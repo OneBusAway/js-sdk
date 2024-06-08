@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '@stainless-temp/open-transit/core';
-import { APIResource } from '@stainless-temp/open-transit/resource';
-import { isRequestOptions } from '@stainless-temp/open-transit/core';
-import * as CurrentTimeAPI from '@stainless-temp/open-transit/resources/current-time';
+import * as Core from '../core';
+import { APIResource } from '../resource';
+import { isRequestOptions } from '../core';
+import * as CurrentTimeAPI from './current-time';
 
 export class CurrentTime extends APIResource {
   /**

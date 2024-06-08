@@ -42,25 +42,25 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```bash
-npm install git+ssh://git@github.com:stainless-sdks/@stainless-temp/open-transit-node.git
+npm install git+ssh://git@github.com:stainless-sdks/open-transit-node.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```bash
 # Clone
-git clone https://www.github.com/stainless-sdks/@stainless-temp/open-transit-node
-cd @stainless-temp
+git clone https://www.github.com/stainless-sdks/open-transit-node
+cd open-transit-node
 
 # With yarn
 yarn link
 cd ../my-package
-yarn link @stainless-temp/open-transit
+yarn link open-transit
 
 # With pnpm
 pnpm link --global
 cd ../my-package
-pnpm link -—global @stainless-temp/open-transit
+pnpm link -—global open-transit
 ```
 
 ## Running tests
@@ -99,7 +99,7 @@ the changes aren't made through the automated pipeline, you may want to make rel
 
 ### Publish with a GitHub workflow
 
-You can release to package managers by using [the `Publish NPM` GitHub action](https://www.github.com/stainless-sdks/@stainless-temp/open-transit-node/actions/workflows/publish-npm.yml). This requires a setup organization or repository secret to be set up.
+You can release to package managers by using [the `Publish NPM` GitHub action](https://www.github.com/stainless-sdks/open-transit-node/actions/workflows/publish-npm.yml). This requires a setup organization or repository secret to be set up.
 
 ### Publish manually
 

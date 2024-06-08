@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '@stainless-temp/open-transit/core';
-import { APIResource } from '@stainless-temp/open-transit/resource';
-import { isRequestOptions } from '@stainless-temp/open-transit/core';
-import * as AgenciesWithCoverageAPI from '@stainless-temp/open-transit/resources/agencies-with-coverage';
+import * as Core from '../core';
+import { APIResource } from '../resource';
+import { isRequestOptions } from '../core';
+import * as AgenciesWithCoverageAPI from './agencies-with-coverage';
 
 export class AgenciesWithCoverage extends APIResource {
   /**

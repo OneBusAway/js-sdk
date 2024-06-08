@@ -9,9 +9,9 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "@stainless-temp/open-transit/_shims/auto/*": ["src/_shims/auto/*-node"],
-      "@stainless-temp/open-transit/*": ["src/*"],
-      "@stainless-temp/open-transit": ["src/index.ts"],
+      "open-transit/_shims/auto/*": ["src/_shims/auto/*-node"],
+      "open-transit/*": ["src/*"],
+      "open-transit": ["src/index.ts"],
     },
     "noEmit": true,
 

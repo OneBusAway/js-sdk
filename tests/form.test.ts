@@ -1,6 +1,6 @@
-import { multipartFormRequestOptions, createForm } from '@stainless-temp/open-transit/core';
-import { Blob } from '@stainless-temp/open-transit/_shims/index';
-import { toFile } from '@stainless-temp/open-transit';
+import { multipartFormRequestOptions, createForm } from 'open-transit/core';
+import { Blob } from 'open-transit/_shims/index';
+import { toFile } from 'open-transit';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

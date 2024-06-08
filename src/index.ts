@@ -4,8 +4,7 @@ import * as Core from './core';
 import * as Errors from './error';
 import { type Agent } from './_shims/index';
 import * as Uploads from './uploads';
-import * as qs from 'qs';
-import * as API from '@stainless-temp/open-transit/resources/index';
+import * as API from './resources/index';
 
 export interface ClientOptions {
   /**
@@ -113,10 +112,6 @@ export class OpenTransit extends Core.APIClient {
     };
   }
 
-  protected override stringifyQuery(query: Record<string, unknown>): string {
-    return qs.stringify(query, { arrayFormat: 'comma' });
-  }
-
   static OpenTransit = this;
 
   static OpenTransitError = Errors.OpenTransitError;
@@ -132,6 +127,9 @@ export class OpenTransit extends Core.APIClient {
   static InternalServerError = Errors.InternalServerError;
   static PermissionDeniedError = Errors.PermissionDeniedError;
   static UnprocessableEntityError = Errors.UnprocessableEntityError;
+
+  static toFile = Uploads.toFile;
+  static fileFromPath = Uploads.fileFromPath;
 }
 
 export const {
@@ -154,10 +152,6 @@ export import toFile = Uploads.toFile;
 export import fileFromPath = Uploads.fileFromPath;
 
 export namespace OpenTransit {
-  // Helper functions
-  export import toFile = Uploads.toFile;
-  export import fileFromPath = Uploads.fileFromPath;
-
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;

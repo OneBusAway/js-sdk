@@ -1,4 +1,4 @@
-import { APIClient } from '@stainless-temp/open-transit/core';
+import { APIClient } from 'open-transit/core';
 
 const { stringifyQuery } = APIClient.prototype as any;
 

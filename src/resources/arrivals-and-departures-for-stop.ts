@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '@stainless-temp/open-transit/core';
-import { APIResource } from '@stainless-temp/open-transit/resource';
-import { isRequestOptions } from '@stainless-temp/open-transit/core';
-import * as ArrivalsAndDeparturesForStopAPI from '@stainless-temp/open-transit/resources/arrivals-and-departures-for-stop';
+import * as Core from '../core';
+import { APIResource } from '../resource';
+import { isRequestOptions } from '../core';
+import * as ArrivalsAndDeparturesForStopAPI from './arrivals-and-departures-for-stop';
 
 export class ArrivalsAndDeparturesForStop extends APIResource {
   /**

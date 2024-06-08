@@ -42,12 +42,12 @@ export let isFsReadStream: Shims['isFsReadStream'] | undefined = undefined;
 export function setShims(shims: Shims, options: { auto: boolean } = { auto: false }) {
   if (auto) {
     throw new Error(
-      `you must \`import '@stainless-temp/open-transit/shims/${shims.kind}'\` before importing anything else from @stainless-temp/open-transit`,
+      `you must \`import 'open-transit/shims/${shims.kind}'\` before importing anything else from open-transit`,
     );
   }
   if (kind) {
     throw new Error(
-      `can't \`import '@stainless-temp/open-transit/shims/${shims.kind}'\` after \`import '@stainless-temp/open-transit/shims/${kind}'\``,
+      `can't \`import 'open-transit/shims/${shims.kind}'\` after \`import 'open-transit/shims/${kind}'\``,
     );
   }
   auto = options.auto;

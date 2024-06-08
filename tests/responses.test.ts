@@ -1,5 +1,5 @@
-import { createResponseHeaders } from '@stainless-temp/open-transit/core';
-import { Headers } from '@stainless-temp/open-transit/_shims/index';
+import { createResponseHeaders } from 'open-transit/core';
+import { Headers } from 'open-transit/_shims/index';
 
 describe('response parsing', () => {
   // TODO: test unicode characters

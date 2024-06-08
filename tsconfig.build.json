@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "@stainless-temp/open-transit/*": ["dist/src/*"],
-      "@stainless-temp/open-transit": ["dist/src/index.ts"],
+      "open-transit/*": ["dist/src/*"],
+      "open-transit": ["dist/src/index.ts"],
     },
     "noEmit": false,
     "declaration": true,

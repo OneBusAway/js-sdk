@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OpenTransit from '@stainless-temp/open-transit';
-import { APIUserAbortError } from '@stainless-temp/open-transit';
-import { Headers } from '@stainless-temp/open-transit/core';
+import OpenTransit from 'open-transit';
+import { APIUserAbortError } from 'open-transit';
+import { Headers } from 'open-transit/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {
