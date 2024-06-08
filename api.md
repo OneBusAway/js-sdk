@@ -26,4 +26,4 @@ Methods:
 
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID.json}">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopIdJson, { ...params }) -> void</code>
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> void</code>

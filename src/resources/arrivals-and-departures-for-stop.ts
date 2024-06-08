@@ -10,20 +10,20 @@ export class ArrivalsAndDeparturesForStop extends APIResource {
    * arrivals-and-departures-for-stop
    */
   retrieve(
-    stopIdJson: string,
+    stopId: string,
     query?: ArrivalsAndDeparturesForStopRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<void>;
-  retrieve(stopIdJson: string, options?: Core.RequestOptions): Core.APIPromise<void>;
+  retrieve(stopId: string, options?: Core.RequestOptions): Core.APIPromise<void>;
   retrieve(
-    stopIdJson: string,
+    stopId: string,
     query: ArrivalsAndDeparturesForStopRetrieveParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<void> {
     if (isRequestOptions(query)) {
-      return this.retrieve(stopIdJson, {}, query);
+      return this.retrieve(stopId, {}, query);
     }
-    return this._client.get(`/api/where/arrivals-and-departures-for-stop/${stopIdJson}`, {
+    return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, {
       query,
       ...options,
       headers: { Accept: '*/*', ...options?.headers },

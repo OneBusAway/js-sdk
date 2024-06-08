@@ -7,7 +7,7 @@ const onebusaway = new Onebusaway({ baseURL: process.env['TEST_API_BASE_URL'] ??
 
 describe('resource arrivalsAndDeparturesForStop', () => {
   test('retrieve', async () => {
-    const responsePromise = onebusaway.arrivalsAndDeparturesForStop.retrieve('string');
+    const responsePromise = onebusaway.arrivalsAndDeparturesForStop.retrieve('1234');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,7 +20,7 @@ describe('resource arrivalsAndDeparturesForStop', () => {
   test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusaway.arrivalsAndDeparturesForStop.retrieve('string', { path: '/_stainless_unknown_path' }),
+      onebusaway.arrivalsAndDeparturesForStop.retrieve('1234', { path: '/_stainless_unknown_path' }),
     ).rejects.toThrow(Onebusaway.NotFoundError);
   });
 
@@ -28,7 +28,7 @@ describe('resource arrivalsAndDeparturesForStop', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       onebusaway.arrivalsAndDeparturesForStop.retrieve(
-        'string',
+        '1234',
         { key: 'string' },
         { path: '/_stainless_unknown_path' },
       ),
