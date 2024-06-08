@@ -9,14 +9,14 @@ export class StopsForLocation extends APIResource {
   /**
    * stops-for-location
    */
-  list(query?: StopsForLocationListParams, options?: Core.RequestOptions): Core.APIPromise<void>;
-  list(options?: Core.RequestOptions): Core.APIPromise<void>;
-  list(
-    query: StopsForLocationListParams | Core.RequestOptions = {},
+  retrieve(query?: StopsForLocationRetrieveParams, options?: Core.RequestOptions): Core.APIPromise<void>;
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<void>;
+  retrieve(
+    query: StopsForLocationRetrieveParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<void> {
     if (isRequestOptions(query)) {
-      return this.list({}, query);
+      return this.retrieve({}, query);
     }
     return this._client.get('/api/where/stops-for-location.json', {
       query,
@@ -26,7 +26,7 @@ export class StopsForLocation extends APIResource {
   }
 }
 
-export interface StopsForLocationListParams {
+export interface StopsForLocationRetrieveParams {
   key?: string;
 
   lat?: number;
@@ -35,5 +35,5 @@ export interface StopsForLocationListParams {
 }
 
 export namespace StopsForLocation {
-  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
+  export import StopsForLocationRetrieveParams = StopsForLocationAPI.StopsForLocationRetrieveParams;
 }

@@ -20,7 +20,7 @@ Methods:
 
 Methods:
 
-- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">list</a>({ ...params }) -> void</code>
+- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">retrieve</a>({ ...params }) -> void</code>
 
 # ArrivalsAndDeparturesForStop
 

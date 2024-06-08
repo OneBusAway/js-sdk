@@ -7,4 +7,4 @@ export {
 } from './arrivals-and-departures-for-stop';
 export { ConfigRetrieveParams, Config } from './config';
 export { CurrentTimeRetrieveParams, CurrentTime } from './current-time';
-export { StopsForLocationListParams, StopsForLocation } from './stops-for-location';
+export { StopsForLocationRetrieveParams, StopsForLocation } from './stops-for-location';
