@@ -155,7 +155,7 @@ export namespace Onebusaway {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
-  export import AgenciesWithCoverageListParams = API.AgenciesWithCoverageListParams;
+  export import AgenciesWithCoverageRetriveParams = API.AgenciesWithCoverageRetriveParams;
 
   export import Config = API.Config;
   export import ConfigRetrieveParams = API.ConfigRetrieveParams;

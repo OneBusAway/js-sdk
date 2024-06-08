@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-export { AgenciesWithCoverageListParams, AgenciesWithCoverage } from './agencies-with-coverage';
+export { AgenciesWithCoverageRetriveParams, AgenciesWithCoverage } from './agencies-with-coverage';
 export {
   ArrivalsAndDeparturesForStopRetrieveParams,
   ArrivalsAndDeparturesForStop,

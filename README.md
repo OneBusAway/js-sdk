@@ -28,7 +28,7 @@ import Onebusaway from 'onebusaway';
 const onebusaway = new Onebusaway();
 
 async function main() {
-  const response = await onebusaway.agenciesWithCoverage.list();
+  const response = await onebusaway.agenciesWithCoverage.retrive();
 }
 
 main();
@@ -45,7 +45,7 @@ import Onebusaway from 'onebusaway';
 const onebusaway = new Onebusaway();
 
 async function main() {
-  const response = await onebusaway.agenciesWithCoverage.list();
+  const response = await onebusaway.agenciesWithCoverage.retrive();
 }
 
 main();
@@ -62,7 +62,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const response = await onebusaway.agenciesWithCoverage.list().catch(async (err) => {
+  const response = await onebusaway.agenciesWithCoverage.retrive().catch(async (err) => {
     if (err instanceof Onebusaway.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
@@ -105,7 +105,7 @@ const onebusaway = new Onebusaway({
 });
 
 // Or, configure per-request:
-await onebusaway.agenciesWithCoverage.list({
+await onebusaway.agenciesWithCoverage.retrive({
   maxRetries: 5,
 });
 ```
@@ -122,7 +122,7 @@ const onebusaway = new Onebusaway({
 });
 
 // Override per-request:
-await onebusaway.agenciesWithCoverage.list({
+await onebusaway.agenciesWithCoverage.retrive({
   timeout: 5 * 1000,
 });
 ```
@@ -143,11 +143,11 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const onebusaway = new Onebusaway();
 
-const response = await onebusaway.agenciesWithCoverage.list().asResponse();
+const response = await onebusaway.agenciesWithCoverage.retrive().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: response, response: raw } = await onebusaway.agenciesWithCoverage.list().withResponse();
+const { data: response, response: raw } = await onebusaway.agenciesWithCoverage.retrive().withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(response);
 ```
@@ -253,7 +253,7 @@ const onebusaway = new Onebusaway({
 });
 
 // Override per-request:
-await onebusaway.agenciesWithCoverage.list({
+await onebusaway.agenciesWithCoverage.retrive({
   httpAgent: new http.Agent({ keepAlive: false }),
 });
 ```

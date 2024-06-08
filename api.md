@@ -2,7 +2,7 @@
 
 Methods:
 
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">list</a>({ ...params }) -> void</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrive</a>({ ...params }) -> void</code>
 
 # Config
 

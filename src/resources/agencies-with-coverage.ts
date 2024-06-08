@@ -9,14 +9,14 @@ export class AgenciesWithCoverage extends APIResource {
   /**
    * agencies-with-coverage
    */
-  list(query?: AgenciesWithCoverageListParams, options?: Core.RequestOptions): Core.APIPromise<void>;
-  list(options?: Core.RequestOptions): Core.APIPromise<void>;
-  list(
-    query: AgenciesWithCoverageListParams | Core.RequestOptions = {},
+  retrive(query?: AgenciesWithCoverageRetriveParams, options?: Core.RequestOptions): Core.APIPromise<void>;
+  retrive(options?: Core.RequestOptions): Core.APIPromise<void>;
+  retrive(
+    query: AgenciesWithCoverageRetriveParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<void> {
     if (isRequestOptions(query)) {
-      return this.list({}, query);
+      return this.retrive({}, query);
     }
     return this._client.get('/api/where/agencies-with-coverage.json', {
       query,
@@ -26,10 +26,10 @@ export class AgenciesWithCoverage extends APIResource {
   }
 }
 
-export interface AgenciesWithCoverageListParams {
+export interface AgenciesWithCoverageRetriveParams {
   key?: string;
 }
 
 export namespace AgenciesWithCoverage {
-  export import AgenciesWithCoverageListParams = AgenciesWithCoverageAPI.AgenciesWithCoverageListParams;
+  export import AgenciesWithCoverageRetriveParams = AgenciesWithCoverageAPI.AgenciesWithCoverageRetriveParams;
 }
