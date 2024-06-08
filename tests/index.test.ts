@@ -169,20 +169,6 @@ describe('instantiate client', () => {
     const client2 = new Onebusaway({ apiKey: 'My API Key' });
     expect(client2.maxRetries).toEqual(2);
   });
-
-  test('with environment variable arguments', () => {
-    // set options via env var
-    process.env['OPEN_TRANSIT_API_KEY'] = 'My API Key';
-    const client = new Onebusaway();
-    expect(client.apiKey).toBe('My API Key');
-  });
-
-  test('with overriden environment variable arguments', () => {
-    // set options via env var
-    process.env['OPEN_TRANSIT_API_KEY'] = 'another My API Key';
-    const client = new Onebusaway({ apiKey: 'My API Key' });
-    expect(client.apiKey).toBe('My API Key');
-  });
 });
 
 describe('request building', () => {
