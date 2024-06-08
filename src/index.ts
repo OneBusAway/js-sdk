@@ -7,6 +7,8 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 
 export interface ClientOptions {
+  apiKey: string;
+
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
    *
@@ -66,11 +68,14 @@ export interface ClientOptions {
 
 /** API Client for interfacing with the Onebusaway API. */
 export class Onebusaway extends Core.APIClient {
+  apiKey: string;
+
   private _options: ClientOptions;
 
   /**
    * API Client for interfacing with the Onebusaway API.
    *
+   * @param {string} opts.apiKey
    * @param {string} [opts.baseURL=process.env['ONEBUSAWAY_BASE_URL'] ?? https://{{baseurl}}] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
@@ -79,8 +84,15 @@ export class Onebusaway extends Core.APIClient {
    * @param {Core.Headers} opts.defaultHeaders - Default headers to include with every request to the API.
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
-  constructor({ baseURL = Core.readEnv('ONEBUSAWAY_BASE_URL'), ...opts }: ClientOptions = {}) {
+  constructor({ baseURL = Core.readEnv('ONEBUSAWAY_BASE_URL'), apiKey, ...opts }: ClientOptions) {
+    if (apiKey === undefined) {
+      throw new Errors.OnebusawayError(
+        "Missing required client option apiKey; you need to instantiate the Onebusaway client with an apiKey option, like new Onebusaway({ apiKey: 'My API Key' }).",
+      );
+    }
+
     const options: ClientOptions = {
+      apiKey,
       ...opts,
       baseURL: baseURL || `https://{{baseurl}}`,
     };
@@ -93,6 +105,8 @@ export class Onebusaway extends Core.APIClient {
       fetch: options.fetch,
     });
     this._options = options;
+
+    this.apiKey = apiKey;
   }
 
   agenciesWithCoverage: API.AgenciesWithCoverage = new API.AgenciesWithCoverage(this);
@@ -110,6 +124,10 @@ export class Onebusaway extends Core.APIClient {
       ...super.defaultHeaders(opts),
       ...this._options.defaultHeaders,
     };
+  }
+
+  protected override authHeaders(opts: Core.FinalRequestOptions): Core.Headers {
+    return { key: this.apiKey };
   }
 
   static Onebusaway = this;

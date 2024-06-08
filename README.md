@@ -25,7 +25,9 @@ The full API of this library can be found in [api.md](api.md).
 ```js
 import Onebusaway from 'onebusaway';
 
-const onebusaway = new Onebusaway();
+const onebusaway = new Onebusaway({
+  apiKey: 'My API Key',
+});
 
 async function main() {
   const response = await onebusaway.agenciesWithCoverage.retrieve();
@@ -42,7 +44,9 @@ This library includes TypeScript definitions for all request params and response
 ```ts
 import Onebusaway from 'onebusaway';
 
-const onebusaway = new Onebusaway();
+const onebusaway = new Onebusaway({
+  apiKey: 'My API Key',
+});
 
 async function main() {
   const response = await onebusaway.agenciesWithCoverage.retrieve();
