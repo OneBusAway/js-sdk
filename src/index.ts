@@ -164,7 +164,6 @@ export namespace Onebusaway {
   export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
 
   export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
-  export import ArrivalsAndDeparturesForStopRetrieveParams = API.ArrivalsAndDeparturesForStopRetrieveParams;
 }
 
 export default Onebusaway;

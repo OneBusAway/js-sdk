@@ -27,8 +27,6 @@ export class StopsForLocation extends APIResource {
 }
 
 export interface StopsForLocationRetrieveParams {
-  key?: string;
-
   lat?: number;
 
   lon?: number;

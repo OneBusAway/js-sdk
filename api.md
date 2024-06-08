@@ -2,7 +2,7 @@
 
 Methods:
 
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrive</a>() -> void</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>() -> void</code>
 
 # Config
 
@@ -26,4 +26,4 @@ Methods:
 
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> void</code>
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId) -> void</code>

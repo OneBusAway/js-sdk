@@ -7,7 +7,7 @@ export class AgenciesWithCoverage extends APIResource {
   /**
    * agencies-with-coverage
    */
-  retrive(options?: Core.RequestOptions): Core.APIPromise<void> {
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<void> {
     return this._client.get('/api/where/agencies-with-coverage.json', {
       ...options,
       headers: { Accept: '*/*', ...options?.headers },

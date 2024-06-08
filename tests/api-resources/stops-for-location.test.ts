@@ -27,10 +27,7 @@ describe('resource stopsForLocation', () => {
   test('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusaway.stopsForLocation.retrieve(
-        { key: 'string', lat: 0, lon: 0 },
-        { path: '/_stainless_unknown_path' },
-      ),
+      onebusaway.stopsForLocation.retrieve({ lat: 0, lon: 0 }, { path: '/_stainless_unknown_path' }),
     ).rejects.toThrow(Onebusaway.NotFoundError);
   });
 });
