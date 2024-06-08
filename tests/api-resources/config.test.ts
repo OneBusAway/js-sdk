@@ -23,11 +23,4 @@ describe('resource config', () => {
       Onebusaway.NotFoundError,
     );
   });
-
-  test('retrieve: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      onebusaway.config.retrieve({ key: 'string' }, { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(Onebusaway.NotFoundError);
-  });
 });

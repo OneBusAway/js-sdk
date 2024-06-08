@@ -2,34 +2,15 @@
 
 import * as Core from '../core';
 import { APIResource } from '../resource';
-import { isRequestOptions } from '../core';
-import * as CurrentTimeAPI from './current-time';
 
 export class CurrentTime extends APIResource {
   /**
    * current-time
    */
-  retrieve(query?: CurrentTimeRetrieveParams, options?: Core.RequestOptions): Core.APIPromise<void>;
-  retrieve(options?: Core.RequestOptions): Core.APIPromise<void>;
-  retrieve(
-    query: CurrentTimeRetrieveParams | Core.RequestOptions = {},
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<void> {
-    if (isRequestOptions(query)) {
-      return this.retrieve({}, query);
-    }
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<void> {
     return this._client.get('/api/where/current-time.json', {
-      query,
       ...options,
       headers: { Accept: '*/*', ...options?.headers },
     });
   }
-}
-
-export interface CurrentTimeRetrieveParams {
-  key?: string;
-}
-
-export namespace CurrentTime {
-  export import CurrentTimeRetrieveParams = CurrentTimeAPI.CurrentTimeRetrieveParams;
 }

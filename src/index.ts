@@ -155,13 +155,10 @@ export namespace Onebusaway {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
-  export import AgenciesWithCoverageRetriveParams = API.AgenciesWithCoverageRetriveParams;
 
   export import Config = API.Config;
-  export import ConfigRetrieveParams = API.ConfigRetrieveParams;
 
   export import CurrentTime = API.CurrentTime;
-  export import CurrentTimeRetrieveParams = API.CurrentTimeRetrieveParams;
 
   export import StopsForLocation = API.StopsForLocation;
   export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
