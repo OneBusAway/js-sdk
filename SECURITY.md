@@ -16,9 +16,9 @@ before making any information public.
 ## Reporting Non-SDK Related Security Issues
 
 If you encounter security issues that are not directly related to SDKs but pertain to the services
-or products provided by Open Transit please follow the respective company's security reporting guidelines.
+or products provided by Onebusaway please follow the respective company's security reporting guidelines.
 
-### Open Transit Terms and Policies
+### Onebusaway Terms and Policies
 
 Please contact dev-feedback@open-transit.com for any questions or concerns regarding security of our services.
 

@@ -1,6 +1,6 @@
-import { multipartFormRequestOptions, createForm } from 'open-transit/core';
-import { Blob } from 'open-transit/_shims/index';
-import { toFile } from 'open-transit';
+import { multipartFormRequestOptions, createForm } from 'onebusaway/core';
+import { Blob } from 'onebusaway/_shims/index';
+import { toFile } from 'onebusaway';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

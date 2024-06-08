@@ -2,9 +2,9 @@
 
 import { castToError, Headers } from './core';
 
-export class OpenTransitError extends Error {}
+export class OnebusawayError extends Error {}
 
-export class APIError extends OpenTransitError {
+export class APIError extends OnebusawayError {
   readonly status: number | undefined;
   readonly headers: Headers | undefined;
   readonly error: Object | undefined;

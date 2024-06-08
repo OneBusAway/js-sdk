@@ -55,12 +55,12 @@ cd open-transit-node
 # With yarn
 yarn link
 cd ../my-package
-yarn link open-transit
+yarn link onebusaway
 
 # With pnpm
 pnpm link --global
 cd ../my-package
-pnpm link -—global open-transit
+pnpm link -—global onebusaway
 ```
 
 ## Running tests

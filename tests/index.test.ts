@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OpenTransit from 'open-transit';
-import { APIUserAbortError } from 'open-transit';
-import { Headers } from 'open-transit/core';
+import Onebusaway from 'onebusaway';
+import { APIUserAbortError } from 'onebusaway';
+import { Headers } from 'onebusaway/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {
@@ -20,7 +20,7 @@ describe('instantiate client', () => {
   });
 
   describe('defaultHeaders', () => {
-    const client = new OpenTransit({
+    const client = new Onebusaway({
       baseURL: 'http://localhost:5000/',
       defaultHeaders: { 'X-My-Default-Header': '2' },
     });
@@ -51,7 +51,7 @@ describe('instantiate client', () => {
 
   describe('defaultQuery', () => {
     test('with null query params given', () => {
-      const client = new OpenTransit({
+      const client = new Onebusaway({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { apiVersion: 'foo' },
       });
@@ -59,7 +59,7 @@ describe('instantiate client', () => {
     });
 
     test('multiple default query params', () => {
-      const client = new OpenTransit({
+      const client = new Onebusaway({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { apiVersion: 'foo', hello: 'world' },
       });
@@ -67,13 +67,13 @@ describe('instantiate client', () => {
     });
 
     test('overriding with `undefined`', () => {
-      const client = new OpenTransit({ baseURL: 'http://localhost:5000/', defaultQuery: { hello: 'world' } });
+      const client = new Onebusaway({ baseURL: 'http://localhost:5000/', defaultQuery: { hello: 'world' } });
       expect(client.buildURL('/foo', { hello: undefined })).toEqual('http://localhost:5000/foo');
     });
   });
 
   test('custom fetch', async () => {
-    const client = new OpenTransit({
+    const client = new Onebusaway({
       baseURL: 'http://localhost:5000/',
       fetch: (url) => {
         return Promise.resolve(
@@ -89,7 +89,7 @@ describe('instantiate client', () => {
   });
 
   test('custom signal', async () => {
-    const client = new OpenTransit({
+    const client = new Onebusaway({
       baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
       fetch: (...args) => {
         return new Promise((resolve, reject) =>
@@ -115,55 +115,55 @@ describe('instantiate client', () => {
 
   describe('baseUrl', () => {
     test('trailing slash', () => {
-      const client = new OpenTransit({ baseURL: 'http://localhost:5000/custom/path/' });
+      const client = new Onebusaway({ baseURL: 'http://localhost:5000/custom/path/' });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
     });
 
     test('no trailing slash', () => {
-      const client = new OpenTransit({ baseURL: 'http://localhost:5000/custom/path' });
+      const client = new Onebusaway({ baseURL: 'http://localhost:5000/custom/path' });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
     });
 
     afterEach(() => {
-      process.env['OPEN_TRANSIT_BASE_URL'] = undefined;
+      process.env['ONEBUSAWAY_BASE_URL'] = undefined;
     });
 
     test('explicit option', () => {
-      const client = new OpenTransit({ baseURL: 'https://example.com' });
+      const client = new Onebusaway({ baseURL: 'https://example.com' });
       expect(client.baseURL).toEqual('https://example.com');
     });
 
     test('env variable', () => {
-      process.env['OPEN_TRANSIT_BASE_URL'] = 'https://example.com/from_env';
-      const client = new OpenTransit({});
+      process.env['ONEBUSAWAY_BASE_URL'] = 'https://example.com/from_env';
+      const client = new Onebusaway({});
       expect(client.baseURL).toEqual('https://example.com/from_env');
     });
 
     test('empty env variable', () => {
-      process.env['OPEN_TRANSIT_BASE_URL'] = ''; // empty
-      const client = new OpenTransit({});
+      process.env['ONEBUSAWAY_BASE_URL'] = ''; // empty
+      const client = new Onebusaway({});
       expect(client.baseURL).toEqual('https://{{baseurl}}');
     });
 
     test('blank env variable', () => {
-      process.env['OPEN_TRANSIT_BASE_URL'] = '  '; // blank
-      const client = new OpenTransit({});
+      process.env['ONEBUSAWAY_BASE_URL'] = '  '; // blank
+      const client = new Onebusaway({});
       expect(client.baseURL).toEqual('https://{{baseurl}}');
     });
   });
 
   test('maxRetries option is correctly set', () => {
-    const client = new OpenTransit({ maxRetries: 4 });
+    const client = new Onebusaway({ maxRetries: 4 });
     expect(client.maxRetries).toEqual(4);
 
     // default
-    const client2 = new OpenTransit({});
+    const client2 = new Onebusaway({});
     expect(client2.maxRetries).toEqual(2);
   });
 });
 
 describe('request building', () => {
-  const client = new OpenTransit({});
+  const client = new Onebusaway({});
 
   describe('Content-Length', () => {
     test('handles multi-byte characters', () => {
@@ -205,7 +205,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new OpenTransit({ timeout: 10, fetch: testFetch });
+    const client = new Onebusaway({ timeout: 10, fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
@@ -232,7 +232,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new OpenTransit({ fetch: testFetch });
+    const client = new Onebusaway({ fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
@@ -259,7 +259,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new OpenTransit({ fetch: testFetch });
+    const client = new Onebusaway({ fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);

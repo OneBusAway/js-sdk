@@ -9,9 +9,9 @@ export function getRuntime({ manuallyImported }: { manuallyImported?: boolean } 
   const recommendation =
     manuallyImported ?
       `You may need to use polyfills`
-    : `Add one of these imports before your first \`import … from 'open-transit'\`:
-- \`import 'open-transit/shims/node'\` (if you're running on Node)
-- \`import 'open-transit/shims/web'\` (otherwise)
+    : `Add one of these imports before your first \`import … from 'onebusaway'\`:
+- \`import 'onebusaway/shims/node'\` (if you're running on Node)
+- \`import 'onebusaway/shims/web'\` (otherwise)
 `;
 
   let _fetch, _Request, _Response, _Headers;

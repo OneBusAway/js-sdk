@@ -1,13 +1,13 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OpenTransit from 'open-transit';
+import Onebusaway from 'onebusaway';
 import { Response } from 'node-fetch';
 
-const openTransit = new OpenTransit({ baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010' });
+const onebusaway = new Onebusaway({ baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010' });
 
 describe('resource stopsForLocation', () => {
   test('list', async () => {
-    const responsePromise = openTransit.stopsForLocation.list();
+    const responsePromise = onebusaway.stopsForLocation.list();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -19,18 +19,18 @@ describe('resource stopsForLocation', () => {
 
   test('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(openTransit.stopsForLocation.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      OpenTransit.NotFoundError,
+    await expect(onebusaway.stopsForLocation.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      Onebusaway.NotFoundError,
     );
   });
 
   test('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      openTransit.stopsForLocation.list(
+      onebusaway.stopsForLocation.list(
         { key: 'string', lat: 0, lon: 0 },
         { path: '/_stainless_unknown_path' },
       ),
-    ).rejects.toThrow(OpenTransit.NotFoundError);
+    ).rejects.toThrow(Onebusaway.NotFoundError);
   });
 });

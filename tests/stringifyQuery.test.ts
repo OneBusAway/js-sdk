@@ -1,4 +1,4 @@
-import { APIClient } from 'open-transit/core';
+import { APIClient } from 'onebusaway/core';
 
 const { stringifyQuery } = APIClient.prototype as any;
 
