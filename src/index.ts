@@ -8,7 +8,7 @@ import * as API from './resources/index';
 
 export interface ClientOptions {
   /**
-   * Defaults to process.env['ONEBUSAWAY_API_KEY'].
+   * Defaults to process.env['OPEN_TRANSIT_API_KEY'].
    */
   apiKey?: string | undefined;
 
@@ -78,7 +78,7 @@ export class Onebusaway extends Core.APIClient {
   /**
    * API Client for interfacing with the Onebusaway API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['ONEBUSAWAY_API_KEY'] ?? undefined]
+   * @param {string | undefined} [opts.apiKey=process.env['OPEN_TRANSIT_API_KEY'] ?? undefined]
    * @param {string} [opts.baseURL=process.env['ONEBUSAWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
@@ -89,12 +89,12 @@ export class Onebusaway extends Core.APIClient {
    */
   constructor({
     baseURL = Core.readEnv('ONEBUSAWAY_BASE_URL'),
-    apiKey = Core.readEnv('ONEBUSAWAY_API_KEY'),
+    apiKey = Core.readEnv('OPEN_TRANSIT_API_KEY'),
     ...opts
   }: ClientOptions = {}) {
     if (apiKey === undefined) {
       throw new Errors.OnebusawayError(
-        "The ONEBUSAWAY_API_KEY environment variable is missing or empty; either provide it, or instantiate the Onebusaway client with an apiKey option, like new Onebusaway({ apiKey: 'My API Key' }).",
+        "The OPEN_TRANSIT_API_KEY environment variable is missing or empty; either provide it, or instantiate the Onebusaway client with an apiKey option, like new Onebusaway({ apiKey: 'My API Key' }).",
       );
     }
 
