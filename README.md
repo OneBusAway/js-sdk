@@ -28,7 +28,7 @@ import Onebusaway from 'onebusaway';
 const onebusaway = new Onebusaway();
 
 async function main() {
-  const response = await onebusaway.agenciesWithCoverage.retrieve();
+  const response = await onebusaway.agenciesWithCoverage.retrieve({ key: 'string' });
 }
 
 main();
@@ -45,7 +45,8 @@ import Onebusaway from 'onebusaway';
 const onebusaway = new Onebusaway();
 
 async function main() {
-  const response = await onebusaway.agenciesWithCoverage.retrieve();
+  const params: Onebusaway.AgenciesWithCoverageRetrieveParams = { key: 'string' };
+  const response = await onebusaway.agenciesWithCoverage.retrieve(params);
 }
 
 main();
@@ -62,7 +63,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const response = await onebusaway.agenciesWithCoverage.retrieve().catch(async (err) => {
+  const response = await onebusaway.agenciesWithCoverage.retrieve({ key: 'string' }).catch(async (err) => {
     if (err instanceof Onebusaway.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
@@ -102,11 +103,10 @@ You can use the `maxRetries` option to configure or disable this:
 // Configure the default for all requests:
 const onebusaway = new Onebusaway({
   maxRetries: 0, // default is 2
-  apiKey: 'My API Key',
 });
 
 // Or, configure per-request:
-await onebusaway.agenciesWithCoverage.retrieve({
+await onebusaway.agenciesWithCoverage.retrieve({ key: 'string' }, {
   maxRetries: 5,
 });
 ```
@@ -120,11 +120,10 @@ Requests time out after 1 minute by default. You can configure this with a `time
 // Configure the default for all requests:
 const onebusaway = new Onebusaway({
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
-  apiKey: 'My API Key',
 });
 
 // Override per-request:
-await onebusaway.agenciesWithCoverage.retrieve({
+await onebusaway.agenciesWithCoverage.retrieve({ key: 'string' }, {
   timeout: 5 * 1000,
 });
 ```
@@ -145,11 +144,13 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const onebusaway = new Onebusaway();
 
-const response = await onebusaway.agenciesWithCoverage.retrieve().asResponse();
+const response = await onebusaway.agenciesWithCoverage.retrieve({ key: 'string' }).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: response, response: raw } = await onebusaway.agenciesWithCoverage.retrieve().withResponse();
+const { data: response, response: raw } = await onebusaway.agenciesWithCoverage
+  .retrieve({ key: 'string' })
+  .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(response);
 ```
@@ -252,13 +253,15 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 // Configure the default for all requests:
 const onebusaway = new Onebusaway({
   httpAgent: new HttpsProxyAgent(process.env.PROXY_URL),
-  apiKey: 'My API Key',
 });
 
 // Override per-request:
-await onebusaway.agenciesWithCoverage.retrieve({
-  httpAgent: new http.Agent({ keepAlive: false }),
-});
+await onebusaway.agenciesWithCoverage.retrieve(
+  { key: 'string' },
+  {
+    httpAgent: new http.Agent({ keepAlive: false }),
+  },
+);
 ```
 
 ## Semantic versioning

@@ -126,6 +126,10 @@ export class Onebusaway extends Core.APIClient {
     };
   }
 
+  protected override authHeaders(opts: Core.FinalRequestOptions): Core.Headers {
+    return { key: this.apiKey };
+  }
+
   static Onebusaway = this;
 
   static OnebusawayError = Errors.OnebusawayError;
@@ -169,15 +173,19 @@ export namespace Onebusaway {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
+  export import AgenciesWithCoverageRetrieveParams = API.AgenciesWithCoverageRetrieveParams;
 
   export import Config = API.Config;
+  export import ConfigRetrieveParams = API.ConfigRetrieveParams;
 
   export import CurrentTime = API.CurrentTime;
+  export import CurrentTimeRetrieveParams = API.CurrentTimeRetrieveParams;
 
   export import StopsForLocation = API.StopsForLocation;
   export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
 
   export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
+  export import ArrivalsAndDeparturesForStopRetrieveParams = API.ArrivalsAndDeparturesForStopRetrieveParams;
 }
 
 export default Onebusaway;
