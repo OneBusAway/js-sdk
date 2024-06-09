@@ -9,8 +9,8 @@ const onebusaway = new Onebusaway({
 });
 
 describe('resource arrivalsAndDeparturesForStop', () => {
-  test('retrieve: only required params', async () => {
-    const responsePromise = onebusaway.arrivalsAndDeparturesForStop.retrieve('1234', { key: 'string' });
+  test('retrieve', async () => {
+    const responsePromise = onebusaway.arrivalsAndDeparturesForStop.retrieve('1234');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,7 +20,10 @@ describe('resource arrivalsAndDeparturesForStop', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: required and optional params', async () => {
-    const response = await onebusaway.arrivalsAndDeparturesForStop.retrieve('1234', { key: 'string' });
+  test('retrieve: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      onebusaway.arrivalsAndDeparturesForStop.retrieve('1234', { path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(Onebusaway.NotFoundError);
   });
 });
