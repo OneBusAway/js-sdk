@@ -133,6 +133,10 @@ export class Onebusaway extends Core.APIClient {
     };
   }
 
+  protected override authHeaders(opts: Core.FinalRequestOptions): Core.Headers {
+    return { key: this.apiKey };
+  }
+
   static Onebusaway = this;
 
   static OnebusawayError = Errors.OnebusawayError;
