@@ -7,7 +7,10 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 
 export interface ClientOptions {
-  apiKey: string;
+  /**
+   * Defaults to process.env['OPEN_TRANSIT_API_KEY'].
+   */
+  apiKey?: string | undefined;
 
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
@@ -75,7 +78,7 @@ export class Onebusaway extends Core.APIClient {
   /**
    * API Client for interfacing with the Onebusaway API.
    *
-   * @param {string} opts.apiKey
+   * @param {string | undefined} [opts.apiKey=process.env['OPEN_TRANSIT_API_KEY'] ?? undefined]
    * @param {string} [opts.baseURL=process.env['ONEBUSAWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
@@ -84,10 +87,14 @@ export class Onebusaway extends Core.APIClient {
    * @param {Core.Headers} opts.defaultHeaders - Default headers to include with every request to the API.
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
-  constructor({ baseURL = Core.readEnv('ONEBUSAWAY_BASE_URL'), apiKey, ...opts }: ClientOptions) {
+  constructor({
+    baseURL = Core.readEnv('ONEBUSAWAY_BASE_URL'),
+    apiKey = Core.readEnv('OPEN_TRANSIT_API_KEY'),
+    ...opts
+  }: ClientOptions = {}) {
     if (apiKey === undefined) {
       throw new Errors.OnebusawayError(
-        "Missing required client option apiKey; you need to instantiate the Onebusaway client with an apiKey option, like new Onebusaway({ apiKey: 'My API Key' }).",
+        "The OPEN_TRANSIT_API_KEY environment variable is missing or empty; either provide it, or instantiate the Onebusaway client with an apiKey option, like new Onebusaway({ apiKey: 'My API Key' }).",
       );
     }
 
