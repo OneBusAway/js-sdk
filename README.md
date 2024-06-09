@@ -27,7 +27,6 @@ import Onebusaway from 'onebusaway';
 
 const onebusaway = new Onebusaway({
   apiKey: 'My API Key',
-  baseURL: 'My Base URL',
 });
 
 async function main() {
@@ -47,7 +46,6 @@ import Onebusaway from 'onebusaway';
 
 const onebusaway = new Onebusaway({
   apiKey: 'My API Key',
-  baseURL: 'My Base URL',
 });
 
 async function main() {
@@ -108,7 +106,6 @@ You can use the `maxRetries` option to configure or disable this:
 // Configure the default for all requests:
 const onebusaway = new Onebusaway({
   maxRetries: 0, // default is 2
-  baseURL: 'My Base URL',
 });
 
 // Or, configure per-request:
@@ -126,7 +123,6 @@ Requests time out after 1 minute by default. You can configure this with a `time
 // Configure the default for all requests:
 const onebusaway = new Onebusaway({
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
-  baseURL: 'My Base URL',
 });
 
 // Override per-request:
@@ -258,7 +254,6 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 // Configure the default for all requests:
 const onebusaway = new Onebusaway({
   httpAgent: new HttpsProxyAgent(process.env.PROXY_URL),
-  baseURL: 'My Base URL',
 });
 
 // Override per-request:
