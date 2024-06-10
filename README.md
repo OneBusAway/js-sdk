@@ -25,10 +25,12 @@ The full API of this library can be found in [api.md](api.md).
 ```js
 import OneBusAway from 'onebusaway';
 
-const oneBusAway = new OneBusAway();
+const oneBusAway = new OneBusAway({
+  apiKey: process.env['OPEN_TRANSIT_API_KEY'], // This is the default and can be omitted
+});
 
 async function main() {
-  const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' });
+  const response = await oneBusAway.agenciesWithCoverage.retrieve();
 }
 
 main();
@@ -42,11 +44,12 @@ This library includes TypeScript definitions for all request params and response
 ```ts
 import OneBusAway from 'onebusaway';
 
-const oneBusAway = new OneBusAway();
+const oneBusAway = new OneBusAway({
+  apiKey: process.env['OPEN_TRANSIT_API_KEY'], // This is the default and can be omitted
+});
 
 async function main() {
-  const params: OneBusAway.AgenciesWithCoverageRetrieveParams = { key: 'string' };
-  const response = await oneBusAway.agenciesWithCoverage.retrieve(params);
+  const response = await oneBusAway.agenciesWithCoverage.retrieve();
 }
 
 main();
@@ -63,7 +66,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }).catch(async (err) => {
+  const response = await oneBusAway.agenciesWithCoverage.retrieve().catch(async (err) => {
     if (err instanceof OneBusAway.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
@@ -103,11 +106,10 @@ You can use the `maxRetries` option to configure or disable this:
 // Configure the default for all requests:
 const oneBusAway = new OneBusAway({
   maxRetries: 0, // default is 2
-  apiKey: 'My API Key',
 });
 
 // Or, configure per-request:
-await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }, {
+await oneBusAway.agenciesWithCoverage.retrieve({
   maxRetries: 5,
 });
 ```
@@ -121,11 +123,10 @@ Requests time out after 1 minute by default. You can configure this with a `time
 // Configure the default for all requests:
 const oneBusAway = new OneBusAway({
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
-  apiKey: 'My API Key',
 });
 
 // Override per-request:
-await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }, {
+await oneBusAway.agenciesWithCoverage.retrieve({
   timeout: 5 * 1000,
 });
 ```
@@ -146,13 +147,11 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const oneBusAway = new OneBusAway();
 
-const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }).asResponse();
+const response = await oneBusAway.agenciesWithCoverage.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: response, response: raw } = await oneBusAway.agenciesWithCoverage
-  .retrieve({ key: 'string' })
-  .withResponse();
+const { data: response, response: raw } = await oneBusAway.agenciesWithCoverage.retrieve().withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(response);
 ```
@@ -255,16 +254,12 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 // Configure the default for all requests:
 const oneBusAway = new OneBusAway({
   httpAgent: new HttpsProxyAgent(process.env.PROXY_URL),
-  apiKey: 'My API Key',
 });
 
 // Override per-request:
-await oneBusAway.agenciesWithCoverage.retrieve(
-  { key: 'string' },
-  {
-    httpAgent: new http.Agent({ keepAlive: false }),
-  },
-);
+await oneBusAway.agenciesWithCoverage.retrieve({
+  httpAgent: new http.Agent({ keepAlive: false }),
+});
 ```
 
 ## Semantic versioning
