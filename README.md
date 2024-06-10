@@ -28,7 +28,11 @@ import OneBusAway from 'onebusaway';
 const oneBusAway = new OneBusAway();
 
 async function main() {
-  const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' });
+  const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage.retrieve({
+    key: 'string',
+  });
+
+  console.log(agenciesWithCoverageRetrieveResponse.code);
 }
 
 main();
@@ -46,7 +50,8 @@ const oneBusAway = new OneBusAway();
 
 async function main() {
   const params: OneBusAway.AgenciesWithCoverageRetrieveParams = { key: 'string' };
-  const response = await oneBusAway.agenciesWithCoverage.retrieve(params);
+  const agenciesWithCoverageRetrieveResponse: OneBusAway.AgenciesWithCoverageRetrieveResponse =
+    await oneBusAway.agenciesWithCoverage.retrieve(params);
 }
 
 main();
@@ -63,15 +68,17 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }).catch(async (err) => {
-    if (err instanceof OneBusAway.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
+  const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage
+    .retrieve({ key: 'string' })
+    .catch(async (err) => {
+      if (err instanceof OneBusAway.APIError) {
+        console.log(err.status); // 400
+        console.log(err.name); // BadRequestError
+        console.log(err.headers); // {server: 'nginx', ...}
+      } else {
+        throw err;
+      }
+    });
 }
 
 main();
@@ -150,11 +157,11 @@ const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' 
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: response, response: raw } = await oneBusAway.agenciesWithCoverage
+const { data: agenciesWithCoverageRetrieveResponse, response: raw } = await oneBusAway.agenciesWithCoverage
   .retrieve({ key: 'string' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(response);
+console.log(agenciesWithCoverageRetrieveResponse.code);
 ```
 
 ### Making custom/undocumented requests

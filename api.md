@@ -1,8 +1,12 @@
 # AgenciesWithCoverage
 
+Types:
+
+- <code><a href="./src/resources/agencies-with-coverage.ts">AgenciesWithCoverageRetrieveResponse</a></code>
+
 Methods:
 
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>({ ...params }) -> void</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>({ ...params }) -> AgenciesWithCoverageRetrieveResponse</code>
 
 # Config
 
