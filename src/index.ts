@@ -79,7 +79,7 @@ export class OneBusAway extends Core.APIClient {
    * API Client for interfacing with the One Bus Away API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['OPEN_TRANSIT_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['ONE_BUS_AWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['ONE_BUS_AWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org/] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
    * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -101,7 +101,7 @@ export class OneBusAway extends Core.APIClient {
     const options: ClientOptions = {
       apiKey,
       ...opts,
-      baseURL: baseURL || `https://api.pugetsound.onebusaway.org`,
+      baseURL: baseURL || `https://api.pugetsound.onebusaway.org/`,
     };
 
     super({

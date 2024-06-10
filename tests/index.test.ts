@@ -151,13 +151,13 @@ describe('instantiate client', () => {
     test('empty env variable', () => {
       process.env['ONE_BUS_AWAY_BASE_URL'] = ''; // empty
       const client = new OneBusAway({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.pugetsound.onebusaway.org');
+      expect(client.baseURL).toEqual('https://api.pugetsound.onebusaway.org/');
     });
 
     test('blank env variable', () => {
       process.env['ONE_BUS_AWAY_BASE_URL'] = '  '; // blank
       const client = new OneBusAway({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.pugetsound.onebusaway.org');
+      expect(client.baseURL).toEqual('https://api.pugetsound.onebusaway.org/');
     });
   });
 
