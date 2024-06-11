@@ -39,25 +39,15 @@ export namespace AgenciesWithCoverageRetrieveResponse {
 
   export namespace Data {
     export interface List {
-      id: string;
+      agencyId: string;
 
-      name: string;
+      lat: number;
 
-      timezone: string;
+      latSpan: number;
 
-      url: string;
+      lon: number;
 
-      disclaimer?: string;
-
-      email?: string;
-
-      fareUrl?: string;
-
-      lang?: string;
-
-      phone?: string;
-
-      privateService?: boolean;
+      lonSpan: number;
     }
 
     export interface References {
