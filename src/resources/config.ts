@@ -8,11 +8,8 @@ export class Config extends APIResource {
   /**
    * config
    */
-  retrieve(
-    query: ConfigRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<ConfigRetrieveResponse> {
-    return this._client.get('/api/where/config.json', { query, ...options });
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<ConfigRetrieveResponse> {
+    return this._client.get('/api/where/config.json', options);
   }
 }
 
@@ -154,11 +151,6 @@ export namespace ConfigRetrieveResponse {
   }
 }
 
-export interface ConfigRetrieveParams {
-  key: string;
-}
-
 export namespace Config {
   export import ConfigRetrieveResponse = ConfigAPI.ConfigRetrieveResponse;
-  export import ConfigRetrieveParams = ConfigAPI.ConfigRetrieveParams;
 }

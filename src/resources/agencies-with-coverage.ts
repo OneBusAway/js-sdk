@@ -8,11 +8,8 @@ export class AgenciesWithCoverage extends APIResource {
   /**
    * Retrieve Agencies with Coverage
    */
-  retrieve(
-    query: AgenciesWithCoverageRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AgenciesWithCoverageRetrieveResponse> {
-    return this._client.get('/api/where/agencies-with-coverage.json', { query, ...options });
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<AgenciesWithCoverageRetrieveResponse> {
+    return this._client.get('/api/where/agencies-with-coverage.json', options);
   }
 }
 
@@ -112,11 +109,6 @@ export namespace AgenciesWithCoverageRetrieveResponse {
   }
 }
 
-export interface AgenciesWithCoverageRetrieveParams {
-  key: string;
-}
-
 export namespace AgenciesWithCoverage {
   export import AgenciesWithCoverageRetrieveResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageRetrieveResponse;
-  export import AgenciesWithCoverageRetrieveParams = AgenciesWithCoverageAPI.AgenciesWithCoverageRetrieveParams;
 }

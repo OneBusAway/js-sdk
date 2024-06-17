@@ -28,9 +28,7 @@ import OneBusAway from 'onebusaway';
 const oneBusAway = new OneBusAway();
 
 async function main() {
-  const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage.retrieve({
-    key: 'string',
-  });
+  const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage.retrieve();
 
   console.log(agenciesWithCoverageRetrieveResponse.code);
 }
@@ -49,9 +47,8 @@ import OneBusAway from 'onebusaway';
 const oneBusAway = new OneBusAway();
 
 async function main() {
-  const params: OneBusAway.AgenciesWithCoverageRetrieveParams = { key: 'string' };
   const agenciesWithCoverageRetrieveResponse: OneBusAway.AgenciesWithCoverageRetrieveResponse =
-    await oneBusAway.agenciesWithCoverage.retrieve(params);
+    await oneBusAway.agenciesWithCoverage.retrieve();
 }
 
 main();
@@ -69,7 +66,7 @@ a subclass of `APIError` will be thrown:
 ```ts
 async function main() {
   const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage
-    .retrieve({ key: 'string' })
+    .retrieve()
     .catch(async (err) => {
       if (err instanceof OneBusAway.APIError) {
         console.log(err.status); // 400
@@ -113,7 +110,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Or, configure per-request:
-await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }, {
+await oneBusAway.agenciesWithCoverage.retrieve({
   maxRetries: 5,
 });
 ```
@@ -130,7 +127,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Override per-request:
-await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }, {
+await oneBusAway.agenciesWithCoverage.retrieve({
   timeout: 5 * 1000,
 });
 ```
@@ -151,12 +148,12 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const oneBusAway = new OneBusAway();
 
-const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }).asResponse();
+const response = await oneBusAway.agenciesWithCoverage.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
 const { data: agenciesWithCoverageRetrieveResponse, response: raw } = await oneBusAway.agenciesWithCoverage
-  .retrieve({ key: 'string' })
+  .retrieve()
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(agenciesWithCoverageRetrieveResponse.code);
@@ -263,12 +260,9 @@ const oneBusAway = new OneBusAway({
 });
 
 // Override per-request:
-await oneBusAway.agenciesWithCoverage.retrieve(
-  { key: 'string' },
-  {
-    httpAgent: new http.Agent({ keepAlive: false }),
-  },
-);
+await oneBusAway.agenciesWithCoverage.retrieve({
+  httpAgent: new http.Agent({ keepAlive: false }),
+});
 ```
 
 ## Semantic versioning

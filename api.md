@@ -6,7 +6,7 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>({ ...params }) -> AgenciesWithCoverageRetrieveResponse</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>() -> AgenciesWithCoverageRetrieveResponse</code>
 
 # Config
 
@@ -16,7 +16,7 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/config.json">client.config.<a href="./src/resources/config.ts">retrieve</a>({ ...params }) -> ConfigRetrieveResponse</code>
+- <code title="get /api/where/config.json">client.config.<a href="./src/resources/config.ts">retrieve</a>() -> ConfigRetrieveResponse</code>
 
 # CurrentTime
 
@@ -26,7 +26,7 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/current-time.json">client.currentTime.<a href="./src/resources/current-time.ts">retrieve</a>({ ...params }) -> CurrentTimeRetrieveResponse</code>
+- <code title="get /api/where/current-time.json">client.currentTime.<a href="./src/resources/current-time.ts">retrieve</a>() -> CurrentTimeRetrieveResponse</code>
 
 # StopsForLocation
 
@@ -46,4 +46,4 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>
