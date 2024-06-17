@@ -11,12 +11,74 @@ export class AgenciesWithCoverage extends APIResource {
   retrieve(
     query: AgenciesWithCoverageRetrieveParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<unknown> {
+  ): Core.APIPromise<AgenciesWithCoverageRetrieveResponse> {
     return this._client.get('/api/where/agencies-with-coverage.json', { query, ...options });
   }
 }
 
-export type AgenciesWithCoverageRetrieveResponse = unknown;
+export interface AgenciesWithCoverageRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  data: AgenciesWithCoverageRetrieveResponse.Data;
+
+  text: string;
+
+  version: number;
+}
+
+export namespace AgenciesWithCoverageRetrieveResponse {
+  export interface Data {
+    limitExceeded?: boolean;
+
+    list?: Array<Data.List>;
+
+    references?: Data.References;
+  }
+
+  export namespace Data {
+    export interface List {
+      agencyId: string;
+
+      lat: number;
+
+      latSpan: number;
+
+      lon: number;
+
+      lonSpan: number;
+    }
+
+    export interface References {
+      agencies?: Array<References.Agency>;
+    }
+
+    export namespace References {
+      export interface Agency {
+        id: string;
+
+        name: string;
+
+        timezone: string;
+
+        url: string;
+
+        disclaimer?: string;
+
+        email?: string;
+
+        fareUrl?: string;
+
+        lang?: string;
+
+        phone?: string;
+
+        privateService?: boolean;
+      }
+    }
+  }
+}
 
 export interface AgenciesWithCoverageRetrieveParams {
   key: string;

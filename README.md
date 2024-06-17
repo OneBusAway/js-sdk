@@ -31,6 +31,8 @@ async function main() {
   const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage.retrieve({
     key: 'string',
   });
+
+  console.log(agenciesWithCoverageRetrieveResponse.code);
 }
 
 main();
@@ -48,9 +50,8 @@ const oneBusAway = new OneBusAway();
 
 async function main() {
   const params: OneBusAway.AgenciesWithCoverageRetrieveParams = { key: 'string' };
-  const agenciesWithCoverageRetrieveResponse: unknown = await oneBusAway.agenciesWithCoverage.retrieve(
-    params,
-  );
+  const agenciesWithCoverageRetrieveResponse: OneBusAway.AgenciesWithCoverageRetrieveResponse =
+    await oneBusAway.agenciesWithCoverage.retrieve(params);
 }
 
 main();
@@ -158,7 +159,7 @@ const { data: agenciesWithCoverageRetrieveResponse, response: raw } = await oneB
   .retrieve({ key: 'string' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(agenciesWithCoverageRetrieveResponse);
+console.log(agenciesWithCoverageRetrieveResponse.code);
 ```
 
 ### Making custom/undocumented requests
