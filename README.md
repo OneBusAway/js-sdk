@@ -26,7 +26,7 @@ The full API of this library can be found in [api.md](api.md).
 import OneBusAway from 'onebusaway';
 
 const oneBusAway = new OneBusAway({
-  apiKey: 'My API Key',
+  apiKey: process.env['OPEN_TRANSIT_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
@@ -47,7 +47,7 @@ This library includes TypeScript definitions for all request params and response
 import OneBusAway from 'onebusaway';
 
 const oneBusAway = new OneBusAway({
-  apiKey: 'My API Key',
+  apiKey: process.env['OPEN_TRANSIT_API_KEY'], // This is the default and can be omitted
 });
 
 async function main() {
