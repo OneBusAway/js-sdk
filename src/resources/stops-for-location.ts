@@ -8,12 +8,23 @@ export class StopsForLocation extends APIResource {
   /**
    * stops-for-location
    */
-  retrieve(query: StopsForLocationRetrieveParams, options?: Core.RequestOptions): Core.APIPromise<unknown> {
+  retrieve(
+    query: StopsForLocationRetrieveParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<StopsForLocationRetrieveResponse> {
     return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
 
-export type StopsForLocationRetrieveResponse = unknown;
+export interface StopsForLocationRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
+}
 
 export interface StopsForLocationRetrieveParams {
   key: string;
