@@ -8,7 +8,7 @@ export class Config extends APIResource {
   /**
    * config
    */
-  retrieve(query: ConfigRetrieveParams, options?: Core.RequestOptions): Core.APIPromise<void> {
+  get(query: ConfigGetParams, options?: Core.RequestOptions): Core.APIPromise<void> {
     return this._client.get('/api/where/config.json', {
       query,
       ...options,
@@ -17,10 +17,10 @@ export class Config extends APIResource {
   }
 }
 
-export interface ConfigRetrieveParams {
+export interface ConfigGetParams {
   key: string;
 }
 
 export namespace Config {
-  export import ConfigRetrieveParams = ConfigAPI.ConfigRetrieveParams;
+  export import ConfigGetParams = ConfigAPI.ConfigGetParams;
 }

@@ -28,11 +28,9 @@ import OneBusAway from 'onebusaway';
 const oneBusAway = new OneBusAway();
 
 async function main() {
-  const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage.retrieve({
-    key: 'string',
-  });
+  const agenciesWithCoverageGetResponse = await oneBusAway.agenciesWithCoverage.get({ key: 'string' });
 
-  console.log(agenciesWithCoverageRetrieveResponse.code);
+  console.log(agenciesWithCoverageGetResponse.code);
 }
 
 main();
@@ -49,9 +47,9 @@ import OneBusAway from 'onebusaway';
 const oneBusAway = new OneBusAway();
 
 async function main() {
-  const params: OneBusAway.AgenciesWithCoverageRetrieveParams = { key: 'string' };
-  const agenciesWithCoverageRetrieveResponse: OneBusAway.AgenciesWithCoverageRetrieveResponse =
-    await oneBusAway.agenciesWithCoverage.retrieve(params);
+  const params: OneBusAway.AgenciesWithCoverageGetParams = { key: 'string' };
+  const agenciesWithCoverageGetResponse: OneBusAway.AgenciesWithCoverageGetResponse =
+    await oneBusAway.agenciesWithCoverage.get(params);
 }
 
 main();
@@ -68,8 +66,8 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const agenciesWithCoverageRetrieveResponse = await oneBusAway.agenciesWithCoverage
-    .retrieve({ key: 'string' })
+  const agenciesWithCoverageGetResponse = await oneBusAway.agenciesWithCoverage
+    .get({ key: 'string' })
     .catch(async (err) => {
       if (err instanceof OneBusAway.APIError) {
         console.log(err.status); // 400
@@ -113,7 +111,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Or, configure per-request:
-await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }, {
+await oneBusAway.agenciesWithCoverage.get({ key: 'string' }, {
   maxRetries: 5,
 });
 ```
@@ -130,7 +128,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Override per-request:
-await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }, {
+await oneBusAway.agenciesWithCoverage.get({ key: 'string' }, {
   timeout: 5 * 1000,
 });
 ```
@@ -151,15 +149,15 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const oneBusAway = new OneBusAway();
 
-const response = await oneBusAway.agenciesWithCoverage.retrieve({ key: 'string' }).asResponse();
+const response = await oneBusAway.agenciesWithCoverage.get({ key: 'string' }).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: agenciesWithCoverageRetrieveResponse, response: raw } = await oneBusAway.agenciesWithCoverage
-  .retrieve({ key: 'string' })
+const { data: agenciesWithCoverageGetResponse, response: raw } = await oneBusAway.agenciesWithCoverage
+  .get({ key: 'string' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(agenciesWithCoverageRetrieveResponse.code);
+console.log(agenciesWithCoverageGetResponse.code);
 ```
 
 ### Making custom/undocumented requests
@@ -263,7 +261,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Override per-request:
-await oneBusAway.agenciesWithCoverage.retrieve(
+await oneBusAway.agenciesWithCoverage.get(
   { key: 'string' },
   {
     httpAgent: new http.Agent({ keepAlive: false }),

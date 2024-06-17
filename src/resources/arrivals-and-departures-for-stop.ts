@@ -8,9 +8,9 @@ export class ArrivalsAndDeparturesForStop extends APIResource {
   /**
    * arrivals-and-departures-for-stop
    */
-  retrieve(
+  get(
     stopId: string,
-    query: ArrivalsAndDeparturesForStopRetrieveParams,
+    query: ArrivalsAndDeparturesForStopGetParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<void> {
     return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, {
@@ -21,10 +21,10 @@ export class ArrivalsAndDeparturesForStop extends APIResource {
   }
 }
 
-export interface ArrivalsAndDeparturesForStopRetrieveParams {
+export interface ArrivalsAndDeparturesForStopGetParams {
   key: string;
 }
 
 export namespace ArrivalsAndDeparturesForStop {
-  export import ArrivalsAndDeparturesForStopRetrieveParams = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveParams;
+  export import ArrivalsAndDeparturesForStopGetParams = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopGetParams;
 }
