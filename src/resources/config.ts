@@ -96,7 +96,7 @@ export namespace ConfigRetrieveResponse {
 
       situations?: Array<unknown>;
 
-      stops?: Array<unknown>;
+      stops?: Array<References.Stop>;
 
       stopTimes?: Array<unknown>;
 
@@ -146,6 +146,30 @@ export namespace ConfigRetrieveResponse {
         type?: number;
 
         url?: string;
+      }
+
+      export interface Stop {
+        id: string;
+
+        code: string;
+
+        lat: number;
+
+        lon: number;
+
+        name: string;
+
+        direction?: string;
+
+        locationType?: number;
+
+        parent?: string;
+
+        routeIds?: Array<string>;
+
+        staticRouteIds?: Array<string>;
+
+        wheelchairBoarding?: string;
       }
     }
   }

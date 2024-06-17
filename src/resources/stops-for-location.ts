@@ -2,7 +2,6 @@
 
 import * as Core from '../core';
 import { APIResource } from '../resource';
-import { isRequestOptions } from '../core';
 import * as StopsForLocationAPI from './stops-for-location';
 
 export class StopsForLocation extends APIResource {
@@ -10,17 +9,9 @@ export class StopsForLocation extends APIResource {
    * stops-for-location
    */
   retrieve(
-    query?: StopsForLocationRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<StopsForLocationRetrieveResponse>;
-  retrieve(options?: Core.RequestOptions): Core.APIPromise<StopsForLocationRetrieveResponse>;
-  retrieve(
-    query: StopsForLocationRetrieveParams | Core.RequestOptions = {},
+    query: StopsForLocationRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<StopsForLocationRetrieveResponse> {
-    if (isRequestOptions(query)) {
-      return this.retrieve({}, query);
-    }
     return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
@@ -39,12 +30,38 @@ export interface StopsForLocationRetrieveResponse {
 
 export namespace StopsForLocationRetrieveResponse {
   export interface Data {
-    entry?: unknown;
+    limitExceeded?: boolean;
+
+    list?: Array<Data.List>;
 
     references?: Data.References;
   }
 
   export namespace Data {
+    export interface List {
+      id: string;
+
+      code: string;
+
+      lat: number;
+
+      lon: number;
+
+      name: string;
+
+      direction?: string;
+
+      locationType?: number;
+
+      parent?: string;
+
+      routeIds?: Array<string>;
+
+      staticRouteIds?: Array<string>;
+
+      wheelchairBoarding?: string;
+    }
+
     export interface References {
       agencies?: Array<References.Agency>;
 
@@ -52,7 +69,7 @@ export namespace StopsForLocationRetrieveResponse {
 
       situations?: Array<unknown>;
 
-      stops?: Array<unknown>;
+      stops?: Array<References.Stop>;
 
       stopTimes?: Array<unknown>;
 
@@ -103,11 +120,37 @@ export namespace StopsForLocationRetrieveResponse {
 
         url?: string;
       }
+
+      export interface Stop {
+        id: string;
+
+        code: string;
+
+        lat: number;
+
+        lon: number;
+
+        name: string;
+
+        direction?: string;
+
+        locationType?: number;
+
+        parent?: string;
+
+        routeIds?: Array<string>;
+
+        staticRouteIds?: Array<string>;
+
+        wheelchairBoarding?: string;
+      }
     }
   }
 }
 
 export interface StopsForLocationRetrieveParams {
+  key: string;
+
   lat?: number;
 
   lon?: number;
