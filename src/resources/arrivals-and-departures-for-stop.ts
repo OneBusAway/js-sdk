@@ -12,19 +12,18 @@ export class ArrivalsAndDeparturesForStop extends APIResource {
     stopId: string,
     query: ArrivalsAndDeparturesForStopRetrieveParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<void> {
-    return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, {
-      query,
-      ...options,
-      headers: { Accept: '*/*', ...options?.headers },
-    });
+  ): Core.APIPromise<unknown> {
+    return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, { query, ...options });
   }
 }
+
+export type ArrivalsAndDeparturesForStopRetrieveResponse = unknown;
 
 export interface ArrivalsAndDeparturesForStopRetrieveParams {
   key: string;
 }
 
 export namespace ArrivalsAndDeparturesForStop {
+  export import ArrivalsAndDeparturesForStopRetrieveResponse = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveResponse;
   export import ArrivalsAndDeparturesForStopRetrieveParams = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveParams;
 }

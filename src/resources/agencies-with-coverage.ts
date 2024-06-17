@@ -11,106 +11,12 @@ export class AgenciesWithCoverage extends APIResource {
   retrieve(
     query: AgenciesWithCoverageRetrieveParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<AgenciesWithCoverageRetrieveResponse> {
+  ): Core.APIPromise<unknown> {
     return this._client.get('/api/where/agencies-with-coverage.json', { query, ...options });
   }
 }
 
-export interface AgenciesWithCoverageRetrieveResponse {
-  code: number;
-
-  currentTime: number;
-
-  text: string;
-
-  version: number;
-
-  data?: AgenciesWithCoverageRetrieveResponse.Data;
-}
-
-export namespace AgenciesWithCoverageRetrieveResponse {
-  export interface Data {
-    limitExceeded?: boolean;
-
-    list?: Array<Data.List>;
-
-    references?: Data.References;
-  }
-
-  export namespace Data {
-    export interface List {
-      agencyId: string;
-
-      lat: number;
-
-      latSpan: number;
-
-      lon: number;
-
-      lonSpan: number;
-    }
-
-    export interface References {
-      agencies?: Array<References.Agency>;
-
-      routes?: Array<References.Route>;
-
-      situations?: Array<unknown>;
-
-      stops?: Array<unknown>;
-
-      stopTimes?: Array<unknown>;
-
-      trips?: Array<unknown>;
-    }
-
-    export namespace References {
-      export interface Agency {
-        id: string;
-
-        name: string;
-
-        timezone: string;
-
-        url: string;
-
-        disclaimer?: string;
-
-        email?: string;
-
-        fareUrl?: string;
-
-        lang?: string;
-
-        phone?: string;
-
-        privateService?: boolean;
-      }
-
-      export interface Route {
-        id: string;
-
-        agencyId: string;
-
-        description: string;
-
-        color?: string;
-
-        longName?: string;
-
-        nullSafeShortName?: string;
-
-        shortName?: string;
-
-        textColor?: string;
-
-        type?: number;
-
-        url?: string;
-      }
-    }
-  }
-}
+export type AgenciesWithCoverageRetrieveResponse = unknown;
 
 export interface AgenciesWithCoverageRetrieveParams {
   key: string;

@@ -6,9 +6,14 @@ export {
   AgenciesWithCoverage,
 } from './agencies-with-coverage';
 export {
+  ArrivalsAndDeparturesForStopRetrieveResponse,
   ArrivalsAndDeparturesForStopRetrieveParams,
   ArrivalsAndDeparturesForStop,
 } from './arrivals-and-departures-for-stop';
-export { ConfigRetrieveParams, Config } from './config';
-export { CurrentTimeRetrieveParams, CurrentTime } from './current-time';
-export { StopsForLocationRetrieveParams, StopsForLocation } from './stops-for-location';
+export { ConfigRetrieveResponse, ConfigRetrieveParams, Config } from './config';
+export { CurrentTimeRetrieveResponse, CurrentTimeRetrieveParams, CurrentTime } from './current-time';
+export {
+  StopsForLocationRetrieveResponse,
+  StopsForLocationRetrieveParams,
+  StopsForLocation,
+} from './stops-for-location';

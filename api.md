@@ -6,28 +6,44 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>({ ...params }) -> AgenciesWithCoverageRetrieveResponse</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>({ ...params }) -> unknown</code>
 
 # Config
 
+Types:
+
+- <code><a href="./src/resources/config.ts">ConfigRetrieveResponse</a></code>
+
 Methods:
 
-- <code title="get /api/where/config.json">client.config.<a href="./src/resources/config.ts">retrieve</a>({ ...params }) -> void</code>
+- <code title="get /api/where/config.json">client.config.<a href="./src/resources/config.ts">retrieve</a>({ ...params }) -> unknown</code>
 
 # CurrentTime
 
+Types:
+
+- <code><a href="./src/resources/current-time.ts">CurrentTimeRetrieveResponse</a></code>
+
 Methods:
 
-- <code title="get /api/where/current-time.json">client.currentTime.<a href="./src/resources/current-time.ts">retrieve</a>({ ...params }) -> void</code>
+- <code title="get /api/where/current-time.json">client.currentTime.<a href="./src/resources/current-time.ts">retrieve</a>({ ...params }) -> unknown</code>
 
 # StopsForLocation
 
+Types:
+
+- <code><a href="./src/resources/stops-for-location.ts">StopsForLocationRetrieveResponse</a></code>
+
 Methods:
 
-- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">retrieve</a>({ ...params }) -> void</code>
+- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">retrieve</a>({ ...params }) -> unknown</code>
 
 # ArrivalsAndDeparturesForStop
 
+Types:
+
+- <code><a href="./src/resources/arrivals-and-departures-for-stop.ts">ArrivalsAndDeparturesForStopRetrieveResponse</a></code>
+
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> void</code>
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> unknown</code>
