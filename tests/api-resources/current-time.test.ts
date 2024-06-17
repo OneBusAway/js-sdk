@@ -6,8 +6,8 @@ import { Response } from 'node-fetch';
 const oneBusAway = new OneBusAway({ baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010' });
 
 describe('resource currentTime', () => {
-  test('get: only required params', async () => {
-    const responsePromise = oneBusAway.currentTime.get({ key: 'string' });
+  test('retrieve: only required params', async () => {
+    const responsePromise = oneBusAway.currentTime.retrieve({ key: 'string' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -17,7 +17,7 @@ describe('resource currentTime', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('get: required and optional params', async () => {
-    const response = await oneBusAway.currentTime.get({ key: 'string' });
+  test('retrieve: required and optional params', async () => {
+    const response = await oneBusAway.currentTime.retrieve({ key: 'string' });
   });
 });

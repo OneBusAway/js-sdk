@@ -155,20 +155,20 @@ export namespace OneBusAway {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
-  export import AgenciesWithCoverageGetResponse = API.AgenciesWithCoverageGetResponse;
-  export import AgenciesWithCoverageGetParams = API.AgenciesWithCoverageGetParams;
+  export import AgenciesWithCoverageRetrieveResponse = API.AgenciesWithCoverageRetrieveResponse;
+  export import AgenciesWithCoverageRetrieveParams = API.AgenciesWithCoverageRetrieveParams;
 
   export import Config = API.Config;
-  export import ConfigGetParams = API.ConfigGetParams;
+  export import ConfigRetrieveParams = API.ConfigRetrieveParams;
 
   export import CurrentTime = API.CurrentTime;
-  export import CurrentTimeGetParams = API.CurrentTimeGetParams;
+  export import CurrentTimeRetrieveParams = API.CurrentTimeRetrieveParams;
 
   export import StopsForLocation = API.StopsForLocation;
-  export import StopsForLocationGetParams = API.StopsForLocationGetParams;
+  export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
 
   export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
-  export import ArrivalsAndDeparturesForStopGetParams = API.ArrivalsAndDeparturesForStopGetParams;
+  export import ArrivalsAndDeparturesForStopRetrieveParams = API.ArrivalsAndDeparturesForStopRetrieveParams;
 }
 
 export default OneBusAway;
