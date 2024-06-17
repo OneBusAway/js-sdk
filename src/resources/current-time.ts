@@ -8,13 +8,22 @@ export class CurrentTime extends APIResource {
   /**
    * current-time
    */
-  retrieve(query: CurrentTimeRetrieveParams, options?: Core.RequestOptions): Core.APIPromise<void> {
-    return this._client.get('/api/where/current-time.json', {
-      query,
-      ...options,
-      headers: { Accept: '*/*', ...options?.headers },
-    });
+  retrieve(
+    query: CurrentTimeRetrieveParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<CurrentTimeRetrieveResponse> {
+    return this._client.get('/api/where/current-time.json', { query, ...options });
   }
+}
+
+export interface CurrentTimeRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
 }
 
 export interface CurrentTimeRetrieveParams {
@@ -22,5 +31,6 @@ export interface CurrentTimeRetrieveParams {
 }
 
 export namespace CurrentTime {
+  export import CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
   export import CurrentTimeRetrieveParams = CurrentTimeAPI.CurrentTimeRetrieveParams;
 }

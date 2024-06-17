@@ -21,11 +21,11 @@ export interface AgenciesWithCoverageRetrieveResponse {
 
   currentTime: number;
 
-  data: AgenciesWithCoverageRetrieveResponse.Data;
-
   text: string;
 
   version: number;
+
+  data?: AgenciesWithCoverageRetrieveResponse.Data;
 }
 
 export namespace AgenciesWithCoverageRetrieveResponse {
@@ -52,6 +52,16 @@ export namespace AgenciesWithCoverageRetrieveResponse {
 
     export interface References {
       agencies?: Array<References.Agency>;
+
+      routes?: Array<References.Route>;
+
+      situations?: Array<unknown>;
+
+      stops?: Array<unknown>;
+
+      stopTimes?: Array<unknown>;
+
+      trips?: Array<unknown>;
     }
 
     export namespace References {
@@ -75,6 +85,28 @@ export namespace AgenciesWithCoverageRetrieveResponse {
         phone?: string;
 
         privateService?: boolean;
+      }
+
+      export interface Route {
+        id?: string;
+
+        agencyId?: string;
+
+        color?: string;
+
+        description?: string;
+
+        longName?: string;
+
+        nullSafeShortName?: string;
+
+        shortName?: string;
+
+        textColor?: string;
+
+        type?: number;
+
+        url?: string;
       }
     }
   }
