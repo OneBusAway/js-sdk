@@ -23,6 +23,7 @@ describe('instantiate client', () => {
     const client = new OneBusAway({
       baseURL: 'http://localhost:5000/',
       defaultHeaders: { 'X-My-Default-Header': '2' },
+      apiKey: 'My API Key',
     });
 
     test('they are used in the request', () => {
@@ -54,6 +55,7 @@ describe('instantiate client', () => {
       const client = new OneBusAway({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { apiVersion: 'foo' },
+        apiKey: 'My API Key',
       });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/foo?apiVersion=foo');
     });
@@ -62,12 +64,17 @@ describe('instantiate client', () => {
       const client = new OneBusAway({
         baseURL: 'http://localhost:5000/',
         defaultQuery: { apiVersion: 'foo', hello: 'world' },
+        apiKey: 'My API Key',
       });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/foo?apiVersion=foo&hello=world');
     });
 
     test('overriding with `undefined`', () => {
-      const client = new OneBusAway({ baseURL: 'http://localhost:5000/', defaultQuery: { hello: 'world' } });
+      const client = new OneBusAway({
+        baseURL: 'http://localhost:5000/',
+        defaultQuery: { hello: 'world' },
+        apiKey: 'My API Key',
+      });
       expect(client.buildURL('/foo', { hello: undefined })).toEqual('http://localhost:5000/foo');
     });
   });
@@ -75,6 +82,7 @@ describe('instantiate client', () => {
   test('custom fetch', async () => {
     const client = new OneBusAway({
       baseURL: 'http://localhost:5000/',
+      apiKey: 'My API Key',
       fetch: (url) => {
         return Promise.resolve(
           new Response(JSON.stringify({ url, custom: true }), {
@@ -91,6 +99,7 @@ describe('instantiate client', () => {
   test('custom signal', async () => {
     const client = new OneBusAway({
       baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+      apiKey: 'My API Key',
       fetch: (...args) => {
         return new Promise((resolve, reject) =>
           setTimeout(
@@ -115,12 +124,12 @@ describe('instantiate client', () => {
 
   describe('baseUrl', () => {
     test('trailing slash', () => {
-      const client = new OneBusAway({ baseURL: 'http://localhost:5000/custom/path/' });
+      const client = new OneBusAway({ baseURL: 'http://localhost:5000/custom/path/', apiKey: 'My API Key' });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
     });
 
     test('no trailing slash', () => {
-      const client = new OneBusAway({ baseURL: 'http://localhost:5000/custom/path' });
+      const client = new OneBusAway({ baseURL: 'http://localhost:5000/custom/path', apiKey: 'My API Key' });
       expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
     });
 
@@ -129,41 +138,41 @@ describe('instantiate client', () => {
     });
 
     test('explicit option', () => {
-      const client = new OneBusAway({ baseURL: 'https://example.com' });
+      const client = new OneBusAway({ baseURL: 'https://example.com', apiKey: 'My API Key' });
       expect(client.baseURL).toEqual('https://example.com');
     });
 
     test('env variable', () => {
       process.env['ONE_BUS_AWAY_BASE_URL'] = 'https://example.com/from_env';
-      const client = new OneBusAway({});
+      const client = new OneBusAway({ apiKey: 'My API Key' });
       expect(client.baseURL).toEqual('https://example.com/from_env');
     });
 
     test('empty env variable', () => {
       process.env['ONE_BUS_AWAY_BASE_URL'] = ''; // empty
-      const client = new OneBusAway({});
+      const client = new OneBusAway({ apiKey: 'My API Key' });
       expect(client.baseURL).toEqual('https://api.pugetsound.onebusaway.org/');
     });
 
     test('blank env variable', () => {
       process.env['ONE_BUS_AWAY_BASE_URL'] = '  '; // blank
-      const client = new OneBusAway({});
+      const client = new OneBusAway({ apiKey: 'My API Key' });
       expect(client.baseURL).toEqual('https://api.pugetsound.onebusaway.org/');
     });
   });
 
   test('maxRetries option is correctly set', () => {
-    const client = new OneBusAway({ maxRetries: 4 });
+    const client = new OneBusAway({ maxRetries: 4, apiKey: 'My API Key' });
     expect(client.maxRetries).toEqual(4);
 
     // default
-    const client2 = new OneBusAway({});
+    const client2 = new OneBusAway({ apiKey: 'My API Key' });
     expect(client2.maxRetries).toEqual(2);
   });
 });
 
 describe('request building', () => {
-  const client = new OneBusAway({});
+  const client = new OneBusAway({ apiKey: 'My API Key' });
 
   describe('Content-Length', () => {
     test('handles multi-byte characters', () => {
@@ -205,7 +214,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new OneBusAway({ timeout: 10, fetch: testFetch });
+    const client = new OneBusAway({ apiKey: 'My API Key', timeout: 10, fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
@@ -232,7 +241,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new OneBusAway({ fetch: testFetch });
+    const client = new OneBusAway({ apiKey: 'My API Key', fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);
@@ -259,7 +268,7 @@ describe('retries', () => {
       return new Response(JSON.stringify({ a: 1 }), { headers: { 'Content-Type': 'application/json' } });
     };
 
-    const client = new OneBusAway({ fetch: testFetch });
+    const client = new OneBusAway({ apiKey: 'My API Key', fetch: testFetch });
 
     expect(await client.request({ path: '/foo', method: 'get' })).toEqual({ a: 1 });
     expect(count).toEqual(2);

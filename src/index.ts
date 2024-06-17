@@ -7,6 +7,8 @@ import * as Uploads from './uploads';
 import * as API from './resources/index';
 
 export interface ClientOptions {
+  apiKey: string;
+
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
    *
@@ -66,11 +68,14 @@ export interface ClientOptions {
 
 /** API Client for interfacing with the One Bus Away API. */
 export class OneBusAway extends Core.APIClient {
+  apiKey: string;
+
   private _options: ClientOptions;
 
   /**
    * API Client for interfacing with the One Bus Away API.
    *
+   * @param {string} opts.apiKey
    * @param {string} [opts.baseURL=process.env['ONE_BUS_AWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org/] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
@@ -79,8 +84,15 @@ export class OneBusAway extends Core.APIClient {
    * @param {Core.Headers} opts.defaultHeaders - Default headers to include with every request to the API.
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
-  constructor({ baseURL = Core.readEnv('ONE_BUS_AWAY_BASE_URL'), ...opts }: ClientOptions = {}) {
+  constructor({ baseURL = Core.readEnv('ONE_BUS_AWAY_BASE_URL'), apiKey, ...opts }: ClientOptions) {
+    if (apiKey === undefined) {
+      throw new Errors.OneBusAwayError(
+        "Missing required client option apiKey; you need to instantiate the OneBusAway client with an apiKey option, like new OneBusAway({ apiKey: 'My API Key' }).",
+      );
+    }
+
     const options: ClientOptions = {
+      apiKey,
       ...opts,
       baseURL: baseURL || `https://api.pugetsound.onebusaway.org/`,
     };
@@ -93,6 +105,8 @@ export class OneBusAway extends Core.APIClient {
       fetch: options.fetch,
     });
     this._options = options;
+
+    this.apiKey = apiKey;
   }
 
   agenciesWithCoverage: API.AgenciesWithCoverage = new API.AgenciesWithCoverage(this);
@@ -102,7 +116,10 @@ export class OneBusAway extends Core.APIClient {
   arrivalsAndDeparturesForStop: API.ArrivalsAndDeparturesForStop = new API.ArrivalsAndDeparturesForStop(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
-    return this._options.defaultQuery;
+    return {
+      key: this.apiKey,
+      ...this._options.defaultQuery,
+    };
   }
 
   protected override defaultHeaders(opts: Core.FinalRequestOptions): Core.Headers {
@@ -110,6 +127,10 @@ export class OneBusAway extends Core.APIClient {
       ...super.defaultHeaders(opts),
       ...this._options.defaultHeaders,
     };
+  }
+
+  protected override authHeaders(opts: Core.FinalRequestOptions): Core.Headers {
+    return {};
   }
 
   static OneBusAway = this;

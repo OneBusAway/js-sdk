@@ -3,7 +3,10 @@
 import OneBusAway from 'onebusaway';
 import { Response } from 'node-fetch';
 
-const oneBusAway = new OneBusAway({ baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010' });
+const oneBusAway = new OneBusAway({
+  apiKey: 'My API Key',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+});
 
 describe('resource arrivalsAndDeparturesForStop', () => {
   test('retrieve', async () => {
