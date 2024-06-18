@@ -2,7 +2,6 @@
 
 Types:
 
-- <code><a href="./src/resources/agencies-with-coverage.ts">Coverage</a></code>
 - <code><a href="./src/resources/agencies-with-coverage.ts">AgenciesWithCoverageRetrieveResponse</a></code>
 
 Methods:
