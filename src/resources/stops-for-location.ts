@@ -39,19 +39,19 @@ export namespace StopsForLocationRetrieveResponse {
 
   export namespace Data {
     export interface List {
-      id: string;
+      id?: string;
 
-      code: string;
-
-      lat: number;
-
-      lon: number;
-
-      name: string;
+      code?: string;
 
       direction?: string;
 
+      lat?: number;
+
       locationType?: number;
+
+      lon?: number;
+
+      name?: string;
 
       parent?: string;
 
