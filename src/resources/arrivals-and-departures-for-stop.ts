@@ -6,13 +6,14 @@ import * as ArrivalsAndDeparturesForStopAPI from './arrivals-and-departures-for-
 
 export class ArrivalsAndDeparturesForStop extends APIResource {
   /**
-   * arrivals-and-departures-for-stop
+   * arrival-and-departure-for-stop
    */
   retrieve(
     stopId: string,
+    query: ArrivalsAndDeparturesForStopRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<ArrivalsAndDeparturesForStopRetrieveResponse> {
-    return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, options);
+    return this._client.get(`/api/where/arrival-and-departure-for-stop/stopID.json`, { query, ...options });
   }
 }
 
@@ -37,27 +38,145 @@ export namespace ArrivalsAndDeparturesForStopRetrieveResponse {
 
   export namespace Data {
     export interface Entry {
-      id?: string;
+      actualTrack?: string;
 
-      blockId?: string;
+      arrivalEnabled?: boolean;
 
-      directionId?: string;
+      blockTripSequence?: number;
 
-      peakOffpeak?: number;
+      departureEnabled?: boolean;
+
+      distanceFromStop?: number;
+
+      frequency?: string;
+
+      historicalOccupancy?: string;
+
+      lastUpdateTime?: number;
+
+      numberOfStopsAway?: number;
+
+      occupancyStatus?: string;
+
+      predicted?: boolean;
+
+      predictedArrivalInterval?: string;
+
+      predictedArrivalTime?: number;
+
+      predictedDepartureInterval?: string;
+
+      predictedDepartureTime?: number;
+
+      predictedOccupancy?: string;
 
       routeId?: string;
 
+      routeLongName?: string;
+
       routeShortName?: string;
 
-      serviceId?: string;
+      scheduledArrivalInterval?: string;
 
-      shapeId?: string;
+      scheduledArrivalTime?: number;
 
-      timeZone?: string;
+      scheduledDepartureInterval?: string;
+
+      scheduledDepartureTime?: number;
+
+      scheduledTrack?: string;
+
+      serviceDate?: number;
+
+      situationIds?: Array<string>;
+
+      status?: string;
+
+      stopId?: string;
+
+      stopSequence?: number;
+
+      totalStopsInTrip?: number;
 
       tripHeadsign?: string;
 
-      tripShortName?: string;
+      tripId?: string;
+
+      tripStatus?: Entry.TripStatus;
+
+      vehicleId?: string;
+    }
+
+    export namespace Entry {
+      export interface TripStatus {
+        activeTripId?: string;
+
+        blockTripSequence?: number;
+
+        closestStop?: string;
+
+        closestStopTimeOffset?: number;
+
+        distanceAlongTrip?: number;
+
+        frequency?: string;
+
+        lastKnownDistanceAlongTrip?: number;
+
+        lastKnownLocation?: TripStatus.LastKnownLocation;
+
+        lastKnownOrientation?: number;
+
+        lastLocationUpdateTime?: number;
+
+        lastUpdateTime?: number;
+
+        nextStop?: string;
+
+        nextStopTimeOffset?: number;
+
+        occupancyCapacity?: number;
+
+        occupancyCount?: number;
+
+        occupancyStatus?: string;
+
+        orientation?: number;
+
+        phase?: string;
+
+        position?: TripStatus.Position;
+
+        predicted?: boolean;
+
+        scheduledDistanceAlongTrip?: number;
+
+        scheduleDeviation?: number;
+
+        serviceDate?: number;
+
+        situationIds?: Array<string>;
+
+        status?: string;
+
+        totalDistanceAlongTrip?: number;
+
+        vehicleId?: string;
+      }
+
+      export namespace TripStatus {
+        export interface LastKnownLocation {
+          lat?: number;
+
+          lon?: number;
+        }
+
+        export interface Position {
+          lat?: number;
+
+          lon?: number;
+        }
+      }
     }
 
     export interface References {
@@ -71,7 +190,7 @@ export namespace ArrivalsAndDeparturesForStopRetrieveResponse {
 
       stopTimes?: Array<unknown>;
 
-      trips?: Array<unknown>;
+      trips?: Array<References.Trip>;
     }
 
     export namespace References {
@@ -142,10 +261,47 @@ export namespace ArrivalsAndDeparturesForStopRetrieveResponse {
 
         wheelchairBoarding?: string;
       }
+
+      export interface Trip {
+        id: string;
+
+        routeId: string;
+
+        blockId?: string;
+
+        directionId?: string;
+
+        peakOffpeak?: number;
+
+        routeShortName?: string;
+
+        serviceId?: string;
+
+        shapeId?: string;
+
+        timeZone?: string;
+
+        tripHeadsign?: string;
+
+        tripShortName?: string;
+      }
     }
   }
 }
 
+export interface ArrivalsAndDeparturesForStopRetrieveParams {
+  serviceDate: number;
+
+  tripId: string;
+
+  stopSequence?: number;
+
+  time?: number;
+
+  vehicleId?: string;
+}
+
 export namespace ArrivalsAndDeparturesForStop {
   export import ArrivalsAndDeparturesForStopRetrieveResponse = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveResponse;
+  export import ArrivalsAndDeparturesForStopRetrieveParams = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveParams;
 }

@@ -58,7 +58,7 @@ export namespace AgenciesWithCoverageRetrieveResponse {
 
       stopTimes?: Array<unknown>;
 
-      trips?: Array<unknown>;
+      trips?: Array<References.Trip>;
     }
 
     export namespace References {
@@ -128,6 +128,30 @@ export namespace AgenciesWithCoverageRetrieveResponse {
         staticRouteIds?: Array<string>;
 
         wheelchairBoarding?: string;
+      }
+
+      export interface Trip {
+        id: string;
+
+        routeId: string;
+
+        blockId?: string;
+
+        directionId?: string;
+
+        peakOffpeak?: number;
+
+        routeShortName?: string;
+
+        serviceId?: string;
+
+        shapeId?: string;
+
+        timeZone?: string;
+
+        tripHeadsign?: string;
+
+        tripShortName?: string;
       }
     }
   }

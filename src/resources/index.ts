@@ -3,6 +3,7 @@
 export { AgenciesWithCoverageRetrieveResponse, AgenciesWithCoverage } from './agencies-with-coverage';
 export {
   ArrivalsAndDeparturesForStopRetrieveResponse,
+  ArrivalsAndDeparturesForStopRetrieveParams,
   ArrivalsAndDeparturesForStop,
 } from './arrivals-and-departures-for-stop';
 export { ConfigRetrieveResponse, Config } from './config';
