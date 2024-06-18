@@ -13,6 +13,18 @@ export class AgenciesWithCoverage extends APIResource {
   }
 }
 
+export interface Coverage {
+  agencyId: string;
+
+  lat: number;
+
+  latSpan: number;
+
+  lon: number;
+
+  lonSpan: number;
+}
+
 export interface AgenciesWithCoverageRetrieveResponse {
   code: number;
 
@@ -29,24 +41,12 @@ export namespace AgenciesWithCoverageRetrieveResponse {
   export interface Data {
     limitExceeded?: boolean;
 
-    list?: Array<Data.List>;
+    list?: Array<AgenciesWithCoverageAPI.Coverage>;
 
     references?: Data.References;
   }
 
   export namespace Data {
-    export interface List {
-      agencyId: string;
-
-      lat: number;
-
-      latSpan: number;
-
-      lon: number;
-
-      lonSpan: number;
-    }
-
     export interface References {
       agencies?: Array<References.Agency>;
 
@@ -158,5 +158,6 @@ export namespace AgenciesWithCoverageRetrieveResponse {
 }
 
 export namespace AgenciesWithCoverage {
+  export import Coverage = AgenciesWithCoverageAPI.Coverage;
   export import AgenciesWithCoverageRetrieveResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageRetrieveResponse;
 }

@@ -183,6 +183,7 @@ export namespace OneBusAway {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
+  export import Coverage = API.Coverage;
   export import AgenciesWithCoverageRetrieveResponse = API.AgenciesWithCoverageRetrieveResponse;
 
   export import Config = API.Config;
