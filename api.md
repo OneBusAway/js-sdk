@@ -1,9 +1,3 @@
-# Shared
-
-Types:
-
-- <code><a href="./src/resources/shared.ts">ResponseWrapper</a></code>
-
 # AgenciesWithCoverage
 
 Types:

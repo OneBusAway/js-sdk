@@ -3,7 +3,6 @@
 import * as Core from '../core';
 import { APIResource } from '../resource';
 import * as CurrentTimeAPI from './current-time';
-import * as Shared from './shared';
 
 export class CurrentTime extends APIResource {
   /**
@@ -14,7 +13,15 @@ export class CurrentTime extends APIResource {
   }
 }
 
-export interface CurrentTimeRetrieveResponse extends Shared.ResponseWrapper {
+export interface CurrentTimeRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
+
   data?: CurrentTimeRetrieveResponse.Data;
 }
 

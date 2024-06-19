@@ -3,7 +3,6 @@
 import * as Core from '../core';
 import { APIResource } from '../resource';
 import * as AgenciesWithCoverageAPI from './agencies-with-coverage';
-import * as Shared from './shared';
 
 export class AgenciesWithCoverage extends APIResource {
   /**
@@ -14,7 +13,15 @@ export class AgenciesWithCoverage extends APIResource {
   }
 }
 
-export interface AgenciesWithCoverageRetrieveResponse extends Shared.ResponseWrapper {
+export interface AgenciesWithCoverageRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
+
   data?: AgenciesWithCoverageRetrieveResponse.Data;
 }
 

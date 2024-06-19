@@ -3,7 +3,6 @@
 import * as Core from '../core';
 import { APIResource } from '../resource';
 import * as StopsForLocationAPI from './stops-for-location';
-import * as Shared from './shared';
 
 export class StopsForLocation extends APIResource {
   /**
@@ -17,7 +16,15 @@ export class StopsForLocation extends APIResource {
   }
 }
 
-export interface StopsForLocationRetrieveResponse extends Shared.ResponseWrapper {
+export interface StopsForLocationRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
+
   data?: StopsForLocationRetrieveResponse.Data;
 }
 

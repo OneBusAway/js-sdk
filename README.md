@@ -31,6 +31,8 @@ const oneBusAway = new OneBusAway({
 
 async function main() {
   const currentTimeRetrieveResponse = await oneBusAway.currentTime.retrieve();
+
+  console.log(currentTimeRetrieveResponse.code);
 }
 
 main();
@@ -156,7 +158,7 @@ const { data: currentTimeRetrieveResponse, response: raw } = await oneBusAway.cu
   .retrieve()
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(currentTimeRetrieveResponse);
+console.log(currentTimeRetrieveResponse.code);
 ```
 
 ### Making custom/undocumented requests

@@ -3,7 +3,6 @@
 import * as Core from '../core';
 import { APIResource } from '../resource';
 import * as ConfigAPI from './config';
-import * as Shared from './shared';
 
 export class Config extends APIResource {
   /**
@@ -14,7 +13,15 @@ export class Config extends APIResource {
   }
 }
 
-export interface ConfigRetrieveResponse extends Shared.ResponseWrapper {
+export interface ConfigRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
+
   data?: ConfigRetrieveResponse.Data;
 }
 

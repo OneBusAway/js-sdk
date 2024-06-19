@@ -3,7 +3,6 @@
 import * as Core from '../core';
 import { APIResource } from '../resource';
 import * as ArrivalAndDepartureForStopAPI from './arrival-and-departure-for-stop';
-import * as Shared from './shared';
 
 export class ArrivalAndDepartureForStop extends APIResource {
   /**
@@ -18,7 +17,15 @@ export class ArrivalAndDepartureForStop extends APIResource {
   }
 }
 
-export interface ArrivalAndDepartureForStopRetrieveResponse extends Shared.ResponseWrapper {
+export interface ArrivalAndDepartureForStopRetrieveResponse {
+  code: number;
+
+  currentTime: number;
+
+  text: string;
+
+  version: number;
+
   data?: ArrivalAndDepartureForStopRetrieveResponse.Data;
 }
 

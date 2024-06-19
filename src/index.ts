@@ -202,8 +202,6 @@ export namespace OneBusAway {
 
   export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
   export import ArrivalsAndDeparturesForStopRetrieveResponse = API.ArrivalsAndDeparturesForStopRetrieveResponse;
-
-  export import ResponseWrapper = API.ResponseWrapper;
 }
 
 export default OneBusAway;
