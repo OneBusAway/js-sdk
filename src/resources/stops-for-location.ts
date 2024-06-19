@@ -9,19 +9,19 @@ export class StopsForLocation extends APIResource {
   /**
    * stops-for-location
    */
-  list(
-    query: StopsForLocationListParams,
+  retrieve(
+    query: StopsForLocationRetrieveParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<StopsForLocationListResponse> {
+  ): Core.APIPromise<StopsForLocationRetrieveResponse> {
     return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
 
-export interface StopsForLocationListResponse extends Shared.ResponseWrapper {
-  data?: StopsForLocationListResponse.Data;
+export interface StopsForLocationRetrieveResponse extends Shared.ResponseWrapper {
+  data?: StopsForLocationRetrieveResponse.Data;
 }
 
-export namespace StopsForLocationListResponse {
+export namespace StopsForLocationRetrieveResponse {
   export interface Data {
     limitExceeded?: boolean;
 
@@ -165,7 +165,7 @@ export namespace StopsForLocationListResponse {
   }
 }
 
-export interface StopsForLocationListParams {
+export interface StopsForLocationRetrieveParams {
   key: string;
 
   lat?: number;
@@ -174,6 +174,6 @@ export interface StopsForLocationListParams {
 }
 
 export namespace StopsForLocation {
-  export import StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
-  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
+  export import StopsForLocationRetrieveResponse = StopsForLocationAPI.StopsForLocationRetrieveResponse;
+  export import StopsForLocationRetrieveParams = StopsForLocationAPI.StopsForLocationRetrieveParams;
 }

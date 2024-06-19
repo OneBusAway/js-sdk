@@ -8,11 +8,11 @@ Types:
 
 Types:
 
-- <code><a href="./src/resources/agencies-with-coverage.ts">AgenciesWithCoverageListResponse</a></code>
+- <code><a href="./src/resources/agencies-with-coverage.ts">AgenciesWithCoverageRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">list</a>() -> AgenciesWithCoverageListResponse</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>() -> AgenciesWithCoverageRetrieveResponse</code>
 
 # Config
 
@@ -38,11 +38,11 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/stops-for-location.ts">StopsForLocationListResponse</a></code>
+- <code><a href="./src/resources/stops-for-location.ts">StopsForLocationRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">list</a>({ ...params }) -> StopsForLocationListResponse</code>
+- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">retrieve</a>({ ...params }) -> StopsForLocationRetrieveResponse</code>
 
 # ArrivalAndDepartureForStop
 
@@ -58,8 +58,8 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/arrivals-and-departures-for-stop.ts">ArrivalsAndDeparturesForStopListResponse</a></code>
+- <code><a href="./src/resources/arrivals-and-departures-for-stop.ts">ArrivalsAndDeparturesForStopRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">list</a>(stopId) -> ArrivalsAndDeparturesForStopListResponse</code>
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>

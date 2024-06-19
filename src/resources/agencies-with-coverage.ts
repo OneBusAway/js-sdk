@@ -9,16 +9,16 @@ export class AgenciesWithCoverage extends APIResource {
   /**
    * Retrieve Agencies with Coverage
    */
-  list(options?: Core.RequestOptions): Core.APIPromise<AgenciesWithCoverageListResponse> {
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<AgenciesWithCoverageRetrieveResponse> {
     return this._client.get('/api/where/agencies-with-coverage.json', options);
   }
 }
 
-export interface AgenciesWithCoverageListResponse extends Shared.ResponseWrapper {
-  data?: AgenciesWithCoverageListResponse.Data;
+export interface AgenciesWithCoverageRetrieveResponse extends Shared.ResponseWrapper {
+  data?: AgenciesWithCoverageRetrieveResponse.Data;
 }
 
-export namespace AgenciesWithCoverageListResponse {
+export namespace AgenciesWithCoverageRetrieveResponse {
   export interface Data {
     limitExceeded?: boolean;
 
@@ -151,5 +151,5 @@ export namespace AgenciesWithCoverageListResponse {
 }
 
 export namespace AgenciesWithCoverage {
-  export import AgenciesWithCoverageListResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageListResponse;
+  export import AgenciesWithCoverageRetrieveResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageRetrieveResponse;
 }

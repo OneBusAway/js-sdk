@@ -7,21 +7,21 @@ import * as Shared from './shared';
 
 export class ArrivalsAndDeparturesForStop extends APIResource {
   /**
-   * arrival-and-departure-for-stop
+   * arrivals-and-departures-for-stop
    */
-  list(
+  retrieve(
     stopId: string,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<ArrivalsAndDeparturesForStopListResponse> {
+  ): Core.APIPromise<ArrivalsAndDeparturesForStopRetrieveResponse> {
     return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, options);
   }
 }
 
-export interface ArrivalsAndDeparturesForStopListResponse extends Shared.ResponseWrapper {
-  data?: ArrivalsAndDeparturesForStopListResponse.Data;
+export interface ArrivalsAndDeparturesForStopRetrieveResponse extends Shared.ResponseWrapper {
+  data?: ArrivalsAndDeparturesForStopRetrieveResponse.Data;
 }
 
-export namespace ArrivalsAndDeparturesForStopListResponse {
+export namespace ArrivalsAndDeparturesForStopRetrieveResponse {
   export interface Data {
     entry?: Data.Entry;
   }
@@ -288,5 +288,5 @@ export namespace ArrivalsAndDeparturesForStopListResponse {
 }
 
 export namespace ArrivalsAndDeparturesForStop {
-  export import ArrivalsAndDeparturesForStopListResponse = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopListResponse;
+  export import ArrivalsAndDeparturesForStopRetrieveResponse = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveResponse;
 }
