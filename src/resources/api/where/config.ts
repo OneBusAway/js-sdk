@@ -1,31 +1,24 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../../core';
-import { APIResource } from '../../resource';
-import * as CurrentTimeAPI from './current-time';
+import * as Core from '../../../core';
+import { APIResource } from '../../../resource';
+import * as ConfigAPI from './config';
+import * as Shared from '../../shared';
 
-export class CurrentTime extends APIResource {
+export class Config extends APIResource {
   /**
-   * current-time
+   * config
    */
-  retrieve(options?: Core.RequestOptions): Core.APIPromise<CurrentTimeRetrieveResponse> {
-    return this._client.get('/api/where/current-time.json', options);
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<ConfigRetrieveResponse> {
+    return this._client.get('/api/where/config.json', options);
   }
 }
 
-export interface CurrentTimeRetrieveResponse {
-  code: number;
-
-  currentTime: number;
-
-  text: string;
-
-  version: number;
-
-  data?: CurrentTimeRetrieveResponse.Data;
+export interface ConfigRetrieveResponse extends Shared.ResponseWrapper {
+  data?: ConfigRetrieveResponse.Data;
 }
 
-export namespace CurrentTimeRetrieveResponse {
+export namespace ConfigRetrieveResponse {
   export interface Data {
     entry?: Data.Entry;
 
@@ -34,9 +27,59 @@ export namespace CurrentTimeRetrieveResponse {
 
   export namespace Data {
     export interface Entry {
-      readableTime?: string;
+      id?: string;
 
-      time?: number;
+      gitProperties?: Entry.GitProperties;
+
+      name?: string;
+
+      serviceDateFrom?: string;
+
+      serviceDateTo?: string;
+    }
+
+    export namespace Entry {
+      export interface GitProperties {
+        'git.branch'?: string;
+
+        'git.build.host'?: string;
+
+        'git.build.time'?: string;
+
+        'git.build.user.email'?: string;
+
+        'git.build.user.name'?: string;
+
+        'git.build.version'?: string;
+
+        'git.closest.tag.commit.count'?: string;
+
+        'git.closest.tag.name'?: string;
+
+        'git.commit.id'?: string;
+
+        'git.commit.id.abbrev'?: string;
+
+        'git.commit.id.describe'?: string;
+
+        'git.commit.id.describe-short'?: string;
+
+        'git.commit.message.full'?: string;
+
+        'git.commit.message.short'?: string;
+
+        'git.commit.time'?: string;
+
+        'git.commit.user.email'?: string;
+
+        'git.commit.user.name'?: string;
+
+        'git.dirty'?: string;
+
+        'git.remote.origin.url'?: string;
+
+        'git.tags'?: string;
+      }
     }
 
     export interface References {
@@ -149,6 +192,6 @@ export namespace CurrentTimeRetrieveResponse {
   }
 }
 
-export namespace CurrentTime {
-  export import CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
+export namespace Config {
+  export import ConfigRetrieveResponse = ConfigAPI.ConfigRetrieveResponse;
 }

@@ -1,11 +1,11 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import type { OpenTransit } from './index';
+import type { OneBusAway } from './index';
 
 export class APIResource {
-  protected _client: OpenTransit;
+  protected _client: OneBusAway;
 
-  constructor(client: OpenTransit) {
+  constructor(client: OneBusAway) {
     this._client = client;
   }
 }

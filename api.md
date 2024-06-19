@@ -1,63 +1,69 @@
-# Where
-
-## AgenciesWithCoverage
+# Shared
 
 Types:
 
-- <code><a href="./src/resources/where/agencies-with-coverage.ts">AgenciesWithCoverageListResponse</a></code>
+- <code><a href="./src/resources/shared.ts">ResponseWrapper</a></code>
 
-Methods:
+# API
 
-- <code title="get /api/where/agencies-with-coverage.json">client.where.agenciesWithCoverage.<a href="./src/resources/where/agencies-with-coverage.ts">list</a>() -> AgenciesWithCoverageListResponse</code>
+## Where
 
-## Config
-
-Types:
-
-- <code><a href="./src/resources/where/config.ts">ConfigRetrieveResponse</a></code>
-
-Methods:
-
-- <code title="get /api/where/config.json">client.where.config.<a href="./src/resources/where/config.ts">retrieve</a>() -> ConfigRetrieveResponse</code>
-
-## CurrentTime
+### AgenciesWithCoverage
 
 Types:
 
-- <code><a href="./src/resources/where/current-time.ts">CurrentTimeRetrieveResponse</a></code>
+- <code><a href="./src/resources/api/where/agencies-with-coverage.ts">AgenciesWithCoverageListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/current-time.json">client.where.currentTime.<a href="./src/resources/where/current-time.ts">retrieve</a>() -> CurrentTimeRetrieveResponse</code>
+- <code title="get /api/where/agencies-with-coverage.json">client.api.where.agenciesWithCoverage.<a href="./src/resources/api/where/agencies-with-coverage.ts">list</a>() -> AgenciesWithCoverageListResponse</code>
 
-## StopsForLocation
+### Config
 
 Types:
 
-- <code><a href="./src/resources/where/stops-for-location.ts">StopsForLocationListResponse</a></code>
+- <code><a href="./src/resources/api/where/config.ts">ConfigRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/stops-for-location.json">client.where.stopsForLocation.<a href="./src/resources/where/stops-for-location.ts">list</a>({ ...params }) -> StopsForLocationListResponse</code>
+- <code title="get /api/where/config.json">client.api.where.config.<a href="./src/resources/api/where/config.ts">retrieve</a>() -> ConfigRetrieveResponse</code>
 
-## Stop
-
-### ArrivalAndDeparture
+### CurrentTime
 
 Types:
 
-- <code><a href="./src/resources/where/stop/arrival-and-departure.ts">ArrivalAndDepartureRetrieveResponse</a></code>
+- <code><a href="./src/resources/api/where/current-time.ts">CurrentTimeRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/arrival-and-departure-for-stop/{stopID}.json">client.where.stop.arrivalAndDeparture.<a href="./src/resources/where/stop/arrival-and-departure.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureRetrieveResponse</code>
+- <code title="get /api/where/current-time.json">client.api.where.currentTime.<a href="./src/resources/api/where/current-time.ts">retrieve</a>() -> CurrentTimeRetrieveResponse</code>
 
-### ArrivalsAndDepartures
+### StopsForLocation
 
 Types:
 
-- <code><a href="./src/resources/where/stop/arrivals-and-departures.ts">ArrivalsAndDepartureListResponse</a></code>
+- <code><a href="./src/resources/api/where/stops-for-location.ts">StopsForLocationListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.where.stop.arrivalsAndDepartures.<a href="./src/resources/where/stop/arrivals-and-departures.ts">list</a>(stopId) -> ArrivalsAndDepartureListResponse</code>
+- <code title="get /api/where/stops-for-location.json">client.api.where.stopsForLocation.<a href="./src/resources/api/where/stops-for-location.ts">list</a>({ ...params }) -> StopsForLocationListResponse</code>
+
+### ArrivalAndDepartureForStop
+
+Types:
+
+- <code><a href="./src/resources/api/where/arrival-and-departure-for-stop.ts">ArrivalAndDepartureForStopRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/arrival-and-departure-for-stop/{stopID}.json">client.api.where.arrivalAndDepartureForStop.<a href="./src/resources/api/where/arrival-and-departure-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureForStopRetrieveResponse</code>
+
+### ArrivalsAndDeparturesForStop
+
+Types:
+
+- <code><a href="./src/resources/api/where/arrivals-and-departures-for-stop.ts">ArrivalsAndDeparturesForStopListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.api.where.arrivalsAndDeparturesForStop.<a href="./src/resources/api/where/arrivals-and-departures-for-stop.ts">list</a>(stopId) -> ArrivalsAndDeparturesForStopListResponse</code>

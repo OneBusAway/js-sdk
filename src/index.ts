@@ -8,14 +8,14 @@ import * as API from './resources/index';
 
 export interface ClientOptions {
   /**
-   * Defaults to process.env['OPEN_TRANSIT_API_KEY'].
+   * Defaults to process.env['ONEBUSAWAY_API_KEY'].
    */
   apiKey?: string | undefined;
 
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
    *
-   * Defaults to process.env['OPEN_TRANSIT_BASE_URL'].
+   * Defaults to process.env['ONE_BUS_AWAY_BASE_URL'].
    */
   baseURL?: string | null | undefined;
 
@@ -69,17 +69,17 @@ export interface ClientOptions {
   defaultQuery?: Core.DefaultQuery;
 }
 
-/** API Client for interfacing with the Open Transit API. */
-export class OpenTransit extends Core.APIClient {
+/** API Client for interfacing with the One Bus Away API. */
+export class OneBusAway extends Core.APIClient {
   apiKey: string;
 
   private _options: ClientOptions;
 
   /**
-   * API Client for interfacing with the Open Transit API.
+   * API Client for interfacing with the One Bus Away API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['OPEN_TRANSIT_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['OPEN_TRANSIT_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
+   * @param {string | undefined} [opts.apiKey=process.env['ONEBUSAWAY_API_KEY'] ?? undefined]
+   * @param {string} [opts.baseURL=process.env['ONE_BUS_AWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
    * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -88,13 +88,13 @@ export class OpenTransit extends Core.APIClient {
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
   constructor({
-    baseURL = Core.readEnv('OPEN_TRANSIT_BASE_URL'),
-    apiKey = Core.readEnv('OPEN_TRANSIT_API_KEY'),
+    baseURL = Core.readEnv('ONE_BUS_AWAY_BASE_URL'),
+    apiKey = Core.readEnv('ONEBUSAWAY_API_KEY'),
     ...opts
   }: ClientOptions = {}) {
     if (apiKey === undefined) {
-      throw new Errors.OpenTransitError(
-        "The OPEN_TRANSIT_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenTransit client with an apiKey option, like new OpenTransit({ apiKey: 'My API Key' }).",
+      throw new Errors.OneBusAwayError(
+        "The ONEBUSAWAY_API_KEY environment variable is missing or empty; either provide it, or instantiate the OneBusAway client with an apiKey option, like new OneBusAway({ apiKey: 'My API Key' }).",
       );
     }
 
@@ -116,7 +116,7 @@ export class OpenTransit extends Core.APIClient {
     this.apiKey = apiKey;
   }
 
-  where: API.Where = new API.Where(this);
+  api: API.API = new API.API(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -136,9 +136,9 @@ export class OpenTransit extends Core.APIClient {
     return {};
   }
 
-  static OpenTransit = this;
+  static OneBusAway = this;
 
-  static OpenTransitError = Errors.OpenTransitError;
+  static OneBusAwayError = Errors.OneBusAwayError;
   static APIError = Errors.APIError;
   static APIConnectionError = Errors.APIConnectionError;
   static APIConnectionTimeoutError = Errors.APIConnectionTimeoutError;
@@ -157,7 +157,7 @@ export class OpenTransit extends Core.APIClient {
 }
 
 export const {
-  OpenTransitError,
+  OneBusAwayError,
   APIError,
   APIConnectionError,
   APIConnectionTimeoutError,
@@ -175,10 +175,12 @@ export const {
 export import toFile = Uploads.toFile;
 export import fileFromPath = Uploads.fileFromPath;
 
-export namespace OpenTransit {
+export namespace OneBusAway {
   export import RequestOptions = Core.RequestOptions;
 
-  export import Where = API.Where;
+  export import API = API.API;
+
+  export import ResponseWrapper = API.ResponseWrapper;
 }
 
-export default OpenTransit;
+export default OneBusAway;

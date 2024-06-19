@@ -1,50 +1,35 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../../core';
-import { APIResource } from '../../resource';
-import * as AgenciesWithCoverageAPI from './agencies-with-coverage';
+import * as Core from '../../../core';
+import { APIResource } from '../../../resource';
+import * as CurrentTimeAPI from './current-time';
+import * as Shared from '../../shared';
 
-export class AgenciesWithCoverage extends APIResource {
+export class CurrentTime extends APIResource {
   /**
-   * Retrieve Agencies with Coverage
+   * current-time
    */
-  list(options?: Core.RequestOptions): Core.APIPromise<AgenciesWithCoverageListResponse> {
-    return this._client.get('/api/where/agencies-with-coverage.json', options);
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<CurrentTimeRetrieveResponse> {
+    return this._client.get('/api/where/current-time.json', options);
   }
 }
 
-export interface AgenciesWithCoverageListResponse {
-  code: number;
-
-  currentTime: number;
-
-  text: string;
-
-  version: number;
-
-  data?: AgenciesWithCoverageListResponse.Data;
+export interface CurrentTimeRetrieveResponse extends Shared.ResponseWrapper {
+  data?: CurrentTimeRetrieveResponse.Data;
 }
 
-export namespace AgenciesWithCoverageListResponse {
+export namespace CurrentTimeRetrieveResponse {
   export interface Data {
-    limitExceeded?: boolean;
-
-    list?: Array<Data.List>;
+    entry?: Data.Entry;
 
     references?: Data.References;
   }
 
   export namespace Data {
-    export interface List {
-      agencyId: string;
+    export interface Entry {
+      readableTime?: string;
 
-      lat: number;
-
-      latSpan: number;
-
-      lon: number;
-
-      lonSpan: number;
+      time?: number;
     }
 
     export interface References {
@@ -157,6 +142,6 @@ export namespace AgenciesWithCoverageListResponse {
   }
 }
 
-export namespace AgenciesWithCoverage {
-  export import AgenciesWithCoverageListResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageListResponse;
+export namespace CurrentTime {
+  export import CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
 }

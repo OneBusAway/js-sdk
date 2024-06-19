@@ -1,8 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../../core';
-import { APIResource } from '../../resource';
+import * as Core from '../../../core';
+import { APIResource } from '../../../resource';
 import * as StopsForLocationAPI from './stops-for-location';
+import * as Shared from '../../shared';
 
 export class StopsForLocation extends APIResource {
   /**
@@ -16,15 +17,7 @@ export class StopsForLocation extends APIResource {
   }
 }
 
-export interface StopsForLocationListResponse {
-  code: number;
-
-  currentTime: number;
-
-  text: string;
-
-  version: number;
-
+export interface StopsForLocationListResponse extends Shared.ResponseWrapper {
   data?: StopsForLocationListResponse.Data;
 }
 

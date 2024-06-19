@@ -2,30 +2,26 @@
 
 import * as Core from '../../../core';
 import { APIResource } from '../../../resource';
-import * as ArrivalsAndDeparturesAPI from './arrivals-and-departures';
+import * as ArrivalsAndDeparturesForStopAPI from './arrivals-and-departures-for-stop';
+import * as Shared from '../../shared';
 
-export class ArrivalsAndDepartures extends APIResource {
+export class ArrivalsAndDeparturesForStop extends APIResource {
   /**
    * arrival-and-departure-for-stop
    */
-  list(stopId: string, options?: Core.RequestOptions): Core.APIPromise<ArrivalsAndDepartureListResponse> {
+  list(
+    stopId: string,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<ArrivalsAndDeparturesForStopListResponse> {
     return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, options);
   }
 }
 
-export interface ArrivalsAndDepartureListResponse {
-  code: number;
-
-  currentTime: number;
-
-  text: string;
-
-  version: number;
-
-  data?: ArrivalsAndDepartureListResponse.Data;
+export interface ArrivalsAndDeparturesForStopListResponse extends Shared.ResponseWrapper {
+  data?: ArrivalsAndDeparturesForStopListResponse.Data;
 }
 
-export namespace ArrivalsAndDepartureListResponse {
+export namespace ArrivalsAndDeparturesForStopListResponse {
   export interface Data {
     entry?: Data.Entry;
   }
@@ -291,6 +287,6 @@ export namespace ArrivalsAndDepartureListResponse {
   }
 }
 
-export namespace ArrivalsAndDepartures {
-  export import ArrivalsAndDepartureListResponse = ArrivalsAndDeparturesAPI.ArrivalsAndDepartureListResponse;
+export namespace ArrivalsAndDeparturesForStop {
+  export import ArrivalsAndDeparturesForStopListResponse = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopListResponse;
 }
