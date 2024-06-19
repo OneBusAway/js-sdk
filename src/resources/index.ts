@@ -7,7 +7,10 @@ export {
   ArrivalAndDepartureForStopRetrieveParams,
   ArrivalAndDepartureForStop,
 } from './arrival-and-departure-for-stop';
-export { ArrivalsAndDeparturesForStop } from './arrivals-and-departures-for-stop';
+export {
+  ArrivalsAndDeparturesForStopRetrieveResponse,
+  ArrivalsAndDeparturesForStop,
+} from './arrivals-and-departures-for-stop';
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export {
