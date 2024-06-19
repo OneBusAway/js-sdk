@@ -2,6 +2,7 @@
 
 Types:
 
+- <code><a href="./src/resources/shared.ts">References</a></code>
 - <code><a href="./src/resources/shared.ts">ResponseWrapper</a></code>
 
 # AgenciesWithCoverage
