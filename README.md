@@ -30,7 +30,7 @@ const oneBusAway = new OneBusAway({
 });
 
 async function main() {
-  const currentTimeRetrieveResponse = await oneBusAway.api.where.currentTime.retrieve();
+  const currentTimeRetrieveResponse = await oneBusAway.currentTime.retrieve();
 }
 
 main();
@@ -49,8 +49,8 @@ const oneBusAway = new OneBusAway({
 });
 
 async function main() {
-  const currentTimeRetrieveResponse: OneBusAway.API.Where.CurrentTimeRetrieveResponse =
-    await oneBusAway.api.where.currentTime.retrieve();
+  const currentTimeRetrieveResponse: OneBusAway.CurrentTimeRetrieveResponse =
+    await oneBusAway.currentTime.retrieve();
 }
 
 main();
@@ -67,7 +67,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const currentTimeRetrieveResponse = await oneBusAway.api.where.currentTime.retrieve().catch(async (err) => {
+  const currentTimeRetrieveResponse = await oneBusAway.currentTime.retrieve().catch(async (err) => {
     if (err instanceof OneBusAway.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
@@ -110,7 +110,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Or, configure per-request:
-await oneBusAway.api.where.currentTime.retrieve({
+await oneBusAway.currentTime.retrieve({
   maxRetries: 5,
 });
 ```
@@ -127,7 +127,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Override per-request:
-await oneBusAway.api.where.currentTime.retrieve({
+await oneBusAway.currentTime.retrieve({
   timeout: 5 * 1000,
 });
 ```
@@ -148,11 +148,11 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const oneBusAway = new OneBusAway();
 
-const response = await oneBusAway.api.where.currentTime.retrieve().asResponse();
+const response = await oneBusAway.currentTime.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: currentTimeRetrieveResponse, response: raw } = await oneBusAway.api.where.currentTime
+const { data: currentTimeRetrieveResponse, response: raw } = await oneBusAway.currentTime
   .retrieve()
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
@@ -260,7 +260,7 @@ const oneBusAway = new OneBusAway({
 });
 
 // Override per-request:
-await oneBusAway.api.where.currentTime.retrieve({
+await oneBusAway.currentTime.retrieve({
   httpAgent: new http.Agent({ keepAlive: false }),
 });
 ```

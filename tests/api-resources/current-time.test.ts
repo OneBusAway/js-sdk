@@ -8,9 +8,9 @@ const oneBusAway = new OneBusAway({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource config', () => {
+describe('resource currentTime', () => {
   test('retrieve', async () => {
-    const responsePromise = oneBusAway.api.where.config.retrieve();
+    const responsePromise = oneBusAway.currentTime.retrieve();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,7 +22,7 @@ describe('resource config', () => {
 
   test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(oneBusAway.api.where.config.retrieve({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+    await expect(oneBusAway.currentTime.retrieve({ path: '/_stainless_unknown_path' })).rejects.toThrow(
       OneBusAway.NotFoundError,
     );
   });

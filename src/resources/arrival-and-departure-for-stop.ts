@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../../../core';
-import { APIResource } from '../../../resource';
+import * as Core from '../core';
+import { APIResource } from '../resource';
 import * as ArrivalAndDepartureForStopAPI from './arrival-and-departure-for-stop';
-import * as Shared from '../../shared';
+import * as Shared from './shared';
 
 export class ArrivalAndDepartureForStop extends APIResource {
   /**

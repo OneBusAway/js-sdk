@@ -1,35 +1,58 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../../../core';
-import { APIResource } from '../../../resource';
-import * as CurrentTimeAPI from './current-time';
-import * as Shared from '../../shared';
+import * as Core from '../core';
+import { APIResource } from '../resource';
+import * as StopsForLocationAPI from './stops-for-location';
+import * as Shared from './shared';
 
-export class CurrentTime extends APIResource {
+export class StopsForLocation extends APIResource {
   /**
-   * current-time
+   * stops-for-location
    */
-  retrieve(options?: Core.RequestOptions): Core.APIPromise<CurrentTimeRetrieveResponse> {
-    return this._client.get('/api/where/current-time.json', options);
+  list(
+    query: StopsForLocationListParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<StopsForLocationListResponse> {
+    return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
 
-export interface CurrentTimeRetrieveResponse extends Shared.ResponseWrapper {
-  data?: CurrentTimeRetrieveResponse.Data;
+export interface StopsForLocationListResponse extends Shared.ResponseWrapper {
+  data?: StopsForLocationListResponse.Data;
 }
 
-export namespace CurrentTimeRetrieveResponse {
+export namespace StopsForLocationListResponse {
   export interface Data {
-    entry?: Data.Entry;
+    limitExceeded?: boolean;
+
+    list?: Array<Data.List>;
 
     references?: Data.References;
   }
 
   export namespace Data {
-    export interface Entry {
-      readableTime?: string;
+    export interface List {
+      id?: string;
 
-      time?: number;
+      code?: string;
+
+      direction?: string;
+
+      lat?: number;
+
+      locationType?: number;
+
+      lon?: number;
+
+      name?: string;
+
+      parent?: string;
+
+      routeIds?: Array<string>;
+
+      staticRouteIds?: Array<string>;
+
+      wheelchairBoarding?: string;
     }
 
     export interface References {
@@ -142,6 +165,15 @@ export namespace CurrentTimeRetrieveResponse {
   }
 }
 
-export namespace CurrentTime {
-  export import CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
+export interface StopsForLocationListParams {
+  key: string;
+
+  lat?: number;
+
+  lon?: number;
+}
+
+export namespace StopsForLocation {
+  export import StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
+  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
 }

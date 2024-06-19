@@ -116,7 +116,12 @@ export class OneBusAway extends Core.APIClient {
     this.apiKey = apiKey;
   }
 
-  api: API.API = new API.API(this);
+  agenciesWithCoverage: API.AgenciesWithCoverage = new API.AgenciesWithCoverage(this);
+  config: API.Config = new API.Config(this);
+  currentTime: API.CurrentTime = new API.CurrentTime(this);
+  stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
+  arrivalAndDepartureForStop: API.ArrivalAndDepartureForStop = new API.ArrivalAndDepartureForStop(this);
+  arrivalsAndDeparturesForStop: API.ArrivalsAndDeparturesForStop = new API.ArrivalsAndDeparturesForStop(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -178,7 +183,25 @@ export import fileFromPath = Uploads.fileFromPath;
 export namespace OneBusAway {
   export import RequestOptions = Core.RequestOptions;
 
-  export import API = API.API;
+  export import AgenciesWithCoverage = API.AgenciesWithCoverage;
+  export import AgenciesWithCoverageListResponse = API.AgenciesWithCoverageListResponse;
+
+  export import Config = API.Config;
+  export import ConfigRetrieveResponse = API.ConfigRetrieveResponse;
+
+  export import CurrentTime = API.CurrentTime;
+  export import CurrentTimeRetrieveResponse = API.CurrentTimeRetrieveResponse;
+
+  export import StopsForLocation = API.StopsForLocation;
+  export import StopsForLocationListResponse = API.StopsForLocationListResponse;
+  export import StopsForLocationListParams = API.StopsForLocationListParams;
+
+  export import ArrivalAndDepartureForStop = API.ArrivalAndDepartureForStop;
+  export import ArrivalAndDepartureForStopRetrieveResponse = API.ArrivalAndDepartureForStopRetrieveResponse;
+  export import ArrivalAndDepartureForStopRetrieveParams = API.ArrivalAndDepartureForStopRetrieveParams;
+
+  export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
+  export import ArrivalsAndDeparturesForStopListResponse = API.ArrivalsAndDeparturesForStopListResponse;
 
   export import ResponseWrapper = API.ResponseWrapper;
 }

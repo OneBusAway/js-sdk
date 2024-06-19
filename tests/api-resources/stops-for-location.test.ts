@@ -10,7 +10,7 @@ const oneBusAway = new OneBusAway({
 
 describe('resource stopsForLocation', () => {
   test('list: only required params', async () => {
-    const responsePromise = oneBusAway.api.where.stopsForLocation.list({ key: 'string' });
+    const responsePromise = oneBusAway.stopsForLocation.list({ key: 'string' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -21,6 +21,6 @@ describe('resource stopsForLocation', () => {
   });
 
   test('list: required and optional params', async () => {
-    const response = await oneBusAway.api.where.stopsForLocation.list({ key: 'string', lat: 0, lon: 0 });
+    const response = await oneBusAway.stopsForLocation.list({ key: 'string', lat: 0, lon: 0 });
   });
 });
