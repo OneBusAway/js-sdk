@@ -1,3 +1,10 @@
+# Shared
+
+Types:
+
+- <code><a href="./src/resources/shared.ts">References</a></code>
+- <code><a href="./src/resources/shared.ts">ResponseWrapper</a></code>
+
 # AgenciesWithCoverage
 
 Types:
@@ -56,4 +63,4 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>
