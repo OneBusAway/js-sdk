@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OneBusAway from 'open-transit';
+import OneBusAway from 'onebusaway';
 import { Response } from 'node-fetch';
 
 const oneBusAway = new OneBusAway({

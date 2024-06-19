@@ -11,7 +11,7 @@
     "paths": {
       "onebusaway/_shims/auto/*": ["src/_shims/auto/*-node"],
       "onebusaway/*": ["src/*"],
-      "onebusaway": ["src/index.ts"]
+      "onebusaway": ["src/index.ts"],
     },
     "noEmit": true,
 

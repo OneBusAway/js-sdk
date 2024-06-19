@@ -1,6 +1,6 @@
 # One Bus Away Node API Library
 
-[![NPM version](https://img.shields.io/npm/v/open-transit.svg)](https://npmjs.org/package/open-transit) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/open-transit)
+[![NPM version](https://img.shields.io/npm/v/onebusaway.svg)](https://npmjs.org/package/onebusaway) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/onebusaway)
 
 This library provides convenient access to the One Bus Away REST API from server-side TypeScript or JavaScript.
 
@@ -15,7 +15,7 @@ npm install git+ssh://git@github.com:stainless-sdks/open-transit-node.git
 ```
 
 > [!NOTE]
-> Once this package is [published to npm](https://app.stainlessapi.com/docs/guides/publish), this will become: `npm install open-transit`
+> Once this package is [published to npm](https://app.stainlessapi.com/docs/guides/publish), this will become: `npm install onebusaway`
 
 ## Usage
 
@@ -23,7 +23,7 @@ The full API of this library can be found in [api.md](api.md).
 
 <!-- prettier-ignore -->
 ```js
-import OneBusAway from 'open-transit';
+import OneBusAway from 'onebusaway';
 
 const oneBusAway = new OneBusAway({
   apiKey: process.env['ONEBUSAWAY_API_KEY'], // This is the default and can be omitted
@@ -42,7 +42,7 @@ This library includes TypeScript definitions for all request params and response
 
 <!-- prettier-ignore -->
 ```ts
-import OneBusAway from 'open-transit';
+import OneBusAway from 'onebusaway';
 
 const oneBusAway = new OneBusAway({
   apiKey: process.env['ONEBUSAWAY_API_KEY'], // This is the default and can be omitted
@@ -214,11 +214,11 @@ add the following import before your first import `from "OneBusAway"`:
 ```ts
 // Tell TypeScript and the package to use the global web fetch instead of node-fetch.
 // Note, despite the name, this does not add any polyfills, but expects them to be provided if needed.
-import 'open-transit/shims/web';
-import OneBusAway from 'open-transit';
+import 'onebusaway/shims/web';
+import OneBusAway from 'onebusaway';
 ```
 
-To do the inverse, add `import "open-transit/shims/node"` (which does import polyfills).
+To do the inverse, add `import "onebusaway/shims/node"` (which does import polyfills).
 This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/stainless-sdks/open-transit-node/tree/main/src/_shims#readme)).
 
 ### Logging and middleware
@@ -228,7 +228,7 @@ which can be used to inspect or alter the `Request` or `Response` before/after e
 
 ```ts
 import { fetch } from 'undici'; // as one example
-import OneBusAway from 'open-transit';
+import OneBusAway from 'onebusaway';
 
 const client = new OneBusAway({
   fetch: async (url: RequestInfo, init?: RequestInit): Promise<Response> => {
@@ -284,7 +284,7 @@ TypeScript >= 4.5 is supported.
 The following runtimes are supported:
 
 - Node.js 18 LTS or later ([non-EOL](https://endoflife.date/nodejs)) versions.
-- Deno v1.28.0 or higher, using `import OneBusAway from "npm:open-transit"`.
+- Deno v1.28.0 or higher, using `import OneBusAway from "npm:onebusaway"`.
 - Bun 1.0 or later.
 - Cloudflare Workers.
 - Vercel Edge Runtime.
