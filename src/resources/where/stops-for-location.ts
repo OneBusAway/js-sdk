@@ -1,19 +1,22 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../core';
-import { APIResource } from '../resource';
-import * as ConfigAPI from './config';
+import * as Core from '../../core';
+import { APIResource } from '../../resource';
+import * as StopsForLocationAPI from './stops-for-location';
 
-export class Config extends APIResource {
+export class StopsForLocation extends APIResource {
   /**
-   * config
+   * stops-for-location
    */
-  retrieve(options?: Core.RequestOptions): Core.APIPromise<ConfigRetrieveResponse> {
-    return this._client.get('/api/where/config.json', options);
+  list(
+    query: StopsForLocationListParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<StopsForLocationListResponse> {
+    return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
 
-export interface ConfigRetrieveResponse {
+export interface StopsForLocationListResponse {
   code: number;
 
   currentTime: number;
@@ -22,71 +25,41 @@ export interface ConfigRetrieveResponse {
 
   version: number;
 
-  data?: ConfigRetrieveResponse.Data;
+  data?: StopsForLocationListResponse.Data;
 }
 
-export namespace ConfigRetrieveResponse {
+export namespace StopsForLocationListResponse {
   export interface Data {
-    entry?: Data.Entry;
+    limitExceeded?: boolean;
+
+    list?: Array<Data.List>;
 
     references?: Data.References;
   }
 
   export namespace Data {
-    export interface Entry {
+    export interface List {
       id?: string;
 
-      gitProperties?: Entry.GitProperties;
+      code?: string;
+
+      direction?: string;
+
+      lat?: number;
+
+      locationType?: number;
+
+      lon?: number;
 
       name?: string;
 
-      serviceDateFrom?: string;
+      parent?: string;
 
-      serviceDateTo?: string;
-    }
+      routeIds?: Array<string>;
 
-    export namespace Entry {
-      export interface GitProperties {
-        'git.branch'?: string;
+      staticRouteIds?: Array<string>;
 
-        'git.build.host'?: string;
-
-        'git.build.time'?: string;
-
-        'git.build.user.email'?: string;
-
-        'git.build.user.name'?: string;
-
-        'git.build.version'?: string;
-
-        'git.closest.tag.commit.count'?: string;
-
-        'git.closest.tag.name'?: string;
-
-        'git.commit.id'?: string;
-
-        'git.commit.id.abbrev'?: string;
-
-        'git.commit.id.describe'?: string;
-
-        'git.commit.id.describe-short'?: string;
-
-        'git.commit.message.full'?: string;
-
-        'git.commit.message.short'?: string;
-
-        'git.commit.time'?: string;
-
-        'git.commit.user.email'?: string;
-
-        'git.commit.user.name'?: string;
-
-        'git.dirty'?: string;
-
-        'git.remote.origin.url'?: string;
-
-        'git.tags'?: string;
-      }
+      wheelchairBoarding?: string;
     }
 
     export interface References {
@@ -199,6 +172,15 @@ export namespace ConfigRetrieveResponse {
   }
 }
 
-export namespace Config {
-  export import ConfigRetrieveResponse = ConfigAPI.ConfigRetrieveResponse;
+export interface StopsForLocationListParams {
+  key: string;
+
+  lat?: number;
+
+  lon?: number;
+}
+
+export namespace StopsForLocation {
+  export import StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
+  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
 }

@@ -1,19 +1,16 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OneBusAway from 'onebusaway';
+import OpenTransit from 'open-transit';
 import { Response } from 'node-fetch';
 
-const oneBusAway = new OneBusAway({
+const openTransit = new OpenTransit({
   apiKey: 'My API Key',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource arrivalsAndDeparturesForStop', () => {
-  test('retrieve: only required params', async () => {
-    const responsePromise = oneBusAway.arrivalsAndDeparturesForStop.retrieve('1_75403', {
-      serviceDate: 0,
-      tripId: 'string',
-    });
+describe('resource currentTime', () => {
+  test('retrieve', async () => {
+    const responsePromise = openTransit.where.currentTime.retrieve();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -23,13 +20,10 @@ describe('resource arrivalsAndDeparturesForStop', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: required and optional params', async () => {
-    const response = await oneBusAway.arrivalsAndDeparturesForStop.retrieve('1_75403', {
-      serviceDate: 0,
-      tripId: 'string',
-      stopSequence: 0,
-      time: 0,
-      vehicleId: 'string',
-    });
+  test('retrieve: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      openTransit.where.currentTime.retrieve({ path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(OpenTransit.NotFoundError);
   });
 });

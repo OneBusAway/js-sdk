@@ -1,23 +1,23 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../core';
-import { APIResource } from '../resource';
-import * as ArrivalsAndDeparturesForStopAPI from './arrivals-and-departures-for-stop';
+import * as Core from '../../../core';
+import { APIResource } from '../../../resource';
+import * as ArrivalAndDepartureAPI from './arrival-and-departure';
 
-export class ArrivalsAndDeparturesForStop extends APIResource {
+export class ArrivalAndDeparture extends APIResource {
   /**
    * arrival-and-departure-for-stop
    */
   retrieve(
     stopId: string,
-    query: ArrivalsAndDeparturesForStopRetrieveParams,
+    query: ArrivalAndDepartureRetrieveParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<ArrivalsAndDeparturesForStopRetrieveResponse> {
+  ): Core.APIPromise<ArrivalAndDepartureRetrieveResponse> {
     return this._client.get(`/api/where/arrival-and-departure-for-stop/stopID.json`, { query, ...options });
   }
 }
 
-export interface ArrivalsAndDeparturesForStopRetrieveResponse {
+export interface ArrivalAndDepartureRetrieveResponse {
   code: number;
 
   currentTime: number;
@@ -26,10 +26,10 @@ export interface ArrivalsAndDeparturesForStopRetrieveResponse {
 
   version: number;
 
-  data?: ArrivalsAndDeparturesForStopRetrieveResponse.Data;
+  data?: ArrivalAndDepartureRetrieveResponse.Data;
 }
 
-export namespace ArrivalsAndDeparturesForStopRetrieveResponse {
+export namespace ArrivalAndDepartureRetrieveResponse {
   export interface Data {
     entry?: Data.Entry;
 
@@ -289,7 +289,7 @@ export namespace ArrivalsAndDeparturesForStopRetrieveResponse {
   }
 }
 
-export interface ArrivalsAndDeparturesForStopRetrieveParams {
+export interface ArrivalAndDepartureRetrieveParams {
   serviceDate: number;
 
   tripId: string;
@@ -301,7 +301,7 @@ export interface ArrivalsAndDeparturesForStopRetrieveParams {
   vehicleId?: string;
 }
 
-export namespace ArrivalsAndDeparturesForStop {
-  export import ArrivalsAndDeparturesForStopRetrieveResponse = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveResponse;
-  export import ArrivalsAndDeparturesForStopRetrieveParams = ArrivalsAndDeparturesForStopAPI.ArrivalsAndDeparturesForStopRetrieveParams;
+export namespace ArrivalAndDeparture {
+  export import ArrivalAndDepartureRetrieveResponse = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveResponse;
+  export import ArrivalAndDepartureRetrieveParams = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveParams;
 }

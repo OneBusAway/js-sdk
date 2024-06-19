@@ -6,9 +6,9 @@
     "rootDir": "./deno",
     "lib": ["es2020", "DOM"],
     "paths": {
-      "onebusaway/_shims/auto/*": ["deno/_shims/auto/*-deno"],
-      "onebusaway/*": ["deno/*"],
-      "onebusaway": ["deno/index.ts"],
+      "open-transit/_shims/auto/*": ["deno/_shims/auto/*-deno"],
+      "open-transit/*": ["deno/*"],
+      "open-transit": ["deno/index.ts"],
     },
     "noEmit": true,
     "declaration": true,

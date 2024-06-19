@@ -1,22 +1,19 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../core';
-import { APIResource } from '../resource';
-import * as StopsForLocationAPI from './stops-for-location';
+import * as Core from '../../core';
+import { APIResource } from '../../resource';
+import * as AgenciesWithCoverageAPI from './agencies-with-coverage';
 
-export class StopsForLocation extends APIResource {
+export class AgenciesWithCoverage extends APIResource {
   /**
-   * stops-for-location
+   * Retrieve Agencies with Coverage
    */
-  retrieve(
-    query: StopsForLocationRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<StopsForLocationRetrieveResponse> {
-    return this._client.get('/api/where/stops-for-location.json', { query, ...options });
+  list(options?: Core.RequestOptions): Core.APIPromise<AgenciesWithCoverageListResponse> {
+    return this._client.get('/api/where/agencies-with-coverage.json', options);
   }
 }
 
-export interface StopsForLocationRetrieveResponse {
+export interface AgenciesWithCoverageListResponse {
   code: number;
 
   currentTime: number;
@@ -25,10 +22,10 @@ export interface StopsForLocationRetrieveResponse {
 
   version: number;
 
-  data?: StopsForLocationRetrieveResponse.Data;
+  data?: AgenciesWithCoverageListResponse.Data;
 }
 
-export namespace StopsForLocationRetrieveResponse {
+export namespace AgenciesWithCoverageListResponse {
   export interface Data {
     limitExceeded?: boolean;
 
@@ -39,27 +36,15 @@ export namespace StopsForLocationRetrieveResponse {
 
   export namespace Data {
     export interface List {
-      id?: string;
+      agencyId: string;
 
-      code?: string;
+      lat: number;
 
-      direction?: string;
+      latSpan: number;
 
-      lat?: number;
+      lon: number;
 
-      locationType?: number;
-
-      lon?: number;
-
-      name?: string;
-
-      parent?: string;
-
-      routeIds?: Array<string>;
-
-      staticRouteIds?: Array<string>;
-
-      wheelchairBoarding?: string;
+      lonSpan: number;
     }
 
     export interface References {
@@ -172,15 +157,6 @@ export namespace StopsForLocationRetrieveResponse {
   }
 }
 
-export interface StopsForLocationRetrieveParams {
-  key: string;
-
-  lat?: number;
-
-  lon?: number;
-}
-
-export namespace StopsForLocation {
-  export import StopsForLocationRetrieveResponse = StopsForLocationAPI.StopsForLocationRetrieveResponse;
-  export import StopsForLocationRetrieveParams = StopsForLocationAPI.StopsForLocationRetrieveParams;
+export namespace AgenciesWithCoverage {
+  export import AgenciesWithCoverageListResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageListResponse;
 }
