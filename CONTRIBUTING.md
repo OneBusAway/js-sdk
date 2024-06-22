@@ -55,12 +55,12 @@ cd onebusaway-js-sdk
 # With yarn
 yarn link
 cd ../my-package
-yarn link onebusaway-sdk
+yarn link onebusaway
 
 # With pnpm
 pnpm link --global
 cd ../my-package
-pnpm link -—global onebusaway-sdk
+pnpm link -—global onebusaway
 ```
 
 ## Running tests
