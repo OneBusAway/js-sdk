@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OnebusawaySDK from 'onebusaway';
+import OnebusawaySDK from 'onebusaway-sdk';
 import { Response } from 'node-fetch';
 
 const onebusawaySDK = new OnebusawaySDK({

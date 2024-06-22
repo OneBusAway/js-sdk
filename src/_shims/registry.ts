@@ -42,12 +42,12 @@ export let isFsReadStream: Shims['isFsReadStream'] | undefined = undefined;
 export function setShims(shims: Shims, options: { auto: boolean } = { auto: false }) {
   if (auto) {
     throw new Error(
-      `you must \`import 'onebusaway/shims/${shims.kind}'\` before importing anything else from onebusaway`,
+      `you must \`import 'onebusaway-sdk/shims/${shims.kind}'\` before importing anything else from onebusaway-sdk`,
     );
   }
   if (kind) {
     throw new Error(
-      `can't \`import 'onebusaway/shims/${shims.kind}'\` after \`import 'onebusaway/shims/${kind}'\``,
+      `can't \`import 'onebusaway-sdk/shims/${shims.kind}'\` after \`import 'onebusaway-sdk/shims/${kind}'\``,
     );
   }
   auto = options.auto;

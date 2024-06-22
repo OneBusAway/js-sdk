@@ -1,5 +1,5 @@
 {
-  "name": "onebusaway",
+  "name": "onebusaway-sdk",
   "version": "0.1.0-alpha.2",
   "description": "The official TypeScript library for the Onebusaway SDK API",
   "author": "Onebusaway SDK <info@onebusaway.org>",
@@ -60,8 +60,8 @@
     "./shims/web.mjs"
   ],
   "imports": {
-    "onebusaway": ".",
-    "onebusaway/*": "./src/*"
+    "onebusaway-sdk": ".",
+    "onebusaway-sdk/*": "./src/*"
   },
   "exports": {
     "./_shims/auto/*": {

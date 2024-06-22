@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "onebusaway/*": ["dist/src/*"],
-      "onebusaway": ["dist/src/index.ts"],
+      "onebusaway-sdk/*": ["dist/src/*"],
+      "onebusaway-sdk": ["dist/src/index.ts"],
     },
     "noEmit": false,
     "declaration": true,
