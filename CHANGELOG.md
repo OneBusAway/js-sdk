@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2024-06-22)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/OneBusAway/onebusaway-js-sdk/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Chores
+
+* **internal:** version bump ([#9](https://github.com/OneBusAway/onebusaway-js-sdk/issues/9)) ([096a223](https://github.com/OneBusAway/onebusaway-js-sdk/commit/096a223271e587109d29ca60c41eca61b68b4c08))
+
 ## 0.1.0-alpha.2 (2024-06-22)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/OneBusAway/onebusaway-js-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
@@ -7,11 +15,6 @@ Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/OneBusAway/
 ### Features
 
 * **api:** update via SDK Studio ([#5](https://github.com/OneBusAway/onebusaway-js-sdk/issues/5)) ([35e898e](https://github.com/OneBusAway/onebusaway-js-sdk/commit/35e898e624904947f711dcfa0de18093ca572321))
-
-
-### Chores
-
-* update SDK settings ([#7](https://github.com/OneBusAway/onebusaway-js-sdk/issues/7)) ([478c9b4](https://github.com/OneBusAway/onebusaway-js-sdk/commit/478c9b4a122a9d1f7d59c0078a6986d23083e8b2))
 
 ## 0.1.0-alpha.1 (2024-06-22)
 
