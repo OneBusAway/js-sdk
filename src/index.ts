@@ -189,6 +189,7 @@ export namespace OnebusawaySDK {
 
   export import Agency = API.Agency;
   export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;
+  export import AgencyRetrieveParams = API.AgencyRetrieveParams;
 
   export import Config = API.Config;
   export import ConfigRetrieveResponse = API.ConfigRetrieveResponse;
