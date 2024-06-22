@@ -1,8 +1,8 @@
 {
   "name": "onebusaway",
-  "version": "0.1.0-alpha.1",
-  "description": "The official TypeScript library for the One Bus Away API",
-  "author": "One Bus Away <info@onebusaway.org>",
+  "version": "0.1.0-alpha.2",
+  "description": "The official TypeScript library for the Onebusaway SDK API",
+  "author": "Onebusaway SDK <info@onebusaway.org>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",

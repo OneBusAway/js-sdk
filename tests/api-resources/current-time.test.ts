@@ -1,16 +1,16 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OneBusAway from 'onebusaway';
+import OnebusawaySDK from 'onebusaway';
 import { Response } from 'node-fetch';
 
-const oneBusAway = new OneBusAway({
+const onebusawaySDK = new OnebusawaySDK({
   apiKey: 'My API Key',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
 describe('resource currentTime', () => {
   test('retrieve', async () => {
-    const responsePromise = oneBusAway.currentTime.retrieve();
+    const responsePromise = onebusawaySDK.currentTime.retrieve();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,8 +22,8 @@ describe('resource currentTime', () => {
 
   test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(oneBusAway.currentTime.retrieve({ path: '/_stainless_unknown_path' })).rejects.toThrow(
-      OneBusAway.NotFoundError,
+    await expect(onebusawaySDK.currentTime.retrieve({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      OnebusawaySDK.NotFoundError,
     );
   });
 });
