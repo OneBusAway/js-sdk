@@ -2,6 +2,7 @@
 
 export * from './shared';
 export { AgenciesWithCoverageRetrieveResponse, AgenciesWithCoverage } from './agencies-with-coverage';
+export { AgencyRetrieveResponse, Agency } from './agency';
 export {
   ArrivalAndDepartureForStopRetrieveResponse,
   ArrivalAndDepartureForStopRetrieveParams,
