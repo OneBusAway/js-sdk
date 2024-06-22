@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OnebusawaySDK from 'onebusaway';
-import { APIUserAbortError } from 'onebusaway';
-import { Headers } from 'onebusaway/core';
+import OnebusawaySDK from 'onebusaway-sdk';
+import { APIUserAbortError } from 'onebusaway-sdk';
+import { Headers } from 'onebusaway-sdk/core';
 import defaultFetch, { Response, type RequestInit, type RequestInfo } from 'node-fetch';
 
 describe('instantiate client', () => {

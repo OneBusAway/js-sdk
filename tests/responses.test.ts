@@ -1,5 +1,5 @@
-import { createResponseHeaders } from 'onebusaway/core';
-import { Headers } from 'onebusaway/_shims/index';
+import { createResponseHeaders } from 'onebusaway-sdk/core';
+import { Headers } from 'onebusaway-sdk/_shims/index';
 
 describe('response parsing', () => {
   // TODO: test unicode characters

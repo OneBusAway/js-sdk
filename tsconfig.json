@@ -9,9 +9,9 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "onebusaway/_shims/auto/*": ["src/_shims/auto/*-node"],
-      "onebusaway/*": ["src/*"],
-      "onebusaway": ["src/index.ts"],
+      "onebusaway-sdk/_shims/auto/*": ["src/_shims/auto/*-node"],
+      "onebusaway-sdk/*": ["src/*"],
+      "onebusaway-sdk": ["src/index.ts"],
     },
     "noEmit": true,
 

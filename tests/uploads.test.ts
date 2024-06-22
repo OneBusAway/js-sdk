@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { toFile, type ResponseLike } from 'onebusaway/uploads';
-import { File } from 'onebusaway/_shims/index';
+import { toFile, type ResponseLike } from 'onebusaway-sdk/uploads';
+import { File } from 'onebusaway-sdk/_shims/index';
 
 class MyClass {
   name: string = 'foo';
