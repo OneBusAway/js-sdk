@@ -16,4 +16,4 @@ jobs:
         run: |
           bash ./bin/check-release-environment
         env:
-          NPM_TOKEN: ${{ secrets.ONE_BUS_AWAY_NPM_TOKEN || secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.ONEBUSAWAY_SDK_NPM_TOKEN || secrets.NPM_TOKEN }}

@@ -1,16 +1,16 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import OneBusAway from 'onebusaway';
+import OnebusawaySDK from 'onebusaway';
 import { Response } from 'node-fetch';
 
-const oneBusAway = new OneBusAway({
+const onebusawaySDK = new OnebusawaySDK({
   apiKey: 'My API Key',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
 describe('resource arrivalAndDepartureForStop', () => {
   test('retrieve: only required params', async () => {
-    const responsePromise = oneBusAway.arrivalAndDepartureForStop.retrieve('1_75403', {
+    const responsePromise = onebusawaySDK.arrivalAndDepartureForStop.retrieve('1_75403', {
       serviceDate: 0,
       tripId: 'string',
     });
@@ -24,7 +24,7 @@ describe('resource arrivalAndDepartureForStop', () => {
   });
 
   test('retrieve: required and optional params', async () => {
-    const response = await oneBusAway.arrivalAndDepartureForStop.retrieve('1_75403', {
+    const response = await onebusawaySDK.arrivalAndDepartureForStop.retrieve('1_75403', {
       serviceDate: 0,
       tripId: 'string',
       stopSequence: 0,

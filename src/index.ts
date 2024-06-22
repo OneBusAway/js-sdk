@@ -15,7 +15,7 @@ export interface ClientOptions {
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
    *
-   * Defaults to process.env['ONE_BUS_AWAY_BASE_URL'].
+   * Defaults to process.env['ONEBUSAWAY_SDK_BASE_URL'].
    */
   baseURL?: string | null | undefined;
 
@@ -69,17 +69,17 @@ export interface ClientOptions {
   defaultQuery?: Core.DefaultQuery;
 }
 
-/** API Client for interfacing with the One Bus Away API. */
-export class OneBusAway extends Core.APIClient {
+/** API Client for interfacing with the Onebusaway SDK API. */
+export class OnebusawaySDK extends Core.APIClient {
   apiKey: string;
 
   private _options: ClientOptions;
 
   /**
-   * API Client for interfacing with the One Bus Away API.
+   * API Client for interfacing with the Onebusaway SDK API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['ONEBUSAWAY_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['ONE_BUS_AWAY_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['ONEBUSAWAY_SDK_BASE_URL'] ?? https://api.pugetsound.onebusaway.org] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {number} [opts.httpAgent] - An HTTP agent used to manage HTTP(s) connections.
    * @param {Core.Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -88,13 +88,13 @@ export class OneBusAway extends Core.APIClient {
    * @param {Core.DefaultQuery} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
   constructor({
-    baseURL = Core.readEnv('ONE_BUS_AWAY_BASE_URL'),
+    baseURL = Core.readEnv('ONEBUSAWAY_SDK_BASE_URL'),
     apiKey = Core.readEnv('ONEBUSAWAY_API_KEY'),
     ...opts
   }: ClientOptions = {}) {
     if (apiKey === undefined) {
-      throw new Errors.OneBusAwayError(
-        "The ONEBUSAWAY_API_KEY environment variable is missing or empty; either provide it, or instantiate the OneBusAway client with an apiKey option, like new OneBusAway({ apiKey: 'My API Key' }).",
+      throw new Errors.OnebusawaySDKError(
+        "The ONEBUSAWAY_API_KEY environment variable is missing or empty; either provide it, or instantiate the OnebusawaySDK client with an apiKey option, like new OnebusawaySDK({ apiKey: 'My API Key' }).",
       );
     }
 
@@ -141,9 +141,9 @@ export class OneBusAway extends Core.APIClient {
     return {};
   }
 
-  static OneBusAway = this;
+  static OnebusawaySDK = this;
 
-  static OneBusAwayError = Errors.OneBusAwayError;
+  static OnebusawaySDKError = Errors.OnebusawaySDKError;
   static APIError = Errors.APIError;
   static APIConnectionError = Errors.APIConnectionError;
   static APIConnectionTimeoutError = Errors.APIConnectionTimeoutError;
@@ -162,7 +162,7 @@ export class OneBusAway extends Core.APIClient {
 }
 
 export const {
-  OneBusAwayError,
+  OnebusawaySDKError,
   APIError,
   APIConnectionError,
   APIConnectionTimeoutError,
@@ -180,7 +180,7 @@ export const {
 export import toFile = Uploads.toFile;
 export import fileFromPath = Uploads.fileFromPath;
 
-export namespace OneBusAway {
+export namespace OnebusawaySDK {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
@@ -207,4 +207,4 @@ export namespace OneBusAway {
   export import ResponseWrapper = API.ResponseWrapper;
 }
 
-export default OneBusAway;
+export default OnebusawaySDK;
