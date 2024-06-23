@@ -11,8 +11,11 @@ It is generated with [Stainless](https://www.stainlessapi.com/).
 ## Installation
 
 ```sh
-npm install onebusaway-sdk
+npm install git+ssh://git@github.com:onebusaway/js-sdk.git
 ```
+
+> [!NOTE]
+> Once this package is [published to npm](https://app.stainlessapi.com/docs/guides/publish), this will become: `npm install onebusaway-sdk`
 
 ## Usage
 
@@ -216,7 +219,7 @@ import OnebusawaySDK from 'onebusaway-sdk';
 ```
 
 To do the inverse, add `import "onebusaway-sdk/shims/node"` (which does import polyfills).
-This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/OneBusAway/js-sdk/tree/main/src/_shims#readme)).
+This can also be useful if you are getting the wrong TypeScript types for `Response` ([more details](https://github.com/onebusaway/js-sdk/tree/main/src/_shims#readme)).
 
 ### Logging and middleware
 
@@ -272,7 +275,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/OneBusAway/js-sdk/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/onebusaway/js-sdk/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
