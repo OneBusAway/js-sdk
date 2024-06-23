@@ -11,7 +11,7 @@ It is generated with [Stainless](https://www.stainlessapi.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:onebusaway/js-sdk.git
+npm install git+ssh://git@github.com:OneBusAway/js-sdk.git
 ```
 
 > [!NOTE]
