@@ -117,11 +117,11 @@ export class OnebusawaySDK extends Core.APIClient {
   }
 
   agenciesWithCoverage: API.AgenciesWithCoverage = new API.AgenciesWithCoverage(this);
+  agency: API.Agency = new API.Agency(this);
   config: API.Config = new API.Config(this);
   currentTime: API.CurrentTime = new API.CurrentTime(this);
   stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
   arrivalAndDepartureForStop: API.ArrivalAndDepartureForStop = new API.ArrivalAndDepartureForStop(this);
-  arrivalsAndDeparturesForStop: API.ArrivalsAndDeparturesForStop = new API.ArrivalsAndDeparturesForStop(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -186,6 +186,10 @@ export namespace OnebusawaySDK {
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
   export import AgenciesWithCoverageRetrieveResponse = API.AgenciesWithCoverageRetrieveResponse;
 
+  export import Agency = API.Agency;
+  export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;
+  export import AgencyRetrieveParams = API.AgencyRetrieveParams;
+
   export import Config = API.Config;
   export import ConfigRetrieveResponse = API.ConfigRetrieveResponse;
 
@@ -199,9 +203,6 @@ export namespace OnebusawaySDK {
   export import ArrivalAndDepartureForStop = API.ArrivalAndDepartureForStop;
   export import ArrivalAndDepartureForStopRetrieveResponse = API.ArrivalAndDepartureForStopRetrieveResponse;
   export import ArrivalAndDepartureForStopRetrieveParams = API.ArrivalAndDepartureForStopRetrieveParams;
-
-  export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
-  export import ArrivalsAndDeparturesForStopRetrieveResponse = API.ArrivalsAndDeparturesForStopRetrieveResponse;
 
   export import References = API.References;
   export import ResponseWrapper = API.ResponseWrapper;
