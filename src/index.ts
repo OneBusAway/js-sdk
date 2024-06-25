@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from './core';
 import * as Errors from './error';
-import { type Agent } from './_shims/index';
 import * as Uploads from './uploads';
+import { type Agent } from './_shims/index';
+import * as Core from './core';
 import * as API from './resources/index';
 
 export interface ClientOptions {
@@ -69,7 +69,9 @@ export interface ClientOptions {
   defaultQuery?: Core.DefaultQuery;
 }
 
-/** API Client for interfacing with the Onebusaway SDK API. */
+/**
+ * API Client for interfacing with the Onebusaway SDK API.
+ */
 export class OnebusawaySDK extends Core.APIClient {
   apiKey: string;
 
@@ -111,6 +113,7 @@ export class OnebusawaySDK extends Core.APIClient {
       maxRetries: options.maxRetries,
       fetch: options.fetch,
     });
+
     this._options = options;
 
     this.apiKey = apiKey;
@@ -188,7 +191,6 @@ export namespace OnebusawaySDK {
 
   export import Agency = API.Agency;
   export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;
-  export import AgencyRetrieveParams = API.AgencyRetrieveParams;
 
   export import Config = API.Config;
   export import ConfigRetrieveResponse = API.ConfigRetrieveResponse;
