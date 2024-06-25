@@ -23,7 +23,7 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/agency/{agencyID}.json">client.agency.<a href="./src/resources/agency.ts">retrieve</a>(agencyId, { ...params }) -> AgencyRetrieveResponse</code>
+- <code title="get /api/where/agency/{agencyID}">client.agency.<a href="./src/resources/agency.ts">retrieve</a>(agencyId) -> AgencyRetrieveResponse</code>
 
 # Config
 
@@ -63,4 +63,4 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/arrival-and-departure-for-stop/{stopID}.json">client.arrivalAndDepartureForStop.<a href="./src/resources/arrival-and-departure-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureForStopRetrieveResponse</code>
+- <code title="get /api/where/arrival-and-departure-for-stop/{stopID}">client.arrivalAndDepartureForStop.<a href="./src/resources/arrival-and-departure-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureForStopRetrieveResponse</code>

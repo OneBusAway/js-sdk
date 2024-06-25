@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import * as Core from '../core';
 import { APIResource } from '../resource';
+import * as Core from '../core';
 import * as AgencyAPI from './agency';
 import * as Shared from './shared';
 
@@ -9,12 +9,8 @@ export class Agency extends APIResource {
   /**
    * Retrieve information for a specific transit agency identified by its unique ID.
    */
-  retrieve(
-    agencyId: string,
-    query: AgencyRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AgencyRetrieveResponse> {
-    return this._client.get(`/api/where/agency/agencyID.json`, { query, ...options });
+  retrieve(agencyId: string, options?: Core.RequestOptions): Core.APIPromise<AgencyRetrieveResponse> {
+    return this._client.get(`/api/where/agency/${agencyId}`, options);
   }
 }
 
@@ -54,14 +50,6 @@ export namespace AgencyRetrieveResponse {
   }
 }
 
-export interface AgencyRetrieveParams {
-  /**
-   * API key for authentication.
-   */
-  key: string;
-}
-
 export namespace Agency {
   export import AgencyRetrieveResponse = AgencyAPI.AgencyRetrieveResponse;
-  export import AgencyRetrieveParams = AgencyAPI.AgencyRetrieveParams;
 }
