@@ -2,12 +2,16 @@
 
 export * from './shared';
 export { AgenciesWithCoverageRetrieveResponse, AgenciesWithCoverage } from './agencies-with-coverage';
-export { AgencyRetrieveResponse, Agency } from './agency';
+export { AgencyRetrieveResponse, AgencyRetrieveParams, Agency } from './agency';
 export {
   ArrivalAndDepartureForStopRetrieveResponse,
   ArrivalAndDepartureForStopRetrieveParams,
   ArrivalAndDepartureForStop,
 } from './arrival-and-departure-for-stop';
+export {
+  ArrivalsAndDeparturesForStopRetrieveResponse,
+  ArrivalsAndDeparturesForStop,
+} from './arrivals-and-departures-for-stop';
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export {
