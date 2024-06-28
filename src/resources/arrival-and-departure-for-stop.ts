@@ -14,7 +14,10 @@ export class ArrivalAndDepartureForStop extends APIResource {
     query: ArrivalAndDepartureForStopRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<ArrivalAndDepartureForStopRetrieveResponse> {
-    return this._client.get(`/api/where/arrival-and-departure-for-stop/stopID.json`, { query, ...options });
+    return this._client.get(`/api/where/arrival-and-departure-for-stop/${stopId}.json`, {
+      query,
+      ...options,
+    });
   }
 }
 
