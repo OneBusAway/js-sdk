@@ -27,7 +27,7 @@ export class ArrivalsAndDeparturesForStop extends APIResource {
     if (isRequestOptions(query)) {
       return this.retrieve(stopId, {}, query);
     }
-    return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, { query, ...options });
+    return this._client.get(`/api/where/arrivals-and-departures-for-stop/${stopId}.json`, { query, ...options });
   }
 }
 
