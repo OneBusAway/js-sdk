@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.13 (2024-06-28)
+
+Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
+
+### Features
+
+* **api:** update via SDK Studio ([#60](https://github.com/OneBusAway/js-sdk/issues/60)) ([aaabd42](https://github.com/OneBusAway/js-sdk/commit/aaabd42f7198bb397b39c5b3948208a39c4b6ab9))
+
 ## 0.1.0-alpha.12 (2024-06-26)
 
 Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
