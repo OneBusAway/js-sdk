@@ -14,7 +14,7 @@ export class Agency extends APIResource {
     query: AgencyRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<AgencyRetrieveResponse> {
-    return this._client.get(`/api/where/agency/agencyID.json`, { query, ...options });
+    return this._client.get(`/api/where/agency/${agencyId}.json`, { query, ...options });
   }
 }
 
