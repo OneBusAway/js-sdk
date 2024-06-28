@@ -64,3 +64,13 @@ Types:
 Methods:
 
 - <code title="get /api/where/arrival-and-departure-for-stop/{stopID}.json">client.arrivalAndDepartureForStop.<a href="./src/resources/arrival-and-departure-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureForStopRetrieveResponse</code>
+
+# ArrivalsAndDeparturesForStop
+
+Types:
+
+- <code><a href="./src/resources/arrivals-and-departures-for-stop.ts">ArrivalsAndDeparturesForStopRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>

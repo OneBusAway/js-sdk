@@ -125,6 +125,7 @@ export class OnebusawaySDK extends Core.APIClient {
   currentTime: API.CurrentTime = new API.CurrentTime(this);
   stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
   arrivalAndDepartureForStop: API.ArrivalAndDepartureForStop = new API.ArrivalAndDepartureForStop(this);
+  arrivalsAndDeparturesForStop: API.ArrivalsAndDeparturesForStop = new API.ArrivalsAndDeparturesForStop(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -206,6 +207,10 @@ export namespace OnebusawaySDK {
   export import ArrivalAndDepartureForStop = API.ArrivalAndDepartureForStop;
   export import ArrivalAndDepartureForStopRetrieveResponse = API.ArrivalAndDepartureForStopRetrieveResponse;
   export import ArrivalAndDepartureForStopRetrieveParams = API.ArrivalAndDepartureForStopRetrieveParams;
+
+  export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
+  export import ArrivalsAndDeparturesForStopRetrieveResponse = API.ArrivalsAndDeparturesForStopRetrieveResponse;
+  export import ArrivalsAndDeparturesForStopRetrieveParams = API.ArrivalsAndDeparturesForStopRetrieveParams;
 
   export import References = API.References;
   export import ResponseWrapper = API.ResponseWrapper;
