@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.0-alpha.14 (2024-06-28)
+
+Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
+
+### Features
+
+* chore(api): update code format ([16d80d1](https://github.com/OneBusAway/js-sdk/commit/16d80d1938183fa31b6746f073e41bf62a20d486))
+* refactor(api): update stop ID parameter in Agency class ([9071875](https://github.com/OneBusAway/js-sdk/commit/9071875f0d4a3a9532177eb9069fabfd734a04ed))
+* refactor(api): update stop ID parameter in ArrivalAndDepartureForStop class ([3e776d4](https://github.com/OneBusAway/js-sdk/commit/3e776d488a27ae836909965079410575911d7f5c))
+* refactor(api): update stop ID parameter in ArrivalAndDepartureForStop class ([9f985d8](https://github.com/OneBusAway/js-sdk/commit/9f985d8b44d309d1cf1750cdb67c3603df85bf90))
+
 ## 0.1.0-alpha.13 (2024-06-28)
 
 Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
