@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2024-06-28)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Features
+
+* refactor(api): update stop ID parameter in ArrivalsAndDeparturesForStop class ([82a3124](https://github.com/OneBusAway/js-sdk/commit/82a3124b2c8622c61b7b6a502b7daecfb7831ebd))
+
 ## 0.1.0-alpha.14 (2024-06-28)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
