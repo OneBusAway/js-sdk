@@ -205,7 +205,7 @@ export namespace OnebusawaySDK {
   export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
 
   export import Route = API.Route;
-  export import RouteRetrueveResponse = API.RouteRetrueveResponse;
+  export import RouteRetrieveResponse = API.RouteRetrieveResponse;
 
   export import ArrivalAndDepartureForStop = API.ArrivalAndDepartureForStop;
   export import ArrivalAndDepartureForStopRetrieveResponse = API.ArrivalAndDepartureForStopRetrieveResponse;
