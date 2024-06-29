@@ -10,7 +10,7 @@ export class Route extends APIResource {
    * Retrieve information for a specific route identified by its unique ID.
    */
   retrueve(routeId: string, options?: Core.RequestOptions): Core.APIPromise<RouteRetrueveResponse> {
-    return this._client.get(`/api/where/route/routeID.json`, options);
+    return this._client.get(`/api/where/route/${routeId}.json`, options);
   }
 }
 
