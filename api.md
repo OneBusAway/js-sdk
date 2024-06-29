@@ -23,7 +23,7 @@ Types:
 
 Methods:
 
-- <code title="get /api/where/agency/{agencyID}.json">client.agency.<a href="./src/resources/agency.ts">retrieve</a>(agencyId, { ...params }) -> AgencyRetrieveResponse</code>
+- <code title="get /api/where/agency/{agencyID}.json">client.agency.<a href="./src/resources/agency.ts">retrieve</a>(agencyId) -> AgencyRetrieveResponse</code>
 
 # Config
 
