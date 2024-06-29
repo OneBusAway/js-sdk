@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.16 (2024-06-29)
+
+Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
+
+### Features
+
+* refactor(api): update buildURL method to include API key in URL ([0d6612f](https://github.com/OneBusAway/js-sdk/commit/0d6612f7adcaf5e7b68e3aefaf8dbd7798d9e1cf))
+
 ## 0.1.0-alpha.15 (2024-06-28)
 
 Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
