@@ -9,12 +9,8 @@ export class Agency extends APIResource {
   /**
    * Retrieve information for a specific transit agency identified by its unique ID.
    */
-  retrieve(
-    agencyId: string,
-    query: AgencyRetrieveParams,
-    options?: Core.RequestOptions,
-  ): Core.APIPromise<AgencyRetrieveResponse> {
-    return this._client.get(`/api/where/agency/agencyID.json`, { query, ...options });
+  retrieve(agencyId: string, options?: Core.RequestOptions): Core.APIPromise<AgencyRetrieveResponse> {
+    return this._client.get(`/api/where/agency/agencyID.json`, options);
   }
 }
 
@@ -27,6 +23,8 @@ export namespace AgencyRetrieveResponse {
     entry?: Data.Entry;
 
     limitExceeded?: boolean;
+
+    references?: Shared.References;
   }
 
   export namespace Data {
@@ -54,14 +52,6 @@ export namespace AgencyRetrieveResponse {
   }
 }
 
-export interface AgencyRetrieveParams {
-  /**
-   * API key for authentication.
-   */
-  key: string;
-}
-
 export namespace Agency {
   export import AgencyRetrieveResponse = AgencyAPI.AgencyRetrieveResponse;
-  export import AgencyRetrieveParams = AgencyAPI.AgencyRetrieveParams;
 }
