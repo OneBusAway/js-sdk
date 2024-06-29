@@ -9,8 +9,8 @@ const onebusawaySDK = new OnebusawaySDK({
 });
 
 describe('resource route', () => {
-  test('retrueve', async () => {
-    const responsePromise = onebusawaySDK.route.retrueve('string');
+  test('retrieve', async () => {
+    const responsePromise = onebusawaySDK.route.retrieve('string');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,10 +20,10 @@ describe('resource route', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrueve: request options instead of params are passed correctly', async () => {
+  test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusawaySDK.route.retrueve('string', { path: '/_stainless_unknown_path' }),
+      onebusawaySDK.route.retrieve('string', { path: '/_stainless_unknown_path' }),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 });
