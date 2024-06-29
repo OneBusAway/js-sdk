@@ -15,6 +15,7 @@ export {
 } from './arrivals-and-departures-for-stop';
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
+export { RouteRetrieveResponse, Route } from './route';
 export {
   StopsForLocationRetrieveResponse,
   StopsForLocationRetrieveParams,
