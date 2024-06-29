@@ -27,6 +27,8 @@ export namespace AgencyRetrieveResponse {
     entry?: Data.Entry;
 
     limitExceeded?: boolean;
+
+    references?: Shared.References;
   }
 
   export namespace Data {
@@ -54,14 +56,6 @@ export namespace AgencyRetrieveResponse {
   }
 }
 
-export interface AgencyRetrieveParams {
-  /**
-   * API key for authentication.
-   */
-  key: string;
-}
-
 export namespace Agency {
   export import AgencyRetrieveResponse = AgencyAPI.AgencyRetrieveResponse;
-  export import AgencyRetrieveParams = AgencyAPI.AgencyRetrieveParams;
 }
