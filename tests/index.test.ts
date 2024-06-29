@@ -11,7 +11,6 @@ describe('instantiate client', () => {
   beforeEach(() => {
     jest.resetModules();
     process.env = { ...env };
-
     console.warn = jest.fn();
   });
 
@@ -57,7 +56,9 @@ describe('instantiate client', () => {
         defaultQuery: { apiVersion: 'foo' },
         apiKey: 'My API Key',
       });
-      expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/foo?apiVersion=foo');
+      expect(client.buildURL('/foo', null)).toEqual(
+        `http://localhost:5000/foo?key=${encodeURIComponent(client.apiKey)}&apiVersion=foo`,
+      );
     });
 
     test('multiple default query params', () => {
@@ -66,7 +67,9 @@ describe('instantiate client', () => {
         defaultQuery: { apiVersion: 'foo', hello: 'world' },
         apiKey: 'My API Key',
       });
-      expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/foo?apiVersion=foo&hello=world');
+      expect(client.buildURL('/foo', null)).toEqual(
+        `http://localhost:5000/foo?key=${encodeURIComponent(client.apiKey)}&apiVersion=foo&hello=world`,
+      );
     });
 
     test('overriding with `undefined`', () => {
@@ -75,7 +78,9 @@ describe('instantiate client', () => {
         defaultQuery: { hello: 'world' },
         apiKey: 'My API Key',
       });
-      expect(client.buildURL('/foo', { hello: undefined })).toEqual('http://localhost:5000/foo');
+      expect(client.buildURL('/foo', { hello: undefined })).toEqual(
+        `http://localhost:5000/foo?key=${encodeURIComponent(client.apiKey)}`,
+      );
     });
   });
 
@@ -93,7 +98,10 @@ describe('instantiate client', () => {
     });
 
     const response = await client.get('/foo');
-    expect(response).toEqual({ url: 'http://localhost:5000/foo', custom: true });
+    expect(response).toEqual({
+      url: `http://localhost:5000/foo?key=${encodeURIComponent(client.apiKey)}`,
+      custom: true,
+    });
   });
 
   test('custom signal', async () => {
@@ -128,7 +136,9 @@ describe('instantiate client', () => {
         baseURL: 'http://localhost:5000/custom/path/',
         apiKey: 'My API Key',
       });
-      expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
+      expect(client.buildURL('/foo', null)).toEqual(
+        `http://localhost:5000/custom/path/foo?key=${encodeURIComponent(client.apiKey)}`,
+      );
     });
 
     test('no trailing slash', () => {
@@ -136,7 +146,9 @@ describe('instantiate client', () => {
         baseURL: 'http://localhost:5000/custom/path',
         apiKey: 'My API Key',
       });
-      expect(client.buildURL('/foo', null)).toEqual('http://localhost:5000/custom/path/foo');
+      expect(client.buildURL('/foo', null)).toEqual(
+        `http://localhost:5000/custom/path/foo?key=${encodeURIComponent(client.apiKey)}`,
+      );
     });
 
     afterEach(() => {
