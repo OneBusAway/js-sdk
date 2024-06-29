@@ -9,16 +9,16 @@ export class Route extends APIResource {
   /**
    * Retrieve information for a specific route identified by its unique ID.
    */
-  retrueve(routeId: string, options?: Core.RequestOptions): Core.APIPromise<RouteRetrueveResponse> {
+  retrieve(routeId: string, options?: Core.RequestOptions): Core.APIPromise<RouteRetrieveResponse> {
     return this._client.get(`/api/where/route/routeID.json`, options);
   }
 }
 
-export interface RouteRetrueveResponse extends Shared.ResponseWrapper {
-  data?: RouteRetrueveResponse.Data;
+export interface RouteRetrieveResponse extends Shared.ResponseWrapper {
+  data?: RouteRetrieveResponse.Data;
 }
 
-export namespace RouteRetrueveResponse {
+export namespace RouteRetrieveResponse {
   export interface Data {
     entry?: Data.Entry;
 
@@ -49,5 +49,5 @@ export namespace RouteRetrueveResponse {
 }
 
 export namespace Route {
-  export import RouteRetrueveResponse = RouteAPI.RouteRetrueveResponse;
+  export import RouteRetrieveResponse = RouteAPI.RouteRetrieveResponse;
 }

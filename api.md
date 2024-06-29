@@ -59,11 +59,11 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/route.ts">RouteRetrueveResponse</a></code>
+- <code><a href="./src/resources/route.ts">RouteRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/route/{routeID}.json">client.route.<a href="./src/resources/route.ts">retrueve</a>(routeId) -> RouteRetrueveResponse</code>
+- <code title="get /api/where/route/{routeID}.json">client.route.<a href="./src/resources/route.ts">retrieve</a>(routeId) -> RouteRetrieveResponse</code>
 
 # ArrivalAndDepartureForStop
 
