@@ -21,3 +21,4 @@ export {
   StopsForLocationRetrieveParams,
   StopsForLocation,
 } from './stops-for-location';
+export { TripRetrieveResponse, Trip } from './trip';
