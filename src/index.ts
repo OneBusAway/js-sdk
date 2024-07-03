@@ -128,6 +128,7 @@ export class OnebusawaySDK extends Core.APIClient {
   arrivalAndDepartureForStop: API.ArrivalAndDepartureForStop = new API.ArrivalAndDepartureForStop(this);
   arrivalsAndDeparturesForStop: API.ArrivalsAndDeparturesForStop = new API.ArrivalsAndDeparturesForStop(this);
   trip: API.Trip = new API.Trip(this);
+  tripsForLocation: API.TripsForLocation = new API.TripsForLocation(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -218,6 +219,10 @@ export namespace OnebusawaySDK {
 
   export import Trip = API.Trip;
   export import TripRetrieveResponse = API.TripRetrieveResponse;
+
+  export import TripsForLocation = API.TripsForLocation;
+  export import TripsForLocationRetrieveResponse = API.TripsForLocationRetrieveResponse;
+  export import TripsForLocationRetrieveParams = API.TripsForLocationRetrieveParams;
 
   export import References = API.References;
   export import ResponseWrapper = API.ResponseWrapper;
