@@ -94,3 +94,13 @@ Types:
 Methods:
 
 - <code title="get /api/where/trip/{tripID}.json">client.trip.<a href="./src/resources/trip.ts">retrieve</a>(tripId) -> TripRetrieveResponse</code>
+
+# TripsForLocation
+
+Types:
+
+- <code><a href="./src/resources/trips-for-location.ts">TripsForLocationRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/trips-for-location.json">client.tripsForLocation.<a href="./src/resources/trips-for-location.ts">retrieve</a>({ ...params }) -> TripsForLocationRetrieveResponse</code>
