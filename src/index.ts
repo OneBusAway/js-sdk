@@ -125,7 +125,7 @@ export class OnebusawaySDK extends Core.APIClient {
   currentTime: API.CurrentTime = new API.CurrentTime(this);
   stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
   route: API.Route = new API.Route(this);
-  arrivalAndDepartureForStop: API.ArrivalAndDepartureForStop = new API.ArrivalAndDepartureForStop(this);
+  arrivalAndDeparture: API.ArrivalAndDeparture = new API.ArrivalAndDeparture(this);
   trip: API.Trip = new API.Trip(this);
   tripsForLocation: API.TripsForLocation = new API.TripsForLocation(this);
 
@@ -208,11 +208,11 @@ export namespace OnebusawaySDK {
   export import Route = API.Route;
   export import RouteRetrieveResponse = API.RouteRetrieveResponse;
 
-  export import ArrivalAndDepartureForStop = API.ArrivalAndDepartureForStop;
-  export import ArrivalAndDepartureForStopRetrieveResponse = API.ArrivalAndDepartureForStopRetrieveResponse;
-  export import ArrivalAndDepartureForStopSearchResponse = API.ArrivalAndDepartureForStopSearchResponse;
-  export import ArrivalAndDepartureForStopRetrieveParams = API.ArrivalAndDepartureForStopRetrieveParams;
-  export import ArrivalAndDepartureForStopSearchParams = API.ArrivalAndDepartureForStopSearchParams;
+  export import ArrivalAndDeparture = API.ArrivalAndDeparture;
+  export import ArrivalAndDepartureSearchAllForStopResponse = API.ArrivalAndDepartureSearchAllForStopResponse;
+  export import ArrivalAndDepartureSearchForStopResponse = API.ArrivalAndDepartureSearchForStopResponse;
+  export import ArrivalAndDepartureSearchAllForStopParams = API.ArrivalAndDepartureSearchAllForStopParams;
+  export import ArrivalAndDepartureSearchForStopParams = API.ArrivalAndDepartureSearchForStopParams;
 
   export import Trip = API.Trip;
   export import TripRetrieveResponse = API.TripRetrieveResponse;
