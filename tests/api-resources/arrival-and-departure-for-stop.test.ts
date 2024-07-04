@@ -32,4 +32,33 @@ describe('resource arrivalAndDepartureForStop', () => {
       vehicleId: 'string',
     });
   });
+
+  test('search', async () => {
+    const responsePromise = onebusawaySDK.arrivalAndDepartureForStop.search('1_75403');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  test('search: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      onebusawaySDK.arrivalAndDepartureForStop.search('1_75403', { path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
+  });
+
+  test('search: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      onebusawaySDK.arrivalAndDepartureForStop.search(
+        '1_75403',
+        { minutesAfter: 0, minutesBefore: 0, time: '2019-12-27T18:11:19.117Z' },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
+  });
 });
