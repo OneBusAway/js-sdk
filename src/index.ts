@@ -209,10 +209,10 @@ export namespace OnebusawaySDK {
   export import RouteRetrieveResponse = API.RouteRetrieveResponse;
 
   export import ArrivalAndDeparture = API.ArrivalAndDeparture;
-  export import ArrivalAndDepartureSearchAllForStopResponse = API.ArrivalAndDepartureSearchAllForStopResponse;
-  export import ArrivalAndDepartureSearchForStopResponse = API.ArrivalAndDepartureSearchForStopResponse;
-  export import ArrivalAndDepartureSearchAllForStopParams = API.ArrivalAndDepartureSearchAllForStopParams;
-  export import ArrivalAndDepartureSearchForStopParams = API.ArrivalAndDepartureSearchForStopParams;
+  export import ArrivalAndDepartureRetrieveResponse = API.ArrivalAndDepartureRetrieveResponse;
+  export import ArrivalAndDepartureListResponse = API.ArrivalAndDepartureListResponse;
+  export import ArrivalAndDepartureRetrieveParams = API.ArrivalAndDepartureRetrieveParams;
+  export import ArrivalAndDepartureListParams = API.ArrivalAndDepartureListParams;
 
   export import Trip = API.Trip;
   export import TripRetrieveResponse = API.TripRetrieveResponse;

@@ -4,10 +4,10 @@ export * from './shared';
 export { AgenciesWithCoverageRetrieveResponse, AgenciesWithCoverage } from './agencies-with-coverage';
 export { AgencyRetrieveResponse, Agency } from './agency';
 export {
-  ArrivalAndDepartureSearchAllForStopResponse,
-  ArrivalAndDepartureSearchForStopResponse,
-  ArrivalAndDepartureSearchAllForStopParams,
-  ArrivalAndDepartureSearchForStopParams,
+  ArrivalAndDepartureRetrieveResponse,
+  ArrivalAndDepartureListResponse,
+  ArrivalAndDepartureRetrieveParams,
+  ArrivalAndDepartureListParams,
   ArrivalAndDeparture,
 } from './arrival-and-departure';
 export { ConfigRetrieveResponse, Config } from './config';
