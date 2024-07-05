@@ -9,37 +9,8 @@ const onebusawaySDK = new OnebusawaySDK({
 });
 
 describe('resource arrivalAndDeparture', () => {
-  test('searchAllForStop', async () => {
-    const responsePromise = onebusawaySDK.arrivalAndDeparture.searchAllForStop('1_75403');
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  test('searchAllForStop: request options instead of params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      onebusawaySDK.arrivalAndDeparture.searchAllForStop('1_75403', { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
-  });
-
-  test('searchAllForStop: request options and params are passed correctly', async () => {
-    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      onebusawaySDK.arrivalAndDeparture.searchAllForStop(
-        '1_75403',
-        { minutesAfter: 0, minutesBefore: 0, time: '2019-12-27T18:11:19.117Z' },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
-  });
-
-  test('searchForStop: only required params', async () => {
-    const responsePromise = onebusawaySDK.arrivalAndDeparture.searchForStop('1_75403', {
+  test('retrieve: only required params', async () => {
+    const responsePromise = onebusawaySDK.arrivalAndDeparture.retrieve('1_75403', {
       serviceDate: 0,
       tripId: 'string',
     });
@@ -52,13 +23,42 @@ describe('resource arrivalAndDeparture', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('searchForStop: required and optional params', async () => {
-    const response = await onebusawaySDK.arrivalAndDeparture.searchForStop('1_75403', {
+  test('retrieve: required and optional params', async () => {
+    const response = await onebusawaySDK.arrivalAndDeparture.retrieve('1_75403', {
       serviceDate: 0,
       tripId: 'string',
       stopSequence: 0,
       time: 0,
       vehicleId: 'string',
     });
+  });
+
+  test('list', async () => {
+    const responsePromise = onebusawaySDK.arrivalAndDeparture.list('1_75403');
+    const rawResponse = await responsePromise.asResponse();
+    expect(rawResponse).toBeInstanceOf(Response);
+    const response = await responsePromise;
+    expect(response).not.toBeInstanceOf(Response);
+    const dataAndResponse = await responsePromise.withResponse();
+    expect(dataAndResponse.data).toBe(response);
+    expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  test('list: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      onebusawaySDK.arrivalAndDeparture.list('1_75403', { path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
+  });
+
+  test('list: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      onebusawaySDK.arrivalAndDeparture.list(
+        '1_75403',
+        { minutesAfter: 0, minutesBefore: 0, time: '2019-12-27T18:11:19.117Z' },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 });
