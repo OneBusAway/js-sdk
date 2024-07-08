@@ -15,7 +15,10 @@ export class ArrivalAndDeparture extends APIResource {
     query: ArrivalAndDepartureRetrieveParams,
     options?: Core.RequestOptions,
   ): Core.APIPromise<ArrivalAndDepartureRetrieveResponse> {
-    return this._client.get(`/api/where/arrival-and-departure-for-stop/stopID.json`, { query, ...options });
+    return this._client.get(`/api/where/arrival-and-departure-for-stop/${stopId}.json`, {
+      query,
+      ...options,
+    });
   }
 
   /**
@@ -35,7 +38,10 @@ export class ArrivalAndDeparture extends APIResource {
     if (isRequestOptions(query)) {
       return this.list(stopId, {}, query);
     }
-    return this._client.get(`/api/where/arrivals-and-departures-for-stop/stopID.json`, { query, ...options });
+    return this._client.get(`/api/where/arrivals-and-departures-for-stop/${stopId}.json`, {
+      query,
+      ...options,
+    });
   }
 }
 
