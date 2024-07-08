@@ -8,9 +8,9 @@ const onebusawaySDK = new OnebusawaySDK({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource arrivalsAndDeparturesForStop', () => {
-  test('retrieve', async () => {
-    const responsePromise = onebusawaySDK.arrivalsAndDeparturesForStop.retrieve('1_75403');
+describe('resource stopsForRoute', () => {
+  test('list', async () => {
+    const responsePromise = onebusawaySDK.stopsForRoute.list('string');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,19 +20,19 @@ describe('resource arrivalsAndDeparturesForStop', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: request options instead of params are passed correctly', async () => {
+  test('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusawaySDK.arrivalsAndDeparturesForStop.retrieve('1_75403', { path: '/_stainless_unknown_path' }),
+      onebusawaySDK.stopsForRoute.list('string', { path: '/_stainless_unknown_path' }),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 
-  test('retrieve: request options and params are passed correctly', async () => {
+  test('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusawaySDK.arrivalsAndDeparturesForStop.retrieve(
-        '1_75403',
-        { minutesAfter: 0, minutesBefore: 0, time: '2019-12-27T18:11:19.117Z' },
+      onebusawaySDK.stopsForRoute.list(
+        'string',
+        { includePolylines: true, time: 'string' },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
