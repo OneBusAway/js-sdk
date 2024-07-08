@@ -65,17 +65,25 @@ Methods:
 
 - <code title="get /api/where/route/{routeID}.json">client.route.<a href="./src/resources/route.ts">retrieve</a>(routeId) -> RouteRetrieveResponse</code>
 
-# ArrivalAndDeparture
+# ArrivalAndDepartureForStop
 
 Types:
 
-- <code><a href="./src/resources/arrival-and-departure.ts">ArrivalAndDepartureRetrieveResponse</a></code>
-- <code><a href="./src/resources/arrival-and-departure.ts">ArrivalAndDepartureListResponse</a></code>
+- <code><a href="./src/resources/arrival-and-departure-for-stop.ts">ArrivalAndDepartureForStopRetrieveResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/arrival-and-departure-for-stop/{stopID}.json">client.arrivalAndDeparture.<a href="./src/resources/arrival-and-departure.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureRetrieveResponse</code>
-- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalAndDeparture.<a href="./src/resources/arrival-and-departure.ts">list</a>(stopId, { ...params }) -> ArrivalAndDepartureListResponse</code>
+- <code title="get /api/where/arrival-and-departure-for-stop/{stopID}.json">client.arrivalAndDepartureForStop.<a href="./src/resources/arrival-and-departure-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalAndDepartureForStopRetrieveResponse</code>
+
+# ArrivalsAndDeparturesForStop
+
+Types:
+
+- <code><a href="./src/resources/arrivals-and-departures-for-stop.ts">ArrivalsAndDeparturesForStopRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/arrivals-and-departures-for-stop/{stopID}.json">client.arrivalsAndDeparturesForStop.<a href="./src/resources/arrivals-and-departures-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ArrivalsAndDeparturesForStopRetrieveResponse</code>
 
 # Trip
 
