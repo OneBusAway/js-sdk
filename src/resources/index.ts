@@ -4,15 +4,12 @@ export * from './shared';
 export { AgenciesWithCoverageRetrieveResponse, AgenciesWithCoverage } from './agencies-with-coverage';
 export { AgencyRetrieveResponse, Agency } from './agency';
 export {
-  ArrivalAndDepartureForStopRetrieveResponse,
-  ArrivalAndDepartureForStopRetrieveParams,
-  ArrivalAndDepartureForStop,
-} from './arrival-and-departure-for-stop';
-export {
-  ArrivalsAndDeparturesForStopRetrieveResponse,
-  ArrivalsAndDeparturesForStopRetrieveParams,
-  ArrivalsAndDeparturesForStop,
-} from './arrivals-and-departures-for-stop';
+  ArrivalAndDepartureRetrieveResponse,
+  ArrivalAndDepartureListResponse,
+  ArrivalAndDepartureRetrieveParams,
+  ArrivalAndDepartureListParams,
+  ArrivalAndDeparture,
+} from './arrival-and-departure';
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export { RouteRetrieveResponse, Route } from './route';
@@ -21,6 +18,7 @@ export {
   StopsForLocationRetrieveParams,
   StopsForLocation,
 } from './stops-for-location';
+export { StopsForRouteListResponse, StopsForRouteListParams, StopsForRoute } from './stops-for-route';
 export { TripRetrieveResponse, Trip } from './trip';
 export {
   TripsForLocationRetrieveResponse,
