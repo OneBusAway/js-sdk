@@ -3,7 +3,7 @@ import OnebusawaySDK from 'onebusaway-sdk';
 // Initialize the SDK with your API key
 const oneBusAway = new OnebusawaySDK({
   apiKey: process.env['ONEBUSAWAY_API_KEY'] || 'TEST',
-  baseURL: 'http://api.pugetsound.onebusaway.org', // pass the region's base URL
+  baseURL: 'https://api.pugetsound.onebusaway.org',
 });
 
 async function main() {
