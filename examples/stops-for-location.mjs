@@ -1,15 +1,41 @@
-import onebusaway from '../dist/index.mjs';
+import OnebusawaySDK from 'onebusaway-sdk';
 
-const oba = new onebusaway({
-  apiKey: 'TEST',
+const oneBusAway = new OnebusawaySDK({
+  apiKey: process.env['ONEBUSAWAY_API_KEY'] || 'test',
 });
 
 async function main() {
-  const response = await oba.stopsForLocation.retrieve({
-    lat: 47.653435,
-    lon: -122.305641,
+  const spaceNeedleStops = await oneBusAway.stopsForLocation.retrieve({
+    lat: 47.6205,
+    lon: -122.3493,
+    radius: 500,
   });
-  console.log(response.data.list[0].direction);
+
+  const stops = spaceNeedleStops.data?.list;
+  const references = spaceNeedleStops.data.references;
+
+  // make it easy to look up routes by ID.
+  const referenceMap = references.routes.reduce((acc, route) => {
+    acc[route.id] = route;
+    return acc;
+  }, {});
+
+  for (const stop of stops) {
+    console.log(`${stop.name} (${stop.lat}, ${stop.lon})`);
+    console.log('  Routes:');
+
+    for (const routeId of stop.routeIds) {
+      const route = referenceMap[routeId];
+
+      // Get a string that looks like "D Line - Blue Ridge/Crown Hill - Ballard - Downtown Seattle"
+      const description = [route.nullSafeShortName, route.description]
+        .filter((e) => e.length > 0)
+        .join(' - ');
+      console.log(`    ${description}`);
+    }
+
+    console.log('');
+  }
 }
 
 main();
