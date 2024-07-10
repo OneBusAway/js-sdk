@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.22 (2024-07-10)
+
+Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
+
+### Features
+
+* chore:(examples): Update arrivalAndDepartutes example code ([646442a](https://github.com/OneBusAway/js-sdk/commit/646442ae524fd34f3dc137f129636249b9de903a))
+* chore(examples): Update  arrival-and-departutes example code ([a31482c](https://github.com/OneBusAway/js-sdk/commit/a31482c9cb38b59195fe26e1020a48962d7290e4))
+* chore(examples): Update arrival-and-departures example code ([5e810fe](https://github.com/OneBusAway/js-sdk/commit/5e810fe3f4e054a444ee1de91cd544f0553fc3ac))
+* chore(examples): Update arrival-and-departutes example code ([0e5ec4f](https://github.com/OneBusAway/js-sdk/commit/0e5ec4f761353d86af61aa1aca87ca3eac95fe9c))
+* chore(examples): Update stops-for-location example code ([b9c0a6f](https://github.com/OneBusAway/js-sdk/commit/b9c0a6f064796db76085c7c6f8aebe50099b1273))
+* chore(exmples): update stops-for-location example code ([35fd9f9](https://github.com/OneBusAway/js-sdk/commit/35fd9f9f711e5df3bafb47895d489c37b1126473))
+
 ## 0.1.0-alpha.21 (2024-07-08)
 
 Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
