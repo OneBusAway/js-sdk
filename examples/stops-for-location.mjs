@@ -2,7 +2,7 @@ import OnebusawaySDK from 'onebusaway-sdk';
 
 const oneBusAway = new OnebusawaySDK({
   apiKey: process.env['ONEBUSAWAY_API_KEY'] || 'test',
-  baseURL: 'http://api.pugetsound.onebusaway.org', // pass the region's base URL
+  baseURL: 'https://api.pugetsound.onebusaway.org', // pass the region's base URL
 });
 
 async function main() {
