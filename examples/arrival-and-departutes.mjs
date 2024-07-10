@@ -1,17 +1,38 @@
-import onebusaway from '../dist/index.mjs';
+import OnebusawaySDK from 'onebusaway-sdk';
 
-const oba = new onebusaway({
-  apiKey: 'TEST',
+// Initialize the SDK with your API key
+const oneBusAway = new OnebusawaySDK({
+  apiKey: process.env['ONEBUSAWAY_API_KEY'] || 'TEST',
 });
 
 async function main() {
+  // Define the query parameters
   const query = {
-    tripId: '1_604670535',
-    serviceDate: '1810918000000',
+    tripId: '1_604670535', // Replace with actual trip ID
+    serviceDate: '1810918000000', // Replace with actual service date in milliseconds since epoch
   };
-  const stopId = '1_75403';
-  const response = await oba.arrivalAndDeparture.retrieve(stopId, query);
 
-  console.log(response);
+  const stopId = '1_75403'; // Replace with actual stop ID
+
+  // Retrieve arrival and departure information
+  const response = await oneBusAway.arrivalAndDeparture.list(stopId, query);
+
+  // Log the response to the console
+  console.log('Arrival and Departure Information:', response);
+
+  // Example to access specific data
+  const arrivalsAndDepartures = response.data.entry.arrivalsAndDepartures;
+
+  // Print details for each arrival and departure
+  arrivalsAndDepartures.forEach((ad) => {
+    console.log(`Route: ${ad.routeShortName}`);
+    console.log(`Trip Headsign: ${ad.tripHeadsign}`);
+    console.log(`Predicted Arrival Time: ${new Date(ad.predictedArrivalTime)}`);
+    console.log(`Scheduled Arrival Time: ${new Date(ad.scheduledArrivalTime)}`);
+    console.log(`Vehicle ID: ${ad.vehicleId}`);
+    console.log('');
+  });
 }
+
+// Run the main function
 main();
