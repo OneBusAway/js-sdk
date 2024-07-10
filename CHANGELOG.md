@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.23 (2024-07-10)
+
+Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
+
+### Features
+
+* chore(examples): update baseURL ([61b04b7](https://github.com/OneBusAway/js-sdk/commit/61b04b7c5582d830a9f5d1f453385634db6e8b2f))
+* chore(examples): update stops-for-location example code ([61f52b7](https://github.com/OneBusAway/js-sdk/commit/61f52b721c34396e4cd7a3bfc03cc3bd40a0154b))
+
 ## 0.1.0-alpha.22 (2024-07-10)
 
 Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
