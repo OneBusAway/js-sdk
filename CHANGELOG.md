@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.21 (2024-07-08)
+
+Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
+
+### Features
+
+* **api:** OpenAPI spec update via Stainless API ([#100](https://github.com/OneBusAway/js-sdk/issues/100)) ([7aca464](https://github.com/OneBusAway/js-sdk/commit/7aca464baa2afe4beebcfea8b7f3a749b7d4d377))
+* **api:** OpenAPI spec update via Stainless API ([#96](https://github.com/OneBusAway/js-sdk/issues/96)) ([1c5c8ce](https://github.com/OneBusAway/js-sdk/commit/1c5c8ceb9efd2ca24e8ce3c21269040108a99973))
+* **api:** OpenAPI spec update via Stainless API ([#98](https://github.com/OneBusAway/js-sdk/issues/98)) ([5f44a71](https://github.com/OneBusAway/js-sdk/commit/5f44a719500e10a8f194389eb77170dd40bb74aa))
+* **api:** OpenAPI spec update via Stainless API ([#99](https://github.com/OneBusAway/js-sdk/issues/99)) ([f94af0b](https://github.com/OneBusAway/js-sdk/commit/f94af0b70cd273ed08bfd4adad78f064ff314f8f))
+* **api:** update via SDK Studio ([#87](https://github.com/OneBusAway/js-sdk/issues/87)) ([5f00b20](https://github.com/OneBusAway/js-sdk/commit/5f00b20b95edefd8ab2ddc4a0ca877c8e0da1ce5))
+* **api:** update via SDK Studio ([#89](https://github.com/OneBusAway/js-sdk/issues/89)) ([4220db4](https://github.com/OneBusAway/js-sdk/commit/4220db458064fda4867f4e28df1d036fab030977))
+* **api:** update via SDK Studio ([#90](https://github.com/OneBusAway/js-sdk/issues/90)) ([4243c6e](https://github.com/OneBusAway/js-sdk/commit/4243c6e2afc920520e5acee3d5ff7455a39821c1))
+* **api:** update via SDK Studio ([#92](https://github.com/OneBusAway/js-sdk/issues/92)) ([9d4f1b4](https://github.com/OneBusAway/js-sdk/commit/9d4f1b400bbffafb8a12275b57fb09f7369362e8))
+* **api:** update via SDK Studio ([#94](https://github.com/OneBusAway/js-sdk/issues/94)) ([0057392](https://github.com/OneBusAway/js-sdk/commit/0057392ec952bb152e68b0eb2742ea26343eed35))
+
 ## 0.1.0-alpha.20 (2024-06-29)
 
 Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)

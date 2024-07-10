@@ -10,7 +10,7 @@ async function main() {
     serviceDate: '1810918000000',
   };
   const stopId = '1_75403';
-  const response = await oba.arrivalAndDeparture.list(stopId, query);
+  const response = await oba.arrivalAndDeparture.retrieve(stopId, query);
 
   console.log(response);
 }

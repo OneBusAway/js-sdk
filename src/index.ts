@@ -124,9 +124,11 @@ export class OnebusawaySDK extends Core.APIClient {
   config: API.Config = new API.Config(this);
   currentTime: API.CurrentTime = new API.CurrentTime(this);
   stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
+  stopsForRoute: API.StopsForRoute = new API.StopsForRoute(this);
   route: API.Route = new API.Route(this);
-  arrivalAndDepartureForStop: API.ArrivalAndDepartureForStop = new API.ArrivalAndDepartureForStop(this);
-  arrivalsAndDeparturesForStop: API.ArrivalsAndDeparturesForStop = new API.ArrivalsAndDeparturesForStop(this);
+  arrivalAndDeparture: API.ArrivalAndDeparture = new API.ArrivalAndDeparture(this);
+  trip: API.Trip = new API.Trip(this);
+  tripsForLocation: API.TripsForLocation = new API.TripsForLocation(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -204,16 +206,25 @@ export namespace OnebusawaySDK {
   export import StopsForLocationRetrieveResponse = API.StopsForLocationRetrieveResponse;
   export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
 
+  export import StopsForRoute = API.StopsForRoute;
+  export import StopsForRouteListResponse = API.StopsForRouteListResponse;
+  export import StopsForRouteListParams = API.StopsForRouteListParams;
+
   export import Route = API.Route;
   export import RouteRetrieveResponse = API.RouteRetrieveResponse;
 
-  export import ArrivalAndDepartureForStop = API.ArrivalAndDepartureForStop;
-  export import ArrivalAndDepartureForStopRetrieveResponse = API.ArrivalAndDepartureForStopRetrieveResponse;
-  export import ArrivalAndDepartureForStopRetrieveParams = API.ArrivalAndDepartureForStopRetrieveParams;
+  export import ArrivalAndDeparture = API.ArrivalAndDeparture;
+  export import ArrivalAndDepartureRetrieveResponse = API.ArrivalAndDepartureRetrieveResponse;
+  export import ArrivalAndDepartureListResponse = API.ArrivalAndDepartureListResponse;
+  export import ArrivalAndDepartureRetrieveParams = API.ArrivalAndDepartureRetrieveParams;
+  export import ArrivalAndDepartureListParams = API.ArrivalAndDepartureListParams;
 
-  export import ArrivalsAndDeparturesForStop = API.ArrivalsAndDeparturesForStop;
-  export import ArrivalsAndDeparturesForStopRetrieveResponse = API.ArrivalsAndDeparturesForStopRetrieveResponse;
-  export import ArrivalsAndDeparturesForStopRetrieveParams = API.ArrivalsAndDeparturesForStopRetrieveParams;
+  export import Trip = API.Trip;
+  export import TripRetrieveResponse = API.TripRetrieveResponse;
+
+  export import TripsForLocation = API.TripsForLocation;
+  export import TripsForLocationRetrieveResponse = API.TripsForLocationRetrieveResponse;
+  export import TripsForLocationRetrieveParams = API.TripsForLocationRetrieveParams;
 
   export import References = API.References;
   export import ResponseWrapper = API.ResponseWrapper;
