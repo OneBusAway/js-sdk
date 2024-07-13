@@ -19,6 +19,7 @@ export {
   StopsForLocation,
 } from './stops-for-location';
 export { StopsForRouteListResponse, StopsForRouteListParams, StopsForRoute } from './stops-for-route';
+export { TripDetailRetrieveResponse, TripDetailRetrieveParams, TripDetails } from './trip-details';
 export { TripRetrieveResponse, Trip } from './trip';
 export {
   TripsForLocationRetrieveResponse,
