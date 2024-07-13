@@ -12,7 +12,7 @@ describe('resource arrivalAndDeparture', () => {
   test('retrieve: only required params', async () => {
     const responsePromise = onebusawaySDK.arrivalAndDeparture.retrieve('1_75403', {
       serviceDate: 0,
-      tripId: 'string',
+      tripId: 'tripId',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -26,10 +26,10 @@ describe('resource arrivalAndDeparture', () => {
   test('retrieve: required and optional params', async () => {
     const response = await onebusawaySDK.arrivalAndDeparture.retrieve('1_75403', {
       serviceDate: 0,
-      tripId: 'string',
+      tripId: 'tripId',
       stopSequence: 0,
       time: 0,
-      vehicleId: 'string',
+      vehicleId: 'vehicleId',
     });
   });
 
