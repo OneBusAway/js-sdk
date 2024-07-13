@@ -10,7 +10,7 @@ const onebusawaySDK = new OnebusawaySDK({
 
 describe('resource stopsForLocation', () => {
   test('retrieve: only required params', async () => {
-    const responsePromise = onebusawaySDK.stopsForLocation.retrieve({ key: 'string' });
+    const responsePromise = onebusawaySDK.stopsForLocation.retrieve({ key: 'key' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -21,6 +21,6 @@ describe('resource stopsForLocation', () => {
   });
 
   test('retrieve: required and optional params', async () => {
-    const response = await onebusawaySDK.stopsForLocation.retrieve({ key: 'string', lat: 0, lon: 0 });
+    const response = await onebusawaySDK.stopsForLocation.retrieve({ key: 'key', lat: 0, lon: 0 });
   });
 });
