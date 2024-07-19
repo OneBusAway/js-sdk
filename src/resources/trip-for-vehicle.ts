@@ -24,7 +24,7 @@ export class TripForVehicle extends APIResource {
     if (isRequestOptions(query)) {
       return this.retrieve(vehicleId, {}, query);
     }
-    return this._client.get(`/api/where/trip-for-vehicle/vehicleID.json`, { query, ...options });
+    return this._client.get(`/api/where/trip-for-vehicle/${vehicleId}.json`, { query, ...options });
   }
 }
 
