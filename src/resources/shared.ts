@@ -9,7 +9,7 @@ export interface References {
 
   stops?: Array<References.Stop>;
 
-  stopTimes?: Array<unknown>;
+  stopTimes?: Array<References.StopTime>;
 
   trips?: Array<References.Trip>;
 }
@@ -257,6 +257,20 @@ export namespace References {
     staticRouteIds?: Array<string>;
 
     wheelchairBoarding?: string;
+  }
+
+  export interface StopTime {
+    arrivalTime?: number;
+
+    departureTime?: number;
+
+    distanceAlongTrip?: number;
+
+    historicalOccupancy?: string;
+
+    stopHeadsign?: string;
+
+    stopId?: string;
   }
 
   export interface Trip {

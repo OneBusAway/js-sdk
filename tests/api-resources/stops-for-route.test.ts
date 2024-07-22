@@ -10,7 +10,7 @@ const onebusawaySDK = new OnebusawaySDK({
 
 describe('resource stopsForRoute', () => {
   test('list', async () => {
-    const responsePromise = onebusawaySDK.stopsForRoute.list('string');
+    const responsePromise = onebusawaySDK.stopsForRoute.list('routeID');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -23,7 +23,7 @@ describe('resource stopsForRoute', () => {
   test('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusawaySDK.stopsForRoute.list('string', { path: '/_stainless_unknown_path' }),
+      onebusawaySDK.stopsForRoute.list('routeID', { path: '/_stainless_unknown_path' }),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 
@@ -31,8 +31,8 @@ describe('resource stopsForRoute', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       onebusawaySDK.stopsForRoute.list(
-        'string',
-        { includePolylines: true, time: 'string' },
+        'routeID',
+        { includePolylines: true, time: 'time' },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
