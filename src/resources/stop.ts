@@ -20,40 +20,34 @@ export interface StopRetrieveResponse extends Shared.ResponseWrapper {
 
 export namespace StopRetrieveResponse {
   export interface Data {
-    data?: Data.Data;
+    entry?: Data.Entry;
+
+    references?: Shared.References;
   }
 
   export namespace Data {
-    export interface Data {
-      entry?: Data.Entry;
+    export interface Entry {
+      id: string;
 
-      references?: Shared.References;
-    }
+      code: string;
 
-    export namespace Data {
-      export interface Entry {
-        id: string;
+      lat: number;
 
-        code: string;
+      lon: number;
 
-        lat: number;
+      name: string;
 
-        lon: number;
+      direction?: string;
 
-        name: string;
+      locationType?: number;
 
-        direction?: string;
+      parent?: string;
 
-        locationType?: number;
+      routeIds?: Array<string>;
 
-        parent?: string;
+      staticRouteIds?: Array<string>;
 
-        routeIds?: Array<string>;
-
-        staticRouteIds?: Array<string>;
-
-        wheelchairBoarding?: string;
-      }
+      wheelchairBoarding?: string;
     }
   }
 }
