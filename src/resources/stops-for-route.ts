@@ -24,7 +24,7 @@ export class StopsForRoute extends APIResource {
     if (isRequestOptions(query)) {
       return this.list(routeId, {}, query);
     }
-    return this._client.get(`/api/where/stops-for-route/routeID.json`, { query, ...options });
+    return this._client.get(`/api/where/stops-for-route/${routeId}.json`, { query, ...options });
   }
 }
 
