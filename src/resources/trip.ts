@@ -10,7 +10,7 @@ export class Trip extends APIResource {
    * Get details of a specific trip
    */
   retrieve(tripId: string, options?: Core.RequestOptions): Core.APIPromise<TripRetrieveResponse> {
-    return this._client.get(`/api/where/trip/tripID.json`, options);
+    return this._client.get(`/api/where/trip/${tripId}.json`, options);
   }
 }
 
