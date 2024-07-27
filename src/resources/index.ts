@@ -13,6 +13,7 @@ export {
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export { RouteRetrieveResponse, Route } from './route';
+export { StopRetrieveResponse, Stop } from './stop';
 export {
   StopsForLocationRetrieveResponse,
   StopsForLocationRetrieveParams,
