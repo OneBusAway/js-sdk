@@ -3,14 +3,14 @@
 import OnebusawaySDK from 'onebusaway-sdk';
 import { Response } from 'node-fetch';
 
-const onebusawaySDK = new OnebusawaySDK({
+const client = new OnebusawaySDK({
   apiKey: 'My API Key',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
 describe('resource tripDetails', () => {
   test('retrieve', async () => {
-    const responsePromise = onebusawaySDK.tripDetails.retrieve('tripID');
+    const responsePromise = client.tripDetails.retrieve('tripID');
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -22,15 +22,15 @@ describe('resource tripDetails', () => {
 
   test('retrieve: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      onebusawaySDK.tripDetails.retrieve('tripID', { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
+    await expect(client.tripDetails.retrieve('tripID', { path: '/_stainless_unknown_path' })).rejects.toThrow(
+      OnebusawaySDK.NotFoundError,
+    );
   });
 
   test('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      onebusawaySDK.tripDetails.retrieve(
+      client.tripDetails.retrieve(
         'tripID',
         { includeSchedule: true, includeStatus: true, includeTrip: true, serviceDate: 0, time: 0 },
         { path: '/_stainless_unknown_path' },
