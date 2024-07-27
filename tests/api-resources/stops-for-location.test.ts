@@ -3,14 +3,14 @@
 import OnebusawaySDK from 'onebusaway-sdk';
 import { Response } from 'node-fetch';
 
-const onebusawaySDK = new OnebusawaySDK({
+const client = new OnebusawaySDK({
   apiKey: 'My API Key',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
 describe('resource stopsForLocation', () => {
   test('retrieve: only required params', async () => {
-    const responsePromise = onebusawaySDK.stopsForLocation.retrieve({ key: 'key' });
+    const responsePromise = client.stopsForLocation.retrieve({ key: 'key' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -21,6 +21,6 @@ describe('resource stopsForLocation', () => {
   });
 
   test('retrieve: required and optional params', async () => {
-    const response = await onebusawaySDK.stopsForLocation.retrieve({ key: 'key', lat: 0, lon: 0 });
+    const response = await client.stopsForLocation.retrieve({ key: 'key', lat: 0, lon: 0 });
   });
 });

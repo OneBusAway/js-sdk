@@ -27,7 +27,7 @@ const client = new OnebusawaySDK({
 });
 
 async function main() {
-  const currentTimeRetrieveResponse = await onebusawaySDK.currentTime.retrieve();
+  const currentTimeRetrieveResponse = await client.currentTime.retrieve();
 }
 
 main();
@@ -47,7 +47,7 @@ const client = new OnebusawaySDK({
 
 async function main() {
   const currentTimeRetrieveResponse: OnebusawaySDK.CurrentTimeRetrieveResponse =
-    await onebusawaySDK.currentTime.retrieve();
+    await client.currentTime.retrieve();
 }
 
 main();
@@ -64,7 +64,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const currentTimeRetrieveResponse = await onebusawaySDK.currentTime.retrieve().catch(async (err) => {
+  const currentTimeRetrieveResponse = await client.currentTime.retrieve().catch(async (err) => {
     if (err instanceof OnebusawaySDK.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
@@ -107,7 +107,7 @@ const client = new OnebusawaySDK({
 });
 
 // Or, configure per-request:
-await onebusawaySDK.currentTime.retrieve({
+await client.currentTime.retrieve({
   maxRetries: 5,
 });
 ```
@@ -124,7 +124,7 @@ const client = new OnebusawaySDK({
 });
 
 // Override per-request:
-await onebusawaySDK.currentTime.retrieve({
+await client.currentTime.retrieve({
   timeout: 5 * 1000,
 });
 ```
@@ -145,11 +145,11 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const client = new OnebusawaySDK();
 
-const response = await onebusawaySDK.currentTime.retrieve().asResponse();
+const response = await client.currentTime.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: currentTimeRetrieveResponse, response: raw } = await onebusawaySDK.currentTime
+const { data: currentTimeRetrieveResponse, response: raw } = await client.currentTime
   .retrieve()
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
@@ -257,7 +257,7 @@ const client = new OnebusawaySDK({
 });
 
 // Override per-request:
-await onebusawaySDK.currentTime.retrieve({
+await client.currentTime.retrieve({
   httpAgent: new http.Agent({ keepAlive: false }),
 });
 ```
