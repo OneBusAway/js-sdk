@@ -10,7 +10,7 @@ export class StopIDsForAgency extends APIResource {
    * Get stop IDs for a specific agency
    */
   list(agencyId: string, options?: Core.RequestOptions): Core.APIPromise<StopIDsForAgencyListResponse> {
-    return this._client.get(`/api/where/stop-ids-for-agency/agencyID.json`, options);
+    return this._client.get(`/api/where/stop-ids-for-agency/${agencyId}.json`, options);
   }
 }
 
