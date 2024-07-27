@@ -65,6 +65,16 @@ Methods:
 
 - <code title="get /api/where/stops-for-route/{routeID}.json">client.stopsForRoute.<a href="./src/resources/stops-for-route.ts">list</a>(routeId, { ...params }) -> StopsForRouteListResponse</code>
 
+# Stop
+
+Types:
+
+- <code><a href="./src/resources/stop.ts">StopRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/stop/{stopID}.json">client.stop.<a href="./src/resources/stop.ts">retrieve</a>(stopId) -> StopRetrieveResponse</code>
+
 # Route
 
 Types:

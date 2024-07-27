@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.0-alpha.26 (2024-07-27)
+
+Full Changelog: [v0.1.0-alpha.25...v0.1.0-alpha.26](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.25...v0.1.0-alpha.26)
+
+### Features
+
+* **api:** OpenAPI spec update via Stainless API ([#115](https://github.com/OneBusAway/js-sdk/issues/115)) ([0ad62cd](https://github.com/OneBusAway/js-sdk/commit/0ad62cd2b20b854f4a9b3f9faf08a3179d24ceb8))
+
+
+### Bug Fixes
+
+* **compat:** remove ReadableStream polyfill redundant since node v16 ([#119](https://github.com/OneBusAway/js-sdk/issues/119)) ([703a920](https://github.com/OneBusAway/js-sdk/commit/703a9207aaa58b81d881f1ef40e8e3324c0c4fce))
+
+
+### Chores
+
+* **docs:** fix incorrect client var names ([#120](https://github.com/OneBusAway/js-sdk/issues/120)) ([f14a152](https://github.com/OneBusAway/js-sdk/commit/f14a15233b4887bf8e7c7f1a6cf63a7d6c8432ac))
+* **internal:** refactor release doctor script ([#117](https://github.com/OneBusAway/js-sdk/issues/117)) ([2b556d7](https://github.com/OneBusAway/js-sdk/commit/2b556d77467436460577539184883d45faadb30f))
+* **tests:** update prism version ([#118](https://github.com/OneBusAway/js-sdk/issues/118)) ([a108862](https://github.com/OneBusAway/js-sdk/commit/a1088622cebf6b1731425c554839c244b1ae92d6))
+
 ## 0.1.0-alpha.25 (2024-07-22)
 
 Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
