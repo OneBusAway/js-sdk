@@ -75,6 +75,16 @@ Methods:
 
 - <code title="get /api/where/stop/{stopID}.json">client.stop.<a href="./src/resources/stop.ts">retrieve</a>(stopId) -> StopRetrieveResponse</code>
 
+# StopIDsForAgency
+
+Types:
+
+- <code><a href="./src/resources/stop-ids-for-agency.ts">StopIDsForAgencyListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/stop-ids-for-agency/{agencyID}.json">client.stopIdsForAgency.<a href="./src/resources/stop-ids-for-agency.ts">list</a>(agencyId) -> StopIDsForAgencyListResponse</code>
+
 # Route
 
 Types:
