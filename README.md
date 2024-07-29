@@ -14,6 +14,10 @@ It is generated with [Stainless](https://www.stainlessapi.com/).
 npm install onebusaway-sdk
 ```
 
+## Examples and Sample Code
+
+See the [Examples README](examples/README.md) to learn about our examples and how to run them.
+
 ## Usage
 
 The full API of this library can be found in [api.md](api.md).
