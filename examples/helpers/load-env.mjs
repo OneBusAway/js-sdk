@@ -2,6 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+/**
+ * Generates a settings object by merging the default settings with the contents of `.env`.
+ *
+ * @param {object} defaultSettings - The default settings object.
+ * @returns {object} - The merged settings object.
+ */
 export function loadSettings(defaultSettings) {
   const envVariables = loadEnv();
   if (envVariables) {
@@ -11,6 +17,10 @@ export function loadSettings(defaultSettings) {
   }
 }
 
+/**
+ * Loads environment variables from a .env file located in the examples directory.
+ * @returns {object|null} - An object containing the loaded environment variables, or null if the .env file does not exist.
+ */
 export function loadEnv() {
   const filename = fileURLToPath(import.meta.url);
   const dirname = path.dirname(filename);
@@ -23,6 +33,11 @@ export function loadEnv() {
   }
 }
 
+/**
+ * Loads environment variables from a file.
+ * @param {string} filePath - The path to the file containing environment variables.
+ * @returns {object} - An object containing the loaded environment variables.
+ */
 export function loadEnvFromPath(filePath) {
   let env = {};
   const fileContent = fs.readFileSync(filePath, 'utf8');
