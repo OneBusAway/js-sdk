@@ -25,6 +25,16 @@ Methods:
 
 - <code title="get /api/where/agency/{agencyID}.json">client.agency.<a href="./src/resources/agency.ts">retrieve</a>(agencyId) -> AgencyRetrieveResponse</code>
 
+# VehiclesForAgency
+
+Types:
+
+- <code><a href="./src/resources/vehicles-for-agency.ts">VehiclesForAgencyListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/vehicles-for-agency/{agencyID}.json">client.vehiclesForAgency.<a href="./src/resources/vehicles-for-agency.ts">list</a>(agencyId, { ...params }) -> VehiclesForAgencyListResponse</code>
+
 # Config
 
 Types:
