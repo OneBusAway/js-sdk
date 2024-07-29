@@ -10,8 +10,10 @@ const settings = loadSettings({ apiKey: 'TEST' });
 const oba = new onebusaway(settings);
 
 async function main() {
-  const response = await oba.config.retrieve();
-  console.log(response);
+  const response = await oba.stopIdsForAgency.list('40');
+  response.data.list.forEach((stop) => {
+    console.log(stop);
+  });
 }
 
 main();
