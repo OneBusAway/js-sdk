@@ -1,6 +1,12 @@
 import onebusaway from '../dist/index.mjs';
 import { loadSettings } from './helpers/load-env.mjs';
 
+// TODO: FIXME
+//
+// This example will need to be updated once the `vehicles-for-agency` method is added to the SDK.
+// Once that happens, we can request that endpoint, grab the first vehicle ID, and use it in the
+// `tripForVehicle` method.
+
 // Load settings from .env file, if it exists.
 // If not, we'll use the Puget Sound server URL (which is the default in the SDK)
 // and the 'TEST' API key.
