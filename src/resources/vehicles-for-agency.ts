@@ -54,6 +54,16 @@ export namespace VehiclesForAgencyListResponse {
       tripStatus: List.TripStatus;
 
       vehicleId: string;
+
+      occupancyCapacity?: number;
+
+      occupancyCount?: number;
+
+      occupancyStatus?: string;
+
+      phase?: string;
+
+      status?: string;
     }
 
     export namespace List {
