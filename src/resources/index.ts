@@ -33,3 +33,8 @@ export {
   TripsForLocationRetrieveParams,
   TripsForLocation,
 } from './trips-for-location';
+export {
+  VehiclesForAgencyListResponse,
+  VehiclesForAgencyListParams,
+  VehiclesForAgency,
+} from './vehicles-for-agency';
