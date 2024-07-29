@@ -121,6 +121,7 @@ export class OnebusawaySDK extends Core.APIClient {
 
   agenciesWithCoverage: API.AgenciesWithCoverage = new API.AgenciesWithCoverage(this);
   agency: API.Agency = new API.Agency(this);
+  vehiclesForAgency: API.VehiclesForAgency = new API.VehiclesForAgency(this);
   config: API.Config = new API.Config(this);
   currentTime: API.CurrentTime = new API.CurrentTime(this);
   stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
@@ -199,6 +200,10 @@ export namespace OnebusawaySDK {
 
   export import Agency = API.Agency;
   export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;
+
+  export import VehiclesForAgency = API.VehiclesForAgency;
+  export import VehiclesForAgencyListResponse = API.VehiclesForAgencyListResponse;
+  export import VehiclesForAgencyListParams = API.VehiclesForAgencyListParams;
 
   export import Config = API.Config;
   export import ConfigRetrieveResponse = API.ConfigRetrieveResponse;
