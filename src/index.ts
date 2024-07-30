@@ -155,6 +155,7 @@ export class OnebusawaySDK extends Core.APIClient {
   }
 
   static OnebusawaySDK = this;
+  static DEFAULT_TIMEOUT = 60000; // 1 minute
 
   static OnebusawaySDKError = Errors.OnebusawaySDKError;
   static APIError = Errors.APIError;
