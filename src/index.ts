@@ -128,6 +128,7 @@ export class OnebusawaySDK extends Core.APIClient {
   stopsForRoute: API.StopsForRoute = new API.StopsForRoute(this);
   stop: API.Stop = new API.Stop(this);
   stopIdsForAgency: API.StopIDsForAgency = new API.StopIDsForAgency(this);
+  scheduleForStop: API.ScheduleForStop = new API.ScheduleForStop(this);
   route: API.Route = new API.Route(this);
   arrivalAndDeparture: API.ArrivalAndDeparture = new API.ArrivalAndDeparture(this);
   trip: API.Trip = new API.Trip(this);
@@ -154,6 +155,7 @@ export class OnebusawaySDK extends Core.APIClient {
   }
 
   static OnebusawaySDK = this;
+  static DEFAULT_TIMEOUT = 60000; // 1 minute
 
   static OnebusawaySDKError = Errors.OnebusawaySDKError;
   static APIError = Errors.APIError;
@@ -224,6 +226,10 @@ export namespace OnebusawaySDK {
 
   export import StopIDsForAgency = API.StopIDsForAgency;
   export import StopIDsForAgencyListResponse = API.StopIDsForAgencyListResponse;
+
+  export import ScheduleForStop = API.ScheduleForStop;
+  export import ScheduleForStopRetrieveResponse = API.ScheduleForStopRetrieveResponse;
+  export import ScheduleForStopRetrieveParams = API.ScheduleForStopRetrieveParams;
 
   export import Route = API.Route;
   export import RouteRetrieveResponse = API.RouteRetrieveResponse;
