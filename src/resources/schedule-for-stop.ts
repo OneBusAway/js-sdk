@@ -24,7 +24,7 @@ export class ScheduleForStop extends APIResource {
     if (isRequestOptions(query)) {
       return this.retrieve(stopId, {}, query);
     }
-    return this._client.get(`/api/where/schedule-for-stop/stopID.json`, { query, ...options });
+    return this._client.get(`/api/where/schedule-for-stop/${stopId}.json`, { query, ...options });
   }
 }
 
