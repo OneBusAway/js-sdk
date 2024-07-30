@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.30 (2024-07-30)
+
+Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
+
+### Features
+
+* **api:** OpenAPI spec update via Stainless API ([#134](https://github.com/OneBusAway/js-sdk/issues/134)) ([6481606](https://github.com/OneBusAway/js-sdk/commit/648160678f5bf5334b44b936b9315d11789f6aba))
+
+
+### Chores
+
+* **internal:** add constant for default timeout ([#136](https://github.com/OneBusAway/js-sdk/issues/136)) ([0531e45](https://github.com/OneBusAway/js-sdk/commit/0531e45c902f76a063ab9374dd4f5a6aee9d3311))
+
 ## 0.1.0-alpha.29 (2024-07-29)
 
 Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
