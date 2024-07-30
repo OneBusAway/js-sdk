@@ -95,6 +95,16 @@ Methods:
 
 - <code title="get /api/where/stop-ids-for-agency/{agencyID}.json">client.stopIdsForAgency.<a href="./src/resources/stop-ids-for-agency.ts">list</a>(agencyId) -> StopIDsForAgencyListResponse</code>
 
+# ScheduleForStop
+
+Types:
+
+- <code><a href="./src/resources/schedule-for-stop.ts">ScheduleForStopRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/schedule-for-stop/{stopID}.json">client.scheduleForStop.<a href="./src/resources/schedule-for-stop.ts">retrieve</a>(stopId, { ...params }) -> ScheduleForStopRetrieveResponse</code>
+
 # Route
 
 Types:
