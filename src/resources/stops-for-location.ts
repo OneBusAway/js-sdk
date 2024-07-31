@@ -32,11 +32,11 @@ export interface StopsForLocationRetrieveResponse extends Shared.ResponseWrapper
 
 export namespace StopsForLocationRetrieveResponse {
   export interface Data {
+    list: Array<Data.List>;
+
+    references: Shared.References;
+
     limitExceeded?: boolean;
-
-    list?: Array<Data.List>;
-
-    references?: Shared.References;
   }
 
   export namespace Data {

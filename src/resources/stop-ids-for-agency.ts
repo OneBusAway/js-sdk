@@ -20,11 +20,11 @@ export interface StopIDsForAgencyListResponse extends Shared.ResponseWrapper {
 
 export namespace StopIDsForAgencyListResponse {
   export interface Data {
+    list: Array<string>;
+
+    references: Shared.References;
+
     limitExceeded?: boolean;
-
-    list?: Array<string>;
-
-    references?: Shared.References;
   }
 }
 
