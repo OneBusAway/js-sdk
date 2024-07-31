@@ -9,8 +9,8 @@ const client = new OnebusawaySDK({
 });
 
 describe('resource stopsForLocation', () => {
-  test('retrieve: only required params', async () => {
-    const responsePromise = client.stopsForLocation.retrieve({ key: 'key' });
+  test('retrieve', async () => {
+    const responsePromise = client.stopsForLocation.retrieve();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,7 +20,17 @@ describe('resource stopsForLocation', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: required and optional params', async () => {
-    const response = await client.stopsForLocation.retrieve({ key: 'key', lat: 0, lon: 0 });
+  test('retrieve: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(client.stopsForLocation.retrieve({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      OnebusawaySDK.NotFoundError,
+    );
+  });
+
+  test('retrieve: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.stopsForLocation.retrieve({ lat: 0, lon: 0 }, { path: '/_stainless_unknown_path' }),
+    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 });

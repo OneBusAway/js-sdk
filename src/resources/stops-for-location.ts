@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../resource';
+import { isRequestOptions } from '../core';
 import * as Core from '../core';
 import * as StopsForLocationAPI from './stops-for-location';
 import * as Shared from './shared';
@@ -10,9 +11,17 @@ export class StopsForLocation extends APIResource {
    * stops-for-location
    */
   retrieve(
-    query: StopsForLocationRetrieveParams,
+    query?: StopsForLocationRetrieveParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<StopsForLocationRetrieveResponse>;
+  retrieve(options?: Core.RequestOptions): Core.APIPromise<StopsForLocationRetrieveResponse>;
+  retrieve(
+    query: StopsForLocationRetrieveParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<StopsForLocationRetrieveResponse> {
+    if (isRequestOptions(query)) {
+      return this.retrieve({}, query);
+    }
     return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
@@ -58,8 +67,6 @@ export namespace StopsForLocationRetrieveResponse {
 }
 
 export interface StopsForLocationRetrieveParams {
-  key: string;
-
   lat?: number;
 
   lon?: number;
