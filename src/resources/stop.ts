@@ -20,9 +20,9 @@ export interface StopRetrieveResponse extends Shared.ResponseWrapper {
 
 export namespace StopRetrieveResponse {
   export interface Data {
-    entry?: Data.Entry;
+    entry: Data.Entry;
 
-    references?: Shared.References;
+    references: Shared.References;
   }
 
   export namespace Data {
