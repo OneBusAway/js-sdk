@@ -20,11 +20,11 @@ export interface AgencyRetrieveResponse extends Shared.ResponseWrapper {
 
 export namespace AgencyRetrieveResponse {
   export interface Data {
-    entry?: Data.Entry;
+    entry: Data.Entry;
+
+    references: Shared.References;
 
     limitExceeded?: boolean;
-
-    references?: Shared.References;
   }
 
   export namespace Data {

@@ -20,11 +20,11 @@ export interface AgenciesWithCoverageRetrieveResponse extends Shared.ResponseWra
 
 export namespace AgenciesWithCoverageRetrieveResponse {
   export interface Data {
+    list: Array<Data.List>;
+
+    references: Shared.References;
+
     limitExceeded?: boolean;
-
-    list?: Array<Data.List>;
-
-    references?: Shared.References;
   }
 
   export namespace Data {
