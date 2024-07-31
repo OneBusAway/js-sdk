@@ -23,19 +23,19 @@ export interface TripsForLocationRetrieveResponse extends Shared.ResponseWrapper
 
 export namespace TripsForLocationRetrieveResponse {
   export interface Data {
+    list: Array<Data.List>;
+
+    references: Shared.References;
+
     /**
      * Indicates if the limit of trips has been exceeded
      */
     limitExceeded?: boolean;
 
-    list?: Array<Data.List>;
-
     /**
      * Indicates if the search location is out of range
      */
     outOfRange?: boolean;
-
-    references?: Shared.References;
   }
 
   export namespace Data {

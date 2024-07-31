@@ -45,9 +45,9 @@ export interface ArrivalAndDepartureRetrieveResponse extends Shared.ResponseWrap
 
 export namespace ArrivalAndDepartureRetrieveResponse {
   export interface Data {
-    entry?: Data.Entry;
+    entry: Data.Entry;
 
-    references?: Shared.References;
+    references: Shared.References;
   }
 
   export namespace Data {
@@ -418,14 +418,14 @@ export interface ArrivalAndDepartureListResponse extends Shared.ResponseWrapper 
 
 export namespace ArrivalAndDepartureListResponse {
   export interface Data {
-    entry?: Data.Entry;
+    entry: Data.Entry;
 
-    references?: Shared.References;
+    references: Shared.References;
   }
 
   export namespace Data {
     export interface Entry {
-      arrivalsAndDepartures?: Array<Entry.ArrivalsAndDeparture>;
+      arrivalsAndDepartures: Array<Entry.ArrivalsAndDeparture>;
     }
 
     export namespace Entry {

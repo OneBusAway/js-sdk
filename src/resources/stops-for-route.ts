@@ -29,7 +29,7 @@ export class StopsForRoute extends APIResource {
 }
 
 export interface StopsForRouteListResponse extends Shared.ResponseWrapper {
-  data?: StopsForRouteListResponse.Data;
+  data: StopsForRouteListResponse.Data;
 }
 
 export namespace StopsForRouteListResponse {
