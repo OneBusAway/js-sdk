@@ -15,7 +15,7 @@ export class StopIDsForAgency extends APIResource {
 }
 
 export interface StopIDsForAgencyListResponse extends Shared.ResponseWrapper {
-  data?: StopIDsForAgencyListResponse.Data;
+  data: StopIDsForAgencyListResponse.Data;
 }
 
 export namespace StopIDsForAgencyListResponse {

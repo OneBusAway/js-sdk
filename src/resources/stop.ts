@@ -15,7 +15,7 @@ export class Stop extends APIResource {
 }
 
 export interface StopRetrieveResponse extends Shared.ResponseWrapper {
-  data?: StopRetrieveResponse.Data;
+  data: StopRetrieveResponse.Data;
 }
 
 export namespace StopRetrieveResponse {
