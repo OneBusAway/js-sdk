@@ -15,7 +15,7 @@ export class Route extends APIResource {
 }
 
 export interface RouteRetrieveResponse extends Shared.ResponseWrapper {
-  data?: RouteRetrieveResponse.Data;
+  data: RouteRetrieveResponse.Data;
 }
 
 export namespace RouteRetrieveResponse {

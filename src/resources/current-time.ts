@@ -15,7 +15,7 @@ export class CurrentTime extends APIResource {
 }
 
 export interface CurrentTimeRetrieveResponse extends Shared.ResponseWrapper {
-  data?: CurrentTimeRetrieveResponse.Data;
+  data: CurrentTimeRetrieveResponse.Data;
 }
 
 export namespace CurrentTimeRetrieveResponse {

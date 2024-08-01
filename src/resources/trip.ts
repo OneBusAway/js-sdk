@@ -15,7 +15,7 @@ export class Trip extends APIResource {
 }
 
 export interface TripRetrieveResponse extends Shared.ResponseWrapper {
-  data?: TripRetrieveResponse.Data;
+  data: TripRetrieveResponse.Data;
 }
 
 export namespace TripRetrieveResponse {

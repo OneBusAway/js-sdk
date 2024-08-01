@@ -29,7 +29,7 @@ export class ScheduleForStop extends APIResource {
 }
 
 export interface ScheduleForStopRetrieveResponse extends Shared.ResponseWrapper {
-  data?: ScheduleForStopRetrieveResponse.Data;
+  data: ScheduleForStopRetrieveResponse.Data;
 }
 
 export namespace ScheduleForStopRetrieveResponse {
