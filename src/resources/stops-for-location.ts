@@ -32,34 +32,34 @@ export interface StopsForLocationRetrieveResponse extends Shared.ResponseWrapper
 
 export namespace StopsForLocationRetrieveResponse {
   export interface Data {
+    limitExceeded: boolean;
+
     list: Array<Data.List>;
 
     references: Shared.References;
-
-    limitExceeded?: boolean;
   }
 
   export namespace Data {
     export interface List {
-      id?: string;
+      id: string;
+
+      lat: number;
+
+      lon: number;
+
+      name: string;
+
+      parent: string;
+
+      routeIds: Array<string>;
+
+      staticRouteIds: Array<string>;
 
       code?: string;
 
       direction?: string;
 
-      lat?: number;
-
       locationType?: number;
-
-      lon?: number;
-
-      name?: string;
-
-      parent?: string;
-
-      routeIds?: Array<string>;
-
-      staticRouteIds?: Array<string>;
 
       wheelchairBoarding?: string;
     }
