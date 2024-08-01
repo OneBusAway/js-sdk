@@ -29,7 +29,7 @@ export class TripDetails extends APIResource {
 }
 
 export interface TripDetailRetrieveResponse extends Shared.ResponseWrapper {
-  data?: TripDetailRetrieveResponse.Data;
+  data: TripDetailRetrieveResponse.Data;
 }
 
 export namespace TripDetailRetrieveResponse {

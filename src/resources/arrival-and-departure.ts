@@ -46,7 +46,7 @@ export class ArrivalAndDeparture extends APIResource {
 }
 
 export interface ArrivalAndDepartureRetrieveResponse extends Shared.ResponseWrapper {
-  data?: ArrivalAndDepartureRetrieveResponse.Data;
+  data: ArrivalAndDepartureRetrieveResponse.Data;
 }
 
 export namespace ArrivalAndDepartureRetrieveResponse {
@@ -419,7 +419,7 @@ export namespace ArrivalAndDepartureRetrieveResponse {
 }
 
 export interface ArrivalAndDepartureListResponse extends Shared.ResponseWrapper {
-  data?: ArrivalAndDepartureListResponse.Data;
+  data: ArrivalAndDepartureListResponse.Data;
 }
 
 export namespace ArrivalAndDepartureListResponse {

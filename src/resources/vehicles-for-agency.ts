@@ -29,7 +29,7 @@ export class VehiclesForAgency extends APIResource {
 }
 
 export interface VehiclesForAgencyListResponse extends Shared.ResponseWrapper {
-  data?: VehiclesForAgencyListResponse.Data;
+  data: VehiclesForAgencyListResponse.Data;
 }
 
 export namespace VehiclesForAgencyListResponse {

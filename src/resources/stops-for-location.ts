@@ -27,7 +27,7 @@ export class StopsForLocation extends APIResource {
 }
 
 export interface StopsForLocationRetrieveResponse extends Shared.ResponseWrapper {
-  data?: StopsForLocationRetrieveResponse.Data;
+  data: StopsForLocationRetrieveResponse.Data;
 }
 
 export namespace StopsForLocationRetrieveResponse {

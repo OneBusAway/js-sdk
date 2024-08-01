@@ -15,7 +15,7 @@ export class Config extends APIResource {
 }
 
 export interface ConfigRetrieveResponse extends Shared.ResponseWrapper {
-  data?: ConfigRetrieveResponse.Data;
+  data: ConfigRetrieveResponse.Data;
 }
 
 export namespace ConfigRetrieveResponse {

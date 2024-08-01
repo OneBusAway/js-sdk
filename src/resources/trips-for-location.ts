@@ -18,7 +18,7 @@ export class TripsForLocation extends APIResource {
 }
 
 export interface TripsForLocationRetrieveResponse extends Shared.ResponseWrapper {
-  data?: TripsForLocationRetrieveResponse.Data;
+  data: TripsForLocationRetrieveResponse.Data;
 }
 
 export namespace TripsForLocationRetrieveResponse {
