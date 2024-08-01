@@ -29,7 +29,7 @@ export class TripForVehicle extends APIResource {
 }
 
 export interface TripForVehicleRetrieveResponse extends Shared.ResponseWrapper {
-  data?: TripForVehicleRetrieveResponse.Data;
+  data: TripForVehicleRetrieveResponse.Data;
 }
 
 export namespace TripForVehicleRetrieveResponse {

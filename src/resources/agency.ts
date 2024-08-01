@@ -15,7 +15,7 @@ export class Agency extends APIResource {
 }
 
 export interface AgencyRetrieveResponse extends Shared.ResponseWrapper {
-  data?: AgencyRetrieveResponse.Data;
+  data: AgencyRetrieveResponse.Data;
 }
 
 export namespace AgencyRetrieveResponse {

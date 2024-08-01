@@ -15,7 +15,7 @@ export class AgenciesWithCoverage extends APIResource {
 }
 
 export interface AgenciesWithCoverageRetrieveResponse extends Shared.ResponseWrapper {
-  data?: AgenciesWithCoverageRetrieveResponse.Data;
+  data: AgenciesWithCoverageRetrieveResponse.Data;
 }
 
 export namespace AgenciesWithCoverageRetrieveResponse {
