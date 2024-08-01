@@ -1,17 +1,17 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export interface References {
-  agencies?: Array<References.Agency>;
+  agencies: Array<References.Agency>;
 
-  routes?: Array<References.Route>;
+  routes: Array<References.Route>;
 
-  situations?: Array<References.Situation>;
+  situations: Array<References.Situation>;
 
-  stops?: Array<References.Stop>;
+  stops: Array<References.Stop>;
 
-  stopTimes?: Array<References.StopTime>;
+  stopTimes: Array<References.StopTime>;
 
-  trips?: Array<References.Trip>;
+  trips: Array<References.Trip>;
 }
 
 export namespace References {
