@@ -242,6 +242,8 @@ export namespace OnebusawaySDK {
   export import RouteIDsForAgencyListResponse = API.RouteIDsForAgencyListResponse;
 
   export import RoutesForLocation = API.RoutesForLocation;
+  export import RoutesForLocationRetrieveResponse = API.RoutesForLocationRetrieveResponse;
+  export import RoutesForLocationRetrieveParams = API.RoutesForLocationRetrieveParams;
 
   export import RoutesForAgency = API.RoutesForAgency;
   export import RoutesForAgencyListResponse = API.RoutesForAgencyListResponse;

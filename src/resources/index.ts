@@ -15,7 +15,11 @@ export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export { RouteIDsForAgencyListResponse, RouteIDsForAgency } from './route-ids-for-agency';
 export { RouteRetrieveResponse, Route } from './route';
 export { RoutesForAgencyListResponse, RoutesForAgency } from './routes-for-agency';
-export { RoutesForLocation } from './routes-for-location';
+export {
+  RoutesForLocationRetrieveResponse,
+  RoutesForLocationRetrieveParams,
+  RoutesForLocation,
+} from './routes-for-location';
 export {
   ScheduleForRouteRetrieveResponse,
   ScheduleForRouteRetrieveParams,
