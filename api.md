@@ -127,6 +127,16 @@ Methods:
 
 # RoutesForLocation
 
+# RoutesForAgency
+
+Types:
+
+- <code><a href="./src/resources/routes-for-agency.ts">RoutesForAgencyListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/routes-for-agency/{agencyID}.json">client.routesForAgency.<a href="./src/resources/routes-for-agency.ts">list</a>(agencyId) -> RoutesForAgencyListResponse</code>
+
 # ArrivalAndDeparture
 
 Types:
