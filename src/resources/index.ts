@@ -14,6 +14,7 @@ export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export { RouteIDsForAgencyListResponse, RouteIDsForAgency } from './route-ids-for-agency';
 export { RouteRetrieveResponse, Route } from './route';
+export { RoutesForAgencyListResponse, RoutesForAgency } from './routes-for-agency';
 export { RoutesForLocation } from './routes-for-location';
 export {
   ScheduleForStopRetrieveResponse,
