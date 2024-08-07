@@ -115,6 +115,16 @@ Methods:
 
 - <code title="get /api/where/route/{routeID}.json">client.route.<a href="./src/resources/route.ts">retrieve</a>(routeId) -> RouteRetrieveResponse</code>
 
+# RouteIDsForAgency
+
+Types:
+
+- <code><a href="./src/resources/route-ids-for-agency.ts">RouteIDsForAgencyListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/route-ids-for-agency/{agencyID}.json">client.routeIdsForAgency.<a href="./src/resources/route-ids-for-agency.ts">list</a>(agencyId) -> RouteIDsForAgencyListResponse</code>
+
 # ArrivalAndDeparture
 
 Types:
