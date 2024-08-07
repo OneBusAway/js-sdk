@@ -125,6 +125,8 @@ Methods:
 
 - <code title="get /api/where/route-ids-for-agency/{agencyID}.json">client.routeIdsForAgency.<a href="./src/resources/route-ids-for-agency.ts">list</a>(agencyId) -> RouteIDsForAgencyListResponse</code>
 
+# RoutesForLocation
+
 # ArrivalAndDeparture
 
 Types:
