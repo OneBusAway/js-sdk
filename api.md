@@ -127,6 +127,14 @@ Methods:
 
 # RoutesForLocation
 
+Types:
+
+- <code><a href="./src/resources/routes-for-location.ts">RoutesForLocationRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/routes-for-location.json">client.routesForLocation.<a href="./src/resources/routes-for-location.ts">retrieve</a>({ ...params }) -> RoutesForLocationRetrieveResponse</code>
+
 # RoutesForAgency
 
 Types:
