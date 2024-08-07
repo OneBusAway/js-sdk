@@ -17,6 +17,11 @@ export { RouteRetrieveResponse, Route } from './route';
 export { RoutesForAgencyListResponse, RoutesForAgency } from './routes-for-agency';
 export { RoutesForLocation } from './routes-for-location';
 export {
+  ScheduleForRouteRetrieveResponse,
+  ScheduleForRouteRetrieveParams,
+  ScheduleForRoute,
+} from './schedule-for-route';
+export {
   ScheduleForStopRetrieveResponse,
   ScheduleForStopRetrieveParams,
   ScheduleForStop,
