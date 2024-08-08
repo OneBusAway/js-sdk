@@ -212,3 +212,23 @@ Methods:
 Methods:
 
 - <code title="get /api/where/report-problem-with-stop/{stopID}.json">client.reportProblemWithStop.<a href="./src/resources/report-problem-with-stop.ts">retrieve</a>(stopId, { ...params }) -> ResponseWrapper</code>
+
+# SearchForStop
+
+Types:
+
+- <code><a href="./src/resources/search-for-stop.ts">SearchForStopRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/search/stop.json">client.searchForStop.<a href="./src/resources/search-for-stop.ts">retrieve</a>({ ...params }) -> SearchForStopRetrieveResponse</code>
+
+# SearchForRoute
+
+Types:
+
+- <code><a href="./src/resources/search-for-route.ts">SearchForRouteRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/search/route.json">client.searchForRoute.<a href="./src/resources/search-for-route.ts">retrieve</a>({ ...params }) -> SearchForRouteRetrieveResponse</code>

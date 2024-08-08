@@ -1,6 +1,6 @@
 {
   "name": "onebusaway-sdk",
-  "version": "0.1.0-alpha.36",
+  "version": "0.1.0-alpha.37",
   "description": "The official TypeScript library for the Onebusaway SDK API",
   "author": "Onebusaway SDK <info@onebusaway.org>",
   "types": "dist/index.d.ts",
@@ -21,7 +21,7 @@
     "prepare": "if ./scripts/utils/check-is-in-git-install.sh; then ./scripts/build; fi",
     "tsn": "ts-node -r tsconfig-paths/register",
     "lint": "./scripts/lint",
-    "fix": "eslint --fix --ext ts,js ."
+    "fix": "./scripts/format"
   },
   "dependencies": {
     "@types/node": "^18.11.18",
