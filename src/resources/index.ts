@@ -31,6 +31,12 @@ export {
   ScheduleForStopRetrieveParams,
   ScheduleForStop,
 } from './schedule-for-stop';
+export {
+  SearchForRouteRetrieveResponse,
+  SearchForRouteRetrieveParams,
+  SearchForRoute,
+} from './search-for-route';
+export { SearchForStopRetrieveResponse, SearchForStopRetrieveParams, SearchForStop } from './search-for-stop';
 export { StopIDsForAgencyListResponse, StopIDsForAgency } from './stop-ids-for-agency';
 export { StopRetrieveResponse, Stop } from './stop';
 export {
