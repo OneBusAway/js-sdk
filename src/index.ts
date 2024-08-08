@@ -130,6 +130,10 @@ export class OnebusawaySDK extends Core.APIClient {
   stopIdsForAgency: API.StopIDsForAgency = new API.StopIDsForAgency(this);
   scheduleForStop: API.ScheduleForStop = new API.ScheduleForStop(this);
   route: API.Route = new API.Route(this);
+  routeIdsForAgency: API.RouteIDsForAgency = new API.RouteIDsForAgency(this);
+  routesForLocation: API.RoutesForLocation = new API.RoutesForLocation(this);
+  routesForAgency: API.RoutesForAgency = new API.RoutesForAgency(this);
+  scheduleForRoute: API.ScheduleForRoute = new API.ScheduleForRoute(this);
   arrivalAndDeparture: API.ArrivalAndDeparture = new API.ArrivalAndDeparture(this);
   trip: API.Trip = new API.Trip(this);
   tripsForLocation: API.TripsForLocation = new API.TripsForLocation(this);
@@ -233,6 +237,20 @@ export namespace OnebusawaySDK {
 
   export import Route = API.Route;
   export import RouteRetrieveResponse = API.RouteRetrieveResponse;
+
+  export import RouteIDsForAgency = API.RouteIDsForAgency;
+  export import RouteIDsForAgencyListResponse = API.RouteIDsForAgencyListResponse;
+
+  export import RoutesForLocation = API.RoutesForLocation;
+  export import RoutesForLocationRetrieveResponse = API.RoutesForLocationRetrieveResponse;
+  export import RoutesForLocationRetrieveParams = API.RoutesForLocationRetrieveParams;
+
+  export import RoutesForAgency = API.RoutesForAgency;
+  export import RoutesForAgencyListResponse = API.RoutesForAgencyListResponse;
+
+  export import ScheduleForRoute = API.ScheduleForRoute;
+  export import ScheduleForRouteRetrieveResponse = API.ScheduleForRouteRetrieveResponse;
+  export import ScheduleForRouteRetrieveParams = API.ScheduleForRouteRetrieveParams;
 
   export import ArrivalAndDeparture = API.ArrivalAndDeparture;
   export import ArrivalAndDepartureRetrieveResponse = API.ArrivalAndDepartureRetrieveResponse;

@@ -115,6 +115,46 @@ Methods:
 
 - <code title="get /api/where/route/{routeID}.json">client.route.<a href="./src/resources/route.ts">retrieve</a>(routeId) -> RouteRetrieveResponse</code>
 
+# RouteIDsForAgency
+
+Types:
+
+- <code><a href="./src/resources/route-ids-for-agency.ts">RouteIDsForAgencyListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/route-ids-for-agency/{agencyID}.json">client.routeIdsForAgency.<a href="./src/resources/route-ids-for-agency.ts">list</a>(agencyId) -> RouteIDsForAgencyListResponse</code>
+
+# RoutesForLocation
+
+Types:
+
+- <code><a href="./src/resources/routes-for-location.ts">RoutesForLocationRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/routes-for-location.json">client.routesForLocation.<a href="./src/resources/routes-for-location.ts">retrieve</a>({ ...params }) -> RoutesForLocationRetrieveResponse</code>
+
+# RoutesForAgency
+
+Types:
+
+- <code><a href="./src/resources/routes-for-agency.ts">RoutesForAgencyListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/routes-for-agency/{agencyID}.json">client.routesForAgency.<a href="./src/resources/routes-for-agency.ts">list</a>(agencyId) -> RoutesForAgencyListResponse</code>
+
+# ScheduleForRoute
+
+Types:
+
+- <code><a href="./src/resources/schedule-for-route.ts">ScheduleForRouteRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/schedule-for-route/{routeID}.json">client.scheduleForRoute.<a href="./src/resources/schedule-for-route.ts">retrieve</a>(routeId, { ...params }) -> ScheduleForRouteRetrieveResponse</code>
+
 # ArrivalAndDeparture
 
 Types:
