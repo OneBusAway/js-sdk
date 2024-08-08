@@ -206,3 +206,9 @@ Types:
 Methods:
 
 - <code title="get /api/where/trip-for-vehicle/{vehicleID}.json">client.tripForVehicle.<a href="./src/resources/trip-for-vehicle.ts">retrieve</a>(vehicleId, { ...params }) -> TripForVehicleRetrieveResponse</code>
+
+# ReportProblemWithStop
+
+Methods:
+
+- <code title="get /api/where/report-problem-with-stop/{stopID}.json">client.reportProblemWithStop.<a href="./src/resources/report-problem-with-stop.ts">retrieve</a>(stopId, { ...params }) -> ResponseWrapper</code>
