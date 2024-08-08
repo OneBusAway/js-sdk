@@ -10,7 +10,7 @@ export class Stop extends APIResource {
    * Get details of a specific stop
    */
   retrieve(stopId: string, options?: Core.RequestOptions): Core.APIPromise<StopRetrieveResponse> {
-    return this._client.get(`/api/where/stop/stopID.json`, options);
+    return this._client.get(`/api/where/stop/${stopId}.json`, options);
   }
 }
 

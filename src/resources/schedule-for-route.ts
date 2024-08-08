@@ -24,7 +24,7 @@ export class ScheduleForRoute extends APIResource {
     if (isRequestOptions(query)) {
       return this.retrieve(routeId, {}, query);
     }
-    return this._client.get(`/api/where/schedule-for-route/routeID.json`, { query, ...options });
+    return this._client.get(`/api/where/schedule-for-route/${routeId}.json`, { query, ...options });
   }
 }
 

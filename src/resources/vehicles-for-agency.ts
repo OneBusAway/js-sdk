@@ -24,7 +24,7 @@ export class VehiclesForAgency extends APIResource {
     if (isRequestOptions(query)) {
       return this.list(agencyId, {}, query);
     }
-    return this._client.get(`/api/where/vehicles-for-agency/agencyID.json`, { query, ...options });
+    return this._client.get(`/api/where/vehicles-for-agency/${agencyId}.json`, { query, ...options });
   }
 }
 
