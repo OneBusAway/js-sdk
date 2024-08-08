@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.37 (2024-08-08)
+
+Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
+
+### Features
+
+* **api:** OpenAPI spec update via Stainless API ([#173](https://github.com/OneBusAway/js-sdk/issues/173)) ([6b2700e](https://github.com/OneBusAway/js-sdk/commit/6b2700e3f32b164a019a02b4324e4d9d86733e53))
+
+
+### Chores
+
+* force eslint to use non flat config ([#175](https://github.com/OneBusAway/js-sdk/issues/175)) ([861c10d](https://github.com/OneBusAway/js-sdk/commit/861c10dae90fb89893933ac760f954d7651a70f3))
+
 ## 0.1.0-alpha.36 (2024-08-08)
 
 Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
