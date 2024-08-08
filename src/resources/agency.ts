@@ -10,7 +10,7 @@ export class Agency extends APIResource {
    * Retrieve information for a specific transit agency identified by its unique ID.
    */
   retrieve(agencyId: string, options?: Core.RequestOptions): Core.APIPromise<AgencyRetrieveResponse> {
-    return this._client.get(`/api/where/agency/${agencyId}.json`, { ...options });
+    return this._client.get(`/api/where/agency/${agencyId}.json`, options);
   }
 }
 
