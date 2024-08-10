@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.38 (2024-08-10)
+
+Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
+
+### Features
+
+* **api:** OpenAPI spec update via Stainless API ([#177](https://github.com/OneBusAway/js-sdk/issues/177)) ([0c8fae7](https://github.com/OneBusAway/js-sdk/commit/0c8fae71d7821a6801a110ea9898a81f6ef70ff0))
+* **api:** OpenAPI spec update via Stainless API ([#181](https://github.com/OneBusAway/js-sdk/issues/181)) ([b9ca906](https://github.com/OneBusAway/js-sdk/commit/b9ca90674eef39841464defd91bb37e9ba276456))
+
+
+### Chores
+
+* **ci:** bump prism mock server version ([#180](https://github.com/OneBusAway/js-sdk/issues/180)) ([b72989f](https://github.com/OneBusAway/js-sdk/commit/b72989f302ceac4da344e728d65e4b780d5dc1e0))
+* **ci:** minor changes ([#179](https://github.com/OneBusAway/js-sdk/issues/179)) ([50ae404](https://github.com/OneBusAway/js-sdk/commit/50ae4049da86327c72b0e1a38acc63ce1b2e9b48))
+
 ## 0.1.0-alpha.37 (2024-08-08)
 
 Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
