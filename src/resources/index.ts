@@ -13,6 +13,7 @@ export {
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export { ReportProblemWithStopRetrieveParams, ReportProblemWithStop } from './report-problem-with-stop';
+export { ReportProblemWithTripRetrieveParams, ReportProblemWithTrip } from './report-problem-with-trip';
 export { RouteIDsForAgencyListResponse, RouteIDsForAgency } from './route-ids-for-agency';
 export { RouteRetrieveResponse, Route } from './route';
 export { RoutesForAgencyListResponse, RoutesForAgency } from './routes-for-agency';

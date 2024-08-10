@@ -213,6 +213,12 @@ Methods:
 
 - <code title="get /api/where/report-problem-with-stop/{stopID}.json">client.reportProblemWithStop.<a href="./src/resources/report-problem-with-stop.ts">retrieve</a>(stopId, { ...params }) -> ResponseWrapper</code>
 
+# ReportProblemWithTrip
+
+Methods:
+
+- <code title="get /api/where/report-problem-with-trip/{tripID}.json">client.reportProblemWithTrip.<a href="./src/resources/report-problem-with-trip.ts">retrieve</a>(tripId, { ...params }) -> ResponseWrapper</code>
+
 # SearchForStop
 
 Types:
