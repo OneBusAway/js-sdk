@@ -48,7 +48,7 @@ export interface ReportProblemWithTripRetrieveParams {
   /**
    * A stop ID indicating where the user is experiencing the problem
    */
-  stopId?: string;
+  stopID?: string;
 
   /**
    * Additional comment text supplied by the user describing the problem
@@ -83,7 +83,7 @@ export interface ReportProblemWithTripRetrieveParams {
   /**
    * The vehicle actively serving the trip
    */
-  vehicleId?: string;
+  vehicleID?: string;
 }
 
 export namespace ReportProblemWithTrip {
