@@ -143,6 +143,7 @@ export class OnebusawaySDK extends Core.APIClient {
   reportProblemWithTrip: API.ReportProblemWithTrip = new API.ReportProblemWithTrip(this);
   searchForStop: API.SearchForStop = new API.SearchForStop(this);
   searchForRoute: API.SearchForRoute = new API.SearchForRoute(this);
+  block: API.Block = new API.Block(this);
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
@@ -290,6 +291,9 @@ export namespace OnebusawaySDK {
   export import SearchForRoute = API.SearchForRoute;
   export import SearchForRouteRetrieveResponse = API.SearchForRouteRetrieveResponse;
   export import SearchForRouteRetrieveParams = API.SearchForRouteRetrieveParams;
+
+  export import Block = API.Block;
+  export import BlockRetrieveResponse = API.BlockRetrieveResponse;
 
   export import References = API.References;
   export import ResponseWrapper = API.ResponseWrapper;
