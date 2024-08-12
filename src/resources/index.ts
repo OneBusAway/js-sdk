@@ -10,6 +10,7 @@ export {
   ArrivalAndDepartureListParams,
   ArrivalAndDeparture,
 } from './arrival-and-departure';
+export { BlockRetrieveResponse, Block } from './block';
 export { ConfigRetrieveResponse, Config } from './config';
 export { CurrentTimeRetrieveResponse, CurrentTime } from './current-time';
 export { ReportProblemWithStopRetrieveParams, ReportProblemWithStop } from './report-problem-with-stop';

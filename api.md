@@ -238,3 +238,13 @@ Types:
 Methods:
 
 - <code title="get /api/where/search/route.json">client.searchForRoute.<a href="./src/resources/search-for-route.ts">retrieve</a>({ ...params }) -> SearchForRouteRetrieveResponse</code>
+
+# Block
+
+Types:
+
+- <code><a href="./src/resources/block.ts">BlockRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/block/{blockID}.json">client.block.<a href="./src/resources/block.ts">retrieve</a>(blockId) -> BlockRetrieveResponse</code>
