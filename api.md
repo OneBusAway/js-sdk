@@ -238,3 +238,23 @@ Types:
 Methods:
 
 - <code title="get /api/where/search/route.json">client.searchForRoute.<a href="./src/resources/search-for-route.ts">retrieve</a>({ ...params }) -> SearchForRouteRetrieveResponse</code>
+
+# Block
+
+Types:
+
+- <code><a href="./src/resources/block.ts">BlockRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/block/{blockID}.json">client.block.<a href="./src/resources/block.ts">retrieve</a>(blockId) -> BlockRetrieveResponse</code>
+
+# Shape
+
+Types:
+
+- <code><a href="./src/resources/shape.ts">ShapeRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/shape/{shapeID}.json">client.shape.<a href="./src/resources/shape.ts">retrieve</a>(shapeId) -> ShapeRetrieveResponse</code>
