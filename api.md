@@ -248,3 +248,13 @@ Types:
 Methods:
 
 - <code title="get /api/where/block/{blockID}.json">client.block.<a href="./src/resources/block.ts">retrieve</a>(blockId) -> BlockRetrieveResponse</code>
+
+# Shape
+
+Types:
+
+- <code><a href="./src/resources/shape.ts">ShapeRetrieveResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/shape/{shapeID}.json">client.shape.<a href="./src/resources/shape.ts">retrieve</a>(shapeId) -> ShapeRetrieveResponse</code>

@@ -39,6 +39,7 @@ export {
   SearchForRoute,
 } from './search-for-route';
 export { SearchForStopRetrieveResponse, SearchForStopRetrieveParams, SearchForStop } from './search-for-stop';
+export { ShapeRetrieveResponse, Shape } from './shape';
 export { StopIDsForAgencyListResponse, StopIDsForAgency } from './stop-ids-for-agency';
 export { StopRetrieveResponse, Stop } from './stop';
 export {
