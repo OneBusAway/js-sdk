@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export * from './shared';
-export { AgenciesWithCoverage } from './agencies-with-coverage';
+export { AgenciesWithCoverageListResponse, AgenciesWithCoverage } from './agencies-with-coverage';
 export { AgencyRetrieveResponse, Agency } from './agency';
 export {
   ArrivalAndDepartureRetrieveResponse,
