@@ -13,7 +13,7 @@ const settings = loadSettings({
 const oba = new onebusaway(settings);
 
 async function main() {
-  const spaceNeedleStops = await oba.stopsForLocation.retrieve({
+  const spaceNeedleStops = await oba.stopsForLocation.list({
     lat: 47.6205,
     lon: -122.3493,
     radius: 500,
