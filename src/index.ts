@@ -209,6 +209,7 @@ export namespace OnebusawaySDK {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
+  export import AgenciesWithCoverageListResponse = API.AgenciesWithCoverageListResponse;
 
   export import Agency = API.Agency;
   export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;

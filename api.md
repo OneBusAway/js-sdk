@@ -7,6 +7,14 @@ Types:
 
 # AgenciesWithCoverage
 
+Types:
+
+- <code><a href="./src/resources/agencies-with-coverage.ts">AgenciesWithCoverageListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">list</a>() -> AgenciesWithCoverageListResponse</code>
+
 # Agency
 
 Types:
