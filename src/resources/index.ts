@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export * from './shared';
-export { AgenciesWithCoverageRetrieveResponse, AgenciesWithCoverage } from './agencies-with-coverage';
+export { AgenciesWithCoverage } from './agencies-with-coverage';
 export { AgencyRetrieveResponse, Agency } from './agency';
 export {
   ArrivalAndDepartureRetrieveResponse,
@@ -60,6 +60,7 @@ export {
   TripsForLocationRetrieveParams,
   TripsForLocation,
 } from './trips-for-location';
+export { TripsForRouteListResponse, TripsForRouteListParams, TripsForRoute } from './trips-for-route';
 export {
   VehiclesForAgencyListResponse,
   VehiclesForAgencyListParams,
