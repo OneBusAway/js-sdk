@@ -13,7 +13,7 @@ const settings = loadSettings({
 const oba = new onebusaway(settings);
 
 async function main() {
-  const response = await oba.agenciesWithCoverage.retrieve();
+  const response = await oba.agenciesWithCoverage.list();
   console.log(response.data);
 }
 
