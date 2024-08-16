@@ -9,19 +9,19 @@ export class TripsForLocation extends APIResource {
   /**
    * Retrieve trips for a given location
    */
-  retrieve(
-    query: TripsForLocationRetrieveParams,
+  list(
+    query: TripsForLocationListParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<TripsForLocationRetrieveResponse> {
+  ): Core.APIPromise<TripsForLocationListResponse> {
     return this._client.get('/api/where/trips-for-location.json', { query, ...options });
   }
 }
 
-export interface TripsForLocationRetrieveResponse extends Shared.ResponseWrapper {
-  data: TripsForLocationRetrieveResponse.Data;
+export interface TripsForLocationListResponse extends Shared.ResponseWrapper {
+  data: TripsForLocationListResponse.Data;
 }
 
-export namespace TripsForLocationRetrieveResponse {
+export namespace TripsForLocationListResponse {
   export interface Data {
     list: Array<Data.List>;
 
@@ -259,7 +259,7 @@ export namespace TripsForLocationRetrieveResponse {
   }
 }
 
-export interface TripsForLocationRetrieveParams {
+export interface TripsForLocationListParams {
   /**
    * The latitude coordinate of the search center
    */
@@ -299,6 +299,6 @@ export interface TripsForLocationRetrieveParams {
 }
 
 export namespace TripsForLocation {
-  export import TripsForLocationRetrieveResponse = TripsForLocationAPI.TripsForLocationRetrieveResponse;
-  export import TripsForLocationRetrieveParams = TripsForLocationAPI.TripsForLocationRetrieveParams;
+  export import TripsForLocationListResponse = TripsForLocationAPI.TripsForLocationListResponse;
+  export import TripsForLocationListParams = TripsForLocationAPI.TripsForLocationListParams;
 }

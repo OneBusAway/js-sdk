@@ -225,8 +225,8 @@ export namespace OnebusawaySDK {
   export import CurrentTimeRetrieveResponse = API.CurrentTimeRetrieveResponse;
 
   export import StopsForLocation = API.StopsForLocation;
-  export import StopsForLocationRetrieveResponse = API.StopsForLocationRetrieveResponse;
-  export import StopsForLocationRetrieveParams = API.StopsForLocationRetrieveParams;
+  export import StopsForLocationListResponse = API.StopsForLocationListResponse;
+  export import StopsForLocationListParams = API.StopsForLocationListParams;
 
   export import StopsForRoute = API.StopsForRoute;
   export import StopsForRouteListResponse = API.StopsForRouteListResponse;
@@ -249,8 +249,8 @@ export namespace OnebusawaySDK {
   export import RouteIDsForAgencyListResponse = API.RouteIDsForAgencyListResponse;
 
   export import RoutesForLocation = API.RoutesForLocation;
-  export import RoutesForLocationRetrieveResponse = API.RoutesForLocationRetrieveResponse;
-  export import RoutesForLocationRetrieveParams = API.RoutesForLocationRetrieveParams;
+  export import RoutesForLocationListResponse = API.RoutesForLocationListResponse;
+  export import RoutesForLocationListParams = API.RoutesForLocationListParams;
 
   export import RoutesForAgency = API.RoutesForAgency;
   export import RoutesForAgencyListResponse = API.RoutesForAgencyListResponse;
@@ -269,8 +269,8 @@ export namespace OnebusawaySDK {
   export import TripRetrieveResponse = API.TripRetrieveResponse;
 
   export import TripsForLocation = API.TripsForLocation;
-  export import TripsForLocationRetrieveResponse = API.TripsForLocationRetrieveResponse;
-  export import TripsForLocationRetrieveParams = API.TripsForLocationRetrieveParams;
+  export import TripsForLocationListResponse = API.TripsForLocationListResponse;
+  export import TripsForLocationListParams = API.TripsForLocationListParams;
 
   export import TripDetails = API.TripDetails;
   export import TripDetailRetrieveResponse = API.TripDetailRetrieveResponse;

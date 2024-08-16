@@ -10,27 +10,27 @@ export class StopsForLocation extends APIResource {
   /**
    * stops-for-location
    */
-  retrieve(
-    query?: StopsForLocationRetrieveParams,
+  list(
+    query?: StopsForLocationListParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<StopsForLocationRetrieveResponse>;
-  retrieve(options?: Core.RequestOptions): Core.APIPromise<StopsForLocationRetrieveResponse>;
-  retrieve(
-    query: StopsForLocationRetrieveParams | Core.RequestOptions = {},
+  ): Core.APIPromise<StopsForLocationListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<StopsForLocationListResponse>;
+  list(
+    query: StopsForLocationListParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
-  ): Core.APIPromise<StopsForLocationRetrieveResponse> {
+  ): Core.APIPromise<StopsForLocationListResponse> {
     if (isRequestOptions(query)) {
-      return this.retrieve({}, query);
+      return this.list({}, query);
     }
     return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
 
-export interface StopsForLocationRetrieveResponse extends Shared.ResponseWrapper {
-  data: StopsForLocationRetrieveResponse.Data;
+export interface StopsForLocationListResponse extends Shared.ResponseWrapper {
+  data: StopsForLocationListResponse.Data;
 }
 
-export namespace StopsForLocationRetrieveResponse {
+export namespace StopsForLocationListResponse {
   export interface Data {
     limitExceeded: boolean;
 
@@ -66,13 +66,13 @@ export namespace StopsForLocationRetrieveResponse {
   }
 }
 
-export interface StopsForLocationRetrieveParams {
+export interface StopsForLocationListParams {
   lat?: number;
 
   lon?: number;
 }
 
 export namespace StopsForLocation {
-  export import StopsForLocationRetrieveResponse = StopsForLocationAPI.StopsForLocationRetrieveResponse;
-  export import StopsForLocationRetrieveParams = StopsForLocationAPI.StopsForLocationRetrieveParams;
+  export import StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
+  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
 }
