@@ -19,8 +19,8 @@ export { RouteIDsForAgencyListResponse, RouteIDsForAgency } from './route-ids-fo
 export { RouteRetrieveResponse, Route } from './route';
 export { RoutesForAgencyListResponse, RoutesForAgency } from './routes-for-agency';
 export {
-  RoutesForLocationRetrieveResponse,
-  RoutesForLocationRetrieveParams,
+  RoutesForLocationListResponse,
+  RoutesForLocationListParams,
   RoutesForLocation,
 } from './routes-for-location';
 export {
@@ -43,8 +43,8 @@ export { ShapeRetrieveResponse, Shape } from './shape';
 export { StopIDsForAgencyListResponse, StopIDsForAgency } from './stop-ids-for-agency';
 export { StopRetrieveResponse, Stop } from './stop';
 export {
-  StopsForLocationRetrieveResponse,
-  StopsForLocationRetrieveParams,
+  StopsForLocationListResponse,
+  StopsForLocationListParams,
   StopsForLocation,
 } from './stops-for-location';
 export { StopsForRouteListResponse, StopsForRouteListParams, StopsForRoute } from './stops-for-route';
@@ -56,8 +56,8 @@ export {
 } from './trip-for-vehicle';
 export { TripRetrieveResponse, Trip } from './trip';
 export {
-  TripsForLocationRetrieveResponse,
-  TripsForLocationRetrieveParams,
+  TripsForLocationListResponse,
+  TripsForLocationListParams,
   TripsForLocation,
 } from './trips-for-location';
 export { TripsForRouteListResponse, TripsForRouteListParams, TripsForRoute } from './trips-for-route';

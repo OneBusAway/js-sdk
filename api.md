@@ -59,11 +59,11 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/stops-for-location.ts">StopsForLocationRetrieveResponse</a></code>
+- <code><a href="./src/resources/stops-for-location.ts">StopsForLocationListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">retrieve</a>({ ...params }) -> StopsForLocationRetrieveResponse</code>
+- <code title="get /api/where/stops-for-location.json">client.stopsForLocation.<a href="./src/resources/stops-for-location.ts">list</a>({ ...params }) -> StopsForLocationListResponse</code>
 
 # StopsForRoute
 
@@ -129,11 +129,11 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/routes-for-location.ts">RoutesForLocationRetrieveResponse</a></code>
+- <code><a href="./src/resources/routes-for-location.ts">RoutesForLocationListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/routes-for-location.json">client.routesForLocation.<a href="./src/resources/routes-for-location.ts">retrieve</a>({ ...params }) -> RoutesForLocationRetrieveResponse</code>
+- <code title="get /api/where/routes-for-location.json">client.routesForLocation.<a href="./src/resources/routes-for-location.ts">list</a>({ ...params }) -> RoutesForLocationListResponse</code>
 
 # RoutesForAgency
 
@@ -181,11 +181,11 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/trips-for-location.ts">TripsForLocationRetrieveResponse</a></code>
+- <code><a href="./src/resources/trips-for-location.ts">TripsForLocationListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/trips-for-location.json">client.tripsForLocation.<a href="./src/resources/trips-for-location.ts">retrieve</a>({ ...params }) -> TripsForLocationRetrieveResponse</code>
+- <code title="get /api/where/trips-for-location.json">client.tripsForLocation.<a href="./src/resources/trips-for-location.ts">list</a>({ ...params }) -> TripsForLocationListResponse</code>
 
 # TripDetails
 
