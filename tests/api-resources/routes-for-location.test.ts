@@ -9,8 +9,8 @@ const client = new OnebusawaySDK({
 });
 
 describe('resource routesForLocation', () => {
-  test('retrieve: only required params', async () => {
-    const responsePromise = client.routesForLocation.retrieve({ lat: 0, lon: 0 });
+  test('list: only required params', async () => {
+    const responsePromise = client.routesForLocation.list({ lat: 0, lon: 0 });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,8 +20,8 @@ describe('resource routesForLocation', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: required and optional params', async () => {
-    const response = await client.routesForLocation.retrieve({
+  test('list: required and optional params', async () => {
+    const response = await client.routesForLocation.list({
       lat: 0,
       lon: 0,
       latSpan: 0,
