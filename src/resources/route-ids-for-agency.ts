@@ -20,11 +20,11 @@ export interface RouteIDsForAgencyListResponse extends Shared.ResponseWrapper {
 
 export namespace RouteIDsForAgencyListResponse {
   export interface Data {
+    limitExceeded: boolean;
+
     list: Array<string>;
 
     references: Shared.References;
-
-    limitExceeded?: boolean;
   }
 }
 
