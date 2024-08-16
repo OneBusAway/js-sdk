@@ -7,14 +7,6 @@ Types:
 
 # AgenciesWithCoverage
 
-Types:
-
-- <code><a href="./src/resources/agencies-with-coverage.ts">AgenciesWithCoverageRetrieveResponse</a></code>
-
-Methods:
-
-- <code title="get /api/where/agencies-with-coverage.json">client.agenciesWithCoverage.<a href="./src/resources/agencies-with-coverage.ts">retrieve</a>() -> AgenciesWithCoverageRetrieveResponse</code>
-
 # Agency
 
 Types:
@@ -206,6 +198,16 @@ Types:
 Methods:
 
 - <code title="get /api/where/trip-for-vehicle/{vehicleID}.json">client.tripForVehicle.<a href="./src/resources/trip-for-vehicle.ts">retrieve</a>(vehicleId, { ...params }) -> TripForVehicleRetrieveResponse</code>
+
+# TripsForRoute
+
+Types:
+
+- <code><a href="./src/resources/trips-for-route.ts">TripsForRouteListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/trips-for-route/{routeID}.json">client.tripsForRoute.<a href="./src/resources/trips-for-route.ts">list</a>(routeId, { ...params }) -> TripsForRouteListResponse</code>
 
 # ReportProblemWithStop
 

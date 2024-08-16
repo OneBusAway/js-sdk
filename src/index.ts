@@ -139,6 +139,7 @@ export class OnebusawaySDK extends Core.APIClient {
   tripsForLocation: API.TripsForLocation = new API.TripsForLocation(this);
   tripDetails: API.TripDetails = new API.TripDetails(this);
   tripForVehicle: API.TripForVehicle = new API.TripForVehicle(this);
+  tripsForRoute: API.TripsForRoute = new API.TripsForRoute(this);
   reportProblemWithStop: API.ReportProblemWithStop = new API.ReportProblemWithStop(this);
   reportProblemWithTrip: API.ReportProblemWithTrip = new API.ReportProblemWithTrip(this);
   searchForStop: API.SearchForStop = new API.SearchForStop(this);
@@ -208,7 +209,6 @@ export namespace OnebusawaySDK {
   export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
-  export import AgenciesWithCoverageRetrieveResponse = API.AgenciesWithCoverageRetrieveResponse;
 
   export import Agency = API.Agency;
   export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;
@@ -278,6 +278,10 @@ export namespace OnebusawaySDK {
   export import TripForVehicle = API.TripForVehicle;
   export import TripForVehicleRetrieveResponse = API.TripForVehicleRetrieveResponse;
   export import TripForVehicleRetrieveParams = API.TripForVehicleRetrieveParams;
+
+  export import TripsForRoute = API.TripsForRoute;
+  export import TripsForRouteListResponse = API.TripsForRouteListResponse;
+  export import TripsForRouteListParams = API.TripsForRouteListParams;
 
   export import ReportProblemWithStop = API.ReportProblemWithStop;
   export import ReportProblemWithStopRetrieveParams = API.ReportProblemWithStopRetrieveParams;
