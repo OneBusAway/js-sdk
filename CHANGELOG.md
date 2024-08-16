@@ -7,6 +7,7 @@ Full Changelog: [v0.1.0-alpha.39...v0.1.0-alpha.40](https://github.com/OneBusAwa
 ### Features
 
 * **api:** OpenAPI spec update via Stainless API ([#188](https://github.com/OneBusAway/js-sdk/issues/188)) ([81208e6](https://github.com/OneBusAway/js-sdk/commit/81208e62a52714dae490a6544ec64076e2af20dc))
+* **api:** OpenAPI spec update via Stainless API ([#191](https://github.com/OneBusAway/js-sdk/issues/191)) ([1edcc74](https://github.com/OneBusAway/js-sdk/commit/1edcc746cfd7f36d93ab371901af7f0a6bfeaa1f))
 
 
 ### Chores
