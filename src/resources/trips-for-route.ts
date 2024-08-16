@@ -43,30 +43,30 @@ export namespace TripsForRouteListResponse {
 
   export namespace Data {
     export interface List {
-      frequency?: string | null;
+      schedule: List.Schedule;
 
-      schedule?: List.Schedule;
+      status: List.Status;
+
+      tripId: string;
+
+      frequency?: string | null;
 
       serviceDate?: number;
 
       situationIds?: Array<string>;
-
-      status?: List.Status;
-
-      tripId?: string;
     }
 
     export namespace List {
       export interface Schedule {
+        nextTripId: string;
+
+        previousTripId: string;
+
+        stopTimes: Array<Schedule.StopTime>;
+
+        timeZone: string;
+
         frequency?: string | null;
-
-        nextTripId?: string;
-
-        previousTripId?: string;
-
-        stopTimes?: Array<Schedule.StopTime>;
-
-        timeZone?: string;
       }
 
       export namespace Schedule {
