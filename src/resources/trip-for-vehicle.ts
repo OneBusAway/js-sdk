@@ -56,15 +56,15 @@ export namespace TripForVehicleRetrieveResponse {
 
     export namespace Entry {
       export interface Schedule {
+        nextTripId: string;
+
+        previousTripId: string;
+
+        stopTimes: Array<Schedule.StopTime>;
+
+        timeZone: string;
+
         frequency?: string | null;
-
-        nextTripId?: string;
-
-        previousTripId?: string;
-
-        stopTimes?: Array<Schedule.StopTime>;
-
-        timeZone?: string;
       }
 
       export namespace Schedule {
