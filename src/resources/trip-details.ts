@@ -41,6 +41,8 @@ export namespace TripDetailRetrieveResponse {
 
   export namespace Data {
     export interface Entry {
+      tripId: string;
+
       frequency?: string | null;
 
       schedule?: Entry.Schedule;
@@ -50,8 +52,6 @@ export namespace TripDetailRetrieveResponse {
       situationIds?: Array<string>;
 
       status?: Entry.Status;
-
-      tripId?: string;
     }
 
     export namespace Entry {
