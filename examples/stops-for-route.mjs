@@ -17,7 +17,7 @@ async function main() {
   const response = await oba.stopsForRoute.list(routeId);
 
   if (response?.data) {
-    console.log(response.data.entry.polylines);
+    console.log(response.data);
   }
 }
 
