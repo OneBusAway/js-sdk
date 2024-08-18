@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0-alpha.40 (2024-08-16)
+## 0.1.0-alpha.40 (2024-08-18)
 
 Full Changelog: [v0.1.0-alpha.39...v0.1.0-alpha.40](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.39...v0.1.0-alpha.40)
 
@@ -10,6 +10,7 @@ Full Changelog: [v0.1.0-alpha.39...v0.1.0-alpha.40](https://github.com/OneBusAwa
 * **api:** OpenAPI spec update via Stainless API ([#191](https://github.com/OneBusAway/js-sdk/issues/191)) ([1edcc74](https://github.com/OneBusAway/js-sdk/commit/1edcc746cfd7f36d93ab371901af7f0a6bfeaa1f))
 * **api:** OpenAPI spec update via Stainless API ([#192](https://github.com/OneBusAway/js-sdk/issues/192)) ([18b4067](https://github.com/OneBusAway/js-sdk/commit/18b40671fcbc150188bb028525c4e9115ebd40be))
 * **api:** OpenAPI spec update via Stainless API ([#193](https://github.com/OneBusAway/js-sdk/issues/193)) ([4997727](https://github.com/OneBusAway/js-sdk/commit/49977278ae1a3c8449295eddedbb9f311da51025))
+* **api:** OpenAPI spec update via Stainless API ([#194](https://github.com/OneBusAway/js-sdk/issues/194)) ([35bfd3d](https://github.com/OneBusAway/js-sdk/commit/35bfd3d94b03281c7e33a5f2f94d3fb244c05d13))
 
 
 ### Chores
