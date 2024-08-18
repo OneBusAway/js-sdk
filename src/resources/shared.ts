@@ -278,6 +278,8 @@ export namespace References {
 
     routeId: string;
 
+    serviceId: string;
+
     blockId?: string;
 
     directionId?: string;
@@ -285,8 +287,6 @@ export namespace References {
     peakOffpeak?: number;
 
     routeShortName?: string;
-
-    serviceId?: string;
 
     shapeId?: string;
 

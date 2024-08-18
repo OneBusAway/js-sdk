@@ -31,6 +31,8 @@ export namespace TripRetrieveResponse {
 
       routeId: string;
 
+      serviceId: string;
+
       blockId?: string;
 
       directionId?: string;
@@ -38,8 +40,6 @@ export namespace TripRetrieveResponse {
       peakOffpeak?: number;
 
       routeShortName?: string;
-
-      serviceId?: string;
 
       shapeId?: string;
 

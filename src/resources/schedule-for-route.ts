@@ -122,6 +122,8 @@ export namespace ScheduleForRouteRetrieveResponse {
 
         routeId: string;
 
+        serviceId: string;
+
         blockId?: string;
 
         directionId?: string;
@@ -129,8 +131,6 @@ export namespace ScheduleForRouteRetrieveResponse {
         peakOffpeak?: number;
 
         routeShortName?: string;
-
-        serviceId?: string;
 
         shapeId?: string;
 
