@@ -34,9 +34,11 @@ export namespace SearchForRouteRetrieveResponse {
 
   export namespace Data {
     export interface List {
-      id?: string;
+      id: string;
 
-      agencyId?: string;
+      agencyId: string;
+
+      type: number;
 
       color?: string;
 
@@ -49,8 +51,6 @@ export namespace SearchForRouteRetrieveResponse {
       shortName?: string;
 
       textColor?: string;
-
-      type?: number;
 
       url?: string;
     }
