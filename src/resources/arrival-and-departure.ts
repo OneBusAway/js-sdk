@@ -59,24 +59,95 @@ export namespace ArrivalAndDepartureRetrieveResponse {
   export namespace Data {
     export interface Entry {
       /**
-       * The actual track information of the arriving transit vehicle.
-       */
-      actualTrack?: string;
-
-      /**
        * Indicates if riders can arrive on this transit vehicle.
        */
-      arrivalEnabled?: boolean;
+      arrivalEnabled: boolean;
 
       /**
        * Index of this arrival’s trip into the sequence of trips for the active block.
        */
-      blockTripSequence?: number;
+      blockTripSequence: number;
 
       /**
        * Indicates if riders can depart from this transit vehicle.
        */
-      departureEnabled?: boolean;
+      departureEnabled: boolean;
+
+      /**
+       * Number of stops between the arriving transit vehicle and the current stop
+       * (excluding the current stop).
+       */
+      numberOfStopsAway: number;
+
+      /**
+       * Predicted arrival time, in milliseconds since Unix epoch (zero if no real-time
+       * available).
+       */
+      predictedArrivalTime: number;
+
+      /**
+       * Predicted departure time, in milliseconds since Unix epoch (zero if no real-time
+       * available).
+       */
+      predictedDepartureTime: number;
+
+      /**
+       * The ID of the route for the arriving vehicle.
+       */
+      routeId: string;
+
+      /**
+       * Scheduled arrival time, in milliseconds since Unix epoch.
+       */
+      scheduledArrivalTime: number;
+
+      /**
+       * Scheduled departure time, in milliseconds since Unix epoch.
+       */
+      scheduledDepartureTime: number;
+
+      /**
+       * Time, in milliseconds since the Unix epoch, of midnight for the start of the
+       * service date for the trip.
+       */
+      serviceDate: number;
+
+      /**
+       * The ID of the stop the vehicle is arriving at.
+       */
+      stopId: string;
+
+      /**
+       * Index of the stop into the sequence of stops that make up the trip for this
+       * arrival.
+       */
+      stopSequence: number;
+
+      /**
+       * Total number of stops visited on the trip for this arrival.
+       */
+      totalStopsInTrip: number;
+
+      /**
+       * Optional trip headsign that potentially overrides the trip headsign in the
+       * referenced trip element.
+       */
+      tripHeadsign: string;
+
+      /**
+       * The ID of the trip for the arriving vehicle.
+       */
+      tripId: string;
+
+      /**
+       * ID of the transit vehicle serving this trip.
+       */
+      vehicleId: string;
+
+      /**
+       * The actual track information of the arriving transit vehicle.
+       */
+      actualTrack?: string;
 
       /**
        * Distance of the arriving transit vehicle from the stop, in meters.
@@ -99,12 +170,6 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       lastUpdateTime?: number;
 
       /**
-       * Number of stops between the arriving transit vehicle and the current stop
-       * (excluding the current stop).
-       */
-      numberOfStopsAway?: number;
-
-      /**
        * Current occupancy status of the transit vehicle.
        */
       occupancyStatus?: string;
@@ -120,31 +185,14 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       predictedArrivalInterval?: string;
 
       /**
-       * Predicted arrival time, in milliseconds since Unix epoch (zero if no real-time
-       * available).
-       */
-      predictedArrivalTime?: number;
-
-      /**
        * Interval for predicted departure time, if available.
        */
       predictedDepartureInterval?: string;
 
       /**
-       * Predicted departure time, in milliseconds since Unix epoch (zero if no real-time
-       * available).
-       */
-      predictedDepartureTime?: number;
-
-      /**
        * Predicted occupancy status of the transit vehicle.
        */
       predictedOccupancy?: string;
-
-      /**
-       * The ID of the route for the arriving vehicle.
-       */
-      routeId?: string;
 
       /**
        * Optional route long name that potentially overrides the route long name in the
@@ -164,30 +212,14 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       scheduledArrivalInterval?: string;
 
       /**
-       * Scheduled arrival time, in milliseconds since Unix epoch.
-       */
-      scheduledArrivalTime?: number;
-
-      /**
        * Interval for scheduled departure time.
        */
       scheduledDepartureInterval?: string;
 
       /**
-       * Scheduled departure time, in milliseconds since Unix epoch.
-       */
-      scheduledDepartureTime?: number;
-
-      /**
        * Scheduled track information of the arriving transit vehicle.
        */
       scheduledTrack?: string;
-
-      /**
-       * Time, in milliseconds since the Unix epoch, of midnight for the start of the
-       * service date for the trip.
-       */
-      serviceDate?: number;
 
       /**
        * References to situation elements (if any) applicable to this arrival.
@@ -200,41 +232,9 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       status?: string;
 
       /**
-       * The ID of the stop the vehicle is arriving at.
-       */
-      stopId?: string;
-
-      /**
-       * Index of the stop into the sequence of stops that make up the trip for this
-       * arrival.
-       */
-      stopSequence?: number;
-
-      /**
-       * Total number of stops visited on the trip for this arrival.
-       */
-      totalStopsInTrip?: number;
-
-      /**
-       * Optional trip headsign that potentially overrides the trip headsign in the
-       * referenced trip element.
-       */
-      tripHeadsign?: string;
-
-      /**
-       * The ID of the trip for the arriving vehicle.
-       */
-      tripId?: string;
-
-      /**
        * Trip-specific status for the arriving transit vehicle.
        */
       tripStatus?: Entry.TripStatus;
-
-      /**
-       * ID of the transit vehicle serving this trip.
-       */
-      vehicleId?: string;
     }
 
     export namespace Entry {
@@ -437,24 +437,95 @@ export namespace ArrivalAndDepartureListResponse {
     export namespace Entry {
       export interface ArrivalsAndDeparture {
         /**
-         * The actual track information of the arriving transit vehicle.
-         */
-        actualTrack?: string;
-
-        /**
          * Indicates if riders can arrive on this transit vehicle.
          */
-        arrivalEnabled?: boolean;
+        arrivalEnabled: boolean;
 
         /**
          * Index of this arrival’s trip into the sequence of trips for the active block.
          */
-        blockTripSequence?: number;
+        blockTripSequence: number;
 
         /**
          * Indicates if riders can depart from this transit vehicle.
          */
-        departureEnabled?: boolean;
+        departureEnabled: boolean;
+
+        /**
+         * Number of stops between the arriving transit vehicle and the current stop
+         * (excluding the current stop).
+         */
+        numberOfStopsAway: number;
+
+        /**
+         * Predicted arrival time, in milliseconds since Unix epoch (zero if no real-time
+         * available).
+         */
+        predictedArrivalTime: number;
+
+        /**
+         * Predicted departure time, in milliseconds since Unix epoch (zero if no real-time
+         * available).
+         */
+        predictedDepartureTime: number;
+
+        /**
+         * The ID of the route for the arriving vehicle.
+         */
+        routeId: string;
+
+        /**
+         * Scheduled arrival time, in milliseconds since Unix epoch.
+         */
+        scheduledArrivalTime: number;
+
+        /**
+         * Scheduled departure time, in milliseconds since Unix epoch.
+         */
+        scheduledDepartureTime: number;
+
+        /**
+         * Time, in milliseconds since the Unix epoch, of midnight for the start of the
+         * service date for the trip.
+         */
+        serviceDate: number;
+
+        /**
+         * The ID of the stop the vehicle is arriving at.
+         */
+        stopId: string;
+
+        /**
+         * Index of the stop into the sequence of stops that make up the trip for this
+         * arrival.
+         */
+        stopSequence: number;
+
+        /**
+         * Total number of stops visited on the trip for this arrival.
+         */
+        totalStopsInTrip: number;
+
+        /**
+         * Optional trip headsign that potentially overrides the trip headsign in the
+         * referenced trip element.
+         */
+        tripHeadsign: string;
+
+        /**
+         * The ID of the trip for the arriving vehicle.
+         */
+        tripId: string;
+
+        /**
+         * ID of the transit vehicle serving this trip.
+         */
+        vehicleId: string;
+
+        /**
+         * The actual track information of the arriving transit vehicle.
+         */
+        actualTrack?: string;
 
         /**
          * Distance of the arriving transit vehicle from the stop, in meters.
@@ -477,12 +548,6 @@ export namespace ArrivalAndDepartureListResponse {
         lastUpdateTime?: number;
 
         /**
-         * Number of stops between the arriving transit vehicle and the current stop
-         * (excluding the current stop).
-         */
-        numberOfStopsAway?: number;
-
-        /**
          * Current occupancy status of the transit vehicle.
          */
         occupancyStatus?: string;
@@ -498,31 +563,14 @@ export namespace ArrivalAndDepartureListResponse {
         predictedArrivalInterval?: string;
 
         /**
-         * Predicted arrival time, in milliseconds since Unix epoch (zero if no real-time
-         * available).
-         */
-        predictedArrivalTime?: number;
-
-        /**
          * Interval for predicted departure time, if available.
          */
         predictedDepartureInterval?: string;
 
         /**
-         * Predicted departure time, in milliseconds since Unix epoch (zero if no real-time
-         * available).
-         */
-        predictedDepartureTime?: number;
-
-        /**
          * Predicted occupancy status of the transit vehicle.
          */
         predictedOccupancy?: string;
-
-        /**
-         * The ID of the route for the arriving vehicle.
-         */
-        routeId?: string;
 
         /**
          * Optional route long name that potentially overrides the route long name in the
@@ -542,30 +590,14 @@ export namespace ArrivalAndDepartureListResponse {
         scheduledArrivalInterval?: string;
 
         /**
-         * Scheduled arrival time, in milliseconds since Unix epoch.
-         */
-        scheduledArrivalTime?: number;
-
-        /**
          * Interval for scheduled departure time.
          */
         scheduledDepartureInterval?: string;
 
         /**
-         * Scheduled departure time, in milliseconds since Unix epoch.
-         */
-        scheduledDepartureTime?: number;
-
-        /**
          * Scheduled track information of the arriving transit vehicle.
          */
         scheduledTrack?: string;
-
-        /**
-         * Time, in milliseconds since the Unix epoch, of midnight for the start of the
-         * service date for the trip.
-         */
-        serviceDate?: number;
 
         /**
          * References to situation elements (if any) applicable to this arrival.
@@ -578,41 +610,9 @@ export namespace ArrivalAndDepartureListResponse {
         status?: string;
 
         /**
-         * The ID of the stop the vehicle is arriving at.
-         */
-        stopId?: string;
-
-        /**
-         * Index of the stop into the sequence of stops that make up the trip for this
-         * arrival.
-         */
-        stopSequence?: number;
-
-        /**
-         * Total number of stops visited on the trip for this arrival.
-         */
-        totalStopsInTrip?: number;
-
-        /**
-         * Optional trip headsign that potentially overrides the trip headsign in the
-         * referenced trip element.
-         */
-        tripHeadsign?: string;
-
-        /**
-         * The ID of the trip for the arriving vehicle.
-         */
-        tripId?: string;
-
-        /**
          * Trip-specific status for the arriving transit vehicle.
          */
         tripStatus?: ArrivalsAndDeparture.TripStatus;
-
-        /**
-         * ID of the transit vehicle serving this trip.
-         */
-        vehicleId?: string;
       }
 
       export namespace ArrivalsAndDeparture {
