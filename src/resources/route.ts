@@ -27,9 +27,11 @@ export namespace RouteRetrieveResponse {
 
   export namespace Data {
     export interface Entry {
-      id?: string;
+      id: string;
 
-      agencyId?: string;
+      agencyId: string;
+
+      type: number;
 
       color?: string;
 
@@ -37,11 +39,11 @@ export namespace RouteRetrieveResponse {
 
       longName?: string;
 
+      nullSafeShortName?: string;
+
       shortName?: string;
 
       textColor?: string;
-
-      type?: number;
 
       url?: string;
     }
