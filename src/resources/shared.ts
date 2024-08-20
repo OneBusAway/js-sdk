@@ -38,9 +38,11 @@ export namespace References {
   }
 
   export interface Route {
-    id?: string;
+    id: string;
 
-    agencyId?: string;
+    agencyId: string;
+
+    type: number;
 
     color?: string;
 
@@ -53,8 +55,6 @@ export namespace References {
     shortName?: string;
 
     textColor?: string;
-
-    type?: number;
 
     url?: string;
   }
