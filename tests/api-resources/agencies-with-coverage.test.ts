@@ -9,8 +9,8 @@ const client = new OnebusawaySDK({
 });
 
 describe('resource agenciesWithCoverage', () => {
-  test('retrieve', async () => {
-    const responsePromise = client.agenciesWithCoverage.retrieve();
+  test('list', async () => {
+    const responsePromise = client.agenciesWithCoverage.list();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,9 +20,9 @@ describe('resource agenciesWithCoverage', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: request options instead of params are passed correctly', async () => {
+  test('list: request options instead of params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.agenciesWithCoverage.retrieve({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+    await expect(client.agenciesWithCoverage.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
       OnebusawaySDK.NotFoundError,
     );
   });

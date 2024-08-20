@@ -3,58 +3,60 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as TripDetailsAPI from './trip-details';
+import * as TripsForRouteAPI from './trips-for-route';
 import * as Shared from './shared';
 
-export class TripDetails extends APIResource {
+export class TripsForRoute extends APIResource {
   /**
-   * Retrieve Trip Details
+   * Search for active trips for a specific route.
    */
-  retrieve(
-    tripId: string,
-    query?: TripDetailRetrieveParams,
+  list(
+    routeId: string,
+    query?: TripsForRouteListParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<TripDetailRetrieveResponse>;
-  retrieve(tripId: string, options?: Core.RequestOptions): Core.APIPromise<TripDetailRetrieveResponse>;
-  retrieve(
-    tripId: string,
-    query: TripDetailRetrieveParams | Core.RequestOptions = {},
+  ): Core.APIPromise<TripsForRouteListResponse>;
+  list(routeId: string, options?: Core.RequestOptions): Core.APIPromise<TripsForRouteListResponse>;
+  list(
+    routeId: string,
+    query: TripsForRouteListParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
-  ): Core.APIPromise<TripDetailRetrieveResponse> {
+  ): Core.APIPromise<TripsForRouteListResponse> {
     if (isRequestOptions(query)) {
-      return this.retrieve(tripId, {}, query);
+      return this.list(routeId, {}, query);
     }
-    return this._client.get(`/api/where/trip-details/${tripId}.json`, { query, ...options });
+    return this._client.get(`/api/where/trips-for-route/${routeId}.json`, { query, ...options });
   }
 }
 
-export interface TripDetailRetrieveResponse extends Shared.ResponseWrapper {
-  data: TripDetailRetrieveResponse.Data;
+export interface TripsForRouteListResponse extends Shared.ResponseWrapper {
+  data: TripsForRouteListResponse.Data;
 }
 
-export namespace TripDetailRetrieveResponse {
+export namespace TripsForRouteListResponse {
   export interface Data {
-    entry: Data.Entry;
+    limitExceeded: boolean;
+
+    list: Array<Data.List>;
 
     references: Shared.References;
   }
 
   export namespace Data {
-    export interface Entry {
+    export interface List {
+      schedule: List.Schedule;
+
+      status: List.Status;
+
       tripId: string;
 
       frequency?: string | null;
 
-      schedule?: Entry.Schedule;
-
       serviceDate?: number;
 
       situationIds?: Array<string>;
-
-      status?: Entry.Status;
     }
 
-    export namespace Entry {
+    export namespace List {
       export interface Schedule {
         nextTripId: string;
 
@@ -260,37 +262,25 @@ export namespace TripDetailRetrieveResponse {
   }
 }
 
-export interface TripDetailRetrieveParams {
+export interface TripsForRouteListParams {
   /**
-   * Whether to include the full schedule element in the tripDetails section
-   * (defaults to true).
+   * Determine whether full schedule elements are included. Defaults to false.
    */
   includeSchedule?: boolean;
 
   /**
-   * Whether to include the full status element in the tripDetails section (defaults
-   * to true).
+   * Determine whether full tripStatus elements with real-time information are
+   * included. Defaults to false.
    */
   includeStatus?: boolean;
 
   /**
-   * Whether to include the full trip element in the references section (defaults to
-   * true).
-   */
-  includeTrip?: boolean;
-
-  /**
-   * Service date for the trip as Unix time in milliseconds (optional).
-   */
-  serviceDate?: number;
-
-  /**
-   * Time parameter to query the system at a specific time (optional).
+   * Query the system at a specific time. Useful for testing.
    */
   time?: number;
 }
 
-export namespace TripDetails {
-  export import TripDetailRetrieveResponse = TripDetailsAPI.TripDetailRetrieveResponse;
-  export import TripDetailRetrieveParams = TripDetailsAPI.TripDetailRetrieveParams;
+export namespace TripsForRoute {
+  export import TripsForRouteListResponse = TripsForRouteAPI.TripsForRouteListResponse;
+  export import TripsForRouteListParams = TripsForRouteAPI.TripsForRouteListParams;
 }

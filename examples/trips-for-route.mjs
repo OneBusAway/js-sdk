@@ -13,8 +13,8 @@ const settings = loadSettings({
 const oba = new onebusaway(settings);
 
 async function main() {
-  const response = await oba.agenciesWithCoverage.list();
-  console.log(response.data);
+  const response = await oba.tripsForRoute.list('1_100224');
+  console.log(response.data.list[0]);
 }
 
 main();

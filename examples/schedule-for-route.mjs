@@ -13,7 +13,14 @@ const settings = loadSettings({
 const oba = new onebusaway(settings);
 
 async function main() {
-  const response = await oba.agenciesWithCoverage.list();
+  const routeId = '1_100223';
+
+  const query = {
+    date: '2024-08-20', // response code 510 - returned if the route has no schedules for the day requested
+  };
+
+  const response = await oba.scheduleForRoute.retrieve(routeId, query);
+
   console.log(response.data);
 }
 

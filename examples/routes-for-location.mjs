@@ -13,7 +13,13 @@ const settings = loadSettings({
 const oba = new onebusaway(settings);
 
 async function main() {
-  const response = await oba.agenciesWithCoverage.list();
+  const query = {
+    lat: 47.6097, // required, type your latitude here
+    lon: -122.3331, // required, type your longitude here
+  };
+
+  const response = await oba.routesForLocation.list(query);
+
   console.log(response.data);
 }
 

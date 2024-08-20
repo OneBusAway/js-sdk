@@ -9,19 +9,19 @@ export class RoutesForLocation extends APIResource {
   /**
    * routes-for-location
    */
-  retrieve(
-    query: RoutesForLocationRetrieveParams,
+  list(
+    query: RoutesForLocationListParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<RoutesForLocationRetrieveResponse> {
+  ): Core.APIPromise<RoutesForLocationListResponse> {
     return this._client.get('/api/where/routes-for-location.json', { query, ...options });
   }
 }
 
-export interface RoutesForLocationRetrieveResponse extends Shared.ResponseWrapper {
-  data: RoutesForLocationRetrieveResponse.Data;
+export interface RoutesForLocationListResponse extends Shared.ResponseWrapper {
+  data: RoutesForLocationListResponse.Data;
 }
 
-export namespace RoutesForLocationRetrieveResponse {
+export namespace RoutesForLocationListResponse {
   export interface Data {
     limitExceeded: boolean;
 
@@ -34,9 +34,11 @@ export namespace RoutesForLocationRetrieveResponse {
 
   export namespace Data {
     export interface List {
-      id?: string;
+      id: string;
 
-      agencyId?: string;
+      agencyId: string;
+
+      type: number;
 
       color?: string;
 
@@ -50,14 +52,12 @@ export namespace RoutesForLocationRetrieveResponse {
 
       textColor?: string;
 
-      type?: number;
-
       url?: string;
     }
   }
 }
 
-export interface RoutesForLocationRetrieveParams {
+export interface RoutesForLocationListParams {
   lat: number;
 
   lon: number;
@@ -72,6 +72,6 @@ export interface RoutesForLocationRetrieveParams {
 }
 
 export namespace RoutesForLocation {
-  export import RoutesForLocationRetrieveResponse = RoutesForLocationAPI.RoutesForLocationRetrieveResponse;
-  export import RoutesForLocationRetrieveParams = RoutesForLocationAPI.RoutesForLocationRetrieveParams;
+  export import RoutesForLocationListResponse = RoutesForLocationAPI.RoutesForLocationListResponse;
+  export import RoutesForLocationListParams = RoutesForLocationAPI.RoutesForLocationListParams;
 }

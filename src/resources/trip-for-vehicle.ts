@@ -41,6 +41,8 @@ export namespace TripForVehicleRetrieveResponse {
 
   export namespace Data {
     export interface Entry {
+      tripId: string;
+
       frequency?: string | null;
 
       schedule?: Entry.Schedule;
@@ -50,21 +52,19 @@ export namespace TripForVehicleRetrieveResponse {
       situationIds?: Array<string>;
 
       status?: Entry.Status;
-
-      tripId?: string;
     }
 
     export namespace Entry {
       export interface Schedule {
+        nextTripId: string;
+
+        previousTripId: string;
+
+        stopTimes: Array<Schedule.StopTime>;
+
+        timeZone: string;
+
         frequency?: string | null;
-
-        nextTripId?: string;
-
-        previousTripId?: string;
-
-        stopTimes?: Array<Schedule.StopTime>;
-
-        timeZone?: string;
       }
 
       export namespace Schedule {
@@ -87,17 +87,84 @@ export namespace TripForVehicleRetrieveResponse {
         /**
          * Trip ID of the trip the vehicle is actively serving.
          */
-        activeTripId?: string;
+        activeTripId: string;
 
         /**
          * Index of the active trip into the sequence of trips for the active block.
          */
-        blockTripSequence?: number;
+        blockTripSequence: number;
 
         /**
          * ID of the closest stop to the current location of the transit vehicle.
          */
-        closestStop?: string;
+        closestStop: string;
+
+        /**
+         * Distance, in meters, the transit vehicle has progressed along the active trip.
+         */
+        distanceAlongTrip: number;
+
+        /**
+         * Last known distance along the trip received in real-time from the transit
+         * vehicle.
+         */
+        lastKnownDistanceAlongTrip: number;
+
+        /**
+         * Timestamp of the last known real-time location update from the transit vehicle.
+         */
+        lastLocationUpdateTime: number;
+
+        /**
+         * Timestamp of the last known real-time update from the transit vehicle.
+         */
+        lastUpdateTime: number;
+
+        /**
+         * Capacity of the transit vehicle in terms of occupancy.
+         */
+        occupancyCapacity: number;
+
+        /**
+         * Current count of occupants in the transit vehicle.
+         */
+        occupancyCount: number;
+
+        /**
+         * Current occupancy status of the transit vehicle.
+         */
+        occupancyStatus: string;
+
+        /**
+         * Current journey phase of the trip.
+         */
+        phase: string;
+
+        /**
+         * Indicates if real-time arrival info is available for this trip.
+         */
+        predicted: boolean;
+
+        /**
+         * Deviation from the schedule in seconds (positive for late, negative for early).
+         */
+        scheduleDeviation: number;
+
+        /**
+         * Time, in milliseconds since the Unix epoch, of midnight for the start of the
+         * service date for the trip.
+         */
+        serviceDate: number;
+
+        /**
+         * Current status modifiers for the trip.
+         */
+        status: string;
+
+        /**
+         * Total length of the trip, in meters.
+         */
+        totalDistanceAlongTrip: number;
 
         /**
          * Time offset from the closest stop to the current position of the transit vehicle
@@ -106,20 +173,9 @@ export namespace TripForVehicleRetrieveResponse {
         closestStopTimeOffset?: number;
 
         /**
-         * Distance, in meters, the transit vehicle has progressed along the active trip.
-         */
-        distanceAlongTrip?: number;
-
-        /**
          * Information about frequency-based scheduling, if applicable to the trip.
          */
         frequency?: string;
-
-        /**
-         * Last known distance along the trip received in real-time from the transit
-         * vehicle.
-         */
-        lastKnownDistanceAlongTrip?: number;
 
         /**
          * Last known location of the transit vehicle.
@@ -130,16 +186,6 @@ export namespace TripForVehicleRetrieveResponse {
          * Last known orientation value received in real-time from the transit vehicle.
          */
         lastKnownOrientation?: number;
-
-        /**
-         * Timestamp of the last known real-time location update from the transit vehicle.
-         */
-        lastLocationUpdateTime?: number;
-
-        /**
-         * Timestamp of the last known real-time update from the transit vehicle.
-         */
-        lastUpdateTime?: number;
 
         /**
          * ID of the next stop the transit vehicle is scheduled to arrive at.
@@ -153,39 +199,14 @@ export namespace TripForVehicleRetrieveResponse {
         nextStopTimeOffset?: number;
 
         /**
-         * Capacity of the transit vehicle in terms of occupancy.
-         */
-        occupancyCapacity?: number;
-
-        /**
-         * Current count of occupants in the transit vehicle.
-         */
-        occupancyCount?: number;
-
-        /**
-         * Current occupancy status of the transit vehicle.
-         */
-        occupancyStatus?: string;
-
-        /**
          * Orientation of the transit vehicle, represented as an angle in degrees.
          */
         orientation?: number;
 
         /**
-         * Current journey phase of the trip.
-         */
-        phase?: string;
-
-        /**
          * Current position of the transit vehicle.
          */
         position?: Status.Position;
-
-        /**
-         * Indicates if real-time arrival info is available for this trip.
-         */
-        predicted?: boolean;
 
         /**
          * Distance, in meters, the transit vehicle is scheduled to have progressed along
@@ -194,30 +215,9 @@ export namespace TripForVehicleRetrieveResponse {
         scheduledDistanceAlongTrip?: number;
 
         /**
-         * Deviation from the schedule in seconds (positive for late, negative for early).
-         */
-        scheduleDeviation?: number;
-
-        /**
-         * Time, in milliseconds since the Unix epoch, of midnight for the start of the
-         * service date for the trip.
-         */
-        serviceDate?: number;
-
-        /**
          * References to situation elements (if any) applicable to this trip.
          */
         situationIds?: Array<string>;
-
-        /**
-         * Current status modifiers for the trip.
-         */
-        status?: string;
-
-        /**
-         * Total length of the trip, in meters.
-         */
-        totalDistanceAlongTrip?: number;
 
         /**
          * ID of the transit vehicle currently serving the trip.
