@@ -34,9 +34,9 @@ export interface StopsForRouteListResponse extends Shared.ResponseWrapper {
 
 export namespace StopsForRouteListResponse {
   export interface Data {
-    entry?: Data.Entry;
+    entry: Data.Entry;
 
-    references?: Shared.References;
+    references: Shared.References;
   }
 
   export namespace Data {
