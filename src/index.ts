@@ -291,12 +291,12 @@ export namespace OnebusawaySDK {
   export import ReportProblemWithTripRetrieveParams = API.ReportProblemWithTripRetrieveParams;
 
   export import SearchForStop = API.SearchForStop;
-  export import SearchForStopRetrieveResponse = API.SearchForStopRetrieveResponse;
-  export import SearchForStopRetrieveParams = API.SearchForStopRetrieveParams;
+  export import SearchForStopListResponse = API.SearchForStopListResponse;
+  export import SearchForStopListParams = API.SearchForStopListParams;
 
   export import SearchForRoute = API.SearchForRoute;
-  export import SearchForRouteRetrieveResponse = API.SearchForRouteRetrieveResponse;
-  export import SearchForRouteRetrieveParams = API.SearchForRouteRetrieveParams;
+  export import SearchForRouteListResponse = API.SearchForRouteListResponse;
+  export import SearchForRouteListParams = API.SearchForRouteListParams;
 
   export import Block = API.Block;
   export import BlockRetrieveResponse = API.BlockRetrieveResponse;
