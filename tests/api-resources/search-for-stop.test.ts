@@ -9,8 +9,8 @@ const client = new OnebusawaySDK({
 });
 
 describe('resource searchForStop', () => {
-  test('retrieve: only required params', async () => {
-    const responsePromise = client.searchForStop.retrieve({ input: 'input' });
+  test('list: only required params', async () => {
+    const responsePromise = client.searchForStop.list({ input: 'input' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,7 +20,7 @@ describe('resource searchForStop', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('retrieve: required and optional params', async () => {
-    const response = await client.searchForStop.retrieve({ input: 'input', maxCount: 0 });
+  test('list: required and optional params', async () => {
+    const response = await client.searchForStop.list({ input: 'input', maxCount: 0 });
   });
 });

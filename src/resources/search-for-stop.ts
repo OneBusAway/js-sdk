@@ -9,19 +9,19 @@ export class SearchForStop extends APIResource {
   /**
    * Search for a stop based on its name.
    */
-  retrieve(
-    query: SearchForStopRetrieveParams,
+  list(
+    query: SearchForStopListParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<SearchForStopRetrieveResponse> {
+  ): Core.APIPromise<SearchForStopListResponse> {
     return this._client.get('/api/where/search/stop.json', { query, ...options });
   }
 }
 
-export interface SearchForStopRetrieveResponse extends Shared.ResponseWrapper {
-  data?: SearchForStopRetrieveResponse.Data;
+export interface SearchForStopListResponse extends Shared.ResponseWrapper {
+  data?: SearchForStopListResponse.Data;
 }
 
-export namespace SearchForStopRetrieveResponse {
+export namespace SearchForStopListResponse {
   export interface Data {
     limitExceeded: boolean;
 
@@ -59,7 +59,7 @@ export namespace SearchForStopRetrieveResponse {
   }
 }
 
-export interface SearchForStopRetrieveParams {
+export interface SearchForStopListParams {
   /**
    * The string to search for.
    */
@@ -72,6 +72,6 @@ export interface SearchForStopRetrieveParams {
 }
 
 export namespace SearchForStop {
-  export import SearchForStopRetrieveResponse = SearchForStopAPI.SearchForStopRetrieveResponse;
-  export import SearchForStopRetrieveParams = SearchForStopAPI.SearchForStopRetrieveParams;
+  export import SearchForStopListResponse = SearchForStopAPI.SearchForStopListResponse;
+  export import SearchForStopListParams = SearchForStopAPI.SearchForStopListParams;
 }
