@@ -9,19 +9,19 @@ export class SearchForRoute extends APIResource {
   /**
    * Search for a route based on its name.
    */
-  retrieve(
-    query: SearchForRouteRetrieveParams,
+  list(
+    query: SearchForRouteListParams,
     options?: Core.RequestOptions,
-  ): Core.APIPromise<SearchForRouteRetrieveResponse> {
+  ): Core.APIPromise<SearchForRouteListResponse> {
     return this._client.get('/api/where/search/route.json', { query, ...options });
   }
 }
 
-export interface SearchForRouteRetrieveResponse extends Shared.ResponseWrapper {
-  data?: SearchForRouteRetrieveResponse.Data;
+export interface SearchForRouteListResponse extends Shared.ResponseWrapper {
+  data?: SearchForRouteListResponse.Data;
 }
 
-export namespace SearchForRouteRetrieveResponse {
+export namespace SearchForRouteListResponse {
   export interface Data {
     limitExceeded: boolean;
 
@@ -57,7 +57,7 @@ export namespace SearchForRouteRetrieveResponse {
   }
 }
 
-export interface SearchForRouteRetrieveParams {
+export interface SearchForRouteListParams {
   /**
    * The string to search for.
    */
@@ -70,6 +70,6 @@ export interface SearchForRouteRetrieveParams {
 }
 
 export namespace SearchForRoute {
-  export import SearchForRouteRetrieveResponse = SearchForRouteAPI.SearchForRouteRetrieveResponse;
-  export import SearchForRouteRetrieveParams = SearchForRouteAPI.SearchForRouteRetrieveParams;
+  export import SearchForRouteListResponse = SearchForRouteAPI.SearchForRouteListResponse;
+  export import SearchForRouteListParams = SearchForRouteAPI.SearchForRouteListParams;
 }

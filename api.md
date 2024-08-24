@@ -233,21 +233,21 @@ Methods:
 
 Types:
 
-- <code><a href="./src/resources/search-for-stop.ts">SearchForStopRetrieveResponse</a></code>
+- <code><a href="./src/resources/search-for-stop.ts">SearchForStopListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/search/stop.json">client.searchForStop.<a href="./src/resources/search-for-stop.ts">retrieve</a>({ ...params }) -> SearchForStopRetrieveResponse</code>
+- <code title="get /api/where/search/stop.json">client.searchForStop.<a href="./src/resources/search-for-stop.ts">list</a>({ ...params }) -> SearchForStopListResponse</code>
 
 # SearchForRoute
 
 Types:
 
-- <code><a href="./src/resources/search-for-route.ts">SearchForRouteRetrieveResponse</a></code>
+- <code><a href="./src/resources/search-for-route.ts">SearchForRouteListResponse</a></code>
 
 Methods:
 
-- <code title="get /api/where/search/route.json">client.searchForRoute.<a href="./src/resources/search-for-route.ts">retrieve</a>({ ...params }) -> SearchForRouteRetrieveResponse</code>
+- <code title="get /api/where/search/route.json">client.searchForRoute.<a href="./src/resources/search-for-route.ts">list</a>({ ...params }) -> SearchForRouteListResponse</code>
 
 # Block
 
