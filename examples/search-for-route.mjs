@@ -14,7 +14,7 @@ const oba = new onebusaway(settings);
 
 async function main() {
   let searchInput = 'crysta';
-  const response = await oba.searchForRoute.retrieve({
+  const response = await oba.searchForRoute.list({
     input: searchInput,
   });
 
