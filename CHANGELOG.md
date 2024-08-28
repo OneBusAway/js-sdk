@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 (2024-08-28)
+
+Full Changelog: [v0.1.0-alpha.41...v1.0.0](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.41...v1.0.0)
+
+### Chores
+
+* release: 1.0.0 ([773c340](https://github.com/OneBusAway/js-sdk/commit/773c34018ef2de02571aa0a71f97c7aee1d5ee99))
+
 ## 0.1.0-alpha.41 (2024-08-24)
 
 Full Changelog: [v0.1.0-alpha.40...v0.1.0-alpha.41](https://github.com/OneBusAway/js-sdk/compare/v0.1.0-alpha.40...v0.1.0-alpha.41)
