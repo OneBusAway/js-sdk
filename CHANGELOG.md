@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.2 (2024-08-31)
+
+Full Changelog: [v1.0.1...v1.0.2](https://github.com/OneBusAway/js-sdk/compare/v1.0.1...v1.0.2)
+
+### Chores
+
+* **ci:** install deps via ./script/bootstrap ([#212](https://github.com/OneBusAway/js-sdk/issues/212)) ([9a44a5b](https://github.com/OneBusAway/js-sdk/commit/9a44a5b27fa20f5de4f53e12d24b6ed43750a90a))
+* run tsc as part of lint script ([#210](https://github.com/OneBusAway/js-sdk/issues/210)) ([27a9b3c](https://github.com/OneBusAway/js-sdk/commit/27a9b3c570db5dee15cb70b77be25a1ba4b95d23))
+
 ## 1.0.1 (2024-08-28)
 
 Full Changelog: [v1.0.0...v1.0.1](https://github.com/OneBusAway/js-sdk/compare/v1.0.0...v1.0.1)
