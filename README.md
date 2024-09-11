@@ -27,7 +27,7 @@ const client = new OnebusawaySDK({
 });
 
 async function main() {
-  const currentTimeRetrieveResponse = await client.currentTime.retrieve();
+  const currentTime = await client.currentTime.retrieve();
 }
 
 main();
@@ -46,8 +46,7 @@ const client = new OnebusawaySDK({
 });
 
 async function main() {
-  const currentTimeRetrieveResponse: OnebusawaySDK.CurrentTimeRetrieveResponse =
-    await client.currentTime.retrieve();
+  const currentTime: OnebusawaySDK.CurrentTimeRetrieveResponse = await client.currentTime.retrieve();
 }
 
 main();
@@ -64,7 +63,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 async function main() {
-  const currentTimeRetrieveResponse = await client.currentTime.retrieve().catch(async (err) => {
+  const currentTime = await client.currentTime.retrieve().catch(async (err) => {
     if (err instanceof OnebusawaySDK.APIError) {
       console.log(err.status); // 400
       console.log(err.name); // BadRequestError
@@ -149,11 +148,9 @@ const response = await client.currentTime.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: currentTimeRetrieveResponse, response: raw } = await client.currentTime
-  .retrieve()
-  .withResponse();
+const { data: currentTime, response: raw } = await client.currentTime.retrieve().withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(currentTimeRetrieveResponse);
+console.log(currentTime);
 ```
 
 ### Making custom/undocumented requests
