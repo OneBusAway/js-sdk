@@ -13,7 +13,7 @@ const settings = loadSettings({
 const oba = new onebusaway(settings);
 
 async function main() {
-  const blockId = '1_7310845';
+  const blockId = "1_7331695";
   const response = await oba.block.retrieve(blockId);
   console.log(response.data.entry.configurations[0].trips[0]);
 }
