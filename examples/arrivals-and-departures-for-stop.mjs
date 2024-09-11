@@ -15,8 +15,8 @@ const oba = new onebusaway(settings);
 async function main() {
   // Define the query parameters
   const query = {
-    tripId: '1_604670535', // Replace with actual trip ID
-    serviceDate: '1810918000000', // Replace with actual service date in milliseconds since epoch
+    minutesBefore: 5, // include vehicles having arrived or departed in the previous n minutes (default=5)
+    minutesAfter: 35,  // include vehicles arriving or departing in the next n minutes (default=35)
   };
 
   const stopId = '1_75403'; // Replace with actual stop ID
