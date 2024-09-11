@@ -30,7 +30,11 @@ describe('resource scheduleForRoute', () => {
   test('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
-      client.scheduleForRoute.retrieve('1_100223', { date: 'date' }, { path: '/_stainless_unknown_path' }),
+      client.scheduleForRoute.retrieve(
+        '1_100223',
+        { date: '2019-12-27' },
+        { path: '/_stainless_unknown_path' },
+      ),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 });

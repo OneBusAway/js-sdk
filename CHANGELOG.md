@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.1.0 (2024-09-11)
+
+Full Changelog: [v1.0.2...v1.1.0](https://github.com/OneBusAway/js-sdk/compare/v1.0.2...v1.1.0)
+
+### Features
+
+* **api:** OpenAPI spec update via Stainless API ([#217](https://github.com/OneBusAway/js-sdk/issues/217)) ([ddae052](https://github.com/OneBusAway/js-sdk/commit/ddae052d9c90311addcc33f0c0c70deab33023ce))
+
+
+### Chores
+
+* configure new SDK language ([#214](https://github.com/OneBusAway/js-sdk/issues/214)) ([1a4b890](https://github.com/OneBusAway/js-sdk/commit/1a4b89014e70ef26ba6524df705d89330f82a1e9))
+* **internal:** codegen related update ([#216](https://github.com/OneBusAway/js-sdk/issues/216)) ([34e99b4](https://github.com/OneBusAway/js-sdk/commit/34e99b4a436d66efec7652f63619e40c0f36ba0f))
+* update blockId ([52ea00c](https://github.com/OneBusAway/js-sdk/commit/52ea00c0934992d119f626405dbbf4901cc872b6))
+
+
+### Refactors
+
+* Refactor queryParams ([b0560c9](https://github.com/OneBusAway/js-sdk/commit/b0560c9d74a2d5b309566f826eb273a5e8662a01))
+
 ## 1.0.2 (2024-08-31)
 
 Full Changelog: [v1.0.1...v1.0.2](https://github.com/OneBusAway/js-sdk/compare/v1.0.1...v1.0.2)
