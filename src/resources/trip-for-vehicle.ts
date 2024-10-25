@@ -286,6 +286,6 @@ export interface TripForVehicleRetrieveParams {
 }
 
 export namespace TripForVehicle {
-  export type TripForVehicleRetrieveResponse = TripForVehicleAPI.TripForVehicleRetrieveResponse;
-  export type TripForVehicleRetrieveParams = TripForVehicleAPI.TripForVehicleRetrieveParams;
+  export import TripForVehicleRetrieveResponse = TripForVehicleAPI.TripForVehicleRetrieveResponse;
+  export import TripForVehicleRetrieveParams = TripForVehicleAPI.TripForVehicleRetrieveParams;
 }

@@ -299,6 +299,6 @@ export interface TripsForLocationListParams {
 }
 
 export namespace TripsForLocation {
-  export type TripsForLocationListResponse = TripsForLocationAPI.TripsForLocationListResponse;
-  export type TripsForLocationListParams = TripsForLocationAPI.TripsForLocationListParams;
+  export import TripsForLocationListResponse = TripsForLocationAPI.TripsForLocationListResponse;
+  export import TripsForLocationListParams = TripsForLocationAPI.TripsForLocationListParams;
 }

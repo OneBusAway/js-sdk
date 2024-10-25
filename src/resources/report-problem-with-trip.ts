@@ -87,6 +87,5 @@ export interface ReportProblemWithTripRetrieveParams {
 }
 
 export namespace ReportProblemWithTrip {
-  export type ReportProblemWithTripRetrieveParams =
-    ReportProblemWithTripAPI.ReportProblemWithTripRetrieveParams;
+  export import ReportProblemWithTripRetrieveParams = ReportProblemWithTripAPI.ReportProblemWithTripRetrieveParams;
 }

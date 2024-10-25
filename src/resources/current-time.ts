@@ -35,5 +35,5 @@ export namespace CurrentTimeRetrieveResponse {
 }
 
 export namespace CurrentTime {
-  export type CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
+  export import CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
 }
