@@ -258,6 +258,6 @@ export interface VehiclesForAgencyListParams {
 }
 
 export namespace VehiclesForAgency {
-  export import VehiclesForAgencyListResponse = VehiclesForAgencyAPI.VehiclesForAgencyListResponse;
-  export import VehiclesForAgencyListParams = VehiclesForAgencyAPI.VehiclesForAgencyListParams;
+  export type VehiclesForAgencyListResponse = VehiclesForAgencyAPI.VehiclesForAgencyListResponse;
+  export type VehiclesForAgencyListParams = VehiclesForAgencyAPI.VehiclesForAgencyListParams;
 }

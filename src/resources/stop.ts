@@ -53,5 +53,5 @@ export namespace StopRetrieveResponse {
 }
 
 export namespace Stop {
-  export import StopRetrieveResponse = StopAPI.StopRetrieveResponse;
+  export type StopRetrieveResponse = StopAPI.StopRetrieveResponse;
 }
