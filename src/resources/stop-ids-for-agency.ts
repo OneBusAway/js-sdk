@@ -29,5 +29,5 @@ export namespace StopIDsForAgencyListResponse {
 }
 
 export namespace StopIDsForAgency {
-  export import StopIDsForAgencyListResponse = StopIDsForAgencyAPI.StopIDsForAgencyListResponse;
+  export type StopIDsForAgencyListResponse = StopIDsForAgencyAPI.StopIDsForAgencyListResponse;
 }

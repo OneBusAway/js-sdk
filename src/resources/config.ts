@@ -85,5 +85,5 @@ export namespace ConfigRetrieveResponse {
 }
 
 export namespace Config {
-  export import ConfigRetrieveResponse = ConfigAPI.ConfigRetrieveResponse;
+  export type ConfigRetrieveResponse = ConfigAPI.ConfigRetrieveResponse;
 }

@@ -103,6 +103,6 @@ export interface StopsForRouteListParams {
 }
 
 export namespace StopsForRoute {
-  export import StopsForRouteListResponse = StopsForRouteAPI.StopsForRouteListResponse;
-  export import StopsForRouteListParams = StopsForRouteAPI.StopsForRouteListParams;
+  export type StopsForRouteListResponse = StopsForRouteAPI.StopsForRouteListResponse;
+  export type StopsForRouteListParams = StopsForRouteAPI.StopsForRouteListParams;
 }
