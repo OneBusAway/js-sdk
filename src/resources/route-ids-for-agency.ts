@@ -29,5 +29,5 @@ export namespace RouteIDsForAgencyListResponse {
 }
 
 export namespace RouteIDsForAgency {
-  export import RouteIDsForAgencyListResponse = RouteIDsForAgencyAPI.RouteIDsForAgencyListResponse;
+  export type RouteIDsForAgencyListResponse = RouteIDsForAgencyAPI.RouteIDsForAgencyListResponse;
 }

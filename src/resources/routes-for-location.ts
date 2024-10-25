@@ -72,6 +72,6 @@ export interface RoutesForLocationListParams {
 }
 
 export namespace RoutesForLocation {
-  export import RoutesForLocationListResponse = RoutesForLocationAPI.RoutesForLocationListResponse;
-  export import RoutesForLocationListParams = RoutesForLocationAPI.RoutesForLocationListParams;
+  export type RoutesForLocationListResponse = RoutesForLocationAPI.RoutesForLocationListResponse;
+  export type RoutesForLocationListParams = RoutesForLocationAPI.RoutesForLocationListParams;
 }

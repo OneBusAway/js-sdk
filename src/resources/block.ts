@@ -83,5 +83,5 @@ export namespace BlockRetrieveResponse {
 }
 
 export namespace Block {
-  export import BlockRetrieveResponse = BlockAPI.BlockRetrieveResponse;
+  export type BlockRetrieveResponse = BlockAPI.BlockRetrieveResponse;
 }
