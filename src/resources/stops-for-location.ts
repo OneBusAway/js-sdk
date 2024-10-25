@@ -84,6 +84,6 @@ export interface StopsForLocationListParams {
 }
 
 export namespace StopsForLocation {
-  export type StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
-  export type StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
+  export import StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
+  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
 }

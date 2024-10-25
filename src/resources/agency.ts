@@ -53,5 +53,5 @@ export namespace AgencyRetrieveResponse {
 }
 
 export namespace Agency {
-  export type AgencyRetrieveResponse = AgencyAPI.AgencyRetrieveResponse;
+  export import AgencyRetrieveResponse = AgencyAPI.AgencyRetrieveResponse;
 }

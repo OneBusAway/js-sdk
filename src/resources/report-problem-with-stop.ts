@@ -56,6 +56,5 @@ export interface ReportProblemWithStopRetrieveParams {
 }
 
 export namespace ReportProblemWithStop {
-  export type ReportProblemWithStopRetrieveParams =
-    ReportProblemWithStopAPI.ReportProblemWithStopRetrieveParams;
+  export import ReportProblemWithStopRetrieveParams = ReportProblemWithStopAPI.ReportProblemWithStopRetrieveParams;
 }

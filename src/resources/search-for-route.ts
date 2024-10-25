@@ -70,6 +70,6 @@ export interface SearchForRouteListParams {
 }
 
 export namespace SearchForRoute {
-  export type SearchForRouteListResponse = SearchForRouteAPI.SearchForRouteListResponse;
-  export type SearchForRouteListParams = SearchForRouteAPI.SearchForRouteListParams;
+  export import SearchForRouteListResponse = SearchForRouteAPI.SearchForRouteListResponse;
+  export import SearchForRouteListParams = SearchForRouteAPI.SearchForRouteListParams;
 }

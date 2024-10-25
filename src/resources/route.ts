@@ -51,5 +51,5 @@ export namespace RouteRetrieveResponse {
 }
 
 export namespace Route {
-  export type RouteRetrieveResponse = RouteAPI.RouteRetrieveResponse;
+  export import RouteRetrieveResponse = RouteAPI.RouteRetrieveResponse;
 }

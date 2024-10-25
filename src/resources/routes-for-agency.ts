@@ -53,5 +53,5 @@ export namespace RoutesForAgencyListResponse {
 }
 
 export namespace RoutesForAgency {
-  export type RoutesForAgencyListResponse = RoutesForAgencyAPI.RoutesForAgencyListResponse;
+  export import RoutesForAgencyListResponse = RoutesForAgencyAPI.RoutesForAgencyListResponse;
 }
