@@ -281,6 +281,6 @@ export interface TripsForRouteListParams {
 }
 
 export namespace TripsForRoute {
-  export type TripsForRouteListResponse = TripsForRouteAPI.TripsForRouteListResponse;
-  export type TripsForRouteListParams = TripsForRouteAPI.TripsForRouteListParams;
+  export import TripsForRouteListResponse = TripsForRouteAPI.TripsForRouteListResponse;
+  export import TripsForRouteListParams = TripsForRouteAPI.TripsForRouteListParams;
 }

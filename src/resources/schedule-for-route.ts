@@ -153,6 +153,6 @@ export interface ScheduleForRouteRetrieveParams {
 }
 
 export namespace ScheduleForRoute {
-  export type ScheduleForRouteRetrieveResponse = ScheduleForRouteAPI.ScheduleForRouteRetrieveResponse;
-  export type ScheduleForRouteRetrieveParams = ScheduleForRouteAPI.ScheduleForRouteRetrieveParams;
+  export import ScheduleForRouteRetrieveResponse = ScheduleForRouteAPI.ScheduleForRouteRetrieveResponse;
+  export import ScheduleForRouteRetrieveParams = ScheduleForRouteAPI.ScheduleForRouteRetrieveParams;
 }
