@@ -206,106 +206,106 @@ export import toFile = Uploads.toFile;
 export import fileFromPath = Uploads.fileFromPath;
 
 export namespace OnebusawaySDK {
-  export type RequestOptions = Core.RequestOptions;
+  export import RequestOptions = Core.RequestOptions;
 
   export import AgenciesWithCoverage = API.AgenciesWithCoverage;
-  export type AgenciesWithCoverageListResponse = API.AgenciesWithCoverageListResponse;
+  export import AgenciesWithCoverageListResponse = API.AgenciesWithCoverageListResponse;
 
   export import Agency = API.Agency;
-  export type AgencyRetrieveResponse = API.AgencyRetrieveResponse;
+  export import AgencyRetrieveResponse = API.AgencyRetrieveResponse;
 
   export import VehiclesForAgency = API.VehiclesForAgency;
-  export type VehiclesForAgencyListResponse = API.VehiclesForAgencyListResponse;
-  export type VehiclesForAgencyListParams = API.VehiclesForAgencyListParams;
+  export import VehiclesForAgencyListResponse = API.VehiclesForAgencyListResponse;
+  export import VehiclesForAgencyListParams = API.VehiclesForAgencyListParams;
 
   export import Config = API.Config;
-  export type ConfigRetrieveResponse = API.ConfigRetrieveResponse;
+  export import ConfigRetrieveResponse = API.ConfigRetrieveResponse;
 
   export import CurrentTime = API.CurrentTime;
-  export type CurrentTimeRetrieveResponse = API.CurrentTimeRetrieveResponse;
+  export import CurrentTimeRetrieveResponse = API.CurrentTimeRetrieveResponse;
 
   export import StopsForLocation = API.StopsForLocation;
-  export type StopsForLocationListResponse = API.StopsForLocationListResponse;
-  export type StopsForLocationListParams = API.StopsForLocationListParams;
+  export import StopsForLocationListResponse = API.StopsForLocationListResponse;
+  export import StopsForLocationListParams = API.StopsForLocationListParams;
 
   export import StopsForRoute = API.StopsForRoute;
-  export type StopsForRouteListResponse = API.StopsForRouteListResponse;
-  export type StopsForRouteListParams = API.StopsForRouteListParams;
+  export import StopsForRouteListResponse = API.StopsForRouteListResponse;
+  export import StopsForRouteListParams = API.StopsForRouteListParams;
 
   export import Stop = API.Stop;
-  export type StopRetrieveResponse = API.StopRetrieveResponse;
+  export import StopRetrieveResponse = API.StopRetrieveResponse;
 
   export import StopIDsForAgency = API.StopIDsForAgency;
-  export type StopIDsForAgencyListResponse = API.StopIDsForAgencyListResponse;
+  export import StopIDsForAgencyListResponse = API.StopIDsForAgencyListResponse;
 
   export import ScheduleForStop = API.ScheduleForStop;
-  export type ScheduleForStopRetrieveResponse = API.ScheduleForStopRetrieveResponse;
-  export type ScheduleForStopRetrieveParams = API.ScheduleForStopRetrieveParams;
+  export import ScheduleForStopRetrieveResponse = API.ScheduleForStopRetrieveResponse;
+  export import ScheduleForStopRetrieveParams = API.ScheduleForStopRetrieveParams;
 
   export import Route = API.Route;
-  export type RouteRetrieveResponse = API.RouteRetrieveResponse;
+  export import RouteRetrieveResponse = API.RouteRetrieveResponse;
 
   export import RouteIDsForAgency = API.RouteIDsForAgency;
-  export type RouteIDsForAgencyListResponse = API.RouteIDsForAgencyListResponse;
+  export import RouteIDsForAgencyListResponse = API.RouteIDsForAgencyListResponse;
 
   export import RoutesForLocation = API.RoutesForLocation;
-  export type RoutesForLocationListResponse = API.RoutesForLocationListResponse;
-  export type RoutesForLocationListParams = API.RoutesForLocationListParams;
+  export import RoutesForLocationListResponse = API.RoutesForLocationListResponse;
+  export import RoutesForLocationListParams = API.RoutesForLocationListParams;
 
   export import RoutesForAgency = API.RoutesForAgency;
-  export type RoutesForAgencyListResponse = API.RoutesForAgencyListResponse;
+  export import RoutesForAgencyListResponse = API.RoutesForAgencyListResponse;
 
   export import ScheduleForRoute = API.ScheduleForRoute;
-  export type ScheduleForRouteRetrieveResponse = API.ScheduleForRouteRetrieveResponse;
-  export type ScheduleForRouteRetrieveParams = API.ScheduleForRouteRetrieveParams;
+  export import ScheduleForRouteRetrieveResponse = API.ScheduleForRouteRetrieveResponse;
+  export import ScheduleForRouteRetrieveParams = API.ScheduleForRouteRetrieveParams;
 
   export import ArrivalAndDeparture = API.ArrivalAndDeparture;
-  export type ArrivalAndDepartureRetrieveResponse = API.ArrivalAndDepartureRetrieveResponse;
-  export type ArrivalAndDepartureListResponse = API.ArrivalAndDepartureListResponse;
-  export type ArrivalAndDepartureRetrieveParams = API.ArrivalAndDepartureRetrieveParams;
-  export type ArrivalAndDepartureListParams = API.ArrivalAndDepartureListParams;
+  export import ArrivalAndDepartureRetrieveResponse = API.ArrivalAndDepartureRetrieveResponse;
+  export import ArrivalAndDepartureListResponse = API.ArrivalAndDepartureListResponse;
+  export import ArrivalAndDepartureRetrieveParams = API.ArrivalAndDepartureRetrieveParams;
+  export import ArrivalAndDepartureListParams = API.ArrivalAndDepartureListParams;
 
   export import Trip = API.Trip;
-  export type TripRetrieveResponse = API.TripRetrieveResponse;
+  export import TripRetrieveResponse = API.TripRetrieveResponse;
 
   export import TripsForLocation = API.TripsForLocation;
-  export type TripsForLocationListResponse = API.TripsForLocationListResponse;
-  export type TripsForLocationListParams = API.TripsForLocationListParams;
+  export import TripsForLocationListResponse = API.TripsForLocationListResponse;
+  export import TripsForLocationListParams = API.TripsForLocationListParams;
 
   export import TripDetails = API.TripDetails;
-  export type TripDetailRetrieveResponse = API.TripDetailRetrieveResponse;
-  export type TripDetailRetrieveParams = API.TripDetailRetrieveParams;
+  export import TripDetailRetrieveResponse = API.TripDetailRetrieveResponse;
+  export import TripDetailRetrieveParams = API.TripDetailRetrieveParams;
 
   export import TripForVehicle = API.TripForVehicle;
-  export type TripForVehicleRetrieveResponse = API.TripForVehicleRetrieveResponse;
-  export type TripForVehicleRetrieveParams = API.TripForVehicleRetrieveParams;
+  export import TripForVehicleRetrieveResponse = API.TripForVehicleRetrieveResponse;
+  export import TripForVehicleRetrieveParams = API.TripForVehicleRetrieveParams;
 
   export import TripsForRoute = API.TripsForRoute;
-  export type TripsForRouteListResponse = API.TripsForRouteListResponse;
-  export type TripsForRouteListParams = API.TripsForRouteListParams;
+  export import TripsForRouteListResponse = API.TripsForRouteListResponse;
+  export import TripsForRouteListParams = API.TripsForRouteListParams;
 
   export import ReportProblemWithStop = API.ReportProblemWithStop;
-  export type ReportProblemWithStopRetrieveParams = API.ReportProblemWithStopRetrieveParams;
+  export import ReportProblemWithStopRetrieveParams = API.ReportProblemWithStopRetrieveParams;
 
   export import ReportProblemWithTrip = API.ReportProblemWithTrip;
-  export type ReportProblemWithTripRetrieveParams = API.ReportProblemWithTripRetrieveParams;
+  export import ReportProblemWithTripRetrieveParams = API.ReportProblemWithTripRetrieveParams;
 
   export import SearchForStop = API.SearchForStop;
-  export type SearchForStopListResponse = API.SearchForStopListResponse;
-  export type SearchForStopListParams = API.SearchForStopListParams;
+  export import SearchForStopListResponse = API.SearchForStopListResponse;
+  export import SearchForStopListParams = API.SearchForStopListParams;
 
   export import SearchForRoute = API.SearchForRoute;
-  export type SearchForRouteListResponse = API.SearchForRouteListResponse;
-  export type SearchForRouteListParams = API.SearchForRouteListParams;
+  export import SearchForRouteListResponse = API.SearchForRouteListResponse;
+  export import SearchForRouteListParams = API.SearchForRouteListParams;
 
   export import Block = API.Block;
-  export type BlockRetrieveResponse = API.BlockRetrieveResponse;
+  export import BlockRetrieveResponse = API.BlockRetrieveResponse;
 
   export import Shape = API.Shape;
-  export type ShapeRetrieveResponse = API.ShapeRetrieveResponse;
+  export import ShapeRetrieveResponse = API.ShapeRetrieveResponse;
 
-  export type References = API.References;
-  export type ResponseWrapper = API.ResponseWrapper;
+  export import References = API.References;
+  export import ResponseWrapper = API.ResponseWrapper;
 }
 
 export default OnebusawaySDK;

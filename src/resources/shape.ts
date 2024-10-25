@@ -40,5 +40,5 @@ export namespace ShapeRetrieveResponse {
 }
 
 export namespace Shape {
-  export type ShapeRetrieveResponse = ShapeAPI.ShapeRetrieveResponse;
+  export import ShapeRetrieveResponse = ShapeAPI.ShapeRetrieveResponse;
 }
