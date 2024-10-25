@@ -72,6 +72,6 @@ export interface SearchForStopListParams {
 }
 
 export namespace SearchForStop {
-  export import SearchForStopListResponse = SearchForStopAPI.SearchForStopListResponse;
-  export import SearchForStopListParams = SearchForStopAPI.SearchForStopListParams;
+  export type SearchForStopListResponse = SearchForStopAPI.SearchForStopListResponse;
+  export type SearchForStopListParams = SearchForStopAPI.SearchForStopListParams;
 }

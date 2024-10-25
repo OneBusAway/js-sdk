@@ -44,5 +44,5 @@ export namespace AgenciesWithCoverageListResponse {
 }
 
 export namespace AgenciesWithCoverage {
-  export import AgenciesWithCoverageListResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageListResponse;
+  export type AgenciesWithCoverageListResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageListResponse;
 }

@@ -291,6 +291,6 @@ export interface TripDetailRetrieveParams {
 }
 
 export namespace TripDetails {
-  export import TripDetailRetrieveResponse = TripDetailsAPI.TripDetailRetrieveResponse;
-  export import TripDetailRetrieveParams = TripDetailsAPI.TripDetailRetrieveParams;
+  export type TripDetailRetrieveResponse = TripDetailsAPI.TripDetailRetrieveResponse;
+  export type TripDetailRetrieveParams = TripDetailsAPI.TripDetailRetrieveParams;
 }

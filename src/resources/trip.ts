@@ -53,5 +53,5 @@ export namespace TripRetrieveResponse {
 }
 
 export namespace Trip {
-  export import TripRetrieveResponse = TripAPI.TripRetrieveResponse;
+  export type TripRetrieveResponse = TripAPI.TripRetrieveResponse;
 }

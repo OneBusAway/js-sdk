@@ -109,6 +109,6 @@ export interface ScheduleForStopRetrieveParams {
 }
 
 export namespace ScheduleForStop {
-  export import ScheduleForStopRetrieveResponse = ScheduleForStopAPI.ScheduleForStopRetrieveResponse;
-  export import ScheduleForStopRetrieveParams = ScheduleForStopAPI.ScheduleForStopRetrieveParams;
+  export type ScheduleForStopRetrieveResponse = ScheduleForStopAPI.ScheduleForStopRetrieveResponse;
+  export type ScheduleForStopRetrieveParams = ScheduleForStopAPI.ScheduleForStopRetrieveParams;
 }

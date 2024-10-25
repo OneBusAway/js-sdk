@@ -827,8 +827,9 @@ export interface ArrivalAndDepartureListParams {
 }
 
 export namespace ArrivalAndDeparture {
-  export import ArrivalAndDepartureRetrieveResponse = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveResponse;
-  export import ArrivalAndDepartureListResponse = ArrivalAndDepartureAPI.ArrivalAndDepartureListResponse;
-  export import ArrivalAndDepartureRetrieveParams = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveParams;
-  export import ArrivalAndDepartureListParams = ArrivalAndDepartureAPI.ArrivalAndDepartureListParams;
+  export type ArrivalAndDepartureRetrieveResponse =
+    ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveResponse;
+  export type ArrivalAndDepartureListResponse = ArrivalAndDepartureAPI.ArrivalAndDepartureListResponse;
+  export type ArrivalAndDepartureRetrieveParams = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveParams;
+  export type ArrivalAndDepartureListParams = ArrivalAndDepartureAPI.ArrivalAndDepartureListParams;
 }
