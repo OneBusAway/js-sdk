@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as RouteAPI from './route';
 import * as Shared from './shared';
 
 export class Route extends APIResource {
@@ -50,6 +49,6 @@ export namespace RouteRetrieveResponse {
   }
 }
 
-export namespace Route {
-  export import RouteRetrieveResponse = RouteAPI.RouteRetrieveResponse;
+export declare namespace Route {
+  export { type RouteRetrieveResponse as RouteRetrieveResponse };
 }

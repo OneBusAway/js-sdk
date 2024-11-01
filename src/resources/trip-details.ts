@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as TripDetailsAPI from './trip-details';
 import * as Shared from './shared';
 
 export class TripDetails extends APIResource {
@@ -290,7 +289,9 @@ export interface TripDetailRetrieveParams {
   time?: number;
 }
 
-export namespace TripDetails {
-  export import TripDetailRetrieveResponse = TripDetailsAPI.TripDetailRetrieveResponse;
-  export import TripDetailRetrieveParams = TripDetailsAPI.TripDetailRetrieveParams;
+export declare namespace TripDetails {
+  export {
+    type TripDetailRetrieveResponse as TripDetailRetrieveResponse,
+    type TripDetailRetrieveParams as TripDetailRetrieveParams,
+  };
 }

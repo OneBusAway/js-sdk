@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as SearchForRouteAPI from './search-for-route';
 import * as Shared from './shared';
 
 export class SearchForRoute extends APIResource {
@@ -69,7 +68,9 @@ export interface SearchForRouteListParams {
   maxCount?: number;
 }
 
-export namespace SearchForRoute {
-  export import SearchForRouteListResponse = SearchForRouteAPI.SearchForRouteListResponse;
-  export import SearchForRouteListParams = SearchForRouteAPI.SearchForRouteListParams;
+export declare namespace SearchForRoute {
+  export {
+    type SearchForRouteListResponse as SearchForRouteListResponse,
+    type SearchForRouteListParams as SearchForRouteListParams,
+  };
 }

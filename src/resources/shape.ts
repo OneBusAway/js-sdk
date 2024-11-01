@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as ShapeAPI from './shape';
 import * as Shared from './shared';
 
 export class Shape extends APIResource {
@@ -39,6 +38,6 @@ export namespace ShapeRetrieveResponse {
   }
 }
 
-export namespace Shape {
-  export import ShapeRetrieveResponse = ShapeAPI.ShapeRetrieveResponse;
+export declare namespace Shape {
+  export { type ShapeRetrieveResponse as ShapeRetrieveResponse };
 }

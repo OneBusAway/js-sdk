@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as TripForVehicleAPI from './trip-for-vehicle';
 import * as Shared from './shared';
 
 export class TripForVehicle extends APIResource {
@@ -285,7 +284,9 @@ export interface TripForVehicleRetrieveParams {
   time?: number;
 }
 
-export namespace TripForVehicle {
-  export import TripForVehicleRetrieveResponse = TripForVehicleAPI.TripForVehicleRetrieveResponse;
-  export import TripForVehicleRetrieveParams = TripForVehicleAPI.TripForVehicleRetrieveParams;
+export declare namespace TripForVehicle {
+  export {
+    type TripForVehicleRetrieveResponse as TripForVehicleRetrieveResponse,
+    type TripForVehicleRetrieveParams as TripForVehicleRetrieveParams,
+  };
 }

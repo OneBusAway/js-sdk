@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as ReportProblemWithTripAPI from './report-problem-with-trip';
 import * as Shared from './shared';
 
 export class ReportProblemWithTrip extends APIResource {
@@ -86,6 +85,6 @@ export interface ReportProblemWithTripRetrieveParams {
   vehicleID?: string;
 }
 
-export namespace ReportProblemWithTrip {
-  export import ReportProblemWithTripRetrieveParams = ReportProblemWithTripAPI.ReportProblemWithTripRetrieveParams;
+export declare namespace ReportProblemWithTrip {
+  export { type ReportProblemWithTripRetrieveParams as ReportProblemWithTripRetrieveParams };
 }

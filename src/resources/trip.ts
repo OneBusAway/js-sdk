@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as TripAPI from './trip';
 import * as Shared from './shared';
 
 export class Trip extends APIResource {
@@ -52,6 +51,6 @@ export namespace TripRetrieveResponse {
   }
 }
 
-export namespace Trip {
-  export import TripRetrieveResponse = TripAPI.TripRetrieveResponse;
+export declare namespace Trip {
+  export { type TripRetrieveResponse as TripRetrieveResponse };
 }

@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AgenciesWithCoverageAPI from './agencies-with-coverage';
 import * as Shared from './shared';
 
 export class AgenciesWithCoverage extends APIResource {
@@ -43,6 +42,6 @@ export namespace AgenciesWithCoverageListResponse {
   }
 }
 
-export namespace AgenciesWithCoverage {
-  export import AgenciesWithCoverageListResponse = AgenciesWithCoverageAPI.AgenciesWithCoverageListResponse;
+export declare namespace AgenciesWithCoverage {
+  export { type AgenciesWithCoverageListResponse as AgenciesWithCoverageListResponse };
 }
