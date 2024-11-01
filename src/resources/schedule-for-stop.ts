@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as ScheduleForStopAPI from './schedule-for-stop';
 import * as Shared from './shared';
 
 export class ScheduleForStop extends APIResource {
@@ -108,7 +107,9 @@ export interface ScheduleForStopRetrieveParams {
   date?: string;
 }
 
-export namespace ScheduleForStop {
-  export import ScheduleForStopRetrieveResponse = ScheduleForStopAPI.ScheduleForStopRetrieveResponse;
-  export import ScheduleForStopRetrieveParams = ScheduleForStopAPI.ScheduleForStopRetrieveParams;
+export declare namespace ScheduleForStop {
+  export {
+    type ScheduleForStopRetrieveResponse as ScheduleForStopRetrieveResponse,
+    type ScheduleForStopRetrieveParams as ScheduleForStopRetrieveParams,
+  };
 }

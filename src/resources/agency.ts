@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as AgencyAPI from './agency';
 import * as Shared from './shared';
 
 export class Agency extends APIResource {
@@ -52,6 +51,6 @@ export namespace AgencyRetrieveResponse {
   }
 }
 
-export namespace Agency {
-  export import AgencyRetrieveResponse = AgencyAPI.AgencyRetrieveResponse;
+export declare namespace Agency {
+  export { type AgencyRetrieveResponse as AgencyRetrieveResponse };
 }

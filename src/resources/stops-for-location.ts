@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as StopsForLocationAPI from './stops-for-location';
 import * as Shared from './shared';
 
 export class StopsForLocation extends APIResource {
@@ -83,7 +82,9 @@ export interface StopsForLocationListParams {
   radius?: number;
 }
 
-export namespace StopsForLocation {
-  export import StopsForLocationListResponse = StopsForLocationAPI.StopsForLocationListResponse;
-  export import StopsForLocationListParams = StopsForLocationAPI.StopsForLocationListParams;
+export declare namespace StopsForLocation {
+  export {
+    type StopsForLocationListResponse as StopsForLocationListResponse,
+    type StopsForLocationListParams as StopsForLocationListParams,
+  };
 }

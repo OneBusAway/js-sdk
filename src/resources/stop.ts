@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as StopAPI from './stop';
 import * as Shared from './shared';
 
 export class Stop extends APIResource {
@@ -52,6 +51,6 @@ export namespace StopRetrieveResponse {
   }
 }
 
-export namespace Stop {
-  export import StopRetrieveResponse = StopAPI.StopRetrieveResponse;
+export declare namespace Stop {
+  export { type StopRetrieveResponse as StopRetrieveResponse };
 }

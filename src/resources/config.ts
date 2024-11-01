@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as ConfigAPI from './config';
 import * as Shared from './shared';
 
 export class Config extends APIResource {
@@ -84,6 +83,6 @@ export namespace ConfigRetrieveResponse {
   }
 }
 
-export namespace Config {
-  export import ConfigRetrieveResponse = ConfigAPI.ConfigRetrieveResponse;
+export declare namespace Config {
+  export { type ConfigRetrieveResponse as ConfigRetrieveResponse };
 }

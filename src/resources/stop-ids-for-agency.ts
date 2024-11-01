@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as StopIDsForAgencyAPI from './stop-ids-for-agency';
 import * as Shared from './shared';
 
 export class StopIDsForAgency extends APIResource {
@@ -28,6 +27,6 @@ export namespace StopIDsForAgencyListResponse {
   }
 }
 
-export namespace StopIDsForAgency {
-  export import StopIDsForAgencyListResponse = StopIDsForAgencyAPI.StopIDsForAgencyListResponse;
+export declare namespace StopIDsForAgency {
+  export { type StopIDsForAgencyListResponse as StopIDsForAgencyListResponse };
 }
