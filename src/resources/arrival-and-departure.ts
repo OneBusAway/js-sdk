@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as ArrivalAndDepartureAPI from './arrival-and-departure';
 import * as Shared from './shared';
 
 export class ArrivalAndDeparture extends APIResource {
@@ -826,9 +825,11 @@ export interface ArrivalAndDepartureListParams {
   time?: string;
 }
 
-export namespace ArrivalAndDeparture {
-  export import ArrivalAndDepartureRetrieveResponse = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveResponse;
-  export import ArrivalAndDepartureListResponse = ArrivalAndDepartureAPI.ArrivalAndDepartureListResponse;
-  export import ArrivalAndDepartureRetrieveParams = ArrivalAndDepartureAPI.ArrivalAndDepartureRetrieveParams;
-  export import ArrivalAndDepartureListParams = ArrivalAndDepartureAPI.ArrivalAndDepartureListParams;
+export declare namespace ArrivalAndDeparture {
+  export {
+    type ArrivalAndDepartureRetrieveResponse as ArrivalAndDepartureRetrieveResponse,
+    type ArrivalAndDepartureListResponse as ArrivalAndDepartureListResponse,
+    type ArrivalAndDepartureRetrieveParams as ArrivalAndDepartureRetrieveParams,
+    type ArrivalAndDepartureListParams as ArrivalAndDepartureListParams,
+  };
 }

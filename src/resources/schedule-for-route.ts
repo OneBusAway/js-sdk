@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as ScheduleForRouteAPI from './schedule-for-route';
 import * as Shared from './shared';
 
 export class ScheduleForRoute extends APIResource {
@@ -152,7 +151,9 @@ export interface ScheduleForRouteRetrieveParams {
   date?: string;
 }
 
-export namespace ScheduleForRoute {
-  export import ScheduleForRouteRetrieveResponse = ScheduleForRouteAPI.ScheduleForRouteRetrieveResponse;
-  export import ScheduleForRouteRetrieveParams = ScheduleForRouteAPI.ScheduleForRouteRetrieveParams;
+export declare namespace ScheduleForRoute {
+  export {
+    type ScheduleForRouteRetrieveResponse as ScheduleForRouteRetrieveResponse,
+    type ScheduleForRouteRetrieveParams as ScheduleForRouteRetrieveParams,
+  };
 }

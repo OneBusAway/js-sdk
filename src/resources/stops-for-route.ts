@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as StopsForRouteAPI from './stops-for-route';
 import * as Shared from './shared';
 
 export class StopsForRoute extends APIResource {
@@ -102,7 +101,9 @@ export interface StopsForRouteListParams {
   time?: string;
 }
 
-export namespace StopsForRoute {
-  export import StopsForRouteListResponse = StopsForRouteAPI.StopsForRouteListResponse;
-  export import StopsForRouteListParams = StopsForRouteAPI.StopsForRouteListParams;
+export declare namespace StopsForRoute {
+  export {
+    type StopsForRouteListResponse as StopsForRouteListResponse,
+    type StopsForRouteListParams as StopsForRouteListParams,
+  };
 }

@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as TripsForLocationAPI from './trips-for-location';
 import * as Shared from './shared';
 
 export class TripsForLocation extends APIResource {
@@ -298,7 +297,9 @@ export interface TripsForLocationListParams {
   time?: number;
 }
 
-export namespace TripsForLocation {
-  export import TripsForLocationListResponse = TripsForLocationAPI.TripsForLocationListResponse;
-  export import TripsForLocationListParams = TripsForLocationAPI.TripsForLocationListParams;
+export declare namespace TripsForLocation {
+  export {
+    type TripsForLocationListResponse as TripsForLocationListResponse,
+    type TripsForLocationListParams as TripsForLocationListParams,
+  };
 }

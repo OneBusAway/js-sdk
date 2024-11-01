@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as RouteIDsForAgencyAPI from './route-ids-for-agency';
 import * as Shared from './shared';
 
 export class RouteIDsForAgency extends APIResource {
@@ -28,6 +27,6 @@ export namespace RouteIDsForAgencyListResponse {
   }
 }
 
-export namespace RouteIDsForAgency {
-  export import RouteIDsForAgencyListResponse = RouteIDsForAgencyAPI.RouteIDsForAgencyListResponse;
+export declare namespace RouteIDsForAgency {
+  export { type RouteIDsForAgencyListResponse as RouteIDsForAgencyListResponse };
 }
