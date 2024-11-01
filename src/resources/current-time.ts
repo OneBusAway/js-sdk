@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as CurrentTimeAPI from './current-time';
 import * as Shared from './shared';
 
 export class CurrentTime extends APIResource {
@@ -34,6 +33,6 @@ export namespace CurrentTimeRetrieveResponse {
   }
 }
 
-export namespace CurrentTime {
-  export import CurrentTimeRetrieveResponse = CurrentTimeAPI.CurrentTimeRetrieveResponse;
+export declare namespace CurrentTime {
+  export { type CurrentTimeRetrieveResponse as CurrentTimeRetrieveResponse };
 }

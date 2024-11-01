@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as BlockAPI from './block';
 import * as Shared from './shared';
 
 export class Block extends APIResource {
@@ -82,6 +81,6 @@ export namespace BlockRetrieveResponse {
   }
 }
 
-export namespace Block {
-  export import BlockRetrieveResponse = BlockAPI.BlockRetrieveResponse;
+export declare namespace Block {
+  export { type BlockRetrieveResponse as BlockRetrieveResponse };
 }

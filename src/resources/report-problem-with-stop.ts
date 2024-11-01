@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as ReportProblemWithStopAPI from './report-problem-with-stop';
 import * as Shared from './shared';
 
 export class ReportProblemWithStop extends APIResource {
@@ -55,6 +54,6 @@ export interface ReportProblemWithStopRetrieveParams {
   userLon?: number;
 }
 
-export namespace ReportProblemWithStop {
-  export import ReportProblemWithStopRetrieveParams = ReportProblemWithStopAPI.ReportProblemWithStopRetrieveParams;
+export declare namespace ReportProblemWithStop {
+  export { type ReportProblemWithStopRetrieveParams as ReportProblemWithStopRetrieveParams };
 }

@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as VehiclesForAgencyAPI from './vehicles-for-agency';
 import * as Shared from './shared';
 
 export class VehiclesForAgency extends APIResource {
@@ -257,7 +256,9 @@ export interface VehiclesForAgencyListParams {
   time?: string;
 }
 
-export namespace VehiclesForAgency {
-  export import VehiclesForAgencyListResponse = VehiclesForAgencyAPI.VehiclesForAgencyListResponse;
-  export import VehiclesForAgencyListParams = VehiclesForAgencyAPI.VehiclesForAgencyListParams;
+export declare namespace VehiclesForAgency {
+  export {
+    type VehiclesForAgencyListResponse as VehiclesForAgencyListResponse,
+    type VehiclesForAgencyListParams as VehiclesForAgencyListParams,
+  };
 }

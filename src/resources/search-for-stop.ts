@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as SearchForStopAPI from './search-for-stop';
 import * as Shared from './shared';
 
 export class SearchForStop extends APIResource {
@@ -71,7 +70,9 @@ export interface SearchForStopListParams {
   maxCount?: number;
 }
 
-export namespace SearchForStop {
-  export import SearchForStopListResponse = SearchForStopAPI.SearchForStopListResponse;
-  export import SearchForStopListParams = SearchForStopAPI.SearchForStopListParams;
+export declare namespace SearchForStop {
+  export {
+    type SearchForStopListResponse as SearchForStopListResponse,
+    type SearchForStopListParams as SearchForStopListParams,
+  };
 }

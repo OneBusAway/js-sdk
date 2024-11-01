@@ -3,7 +3,6 @@
 import { APIResource } from '../resource';
 import { isRequestOptions } from '../core';
 import * as Core from '../core';
-import * as TripsForRouteAPI from './trips-for-route';
 import * as Shared from './shared';
 
 export class TripsForRoute extends APIResource {
@@ -280,7 +279,9 @@ export interface TripsForRouteListParams {
   time?: number;
 }
 
-export namespace TripsForRoute {
-  export import TripsForRouteListResponse = TripsForRouteAPI.TripsForRouteListResponse;
-  export import TripsForRouteListParams = TripsForRouteAPI.TripsForRouteListParams;
+export declare namespace TripsForRoute {
+  export {
+    type TripsForRouteListResponse as TripsForRouteListResponse,
+    type TripsForRouteListParams as TripsForRouteListParams,
+  };
 }

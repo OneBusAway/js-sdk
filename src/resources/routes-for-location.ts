@@ -2,7 +2,6 @@
 
 import { APIResource } from '../resource';
 import * as Core from '../core';
-import * as RoutesForLocationAPI from './routes-for-location';
 import * as Shared from './shared';
 
 export class RoutesForLocation extends APIResource {
@@ -71,7 +70,9 @@ export interface RoutesForLocationListParams {
   radius?: number;
 }
 
-export namespace RoutesForLocation {
-  export import RoutesForLocationListResponse = RoutesForLocationAPI.RoutesForLocationListResponse;
-  export import RoutesForLocationListParams = RoutesForLocationAPI.RoutesForLocationListParams;
+export declare namespace RoutesForLocation {
+  export {
+    type RoutesForLocationListResponse as RoutesForLocationListResponse,
+    type RoutesForLocationListParams as RoutesForLocationListParams,
+  };
 }
