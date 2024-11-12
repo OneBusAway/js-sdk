@@ -269,25 +269,6 @@ export class OnebusawaySDK extends Core.APIClient {
   static fileFromPath = Uploads.fileFromPath;
 }
 
-export {
-  OnebusawaySDKError,
-  APIError,
-  APIConnectionError,
-  APIConnectionTimeoutError,
-  APIUserAbortError,
-  NotFoundError,
-  ConflictError,
-  RateLimitError,
-  BadRequestError,
-  AuthenticationError,
-  InternalServerError,
-  PermissionDeniedError,
-  UnprocessableEntityError,
-} from './error';
-
-export import toFile = Uploads.toFile;
-export import fileFromPath = Uploads.fileFromPath;
-
 OnebusawaySDK.AgenciesWithCoverage = AgenciesWithCoverage;
 OnebusawaySDK.Agency = Agency;
 OnebusawaySDK.VehiclesForAgency = VehiclesForAgency;
@@ -315,7 +296,6 @@ OnebusawaySDK.SearchForStop = SearchForStop;
 OnebusawaySDK.SearchForRoute = SearchForRoute;
 OnebusawaySDK.Block = Block;
 OnebusawaySDK.Shape = Shape;
-
 export declare namespace OnebusawaySDK {
   export type RequestOptions = Core.RequestOptions;
 
@@ -448,5 +428,22 @@ export declare namespace OnebusawaySDK {
   export type References = API.References;
   export type ResponseWrapper = API.ResponseWrapper;
 }
+
+export { toFile, fileFromPath } from 'onebusaway-sdk/uploads';
+export {
+  OnebusawaySDKError,
+  APIError,
+  APIConnectionError,
+  APIConnectionTimeoutError,
+  APIUserAbortError,
+  NotFoundError,
+  ConflictError,
+  RateLimitError,
+  BadRequestError,
+  AuthenticationError,
+  InternalServerError,
+  PermissionDeniedError,
+  UnprocessableEntityError,
+} from 'onebusaway-sdk/error';
 
 export default OnebusawaySDK;
