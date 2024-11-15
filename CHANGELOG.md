@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.9 (2024-11-15)
+
+Full Changelog: [v1.2.8...v1.2.9](https://github.com/OneBusAway/js-sdk/compare/v1.2.8...v1.2.9)
+
+### Chores
+
+* rebuild project due to codegen change ([#255](https://github.com/OneBusAway/js-sdk/issues/255)) ([7f2466c](https://github.com/OneBusAway/js-sdk/commit/7f2466c0f6f6a7812f545b83fbb7e5dff96fc1de))
+
 ## 1.2.8 (2024-11-15)
 
 Full Changelog: [v1.2.7...v1.2.8](https://github.com/OneBusAway/js-sdk/compare/v1.2.7...v1.2.8)
