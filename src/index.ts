@@ -429,7 +429,7 @@ export declare namespace OnebusawaySDK {
   export type ResponseWrapper = API.ResponseWrapper;
 }
 
-export { toFile, fileFromPath } from 'onebusaway-sdk/uploads';
+export { toFile, fileFromPath } from './uploads';
 export {
   OnebusawaySDKError,
   APIError,
@@ -444,6 +444,6 @@ export {
   InternalServerError,
   PermissionDeniedError,
   UnprocessableEntityError,
-} from 'onebusaway-sdk/error';
+} from './error';
 
 export default OnebusawaySDK;
