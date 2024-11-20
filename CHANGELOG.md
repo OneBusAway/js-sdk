@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.10 (2024-11-20)
+
+Full Changelog: [v1.2.9...v1.2.10](https://github.com/OneBusAway/js-sdk/compare/v1.2.9...v1.2.10)
+
+### Documentation
+
+* remove suggestion to use `npm` call out ([#258](https://github.com/OneBusAway/js-sdk/issues/258)) ([d1a2641](https://github.com/OneBusAway/js-sdk/commit/d1a264103d8211aed9079ca506934620f7fb0899))
+
 ## 1.2.9 (2024-11-15)
 
 Full Changelog: [v1.2.8...v1.2.9](https://github.com/OneBusAway/js-sdk/compare/v1.2.8...v1.2.9)
