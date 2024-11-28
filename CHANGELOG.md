@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.0 (2024-11-28)
+
+Full Changelog: [v1.2.10...v1.3.0](https://github.com/OneBusAway/js-sdk/compare/v1.2.10...v1.3.0)
+
+### Features
+
+* **internal:** make git install file structure match npm ([#262](https://github.com/OneBusAway/js-sdk/issues/262)) ([b8c057d](https://github.com/OneBusAway/js-sdk/commit/b8c057d8313cf8645f0e50b96f1ac410dbfb9b79))
+
 ## 1.2.10 (2024-11-20)
 
 Full Changelog: [v1.2.9...v1.2.10](https://github.com/OneBusAway/js-sdk/compare/v1.2.9...v1.2.10)
