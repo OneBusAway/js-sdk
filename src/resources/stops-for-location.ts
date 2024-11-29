@@ -27,6 +27,8 @@ export namespace StopsForLocationListResponse {
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    outOfRange?: boolean;
   }
 
   export namespace Data {
