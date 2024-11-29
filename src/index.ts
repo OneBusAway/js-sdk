@@ -56,6 +56,7 @@ import {
 import { Shape, ShapeRetrieveResponse } from './resources/shape';
 import { Stop, StopRetrieveResponse } from './resources/stop';
 import { StopIDsForAgency, StopIDsForAgencyListResponse } from './resources/stop-ids-for-agency';
+import { StopsForAgency, StopsForAgencyListResponse } from './resources/stops-for-agency';
 import {
   StopsForLocation,
   StopsForLocationListParams,
@@ -209,6 +210,7 @@ export class OnebusawaySDK extends Core.APIClient {
   currentTime: API.CurrentTime = new API.CurrentTime(this);
   stopsForLocation: API.StopsForLocation = new API.StopsForLocation(this);
   stopsForRoute: API.StopsForRoute = new API.StopsForRoute(this);
+  stopsForAgency: API.StopsForAgency = new API.StopsForAgency(this);
   stop: API.Stop = new API.Stop(this);
   stopIdsForAgency: API.StopIDsForAgency = new API.StopIDsForAgency(this);
   scheduleForStop: API.ScheduleForStop = new API.ScheduleForStop(this);
@@ -276,6 +278,7 @@ OnebusawaySDK.Config = Config;
 OnebusawaySDK.CurrentTime = CurrentTime;
 OnebusawaySDK.StopsForLocation = StopsForLocation;
 OnebusawaySDK.StopsForRoute = StopsForRoute;
+OnebusawaySDK.StopsForAgency = StopsForAgency;
 OnebusawaySDK.Stop = Stop;
 OnebusawaySDK.StopIDsForAgency = StopIDsForAgency;
 OnebusawaySDK.ScheduleForStop = ScheduleForStop;
@@ -327,6 +330,8 @@ export declare namespace OnebusawaySDK {
     type StopsForRouteListResponse as StopsForRouteListResponse,
     type StopsForRouteListParams as StopsForRouteListParams,
   };
+
+  export { StopsForAgency as StopsForAgency, type StopsForAgencyListResponse as StopsForAgencyListResponse };
 
   export { Stop as Stop, type StopRetrieveResponse as StopRetrieveResponse };
 
