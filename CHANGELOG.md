@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.5.0 (2024-11-29)
+
+Full Changelog: [v1.4.0...v1.5.0](https://github.com/OneBusAway/js-sdk/compare/v1.4.0...v1.5.0)
+
+### Features
+
+* **api:** api update ([#268](https://github.com/OneBusAway/js-sdk/issues/268)) ([aae3f08](https://github.com/OneBusAway/js-sdk/commit/aae3f08995e6fad2f89ac0ca1702af39152d0363))
+
 ## 1.4.0 (2024-11-29)
 
 Full Changelog: [v1.3.0...v1.4.0](https://github.com/OneBusAway/js-sdk/compare/v1.3.0...v1.4.0)
