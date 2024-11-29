@@ -238,23 +238,23 @@ export namespace References {
   export interface Stop {
     id: string;
 
-    code: string;
-
     lat: number;
 
     lon: number;
 
     name: string;
 
+    parent: string;
+
+    routeIds: Array<string>;
+
+    staticRouteIds: Array<string>;
+
+    code?: string;
+
     direction?: string;
 
     locationType?: number;
-
-    parent?: string;
-
-    routeIds?: Array<string>;
-
-    staticRouteIds?: Array<string>;
 
     wheelchairBoarding?: string;
   }
