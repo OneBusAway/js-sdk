@@ -46,6 +46,7 @@ export {
 export { Shape, type ShapeRetrieveResponse } from './shape';
 export { Stop, type StopRetrieveResponse } from './stop';
 export { StopIDsForAgency, type StopIDsForAgencyListResponse } from './stop-ids-for-agency';
+export { StopsForAgency, type StopsForAgencyListResponse } from './stops-for-agency';
 export {
   StopsForLocation,
   type StopsForLocationListResponse,
