@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.0 (2024-11-30)
+
+Full Changelog: [v1.5.0...v1.6.0](https://github.com/OneBusAway/js-sdk/compare/v1.5.0...v1.6.0)
+
+### Features
+
+* feat(examples): add stops-for-agency example script ([5ca814d](https://github.com/OneBusAway/js-sdk/commit/5ca814d2264f5d300af28423c64c21fd974f5d01))
+
 ## 1.5.0 (2024-11-29)
 
 Full Changelog: [v1.4.0...v1.5.0](https://github.com/OneBusAway/js-sdk/compare/v1.4.0...v1.5.0)
