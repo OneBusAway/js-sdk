@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.1 (2024-12-10)
+
+Full Changelog: [v1.6.0...v1.6.1](https://github.com/OneBusAway/js-sdk/compare/v1.6.0...v1.6.1)
+
+### Chores
+
+* **internal:** remove unnecessary getRequestClient function ([#273](https://github.com/OneBusAway/js-sdk/issues/273)) ([cb80653](https://github.com/OneBusAway/js-sdk/commit/cb80653dfbb98193bffe20c62948907fee1b3846))
+
 ## 1.6.0 (2024-11-30)
 
 Full Changelog: [v1.5.0...v1.6.0](https://github.com/OneBusAway/js-sdk/compare/v1.5.0...v1.6.0)
