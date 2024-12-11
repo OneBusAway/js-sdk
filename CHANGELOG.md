@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.2 (2024-12-11)
+
+Full Changelog: [v1.6.1...v1.6.2](https://github.com/OneBusAway/js-sdk/compare/v1.6.1...v1.6.2)
+
+### Chores
+
+* **internal:** bump cross-spawn to v7.0.6 ([#276](https://github.com/OneBusAway/js-sdk/issues/276)) ([8b3f83f](https://github.com/OneBusAway/js-sdk/commit/8b3f83fc75f74f4b42b29733b8e69c16a8d6edb9))
+
 ## 1.6.1 (2024-12-10)
 
 Full Changelog: [v1.6.0...v1.6.1](https://github.com/OneBusAway/js-sdk/compare/v1.6.0...v1.6.1)
