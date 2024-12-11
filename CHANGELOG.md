@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.3 (2024-12-11)
+
+Full Changelog: [v1.6.2...v1.6.3](https://github.com/OneBusAway/js-sdk/compare/v1.6.2...v1.6.3)
+
+### Chores
+
+* **types:** nicer error class types + jsdocs ([#279](https://github.com/OneBusAway/js-sdk/issues/279)) ([0e2b341](https://github.com/OneBusAway/js-sdk/commit/0e2b3416ec5cfcaae5ab8d02117e394c743fe250))
+
 ## 1.6.2 (2024-12-11)
 
 Full Changelog: [v1.6.1...v1.6.2](https://github.com/OneBusAway/js-sdk/compare/v1.6.1...v1.6.2)
