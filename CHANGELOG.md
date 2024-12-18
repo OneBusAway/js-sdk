@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.5 (2024-12-18)
+
+Full Changelog: [v1.6.4...v1.6.5](https://github.com/OneBusAway/js-sdk/compare/v1.6.4...v1.6.5)
+
+### Chores
+
+* **internal:** fix some typos ([#285](https://github.com/OneBusAway/js-sdk/issues/285)) ([7f302ea](https://github.com/OneBusAway/js-sdk/commit/7f302ea871ab192d03668da9ac7a82e91eee4e34))
+
 ## 1.6.4 (2024-12-12)
 
 Full Changelog: [v1.6.3...v1.6.4](https://github.com/OneBusAway/js-sdk/compare/v1.6.3...v1.6.4)
