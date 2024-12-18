@@ -195,7 +195,7 @@ describe('instantiate client', () => {
     expect(client.apiKey).toBe('My API Key');
   });
 
-  test('with overriden environment variable arguments', () => {
+  test('with overridden environment variable arguments', () => {
     // set options via env var
     process.env['ONEBUSAWAY_API_KEY'] = 'another My API Key';
     const client = new OnebusawaySDK({ apiKey: 'My API Key' });
