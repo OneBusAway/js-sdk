@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.6 (2024-12-20)
+
+Full Changelog: [v1.6.5...v1.6.6](https://github.com/OneBusAway/js-sdk/compare/v1.6.5...v1.6.6)
+
+### Bug Fixes
+
+* **client:** normalize method ([#288](https://github.com/OneBusAway/js-sdk/issues/288)) ([5325e0b](https://github.com/OneBusAway/js-sdk/commit/5325e0bbdd191c0829ac15a5bd716824e8560041))
+
 ## 1.6.5 (2024-12-18)
 
 Full Changelog: [v1.6.4...v1.6.5](https://github.com/OneBusAway/js-sdk/compare/v1.6.4...v1.6.5)
