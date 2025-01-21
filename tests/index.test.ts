@@ -104,6 +104,15 @@ describe('instantiate client', () => {
     });
   });
 
+  test('explicit global fetch', async () => {
+    // make sure the global fetch type is assignable to our Fetch type
+    const client = new OnebusawaySDK({
+      baseURL: 'http://localhost:5000/',
+      apiKey: 'My API Key',
+      fetch: defaultFetch,
+    });
+  });
+
   test('custom signal', async () => {
     const client = new OnebusawaySDK({
       baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
