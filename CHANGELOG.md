@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.0 (2025-02-05)
+
+Full Changelog: [v1.6.11...v1.7.0](https://github.com/OneBusAway/js-sdk/compare/v1.6.11...v1.7.0)
+
+### Features
+
+* **client:** send `X-Stainless-Timeout` header ([#306](https://github.com/OneBusAway/js-sdk/issues/306)) ([85e24c0](https://github.com/OneBusAway/js-sdk/commit/85e24c0e9a96309101318c1cdd14ab590c125555))
+
 ## 1.6.11 (2025-01-21)
 
 Full Changelog: [v1.6.10...v1.6.11](https://github.com/OneBusAway/js-sdk/compare/v1.6.10...v1.6.11)
