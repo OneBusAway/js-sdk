@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.1 (2025-02-14)
+
+Full Changelog: [v1.7.0...v1.7.1](https://github.com/OneBusAway/js-sdk/compare/v1.7.0...v1.7.1)
+
+### Bug Fixes
+
+* **client:** fix export map for index exports ([#309](https://github.com/OneBusAway/js-sdk/issues/309)) ([8fdcd07](https://github.com/OneBusAway/js-sdk/commit/8fdcd072de4d65fd27f5416cc634253ad8517863))
+
 ## 1.7.0 (2025-02-05)
 
 Full Changelog: [v1.6.11...v1.7.0](https://github.com/OneBusAway/js-sdk/compare/v1.6.11...v1.7.0)
