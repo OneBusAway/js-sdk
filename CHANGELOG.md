@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.2 (2025-02-22)
+
+Full Changelog: [v1.7.1...v1.7.2](https://github.com/OneBusAway/js-sdk/compare/v1.7.1...v1.7.2)
+
+### Chores
+
+* **internal:** fix devcontainers setup ([#312](https://github.com/OneBusAway/js-sdk/issues/312)) ([d81e2fb](https://github.com/OneBusAway/js-sdk/commit/d81e2fb62e652baebda37462799416703379a133))
+
 ## 1.7.1 (2025-02-14)
 
 Full Changelog: [v1.7.0...v1.7.1](https://github.com/OneBusAway/js-sdk/compare/v1.7.0...v1.7.1)
