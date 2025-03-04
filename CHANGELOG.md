@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.3 (2025-03-01)
+
+Full Changelog: [v1.7.2...v1.7.3](https://github.com/OneBusAway/js-sdk/compare/v1.7.2...v1.7.3)
+
+### Documentation
+
+* update URLs from stainlessapi.com to stainless.com ([#315](https://github.com/OneBusAway/js-sdk/issues/315)) ([2b1ba71](https://github.com/OneBusAway/js-sdk/commit/2b1ba71389a807963af9a7eb4049620991403e42))
+
 ## 1.7.2 (2025-02-22)
 
 Full Changelog: [v1.7.1...v1.7.2](https://github.com/OneBusAway/js-sdk/compare/v1.7.1...v1.7.2)
