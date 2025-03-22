@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.8.0 (2025-03-22)
+
+Full Changelog: [v1.7.3...v1.8.0](https://github.com/OneBusAway/js-sdk/compare/v1.7.3...v1.8.0)
+
+### Features
+
+* add SKIP_BREW env var to ./scripts/bootstrap ([#318](https://github.com/OneBusAway/js-sdk/issues/318)) ([a01f726](https://github.com/OneBusAway/js-sdk/commit/a01f726677a32765bf0c9e900e96bf3964db7c1b))
+* **client:** accept RFC6838 JSON content types ([#320](https://github.com/OneBusAway/js-sdk/issues/320)) ([c3ab30c](https://github.com/OneBusAway/js-sdk/commit/c3ab30ce2750366423adcffde024c3a69f42410d))
+
+
+### Bug Fixes
+
+* avoid type error in certain environments ([#324](https://github.com/OneBusAway/js-sdk/issues/324)) ([bdee18e](https://github.com/OneBusAway/js-sdk/commit/bdee18ebf5ee7581cfc88c39aa38bac609e12779))
+
+
+### Chores
+
+* **exports:** cleaner resource index imports ([#322](https://github.com/OneBusAway/js-sdk/issues/322)) ([30f9c5d](https://github.com/OneBusAway/js-sdk/commit/30f9c5d9d1c15cb848f7fbad6e2540ad7bcbabfc))
+* **exports:** stop using path fallbacks ([#323](https://github.com/OneBusAway/js-sdk/issues/323)) ([875ea2e](https://github.com/OneBusAway/js-sdk/commit/875ea2eca7c4308c1d3ba9f028195ca14bf0ada1))
+* **internal:** remove extra empty newlines ([#321](https://github.com/OneBusAway/js-sdk/issues/321)) ([1050d0a](https://github.com/OneBusAway/js-sdk/commit/1050d0a5a8cad6a90ce9b0b6db87de820b305696))
+
 ## 1.7.3 (2025-03-01)
 
 Full Changelog: [v1.7.2...v1.7.3](https://github.com/OneBusAway/js-sdk/compare/v1.7.2...v1.7.3)
