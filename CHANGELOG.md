@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.1 (2025-03-28)
+
+Full Changelog: [v1.8.0...v1.8.1](https://github.com/OneBusAway/js-sdk/compare/v1.8.0...v1.8.1)
+
+### Bug Fixes
+
+* **internal:** work around https://github.com/vercel/next.js/issues/76881 ([#326](https://github.com/OneBusAway/js-sdk/issues/326)) ([c9b09e8](https://github.com/OneBusAway/js-sdk/commit/c9b09e8812cbaa3007248affa258004713976197))
+
 ## 1.8.0 (2025-03-22)
 
 Full Changelog: [v1.7.3...v1.8.0](https://github.com/OneBusAway/js-sdk/compare/v1.7.3...v1.8.0)
