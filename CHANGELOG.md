@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.2 (2025-04-03)
+
+Full Changelog: [v1.8.1...v1.8.2](https://github.com/OneBusAway/js-sdk/compare/v1.8.1...v1.8.2)
+
+### Bug Fixes
+
+* **client:** send `X-Stainless-Timeout` in seconds ([#329](https://github.com/OneBusAway/js-sdk/issues/329)) ([e9679b4](https://github.com/OneBusAway/js-sdk/commit/e9679b40366b6f02eeea2727b8bcc28e66293c8b))
+
 ## 1.8.1 (2025-03-28)
 
 Full Changelog: [v1.8.0...v1.8.1](https://github.com/OneBusAway/js-sdk/compare/v1.8.0...v1.8.1)
