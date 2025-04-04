@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.8.3 (2025-04-04)
+
+Full Changelog: [v1.8.2...v1.8.3](https://github.com/OneBusAway/js-sdk/compare/v1.8.2...v1.8.3)
+
+### Bug Fixes
+
+* **api:** improve type resolution when importing as a package ([#334](https://github.com/OneBusAway/js-sdk/issues/334)) ([5f9e05c](https://github.com/OneBusAway/js-sdk/commit/5f9e05c5d6ebd3951cb428ca3433d6a3a5fb9d78))
+
+
+### Chores
+
+* **internal:** add aliases for Record and Array ([#332](https://github.com/OneBusAway/js-sdk/issues/332)) ([dec0e5f](https://github.com/OneBusAway/js-sdk/commit/dec0e5fcbf4990d8be25db3e96be2d03b0aaac46))
+
 ## 1.8.2 (2025-04-03)
 
 Full Changelog: [v1.8.1...v1.8.2](https://github.com/OneBusAway/js-sdk/compare/v1.8.1...v1.8.2)
