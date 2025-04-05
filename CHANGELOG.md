@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.8.4 (2025-04-05)
+
+Full Changelog: [v1.8.3...v1.8.4](https://github.com/OneBusAway/js-sdk/compare/v1.8.3...v1.8.4)
+
+### Bug Fixes
+
+* **mcp:** remove unused tools.ts ([#336](https://github.com/OneBusAway/js-sdk/issues/336)) ([e5e65d4](https://github.com/OneBusAway/js-sdk/commit/e5e65d41b209163a0bfbfdeff022b1ddda083018))
+
 ## 1.8.3 (2025-04-04)
 
 Full Changelog: [v1.8.2...v1.8.3](https://github.com/OneBusAway/js-sdk/compare/v1.8.2...v1.8.3)
