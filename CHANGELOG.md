@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.8.5 (2025-04-10)
+
+Full Changelog: [v1.8.4...v1.8.5](https://github.com/OneBusAway/js-sdk/compare/v1.8.4...v1.8.5)
+
+### Chores
+
+* **internal:** reduce CI branch coverage ([16ffab7](https://github.com/OneBusAway/js-sdk/commit/16ffab7746cc9f45609e8149e236a20d00c863a6))
+* **internal:** upload builds and expand CI branch coverage ([124eb5e](https://github.com/OneBusAway/js-sdk/commit/124eb5e8224eac5832bdb407520ab93ce2fa9843))
+
 ## 1.8.4 (2025-04-05)
 
 Full Changelog: [v1.8.3...v1.8.4](https://github.com/OneBusAway/js-sdk/compare/v1.8.3...v1.8.4)
