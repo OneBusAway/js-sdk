@@ -7,6 +7,13 @@ import * as Shared from './shared';
 export class RoutesForAgency extends APIResource {
   /**
    * Retrieve the list of all routes for a particular agency by id
+   *
+   * @example
+   * ```ts
+   * const routesForAgencies = await client.routesForAgency.list(
+   *   '40',
+   * );
+   * ```
    */
   list(agencyId: string, options?: Core.RequestOptions): Core.APIPromise<RoutesForAgencyListResponse> {
     return this._client.get(`/api/where/routes-for-agency/${agencyId}.json`, options);
