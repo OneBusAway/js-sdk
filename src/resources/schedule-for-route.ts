@@ -8,6 +8,12 @@ import * as Shared from './shared';
 export class ScheduleForRoute extends APIResource {
   /**
    * Retrieve the full schedule for a route on a particular day
+   *
+   * @example
+   * ```ts
+   * const scheduleForRoute =
+   *   await client.scheduleForRoute.retrieve('1_100223');
+   * ```
    */
   retrieve(
     routeId: string,
