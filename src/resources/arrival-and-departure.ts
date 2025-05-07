@@ -8,6 +8,15 @@ import * as Shared from './shared';
 export class ArrivalAndDeparture extends APIResource {
   /**
    * arrival-and-departure-for-stop
+   *
+   * @example
+   * ```ts
+   * const arrivalAndDeparture =
+   *   await client.arrivalAndDeparture.retrieve('1_75403', {
+   *     serviceDate: 0,
+   *     tripId: 'tripId',
+   *   });
+   * ```
    */
   retrieve(
     stopId: string,
@@ -22,6 +31,12 @@ export class ArrivalAndDeparture extends APIResource {
 
   /**
    * arrivals-and-departures-for-stop
+   *
+   * @example
+   * ```ts
+   * const arrivalAndDepartures =
+   *   await client.arrivalAndDeparture.list('1_75403');
+   * ```
    */
   list(
     stopId: string,

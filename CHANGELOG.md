@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.8.5 (2025-05-07)
+
+Full Changelog: [v1.8.4...v1.8.5](https://github.com/OneBusAway/js-sdk/compare/v1.8.4...v1.8.5)
+
+### Chores
+
+* **ci:** add timeout thresholds for CI jobs ([e790128](https://github.com/OneBusAway/js-sdk/commit/e790128972e705f8008ca7e8bd01333bc647b265))
+* **ci:** bump node version for release workflows ([47da0d6](https://github.com/OneBusAway/js-sdk/commit/47da0d657411169fbaa8b0e7b4caf80118c41d6c))
+* **ci:** only use depot for staging repos ([642c4c8](https://github.com/OneBusAway/js-sdk/commit/642c4c82142d31c79902a7f124cbb5eccff61043))
+* **client:** minor internal fixes ([7a5758f](https://github.com/OneBusAway/js-sdk/commit/7a5758ffd34abdb3ab7060c47538a3892608fd31))
+* **internal:** codegen related update ([df16f42](https://github.com/OneBusAway/js-sdk/commit/df16f4229a8201e69600c9627bceee72600eabae))
+* **internal:** reduce CI branch coverage ([16ffab7](https://github.com/OneBusAway/js-sdk/commit/16ffab7746cc9f45609e8149e236a20d00c863a6))
+* **internal:** upload builds and expand CI branch coverage ([124eb5e](https://github.com/OneBusAway/js-sdk/commit/124eb5e8224eac5832bdb407520ab93ce2fa9843))
+
+
+### Documentation
+
+* add examples to tsdocs ([7ebb2ea](https://github.com/OneBusAway/js-sdk/commit/7ebb2ea02282e08fa2625cd1eae517162d13b556))
+* **readme:** fix typo ([7186196](https://github.com/OneBusAway/js-sdk/commit/71861968594c6e0f7a117a265287b758fc5cc102))
+
 ## 1.8.4 (2025-04-05)
 
 Full Changelog: [v1.8.3...v1.8.4](https://github.com/OneBusAway/js-sdk/compare/v1.8.3...v1.8.4)
