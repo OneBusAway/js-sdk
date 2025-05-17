@@ -29,6 +29,8 @@ export namespace StopsForAgencyListResponse {
 
     lat: number;
 
+    locationType: number;
+
     lon: number;
 
     name: string;
@@ -42,8 +44,6 @@ export namespace StopsForAgencyListResponse {
     code?: string;
 
     direction?: string;
-
-    locationType?: number;
 
     wheelchairBoarding?: string;
   }
