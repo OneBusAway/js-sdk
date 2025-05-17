@@ -37,6 +37,8 @@ export namespace SearchForStopListResponse {
 
       lat: number;
 
+      locationType: number;
+
       lon: number;
 
       name: string;
@@ -50,8 +52,6 @@ export namespace SearchForStopListResponse {
       code?: string;
 
       direction?: string;
-
-      locationType?: number;
 
       wheelchairBoarding?: string;
     }

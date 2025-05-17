@@ -37,6 +37,8 @@ export namespace StopsForLocationListResponse {
 
       lat: number;
 
+      locationType: number;
+
       lon: number;
 
       name: string;
@@ -50,8 +52,6 @@ export namespace StopsForLocationListResponse {
       code?: string;
 
       direction?: string;
-
-      locationType?: number;
 
       wheelchairBoarding?: string;
     }

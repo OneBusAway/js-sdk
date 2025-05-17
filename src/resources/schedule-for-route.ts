@@ -63,6 +63,8 @@ export namespace ScheduleForRouteRetrieveResponse {
 
         lat: number;
 
+        locationType: number;
+
         lon: number;
 
         name: string;
@@ -76,8 +78,6 @@ export namespace ScheduleForRouteRetrieveResponse {
         code?: string;
 
         direction?: string;
-
-        locationType?: number;
 
         wheelchairBoarding?: string;
       }
