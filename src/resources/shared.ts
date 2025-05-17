@@ -240,6 +240,8 @@ export namespace References {
 
     lat: number;
 
+    locationType: number;
+
     lon: number;
 
     name: string;
@@ -253,8 +255,6 @@ export namespace References {
     code?: string;
 
     direction?: string;
-
-    locationType?: number;
 
     wheelchairBoarding?: string;
   }

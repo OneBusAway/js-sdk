@@ -30,6 +30,8 @@ export namespace StopRetrieveResponse {
 
       lat: number;
 
+      locationType: number;
+
       lon: number;
 
       name: string;
@@ -43,8 +45,6 @@ export namespace StopRetrieveResponse {
       code?: string;
 
       direction?: string;
-
-      locationType?: number;
 
       wheelchairBoarding?: string;
     }
