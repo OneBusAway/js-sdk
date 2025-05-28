@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.9.1 (2025-05-28)
+
+Full Changelog: [v1.9.0...v1.9.1](https://github.com/OneBusAway/js-sdk/compare/v1.9.0...v1.9.1)
+
+### Chores
+
+* **docs:** grammar improvements ([69c73d1](https://github.com/OneBusAway/js-sdk/commit/69c73d1a48d1c14d6b48159d615a2b4217ee8098))
+* improve publish-npm script --latest tag logic ([39ed659](https://github.com/OneBusAway/js-sdk/commit/39ed6590e291acc8ed1987c1d3952362ad33d43b))
+
 ## 1.9.0 (2025-05-17)
 
 Full Changelog: [v1.8.5...v1.9.0](https://github.com/OneBusAway/js-sdk/compare/v1.8.5...v1.9.0)
