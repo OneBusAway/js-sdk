@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.9.2 (2025-06-04)
+
+Full Changelog: [v1.9.1...v1.9.2](https://github.com/OneBusAway/js-sdk/compare/v1.9.1...v1.9.2)
+
+### Chores
+
+* **docs:** use top-level-await in example snippets ([054a981](https://github.com/OneBusAway/js-sdk/commit/054a98186c9de42db6adae1153092054b70baec5))
+
 ## 1.9.1 (2025-05-28)
 
 Full Changelog: [v1.9.0...v1.9.1](https://github.com/OneBusAway/js-sdk/compare/v1.9.0...v1.9.1)
