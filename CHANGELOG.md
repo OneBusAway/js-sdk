@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.9.3 (2025-06-14)
+
+Full Changelog: [v1.9.2...v1.9.3](https://github.com/OneBusAway/js-sdk/compare/v1.9.2...v1.9.3)
+
+### Bug Fixes
+
+* publish script — handle NPM errors correctly ([170a3dd](https://github.com/OneBusAway/js-sdk/commit/170a3ddbb49d34dc23479e7187953acf81e35843))
+
+
+### Chores
+
+* **internal:** make base APIResource abstract ([9c94aa1](https://github.com/OneBusAway/js-sdk/commit/9c94aa131540e803b108736bf06d0eb22f4c4d65))
+
 ## 1.9.2 (2025-06-04)
 
 Full Changelog: [v1.9.1...v1.9.2](https://github.com/OneBusAway/js-sdk/compare/v1.9.1...v1.9.2)
