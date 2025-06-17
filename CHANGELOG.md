@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.10.0 (2025-06-17)
+
+Full Changelog: [v1.9.3...v1.10.0](https://github.com/OneBusAway/js-sdk/compare/v1.9.3...v1.10.0)
+
+### Features
+
+* **client:** add support for endpoint-specific base URLs ([a810e63](https://github.com/OneBusAway/js-sdk/commit/a810e63562fa409c1cf0e64aa1dc2c05ddc231fe))
+
+
+### Chores
+
+* **ci:** enable for pull requests ([f4d3b43](https://github.com/OneBusAway/js-sdk/commit/f4d3b4305c1feaf6e6f22b506d929e88f778cb5d))
+
 ## 1.9.3 (2025-06-14)
 
 Full Changelog: [v1.9.2...v1.9.3](https://github.com/OneBusAway/js-sdk/compare/v1.9.2...v1.9.3)
