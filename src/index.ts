@@ -192,6 +192,7 @@ export class OnebusawaySDK extends Core.APIClient {
 
     super({
       baseURL: options.baseURL!,
+      baseURLOverridden: baseURL ? baseURL !== 'https://api.pugetsound.onebusaway.org' : false,
       timeout: options.timeout ?? 60000 /* 1 minute */,
       httpAgent: options.httpAgent,
       maxRetries: options.maxRetries,
@@ -231,6 +232,13 @@ export class OnebusawaySDK extends Core.APIClient {
   searchForRoute: API.SearchForRoute = new API.SearchForRoute(this);
   block: API.Block = new API.Block(this);
   shape: API.Shape = new API.Shape(this);
+
+  /**
+   * Check whether the base URL is set to its default.
+   */
+  #baseURLOverridden(): boolean {
+    return this.baseURL !== 'https://api.pugetsound.onebusaway.org';
+  }
 
   protected override defaultQuery(): Core.DefaultQuery | undefined {
     return {
