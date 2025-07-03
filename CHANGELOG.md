@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.1 (2025-07-03)
+
+Full Changelog: [v1.10.0...v1.10.1](https://github.com/OneBusAway/js-sdk/compare/v1.10.0...v1.10.1)
+
+### Bug Fixes
+
+* **client:** don't send `Content-Type` for bodyless methods ([98d2260](https://github.com/OneBusAway/js-sdk/commit/98d22608ed823b3c42fe32d4f2b8b74416736e37))
+
 ## 1.10.0 (2025-07-03)
 
 Full Changelog: [v1.9.3...v1.10.0](https://github.com/OneBusAway/js-sdk/compare/v1.9.3...v1.10.0)
