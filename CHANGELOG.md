@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.10.0 (2025-07-03)
+
+Full Changelog: [v1.9.3...v1.10.0](https://github.com/OneBusAway/js-sdk/compare/v1.9.3...v1.10.0)
+
+### Features
+
+* **client:** add support for endpoint-specific base URLs ([a810e63](https://github.com/OneBusAway/js-sdk/commit/a810e63562fa409c1cf0e64aa1dc2c05ddc231fe))
+
+
+### Bug Fixes
+
+* **ci:** release-doctor — report correct token name ([c6ba4d8](https://github.com/OneBusAway/js-sdk/commit/c6ba4d8d076d5e822c929b7edce87b214a73d9fe))
+
+
+### Chores
+
+* **ci:** enable for pull requests ([f4d3b43](https://github.com/OneBusAway/js-sdk/commit/f4d3b4305c1feaf6e6f22b506d929e88f778cb5d))
+* **ci:** only run for pushes and fork pull requests ([af79c29](https://github.com/OneBusAway/js-sdk/commit/af79c290abbf16b4d850e7fd4b38143bfb9199bf))
+* mention unit type in timeout docs ([b650d71](https://github.com/OneBusAway/js-sdk/commit/b650d719ebe8d57b29cf091138f3c63c44c6c7ae))
+
 ## 1.9.3 (2025-06-14)
 
 Full Changelog: [v1.9.2...v1.9.3](https://github.com/OneBusAway/js-sdk/compare/v1.9.2...v1.9.3)
