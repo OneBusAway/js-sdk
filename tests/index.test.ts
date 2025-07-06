@@ -207,14 +207,14 @@ describe('instantiate client', () => {
     test('in request options', () => {
       const client = new OnebusawaySDK({ apiKey: 'My API Key' });
       expect(client.buildURL('/foo', null, 'http://localhost:5000/option')).toEqual(
-        'http://localhost:5000/option/foo',
+        `http://localhost:5000/option/foo?key=${encodeURIComponent(client.apiKey)}`,
       );
     });
 
     test('in request options overridden by client options', () => {
       const client = new OnebusawaySDK({ apiKey: 'My API Key', baseURL: 'http://localhost:5000/client' });
       expect(client.buildURL('/foo', null, 'http://localhost:5000/option')).toEqual(
-        'http://localhost:5000/client/foo',
+        `http://localhost:5000/client/foo?key=${encodeURIComponent(client.apiKey)}`,
       );
     });
 
@@ -222,7 +222,7 @@ describe('instantiate client', () => {
       process.env['ONEBUSAWAY_SDK_BASE_URL'] = 'http://localhost:5000/env';
       const client = new OnebusawaySDK({ apiKey: 'My API Key' });
       expect(client.buildURL('/foo', null, 'http://localhost:5000/option')).toEqual(
-        'http://localhost:5000/env/foo',
+        `http://localhost:5000/env/foo?key=${encodeURIComponent(client.apiKey)}`,
       );
     });
   });
