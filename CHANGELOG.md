@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.2 (2025-07-10)
+
+Full Changelog: [v1.10.1...v1.10.2](https://github.com/OneBusAway/js-sdk/compare/v1.10.1...v1.10.2)
+
+### Chores
+
+* make some internal functions async ([bd7a6e7](https://github.com/OneBusAway/js-sdk/commit/bd7a6e78fae9e047beed8d8ada8c3f93558bef60))
+
 ## 1.10.1 (2025-07-03)
 
 Full Changelog: [v1.10.0...v1.10.1](https://github.com/OneBusAway/js-sdk/compare/v1.10.0...v1.10.1)
