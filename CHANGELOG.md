@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.3 (2025-07-30)
+
+Full Changelog: [v1.10.2...v1.10.3](https://github.com/OneBusAway/js-sdk/compare/v1.10.2...v1.10.3)
+
+### Chores
+
+* **internal:** remove redundant imports config ([22f6355](https://github.com/OneBusAway/js-sdk/commit/22f6355596dd944d7f8988a30129d6b1494f5a46))
+
 ## 1.10.2 (2025-07-10)
 
 Full Changelog: [v1.10.1...v1.10.2](https://github.com/OneBusAway/js-sdk/compare/v1.10.1...v1.10.2)
