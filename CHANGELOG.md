@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.4 (2025-08-07)
+
+Full Changelog: [v1.10.3...v1.10.4](https://github.com/OneBusAway/js-sdk/compare/v1.10.3...v1.10.4)
+
+### Chores
+
+* **internal:** move publish config ([15d2193](https://github.com/OneBusAway/js-sdk/commit/15d2193b380af7a3c88c5c7609fbd63a07def8e5))
+
 ## 1.10.3 (2025-07-30)
 
 Full Changelog: [v1.10.2...v1.10.3](https://github.com/OneBusAway/js-sdk/compare/v1.10.2...v1.10.3)
