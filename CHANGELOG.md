@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.5 (2025-08-09)
+
+Full Changelog: [v1.10.4...v1.10.5](https://github.com/OneBusAway/js-sdk/compare/v1.10.4...v1.10.5)
+
+### Chores
+
+* **internal:** update comment in script ([2ce48c7](https://github.com/OneBusAway/js-sdk/commit/2ce48c7457c0c4f4cafa92abd40a77cbb375e8c8))
+* update @stainless-api/prism-cli to v5.15.0 ([144b2c6](https://github.com/OneBusAway/js-sdk/commit/144b2c62325d4960730fd547a085ea054e8de821))
+
 ## 1.10.4 (2025-08-07)
 
 Full Changelog: [v1.10.3...v1.10.4](https://github.com/OneBusAway/js-sdk/compare/v1.10.3...v1.10.4)
