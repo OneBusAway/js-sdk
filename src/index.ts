@@ -309,6 +309,7 @@ OnebusawaySDK.SearchForStop = SearchForStop;
 OnebusawaySDK.SearchForRoute = SearchForRoute;
 OnebusawaySDK.Block = Block;
 OnebusawaySDK.Shape = Shape;
+
 export declare namespace OnebusawaySDK {
   export type RequestOptions = Core.RequestOptions;
 
