@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.6 (2025-08-16)
+
+Full Changelog: [v1.10.5...v1.10.6](https://github.com/OneBusAway/js-sdk/compare/v1.10.5...v1.10.6)
+
+### Chores
+
+* **deps:** update dependency node-fetch to v2.6.13 ([020d24a](https://github.com/OneBusAway/js-sdk/commit/020d24a035898ca209fc331d3f4d06e7c4f93a3c))
+* **internal:** formatting change ([41b64e7](https://github.com/OneBusAway/js-sdk/commit/41b64e73b2c4c83a239632125c47f632d6d834e7))
+
 ## 1.10.5 (2025-08-09)
 
 Full Changelog: [v1.10.4...v1.10.5](https://github.com/OneBusAway/js-sdk/compare/v1.10.4...v1.10.5)
