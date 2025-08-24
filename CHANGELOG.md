@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.7 (2025-08-23)
+
+Full Changelog: [v1.10.6...v1.10.7](https://github.com/OneBusAway/js-sdk/compare/v1.10.6...v1.10.7)
+
+### Chores
+
+* update CI script ([57b75ff](https://github.com/OneBusAway/js-sdk/commit/57b75ff1fe8be78cbcc23cb647e1c3e345ea2684))
+
 ## 1.10.6 (2025-08-16)
 
 Full Changelog: [v1.10.5...v1.10.6](https://github.com/OneBusAway/js-sdk/compare/v1.10.5...v1.10.6)
