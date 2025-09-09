@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.10.8 (2025-09-09)
+
+Full Changelog: [v1.10.7...v1.10.8](https://github.com/OneBusAway/js-sdk/compare/v1.10.7...v1.10.8)
+
+### Bug Fixes
+
+* coerce nullable values to undefined ([82f2e9b](https://github.com/OneBusAway/js-sdk/commit/82f2e9b185ad1ea83f365f81eccbf0070a2f9d08))
+
+
+### Chores
+
+* ci build action ([03f0f2b](https://github.com/OneBusAway/js-sdk/commit/03f0f2b30899c9e28ad33b589491f23b66e38a20))
+
 ## 1.10.7 (2025-08-23)
 
 Full Changelog: [v1.10.6...v1.10.7](https://github.com/OneBusAway/js-sdk/compare/v1.10.6...v1.10.7)
