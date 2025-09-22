@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.9 (2025-09-20)
+
+Full Changelog: [v1.10.8...v1.10.9](https://github.com/OneBusAway/js-sdk/compare/v1.10.8...v1.10.9)
+
+### Chores
+
+* do not install brew dependencies in ./scripts/bootstrap by default ([ab7f227](https://github.com/OneBusAway/js-sdk/commit/ab7f22737b85492188f429280529abd07b651760))
+
 ## 1.10.8 (2025-09-09)
 
 Full Changelog: [v1.10.7...v1.10.8](https://github.com/OneBusAway/js-sdk/compare/v1.10.7...v1.10.8)
