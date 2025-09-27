@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.10.10 (2025-09-27)
+
+Full Changelog: [v1.10.9...v1.10.10](https://github.com/OneBusAway/js-sdk/compare/v1.10.9...v1.10.10)
+
+### Performance Improvements
+
+* faster formatting ([bc7b2bd](https://github.com/OneBusAway/js-sdk/commit/bc7b2bd1abb7b99b91e83879dc2dc7a56eb976a5))
+
+
+### Chores
+
+* **internal:** codegen related update ([fccbf3d](https://github.com/OneBusAway/js-sdk/commit/fccbf3d61bb36d708c68fd50df8056cbfd0f97c8))
+* **internal:** fix incremental formatting in some cases ([d68acbe](https://github.com/OneBusAway/js-sdk/commit/d68acbef0ad0670075f6c90497300a20a4411a80))
+* **internal:** ignore .eslintcache ([a7cb2f6](https://github.com/OneBusAway/js-sdk/commit/a7cb2f63178d8d0cddec08aa397bca6e31b9ebf5))
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([26b9eb2](https://github.com/OneBusAway/js-sdk/commit/26b9eb2a666e7453f761563ec65d78dbe9a8c895))
+
 ## 1.10.9 (2025-09-20)
 
 Full Changelog: [v1.10.8...v1.10.9](https://github.com/OneBusAway/js-sdk/compare/v1.10.8...v1.10.9)
