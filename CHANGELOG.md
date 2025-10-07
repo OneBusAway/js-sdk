@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.11 (2025-10-07)
+
+Full Changelog: [v1.10.10...v1.10.11](https://github.com/OneBusAway/js-sdk/compare/v1.10.10...v1.10.11)
+
+### Chores
+
+* **internal:** remove .eslintcache ([76ba26d](https://github.com/OneBusAway/js-sdk/commit/76ba26d2f8630b15839b2cdeadaf9e56104bcd81))
+* **internal:** use npm pack for build uploads ([05af6a6](https://github.com/OneBusAway/js-sdk/commit/05af6a61db0d2c1551436b62bff55b1100d9ea89))
+
 ## 1.10.10 (2025-09-27)
 
 Full Changelog: [v1.10.9...v1.10.10](https://github.com/OneBusAway/js-sdk/compare/v1.10.9...v1.10.10)
