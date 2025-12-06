@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.10.12 (2025-12-06)
+
+Full Changelog: [v1.10.11...v1.10.12](https://github.com/OneBusAway/js-sdk/compare/v1.10.11...v1.10.12)
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([905bc51](https://github.com/OneBusAway/js-sdk/commit/905bc5147a68c75602aa33792e4b7df99730d97a))
+* **mcp:** return correct lines on typescript errors ([01ad11c](https://github.com/OneBusAway/js-sdk/commit/01ad11cb782dab1ead46030f65d5579f5788f03c))
+
+
+### Chores
+
+* **internal:** codegen related update ([ebfcdbd](https://github.com/OneBusAway/js-sdk/commit/ebfcdbd97628e9d8cac95797ac64597acf791e3c))
+* **internal:** codegen related update ([d954006](https://github.com/OneBusAway/js-sdk/commit/d9540060d4bee207eacf1f86b75d186fc2368b04))
+
 ## 1.10.11 (2025-10-07)
 
 Full Changelog: [v1.10.10...v1.10.11](https://github.com/OneBusAway/js-sdk/compare/v1.10.10...v1.10.11)
