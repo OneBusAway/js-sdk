@@ -56,7 +56,11 @@ describe('resource arrivalAndDeparture', () => {
     await expect(
       client.arrivalAndDeparture.list(
         '1_75403',
-        { minutesAfter: 0, minutesBefore: 0, time: '2019-12-27T18:11:19.117Z' },
+        {
+          minutesAfter: 0,
+          minutesBefore: 0,
+          time: '2019-12-27T18:11:19.117Z',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
