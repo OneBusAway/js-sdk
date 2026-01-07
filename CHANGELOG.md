@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.14 (2026-01-07)
+
+Full Changelog: [v1.10.13...v1.10.14](https://github.com/OneBusAway/js-sdk/compare/v1.10.13...v1.10.14)
+
+### Chores
+
+* break long lines in snippets into multiline ([2e93294](https://github.com/OneBusAway/js-sdk/commit/2e93294ac5e24ded5659d9df321729eb6e3d0820))
+
 ## 1.10.13 (2026-01-06)
 
 Full Changelog: [v1.10.12...v1.10.13](https://github.com/OneBusAway/js-sdk/compare/v1.10.12...v1.10.13)
