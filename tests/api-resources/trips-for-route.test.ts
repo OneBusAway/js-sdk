@@ -32,7 +32,11 @@ describe('resource tripsForRoute', () => {
     await expect(
       client.tripsForRoute.list(
         'routeID',
-        { includeSchedule: true, includeStatus: true, time: 0 },
+        {
+          includeSchedule: true,
+          includeStatus: true,
+          time: 0,
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(OnebusawaySDK.NotFoundError);
