@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.15 (2026-01-17)
+
+Full Changelog: [v1.10.14...v1.10.15](https://github.com/OneBusAway/js-sdk/compare/v1.10.14...v1.10.15)
+
+### Chores
+
+* **internal:** update `actions/checkout` version ([5576068](https://github.com/OneBusAway/js-sdk/commit/55760681421a9fcb77ee65b5411e18e80f7211dc))
+* **internal:** upgrade babel, qs, js-yaml ([2f42a2f](https://github.com/OneBusAway/js-sdk/commit/2f42a2f3d6ac4026d63ab27f7d57f56998ca674d))
+
 ## 1.10.14 (2026-01-07)
 
 Full Changelog: [v1.10.13...v1.10.14](https://github.com/OneBusAway/js-sdk/compare/v1.10.13...v1.10.14)
