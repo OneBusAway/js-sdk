@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.16 (2026-01-24)
+
+Full Changelog: [v1.10.15...v1.10.16](https://github.com/OneBusAway/js-sdk/compare/v1.10.15...v1.10.16)
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([60a35f6](https://github.com/OneBusAway/js-sdk/commit/60a35f6716bb1ab9d59f825325793f05d2cb73c2))
+
 ## 1.10.15 (2026-01-17)
 
 Full Changelog: [v1.10.14...v1.10.15](https://github.com/OneBusAway/js-sdk/compare/v1.10.14...v1.10.15)
