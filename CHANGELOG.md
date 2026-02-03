@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.17 (2026-02-03)
+
+Full Changelog: [v1.10.16...v1.10.17](https://github.com/OneBusAway/js-sdk/compare/v1.10.16...v1.10.17)
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([48bcc48](https://github.com/OneBusAway/js-sdk/commit/48bcc4802e1c2684278084b54602c72bb58a07b5))
+
 ## 1.10.16 (2026-01-24)
 
 Full Changelog: [v1.10.15...v1.10.16](https://github.com/OneBusAway/js-sdk/compare/v1.10.15...v1.10.16)
