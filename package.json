@@ -1,6 +1,6 @@
 {
   "name": "onebusaway-sdk",
-  "version": "1.10.17",
+  "version": "1.10.18",
   "description": "The official TypeScript library for the Onebusaway SDK API",
   "author": "Onebusaway SDK <info@onebusaway.org>",
   "types": "dist/index.d.ts",
