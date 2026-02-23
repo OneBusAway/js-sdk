@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.18 (2026-02-20)
+
+Full Changelog: [v1.10.17...v1.10.18](https://github.com/OneBusAway/js-sdk/compare/v1.10.17...v1.10.18)
+
+### Chores
+
+* update mock server docs ([1ef651a](https://github.com/OneBusAway/js-sdk/commit/1ef651a2671e7b668733799014ac8e7f9cc72ca6))
+
 ## 1.10.17 (2026-02-03)
 
 Full Changelog: [v1.10.16...v1.10.17](https://github.com/OneBusAway/js-sdk/compare/v1.10.16...v1.10.17)
