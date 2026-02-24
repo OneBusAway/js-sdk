@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.19 (2026-02-24)
+
+Full Changelog: [v1.10.18...v1.10.19](https://github.com/OneBusAway/js-sdk/compare/v1.10.18...v1.10.19)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([fbd2091](https://github.com/OneBusAway/js-sdk/commit/fbd20912bd3703b5111955040dd7d4c58c427a24))
+
 ## 1.10.18 (2026-02-20)
 
 Full Changelog: [v1.10.17...v1.10.18](https://github.com/OneBusAway/js-sdk/compare/v1.10.17...v1.10.18)
