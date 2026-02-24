@@ -60,7 +60,7 @@ $ yarn link onebusaway-sdk
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global onebusaway-sdk
+$ pnpm link --global onebusaway-sdk
 ```
 
 ## Running tests
