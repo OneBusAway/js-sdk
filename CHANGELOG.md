@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.20 (2026-02-27)
+
+Full Changelog: [v1.10.19...v1.10.20](https://github.com/OneBusAway/js-sdk/compare/v1.10.19...v1.10.20)
+
+### Chores
+
+* **internal:** move stringifyQuery implementation to internal function ([10dbca9](https://github.com/OneBusAway/js-sdk/commit/10dbca9f28a77a3cdbf8314f821314ef58a721b9))
+
 ## 1.10.19 (2026-02-24)
 
 Full Changelog: [v1.10.18...v1.10.19](https://github.com/OneBusAway/js-sdk/compare/v1.10.18...v1.10.19)
