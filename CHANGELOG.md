@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.10.21 (2026-03-06)
+
+Full Changelog: [v1.10.20...v1.10.21](https://github.com/OneBusAway/js-sdk/compare/v1.10.20...v1.10.21)
+
+### Chores
+
+* **internal:** codegen related update ([70ab473](https://github.com/OneBusAway/js-sdk/commit/70ab473d0dadaa7dec86fce467c41e19ba14783b))
+
 ## 1.10.20 (2026-02-27)
 
 Full Changelog: [v1.10.19...v1.10.20](https://github.com/OneBusAway/js-sdk/compare/v1.10.19...v1.10.20)
