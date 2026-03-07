@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.10.22 (2026-03-07)
+
+Full Changelog: [v1.10.21...v1.10.22](https://github.com/OneBusAway/js-sdk/compare/v1.10.21...v1.10.22)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([d4b33cc](https://github.com/OneBusAway/js-sdk/commit/d4b33ccf5f59f128fe4c5d3f7fd7c17e129e952f))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([7e3e48d](https://github.com/OneBusAway/js-sdk/commit/7e3e48d7de502400a817fc788c10d4f9392ce6fd))
+* **test:** do not count install time for mock server timeout ([a7f657b](https://github.com/OneBusAway/js-sdk/commit/a7f657b01adb0b903a14525c56b7204160928582))
+
 ## 1.10.21 (2026-03-06)
 
 Full Changelog: [v1.10.20...v1.10.21](https://github.com/OneBusAway/js-sdk/compare/v1.10.20...v1.10.21)
