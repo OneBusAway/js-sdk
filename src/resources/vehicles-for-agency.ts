@@ -46,13 +46,9 @@ export namespace VehiclesForAgencyListResponse {
 
       lastUpdateTime: number;
 
-      location: List.Location;
-
-      tripId: string;
-
-      tripStatus: List.TripStatus;
-
       vehicleId: string;
+
+      location?: List.Location;
 
       occupancyCapacity?: number;
 
@@ -63,6 +59,10 @@ export namespace VehiclesForAgencyListResponse {
       phase?: string;
 
       status?: string;
+
+      tripId?: string;
+
+      tripStatus?: List.TripStatus;
     }
 
     export namespace List {
