@@ -50,38 +50,10 @@ export namespace ScheduleForRouteRetrieveResponse {
 
       serviceIds: Array<string>;
 
-      stops: Array<Entry.Stop>;
-
       stopTripGroupings: Array<Entry.StopTripGrouping>;
-
-      trips: Array<Entry.Trip>;
     }
 
     export namespace Entry {
-      export interface Stop {
-        id: string;
-
-        lat: number;
-
-        locationType: number;
-
-        lon: number;
-
-        name: string;
-
-        parent: string;
-
-        routeIds: Array<string>;
-
-        staticRouteIds: Array<string>;
-
-        code?: string;
-
-        direction?: string;
-
-        wheelchairBoarding?: string;
-      }
-
       export interface StopTripGrouping {
         directionId: string;
 
@@ -120,30 +92,6 @@ export namespace ScheduleForRouteRetrieveResponse {
             stopHeadsign?: string;
           }
         }
-      }
-
-      export interface Trip {
-        id: string;
-
-        routeId: string;
-
-        serviceId: string;
-
-        blockId?: string;
-
-        directionId?: string;
-
-        peakOffpeak?: number;
-
-        routeShortName?: string;
-
-        shapeId?: string;
-
-        timeZone?: string;
-
-        tripHeadsign?: string;
-
-        tripShortName?: string;
       }
     }
   }
