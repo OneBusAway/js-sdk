@@ -33,62 +33,56 @@ export interface StopsForRouteListResponse extends Shared.ResponseWrapper {
 
 export namespace StopsForRouteListResponse {
   export interface Data {
-    data: Data.Data;
+    entry: Data.Entry;
+
+    references: Shared.References;
   }
 
   export namespace Data {
-    export interface Data {
-      entry: Data.Entry;
+    export interface Entry {
+      polylines?: Array<Entry.Polyline>;
 
-      references: Shared.References;
+      routeId?: string;
+
+      stopGroupings?: Array<Entry.StopGrouping>;
+
+      stopIds?: Array<string>;
     }
 
-    export namespace Data {
-      export interface Entry {
-        polylines?: Array<Entry.Polyline>;
+    export namespace Entry {
+      export interface Polyline {
+        length?: number;
 
-        routeId?: string;
+        levels?: string;
 
-        stopGroupings?: Array<Entry.StopGrouping>;
+        points?: string;
+      }
+
+      export interface StopGrouping {
+        id?: string;
+
+        name?: StopGrouping.Name;
+
+        polylines?: Array<StopGrouping.Polyline>;
 
         stopIds?: Array<string>;
       }
 
-      export namespace Entry {
+      export namespace StopGrouping {
+        export interface Name {
+          name?: string;
+
+          names?: Array<string>;
+
+          type?: string;
+        }
+
         export interface Polyline {
           length?: number;
 
           levels?: string;
 
           points?: string;
-        }
-
-        export interface StopGrouping {
-          id?: string;
-
-          name?: StopGrouping.Name;
-
-          polylines?: Array<StopGrouping.Polyline>;
-
-          stopIds?: Array<string>;
-        }
-
-        export namespace StopGrouping {
-          export interface Name {
-            name?: string;
-
-            names?: Array<string>;
-
-            type?: string;
-          }
-
-          export interface Polyline {
-            length?: number;
-
-            levels?: string;
-
-            points?: string;
-          }
         }
       }
     }
