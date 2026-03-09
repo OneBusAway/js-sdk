@@ -14,38 +14,44 @@ export class StopsForAgency extends APIResource {
 }
 
 export interface StopsForAgencyListResponse extends Shared.ResponseWrapper {
-  limitExceeded: boolean;
-
-  list: Array<StopsForAgencyListResponse.List>;
-
-  references: Shared.References;
-
-  outOfRange?: boolean;
+  data: StopsForAgencyListResponse.Data;
 }
 
 export namespace StopsForAgencyListResponse {
-  export interface List {
-    id: string;
+  export interface Data {
+    limitExceeded: boolean;
 
-    lat: number;
+    list: Array<Data.List>;
 
-    locationType: number;
+    references: Shared.References;
 
-    lon: number;
+    outOfRange?: boolean;
+  }
 
-    name: string;
+  export namespace Data {
+    export interface List {
+      id: string;
 
-    parent: string;
+      lat: number;
 
-    routeIds: Array<string>;
+      locationType: number;
 
-    staticRouteIds: Array<string>;
+      lon: number;
 
-    code?: string;
+      name: string;
 
-    direction?: string;
+      parent: string;
 
-    wheelchairBoarding?: string;
+      routeIds: Array<string>;
+
+      staticRouteIds: Array<string>;
+
+      code?: string;
+
+      direction?: string;
+
+      wheelchairBoarding?: string;
+    }
   }
 }
 
