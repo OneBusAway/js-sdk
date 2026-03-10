@@ -33,11 +33,11 @@ export interface VehiclesForAgencyListResponse extends Shared.ResponseWrapper {
 
 export namespace VehiclesForAgencyListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
   }
 
   export namespace Data {

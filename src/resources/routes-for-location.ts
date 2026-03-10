@@ -22,13 +22,13 @@ export interface RoutesForLocationListResponse extends Shared.ResponseWrapper {
 
 export namespace RoutesForLocationListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     outOfRange: boolean;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
   }
 
   export namespace Data {
