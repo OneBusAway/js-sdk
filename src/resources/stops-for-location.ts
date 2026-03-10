@@ -22,11 +22,11 @@ export interface StopsForLocationListResponse extends Shared.ResponseWrapper {
 
 export namespace StopsForLocationListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
 
     outOfRange?: boolean;
   }

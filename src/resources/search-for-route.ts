@@ -22,13 +22,13 @@ export interface SearchForRouteListResponse extends Shared.ResponseWrapper {
 
 export namespace SearchForRouteListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     outOfRange: boolean;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
   }
 
   export namespace Data {

@@ -33,11 +33,11 @@ export interface TripsForRouteListResponse extends Shared.ResponseWrapper {
 
 export namespace TripsForRouteListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
   }
 
   export namespace Data {

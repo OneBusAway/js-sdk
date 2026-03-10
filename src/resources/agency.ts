@@ -21,8 +21,6 @@ export namespace AgencyRetrieveResponse {
   export interface Data {
     entry: Data.Entry;
 
-    limitExceeded: boolean;
-
     references: Shared.References;
   }
 
