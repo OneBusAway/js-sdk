@@ -26,11 +26,11 @@ export interface RoutesForAgencyListResponse extends Shared.ResponseWrapper {
 
 export namespace RoutesForAgencyListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
   }
 
   export namespace Data {

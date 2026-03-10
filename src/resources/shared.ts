@@ -88,12 +88,7 @@ export namespace References {
     /**
      * Reason for the service alert, taken from TPEG codes.
      */
-    reason?:
-      | 'equipmentReason'
-      | 'environmentReason'
-      | 'personnelReason'
-      | 'miscellaneousReason'
-      | 'securityAlert';
+    reason?: string;
 
     /**
      * Severity of the situation.

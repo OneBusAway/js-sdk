@@ -19,11 +19,11 @@ export interface StopsForAgencyListResponse extends Shared.ResponseWrapper {
 
 export namespace StopsForAgencyListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
 
     outOfRange?: boolean;
   }

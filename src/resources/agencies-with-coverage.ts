@@ -20,11 +20,11 @@ export interface AgenciesWithCoverageListResponse extends Shared.ResponseWrapper
 
 export namespace AgenciesWithCoverageListResponse {
   export interface Data {
-    limitExceeded: boolean;
-
     list: Array<Data.List>;
 
     references: Shared.References;
+
+    limitExceeded?: boolean;
   }
 
   export namespace Data {
