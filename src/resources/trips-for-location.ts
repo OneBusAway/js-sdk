@@ -176,9 +176,9 @@ export namespace TripsForLocationListResponse {
         frequency?: string;
 
         /**
-         * Last known location of the transit vehicle.
+         * Last known location of the transit vehicle (optional).
          */
-        lastKnownLocation?: Status.LastKnownLocation;
+        lastKnownLocation?: Status.LastKnownLocation | null;
 
         /**
          * Last known orientation value received in real-time from the transit vehicle.
@@ -225,7 +225,7 @@ export namespace TripsForLocationListResponse {
 
       export namespace Status {
         /**
-         * Last known location of the transit vehicle.
+         * Last known location of the transit vehicle (optional).
          */
         export interface LastKnownLocation {
           /**
