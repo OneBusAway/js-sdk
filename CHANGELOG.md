@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.13.1 (2026-03-17)
+
+Full Changelog: [v1.13.0...v1.13.1](https://github.com/OneBusAway/js-sdk/compare/v1.13.0...v1.13.1)
+
+### Chores
+
+* **internal:** tweak CI branches ([0847504](https://github.com/OneBusAway/js-sdk/commit/0847504d442c120b58e1d1ec2d6e9258a94a53c9))
+
 ## 1.13.0 (2026-03-14)
 
 Full Changelog: [v1.12.0...v1.13.0](https://github.com/OneBusAway/js-sdk/compare/v1.12.0...v1.13.0)
