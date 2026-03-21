@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.13.2 (2026-03-21)
+
+Full Changelog: [v1.13.1...v1.13.2](https://github.com/OneBusAway/js-sdk/compare/v1.13.1...v1.13.2)
+
+### Chores
+
+* **tests:** bump steady to v0.19.4 ([132ab91](https://github.com/OneBusAway/js-sdk/commit/132ab91bb082b50998ac922c470c0af91f222b07))
+* **tests:** bump steady to v0.19.5 ([660d653](https://github.com/OneBusAway/js-sdk/commit/660d6536201706d67db4cd868fd16e78cf808344))
+
+
+### Refactors
+
+* **tests:** switch from prism to steady ([e1cad64](https://github.com/OneBusAway/js-sdk/commit/e1cad64328b9a3dd305b928ad2e4d3c8c4a7549a))
+
 ## 1.13.1 (2026-03-17)
 
 Full Changelog: [v1.13.0...v1.13.1](https://github.com/OneBusAway/js-sdk/compare/v1.13.0...v1.13.1)
