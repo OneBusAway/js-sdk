@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.13.3 (2026-03-25)
+
+Full Changelog: [v1.13.2...v1.13.3](https://github.com/OneBusAway/js-sdk/compare/v1.13.2...v1.13.3)
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([9efc52e](https://github.com/OneBusAway/js-sdk/commit/9efc52e60489e0f6f084d2564440ba18324e5ac1))
+* **internal:** update gitignore ([87b502e](https://github.com/OneBusAway/js-sdk/commit/87b502eb4274c2a396ebde0d7a86172db4bc5ea6))
+* **tests:** bump steady to v0.19.6 ([593ce20](https://github.com/OneBusAway/js-sdk/commit/593ce2000e18511fa86ecb1c43ba4ff9ddde4749))
+* **tests:** bump steady to v0.19.7 ([fc3bd9b](https://github.com/OneBusAway/js-sdk/commit/fc3bd9b86319a1a75b2b5e109c9b7a5a3622f77d))
+
 ## 1.13.2 (2026-03-21)
 
 Full Changelog: [v1.13.1...v1.13.2](https://github.com/OneBusAway/js-sdk/compare/v1.13.1...v1.13.2)
