@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.13.4 (2026-03-27)
+
+Full Changelog: [v1.13.3...v1.13.4](https://github.com/OneBusAway/js-sdk/compare/v1.13.3...v1.13.4)
+
+### Chores
+
+* **internal:** update multipart form array serialization ([ea9727f](https://github.com/OneBusAway/js-sdk/commit/ea9727f773c665e9f714b86a69068c8f35b66961))
+
 ## 1.13.3 (2026-03-25)
 
 Full Changelog: [v1.13.2...v1.13.3](https://github.com/OneBusAway/js-sdk/compare/v1.13.2...v1.13.3)
