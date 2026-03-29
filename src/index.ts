@@ -14,6 +14,11 @@ import {
   ArrivalAndDepartureRetrieveParams,
   ArrivalAndDepartureRetrieveResponse,
 } from './resources/arrival-and-departure';
+import {
+  ArrivalsAndDeparturesForLocation,
+  ArrivalsAndDeparturesForLocationListParams,
+  ArrivalsAndDeparturesForLocationListResponse,
+} from './resources/arrivals-and-departures-for-location';
 import { Block, BlockRetrieveResponse } from './resources/block';
 import { Config, ConfigRetrieveResponse } from './resources/config';
 import { CurrentTime, CurrentTimeRetrieveResponse } from './resources/current-time';
@@ -222,6 +227,8 @@ export class OnebusawaySDK extends Core.APIClient {
   routesForLocation: API.RoutesForLocation = new API.RoutesForLocation(this);
   routesForAgency: API.RoutesForAgency = new API.RoutesForAgency(this);
   scheduleForRoute: API.ScheduleForRoute = new API.ScheduleForRoute(this);
+  arrivalsAndDeparturesForLocation: API.ArrivalsAndDeparturesForLocation =
+    new API.ArrivalsAndDeparturesForLocation(this);
   arrivalAndDeparture: API.ArrivalAndDeparture = new API.ArrivalAndDeparture(this);
   trip: API.Trip = new API.Trip(this);
   tripsForLocation: API.TripsForLocation = new API.TripsForLocation(this);
@@ -297,6 +304,7 @@ OnebusawaySDK.RouteIDsForAgency = RouteIDsForAgency;
 OnebusawaySDK.RoutesForLocation = RoutesForLocation;
 OnebusawaySDK.RoutesForAgency = RoutesForAgency;
 OnebusawaySDK.ScheduleForRoute = ScheduleForRoute;
+OnebusawaySDK.ArrivalsAndDeparturesForLocation = ArrivalsAndDeparturesForLocation;
 OnebusawaySDK.ArrivalAndDeparture = ArrivalAndDeparture;
 OnebusawaySDK.Trip = Trip;
 OnebusawaySDK.TripsForLocation = TripsForLocation;
@@ -379,6 +387,12 @@ export declare namespace OnebusawaySDK {
     ScheduleForRoute as ScheduleForRoute,
     type ScheduleForRouteRetrieveResponse as ScheduleForRouteRetrieveResponse,
     type ScheduleForRouteRetrieveParams as ScheduleForRouteRetrieveParams,
+  };
+
+  export {
+    ArrivalsAndDeparturesForLocation as ArrivalsAndDeparturesForLocation,
+    type ArrivalsAndDeparturesForLocationListResponse as ArrivalsAndDeparturesForLocationListResponse,
+    type ArrivalsAndDeparturesForLocationListParams as ArrivalsAndDeparturesForLocationListParams,
   };
 
   export {

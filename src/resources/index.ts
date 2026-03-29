@@ -10,6 +10,11 @@ export {
   type ArrivalAndDepartureRetrieveParams,
   type ArrivalAndDepartureListParams,
 } from './arrival-and-departure';
+export {
+  ArrivalsAndDeparturesForLocation,
+  type ArrivalsAndDeparturesForLocationListResponse,
+  type ArrivalsAndDeparturesForLocationListParams,
+} from './arrivals-and-departures-for-location';
 export { Block, type BlockRetrieveResponse } from './block';
 export { Config, type ConfigRetrieveResponse } from './config';
 export { CurrentTime, type CurrentTimeRetrieveResponse } from './current-time';

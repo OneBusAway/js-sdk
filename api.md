@@ -165,6 +165,16 @@ Methods:
 
 - <code title="get /api/where/schedule-for-route/{routeID}.json">client.scheduleForRoute.<a href="./src/resources/schedule-for-route.ts">retrieve</a>(routeId, { ...params }) -> ScheduleForRouteRetrieveResponse</code>
 
+# ArrivalsAndDeparturesForLocation
+
+Types:
+
+- <code><a href="./src/resources/arrivals-and-departures-for-location.ts">ArrivalsAndDeparturesForLocationListResponse</a></code>
+
+Methods:
+
+- <code title="get /api/where/arrivals-and-departures-for-location.json">client.arrivalsAndDeparturesForLocation.<a href="./src/resources/arrivals-and-departures-for-location.ts">list</a>({ ...params }) -> ArrivalsAndDeparturesForLocationListResponse</code>
+
 # ArrivalAndDeparture
 
 Types:
