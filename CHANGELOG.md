@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.14.1 (2026-04-01)
+
+Full Changelog: [v1.14.0...v1.14.1](https://github.com/OneBusAway/js-sdk/compare/v1.14.0...v1.14.1)
+
+### Chores
+
+* **tests:** bump steady to v0.20.1 ([601aaf4](https://github.com/OneBusAway/js-sdk/commit/601aaf4646c04aa90559f15e2fa6ff2e12c3a92f))
+* **tests:** bump steady to v0.20.2 ([b9535cd](https://github.com/OneBusAway/js-sdk/commit/b9535cdb1face261d20a4b9288930491960b38cb))
+
 ## 1.14.0 (2026-03-29)
 
 Full Changelog: [v1.13.4...v1.14.0](https://github.com/OneBusAway/js-sdk/compare/v1.13.4...v1.14.0)
