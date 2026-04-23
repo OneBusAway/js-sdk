@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.14.4 (2026-04-23)
+
+Full Changelog: [v1.14.3...v1.14.4](https://github.com/OneBusAway/js-sdk/compare/v1.14.3...v1.14.4)
+
+### Chores
+
+* **internal:** more robust bootstrap script ([2b6d0f2](https://github.com/OneBusAway/js-sdk/commit/2b6d0f22e677e49fc385eb88a90eee42b8e7d9b2))
+
 ## 1.14.3 (2026-04-18)
 
 Full Changelog: [v1.14.2...v1.14.3](https://github.com/OneBusAway/js-sdk/compare/v1.14.2...v1.14.3)
