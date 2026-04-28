@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.15.0 (2026-04-28)
+
+Full Changelog: [v1.14.4...v1.15.0](https://github.com/OneBusAway/js-sdk/compare/v1.14.4...v1.15.0)
+
+### Features
+
+* support setting headers via env ([97822cd](https://github.com/OneBusAway/js-sdk/commit/97822cdaad9ec6ad9dcb2093f1e53609c65f381e))
+
 ## 1.14.4 (2026-04-23)
 
 Full Changelog: [v1.14.3...v1.14.4](https://github.com/OneBusAway/js-sdk/compare/v1.14.3...v1.14.4)
