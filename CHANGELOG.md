@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.15.1 (2026-04-29)
+
+Full Changelog: [v1.15.0...v1.15.1](https://github.com/OneBusAway/js-sdk/compare/v1.15.0...v1.15.1)
+
+### Bug Fixes
+
+* change publish command from yarn to npm for consistency ([5135faa](https://github.com/OneBusAway/js-sdk/commit/5135faa7259fe0742d0c7d95d860d3e1bf848907))
+
 ## 1.15.0 (2026-04-28)
 
 Full Changelog: [v1.14.4...v1.15.0](https://github.com/OneBusAway/js-sdk/compare/v1.14.4...v1.15.0)
