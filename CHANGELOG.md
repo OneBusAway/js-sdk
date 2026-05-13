@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.15.2 (2026-05-13)
+
+Full Changelog: [v1.15.1...v1.15.2](https://github.com/OneBusAway/js-sdk/compare/v1.15.1...v1.15.2)
+
 ## 1.15.1 (2026-04-29)
 
 Full Changelog: [v1.15.0...v1.15.1](https://github.com/OneBusAway/js-sdk/compare/v1.15.0...v1.15.1)
