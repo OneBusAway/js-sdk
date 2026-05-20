@@ -44,6 +44,9 @@ export namespace TripsForRouteListResponse {
     export interface List {
       schedule: List.Schedule;
 
+      /**
+       * Trip-specific status for the arriving transit vehicle.
+       */
       status: List.Status;
 
       tripId: string;
@@ -84,6 +87,9 @@ export namespace TripsForRouteListResponse {
         }
       }
 
+      /**
+       * Trip-specific status for the arriving transit vehicle.
+       */
       export interface Status {
         /**
          * Trip ID of the trip the vehicle is actively serving.
