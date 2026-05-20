@@ -62,6 +62,9 @@ export namespace VehiclesForAgencyListResponse {
 
       tripId?: string;
 
+      /**
+       * Trip-specific status for the arriving transit vehicle.
+       */
       tripStatus?: List.TripStatus;
     }
 
@@ -72,6 +75,9 @@ export namespace VehiclesForAgencyListResponse {
         lon?: number;
       }
 
+      /**
+       * Trip-specific status for the arriving transit vehicle.
+       */
       export interface TripStatus {
         /**
          * Trip ID of the trip the vehicle is actively serving.

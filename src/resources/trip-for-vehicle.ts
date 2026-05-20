@@ -50,6 +50,9 @@ export namespace TripForVehicleRetrieveResponse {
 
       situationIds?: Array<string>;
 
+      /**
+       * Trip-specific status for the arriving transit vehicle.
+       */
       status?: Entry.Status;
     }
 
@@ -82,6 +85,9 @@ export namespace TripForVehicleRetrieveResponse {
         }
       }
 
+      /**
+       * Trip-specific status for the arriving transit vehicle.
+       */
       export interface Status {
         /**
          * Trip ID of the trip the vehicle is actively serving.
