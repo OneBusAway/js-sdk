@@ -171,7 +171,7 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       /**
        * Information about frequency-based scheduling, if applicable to the trip.
        */
-      frequency?: string;
+      frequency?: string | null;
 
       /**
        * Historical occupancy information of the transit vehicle.
@@ -196,12 +196,12 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       /**
        * Interval for predicted arrival time, if available.
        */
-      predictedArrivalInterval?: string;
+      predictedArrivalInterval?: string | null;
 
       /**
        * Interval for predicted departure time, if available.
        */
-      predictedDepartureInterval?: string;
+      predictedDepartureInterval?: string | null;
 
       /**
        * Predicted occupancy status of the transit vehicle.
@@ -223,12 +223,12 @@ export namespace ArrivalAndDepartureRetrieveResponse {
       /**
        * Interval for scheduled arrival time.
        */
-      scheduledArrivalInterval?: string;
+      scheduledArrivalInterval?: string | null;
 
       /**
        * Interval for scheduled departure time.
        */
-      scheduledDepartureInterval?: string;
+      scheduledDepartureInterval?: string | null;
 
       /**
        * Scheduled track information of the arriving transit vehicle.
@@ -347,7 +347,7 @@ export namespace ArrivalAndDepartureRetrieveResponse {
         /**
          * Information about frequency-based scheduling, if applicable to the trip.
          */
-        frequency?: string;
+        frequency?: string | null;
 
         /**
          * Last known location of the transit vehicle (optional).
@@ -549,7 +549,7 @@ export namespace ArrivalAndDepartureListResponse {
         /**
          * Information about frequency-based scheduling, if applicable to the trip.
          */
-        frequency?: string;
+        frequency?: string | null;
 
         /**
          * Historical occupancy information of the transit vehicle.
@@ -574,12 +574,12 @@ export namespace ArrivalAndDepartureListResponse {
         /**
          * Interval for predicted arrival time, if available.
          */
-        predictedArrivalInterval?: string;
+        predictedArrivalInterval?: string | null;
 
         /**
          * Interval for predicted departure time, if available.
          */
-        predictedDepartureInterval?: string;
+        predictedDepartureInterval?: string | null;
 
         /**
          * Predicted occupancy status of the transit vehicle.
@@ -601,12 +601,12 @@ export namespace ArrivalAndDepartureListResponse {
         /**
          * Interval for scheduled arrival time.
          */
-        scheduledArrivalInterval?: string;
+        scheduledArrivalInterval?: string | null;
 
         /**
          * Interval for scheduled departure time.
          */
-        scheduledDepartureInterval?: string;
+        scheduledDepartureInterval?: string | null;
 
         /**
          * Scheduled track information of the arriving transit vehicle.
@@ -725,7 +725,7 @@ export namespace ArrivalAndDepartureListResponse {
           /**
            * Information about frequency-based scheduling, if applicable to the trip.
            */
-          frequency?: string;
+          frequency?: string | null;
 
           /**
            * Last known location of the transit vehicle (optional).
