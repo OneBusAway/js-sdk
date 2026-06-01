@@ -170,7 +170,7 @@ export namespace VehiclesForAgencyListResponse {
         /**
          * Information about frequency-based scheduling, if applicable to the trip.
          */
-        frequency?: string;
+        frequency?: string | null;
 
         /**
          * Last known location of the transit vehicle (optional).

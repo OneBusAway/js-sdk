@@ -44,7 +44,7 @@ export namespace TripDetailRetrieveResponse {
 
       frequency?: string | null;
 
-      schedule?: Entry.Schedule;
+      schedule?: Entry.Schedule | null;
 
       serviceDate?: number;
 
@@ -180,7 +180,7 @@ export namespace TripDetailRetrieveResponse {
         /**
          * Information about frequency-based scheduling, if applicable to the trip.
          */
-        frequency?: string;
+        frequency?: string | null;
 
         /**
          * Last known location of the transit vehicle (optional).
