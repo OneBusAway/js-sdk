@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.17.0 (2026-06-01)
+
+Full Changelog: [v1.16.0...v1.17.0](https://github.com/OneBusAway/js-sdk/compare/v1.16.0...v1.17.0)
+
+### Features
+
+* **api:** api update ([2577add](https://github.com/OneBusAway/js-sdk/commit/2577adda20708d0b9d167f0011a43bb48fb8e5ef))
+
 ## 1.16.0 (2026-05-20)
 
 Full Changelog: [v1.15.2...v1.16.0](https://github.com/OneBusAway/js-sdk/compare/v1.15.2...v1.16.0)
