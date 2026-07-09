@@ -293,7 +293,7 @@ export interface TripsForLocationListParams {
 
   /**
    * Whether to include full trip elements in the references section. Defaults to
-   * false.
+   * true.
    */
   includeTrip?: boolean;
 
