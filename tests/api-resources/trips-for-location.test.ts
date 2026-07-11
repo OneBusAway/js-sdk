@@ -10,12 +10,7 @@ const client = new OnebusawaySDK({
 
 describe('resource tripsForLocation', () => {
   test('list: only required params', async () => {
-    const responsePromise = client.tripsForLocation.list({
-      lat: 0,
-      latSpan: 0,
-      lon: 0,
-      lonSpan: 0,
-    });
+    const responsePromise = client.tripsForLocation.list({ latSpan: 0, lonSpan: 0 });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -27,12 +22,12 @@ describe('resource tripsForLocation', () => {
 
   test('list: required and optional params', async () => {
     const response = await client.tripsForLocation.list({
-      lat: 0,
       latSpan: 0,
-      lon: 0,
       lonSpan: 0,
       includeSchedule: true,
       includeTrip: true,
+      lat: 0,
+      lon: 0,
       time: 0,
     });
   });
