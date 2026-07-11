@@ -266,19 +266,9 @@ export namespace TripsForLocationListResponse {
 
 export interface TripsForLocationListParams {
   /**
-   * The latitude coordinate of the search center
-   */
-  lat: number;
-
-  /**
    * Latitude span of the search bounding box
    */
   latSpan: number;
-
-  /**
-   * The longitude coordinate of the search center
-   */
-  lon: number;
 
   /**
    * Longitude span of the search bounding box
@@ -296,6 +286,16 @@ export interface TripsForLocationListParams {
    * true.
    */
   includeTrip?: boolean;
+
+  /**
+   * The latitude coordinate of the search center. If omitted, defaults to 0.0.
+   */
+  lat?: number;
+
+  /**
+   * The longitude coordinate of the search center. If omitted, defaults to 0.0.
+   */
+  lon?: number;
 
   /**
    * Specific time for the query. Defaults to the current time.
