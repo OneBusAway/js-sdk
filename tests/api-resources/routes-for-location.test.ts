@@ -9,8 +9,8 @@ const client = new OnebusawaySDK({
 });
 
 describe('resource routesForLocation', () => {
-  test('list: only required params', async () => {
-    const responsePromise = client.routesForLocation.list({ lat: 0, lon: 0 });
+  test('list', async () => {
+    const responsePromise = client.routesForLocation.list();
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,14 +20,27 @@ describe('resource routesForLocation', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  test('list: required and optional params', async () => {
-    const response = await client.routesForLocation.list({
-      lat: 0,
-      lon: 0,
-      latSpan: 0,
-      lonSpan: 0,
-      query: 'query',
-      radius: 0,
-    });
+  test('list: request options instead of params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(client.routesForLocation.list({ path: '/_stainless_unknown_path' })).rejects.toThrow(
+      OnebusawaySDK.NotFoundError,
+    );
+  });
+
+  test('list: request options and params are passed correctly', async () => {
+    // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
+    await expect(
+      client.routesForLocation.list(
+        {
+          lat: 0,
+          latSpan: 0,
+          lon: 0,
+          lonSpan: 0,
+          query: 'query',
+          radius: 0,
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(OnebusawaySDK.NotFoundError);
   });
 });

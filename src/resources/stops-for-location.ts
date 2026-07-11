@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../resource';
+import { isRequestOptions } from '../core';
 import * as Core from '../core';
 import * as Shared from './shared';
 
@@ -9,9 +10,17 @@ export class StopsForLocation extends APIResource {
    * stops-for-location
    */
   list(
-    query: StopsForLocationListParams,
+    query?: StopsForLocationListParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<StopsForLocationListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<StopsForLocationListResponse>;
+  list(
+    query: StopsForLocationListParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<StopsForLocationListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/where/stops-for-location.json', { query, ...options });
   }
 }
@@ -59,14 +68,20 @@ export namespace StopsForLocationListResponse {
 }
 
 export interface StopsForLocationListParams {
-  lat: number;
-
-  lon: number;
+  /**
+   * If omitted, defaults to 0.0.
+   */
+  lat?: number;
 
   /**
    * An alternative to radius to set the search bounding box (optional)
    */
   latSpan?: number;
+
+  /**
+   * If omitted, defaults to 0.0.
+   */
+  lon?: number;
 
   /**
    * An alternative to radius to set the search bounding box (optional)

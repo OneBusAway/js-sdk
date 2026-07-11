@@ -1,6 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../resource';
+import { isRequestOptions } from '../core';
 import * as Core from '../core';
 import * as Shared from './shared';
 
@@ -9,9 +10,17 @@ export class RoutesForLocation extends APIResource {
    * routes-for-location
    */
   list(
-    query: RoutesForLocationListParams,
+    query?: RoutesForLocationListParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<RoutesForLocationListResponse>;
+  list(options?: Core.RequestOptions): Core.APIPromise<RoutesForLocationListResponse>;
+  list(
+    query: RoutesForLocationListParams | Core.RequestOptions = {},
     options?: Core.RequestOptions,
   ): Core.APIPromise<RoutesForLocationListResponse> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
     return this._client.get('/api/where/routes-for-location.json', { query, ...options });
   }
 }
@@ -57,11 +66,17 @@ export namespace RoutesForLocationListResponse {
 }
 
 export interface RoutesForLocationListParams {
-  lat: number;
-
-  lon: number;
+  /**
+   * If omitted, defaults to 0.0.
+   */
+  lat?: number;
 
   latSpan?: number;
+
+  /**
+   * If omitted, defaults to 0.0.
+   */
+  lon?: number;
 
   lonSpan?: number;
 
