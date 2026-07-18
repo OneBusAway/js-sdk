@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.20.0 (2026-07-18)
+
+Full Changelog: [v1.19.0...v1.20.0](https://github.com/OneBusAway/js-sdk/compare/v1.19.0...v1.20.0)
+
+### Features
+
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([be7256f](https://github.com/OneBusAway/js-sdk/commit/be7256f7354a1e1a6f4fc1ba540f188ee7ef1e7f))
+
 ## 1.19.0 (2026-07-11)
 
 Full Changelog: [v1.18.0...v1.19.0](https://github.com/OneBusAway/js-sdk/compare/v1.18.0...v1.19.0)
