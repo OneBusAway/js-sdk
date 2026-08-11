@@ -6,7 +6,7 @@
     "rootDir": "./dist/src",
     "paths": {
       "onebusaway-sdk/*": ["./dist/src/*"],
-      "onebusaway-sdk": ["./dist/src/index.ts"]
+      "onebusaway-sdk": ["./dist/src/index.ts"],
     },
     "noEmit": false,
     "declaration": true,
