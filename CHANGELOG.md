@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.20.1 (2026-08-20)
+
+Full Changelog: [v1.20.0...v1.20.1](https://github.com/OneBusAway/js-sdk/compare/v1.20.0...v1.20.1)
+
+### Chores
+
+* **internal:** allow the mock server port to be set with STAINLESS_MOCK_PORT ([737e8f6](https://github.com/OneBusAway/js-sdk/commit/737e8f6e3d916397142c9d1213aa12fc259b878f))
+
 ## 1.20.0 (2026-07-18)
 
 Full Changelog: [v1.19.0...v1.20.0](https://github.com/OneBusAway/js-sdk/compare/v1.19.0...v1.20.0)
