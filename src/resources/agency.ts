@@ -6,7 +6,7 @@ import * as Shared from './shared';
 
 export class Agency extends APIResource {
   /**
-   * Retrieve information for a specific transit agency identified by its unique ID.
+   * Retrieve information for a specific transit agency identified by its ID.
    */
   retrieve(agencyId: string, options?: Core.RequestOptions): Core.APIPromise<AgencyRetrieveResponse> {
     return this._client.get(`/api/where/agency/${agencyId}.json`, options);
