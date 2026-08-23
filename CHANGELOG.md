@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.21.0](https://github.com/OneBusAway/js-sdk/compare/v1.20.0...v1.21.0) (2026-08-23)
+
+
+### Features
+
+* initial stlc build ([846117a](https://github.com/OneBusAway/js-sdk/commit/846117a939345e01b8a228106b974ae3b6c2b35e))
+* initial stlc build ([c6b7016](https://github.com/OneBusAway/js-sdk/commit/c6b7016b921435443df6bb6ce9200b9085bc80b8))
+
+
+### Bug Fixes
+
+* add release-please config to all targets ([067651f](https://github.com/OneBusAway/js-sdk/commit/067651f583be5f39fd677cc0c84ad7be176d9f8d))
+* resolve custom-code merge conflicts across kotlin, java ([07b355e](https://github.com/OneBusAway/js-sdk/commit/07b355e4d45a7880f3d621e68f0f7956d177b887))
+* update agency endpoint description ([38df720](https://github.com/OneBusAway/js-sdk/commit/38df7204021dccffa75323140fbbcddf7ffdf01d))
+
+
+### Chores
+
+* add stlc promote and sync workflows ([daa14f2](https://github.com/OneBusAway/js-sdk/commit/daa14f24162a2e6ba0e3ed6b99f7be0b9b28f8cc))
+
 ## 1.20.0 (2026-07-18)
 
 Full Changelog: [v1.19.0...v1.20.0](https://github.com/OneBusAway/js-sdk/compare/v1.19.0...v1.20.0)
