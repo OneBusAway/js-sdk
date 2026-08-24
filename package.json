@@ -118,5 +118,9 @@
       "require": "./dist/*.js",
       "default": "./dist/*.mjs"
     }
+  },
+  "homepage": "https://github.com/OneBusAway/js-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/OneBusAway/js-sdk/issues"
   }
 }
