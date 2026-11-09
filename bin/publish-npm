@@ -2,7 +2,13 @@
 
 set -eux
 
-npm config set '//registry.npmjs.org/:_authToken' "$NPM_TOKEN"
+# Publishing uses npm trusted publishing (OIDC) by default; NPM_TOKEN is an optional fallback.
+if [[ ${NPM_TOKEN:-} ]]; then
+  npm config set '//registry.npmjs.org/:_authToken' "$NPM_TOKEN"
+elif [[ ! ${ACTIONS_ID_TOKEN_REQUEST_TOKEN:-} ]]; then
+  echo "ERROR: NPM_TOKEN must be set if not running in a GitHub Action with id-token permission"
+  exit 1
+fi
 
 yarn build
 cd dist
