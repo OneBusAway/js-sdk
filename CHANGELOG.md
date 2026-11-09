@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.1](https://github.com/OneBusAway/js-sdk/compare/v1.21.0...v1.21.1) (2026-11-09)
+
+
+### Chores
+
+* change sync schedule to once daily ([dce001e](https://github.com/OneBusAway/js-sdk/commit/dce001eb23eb11fc7bed5ea03c21b20e59d527af))
+
 ## [1.21.0](https://github.com/OneBusAway/js-sdk/compare/v1.20.0...v1.21.0) (2026-08-23)
 
 
